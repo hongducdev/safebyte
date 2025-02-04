@@ -21,6 +21,7 @@ $post_video_link = get_post_meta(get_the_ID(), 'post_video_link', true);
         <?php echo '</div>';
     } ?>
     <div class="pxl-item--holder">
+        <?php safebyte()->blog->get_archive_meta(); ?>
         <h2 class="pxl-item--title">
             <a href="<?php echo esc_url( get_permalink()); ?>" title="<?php the_title_attribute(); ?>">
                 <?php if(is_sticky()) { ?>
@@ -29,7 +30,6 @@ $post_video_link = get_post_meta(get_the_ID(), 'post_video_link', true);
                 <?php the_title(); ?>
             </a>
         </h2>
-        <?php safebyte()->blog->get_archive_meta(); ?>
         <div class="pxl-item--excerpt">
             <?php
                 safebyte()->blog->get_excerpt();
@@ -42,7 +42,7 @@ $post_video_link = get_post_meta(get_the_ID(), 'post_video_link', true);
             ?>
         </div>
         <div class="pxl-item--readmore">
-            <a class="btn btn-text-parallax btn-icon-box" href="<?php echo esc_url( get_permalink()); ?>">
+            <a class="" href="<?php echo esc_url( get_permalink()); ?>">
                 <span class="pxl--btn-text"><?php echo safebyte_html($archive_readmore_text); ?></span>
                 <span class="pxl--btn-icon"><i class="flaticon-up-right-arrow"></i></span>
             </a>

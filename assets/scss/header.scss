@@ -717,17 +717,18 @@
 .pxl-anchor-button {
     cursor: pointer;
     &.style-2 {
-        height: 50px;
-        width: 50px;
-        @include border-radius(50px);
-        border: 1px solid #9cb9ba;
+        --x: 55px;
+        height: var(--x);
+        width: var(--x);
+        @include border-radius(var(--x));
+        border: 1px solid #cdcdcd;
         display: inline-flex;
         justify-content: center;
         align-items: center;
         position: relative;
         @include transition(all 0.3s linear 0ms);
         &:hover {
-            background-color: #9cb9ba;
+            background-color: #cdcdcd;
             .pxl-anchor-divider {
                 .pxl-icon-line {
                     &:before,
@@ -847,7 +848,7 @@
     &.type-icon {
         display: inline-flex;
         align-items: center;
-        color: #000;
+        color: $secondary_color;
         @include transition(all 300ms linear 0ms);
         &:hover {
             color: #fff;

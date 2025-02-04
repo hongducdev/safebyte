@@ -67,27 +67,22 @@ class Safebyte_Recent_Posts_Widget extends WP_Widget
                             'thumb_size' => '166x166',
                         ) );
                         $thumbnail    = $img['thumbnail']; ?>
-                        <div class="pxl-item--img pxl-mr-15">
+                        <div class="pxl-item--img pxl-mr-20">
                            <a href="<?php the_permalink(); ?>"><?php echo wp_kses_post($thumbnail); ?></a>
                          </div>
                     <?php endif; ?>
                     <div class="pxl-item--holder">
+                        <div class="pxl-item--meta">
+                            <div class="pxl-item--date">
+                                <?php echo get_the_date('d F Y'); ?>
+                            </div>
+                        </div>
                         <?php printf(
                             '<h4 class="pxl-item--title"><a href="%1$s" title="%2$s">%3$s</a></h4>',
                             esc_url( get_permalink() ),
                             esc_attr( get_the_title() ),
                             get_the_title()
                         ); ?>
-                        <div class="pxl-item--meta">
-                            <div class="pxl-item--date pxl-mr-12">
-                                <i class="flaticon-user text-gradient pxl-mr-5"></i>
-                                <?php echo get_the_date('d M'); ?>/<?php echo get_the_date('y'); ?>
-                            </div>
-                            <div class="pxl-item--comment">
-                                <i class="flaticon-chat text-gradient pxl-mr-5"></i>
-                                <?php echo comments_number(esc_html__('No Comments', 'safebyte'),esc_html__('1 Comment', 'safebyte'),esc_html__('% Comments', 'safebyte')); ?>
-                            </div>
-                        </div>
                     </div>
                 </div>
             <?php }

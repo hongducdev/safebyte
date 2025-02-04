@@ -22,7 +22,7 @@
                 ],
                 'third'   => [
                     'title' => esc_html__('Third', 'safebyte'), 
-                    'value' => safebyte()->get_opt('third_color', '#00c5fe')
+                    'value' => safebyte()->get_opt('third_color', '#0e4eeb')
                 ],
                 'dark'   => [
                     'title' => esc_html__('Dark', 'safebyte'), 

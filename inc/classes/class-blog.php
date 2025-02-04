@@ -15,28 +15,22 @@ if (!class_exists('Safebyte_Blog')) {
                     <div class="pxl-blog-meta-inner">
                         <?php if($archive_author) : ?>
                             <div class="pxl-item--author pxl-mr-28">
-                                <i class="flaticon-user text-gradient pxl-mr-8"></i>
-                                <?php echo esc_html__('by', 'safebyte'); ?>&nbsp;<?php the_author_posts_link(); ?>
-                            </div>
-                        <?php endif; ?>
-                        <?php if($archive_comment) : ?>
-                            <div class="pxl-item--comment pxl-mr-28">
-                                <i class="flaticon-chat text-gradient pxl-mr-8"></i>
-                                <a href="<?php the_permalink(); ?>#comments">
-                                    <?php echo comments_number(esc_html__('No Comments', 'safebyte'),esc_html__('1 Comment', 'safebyte'),esc_html__('% Comments', 'safebyte')); ?>
-                                </a>
-                            </div>
-                        <?php endif; ?>
-                        <?php if($archive_date) : ?>
-                            <div class="pxl-item--date pxl-mr-28">
-                                <i class="flaticon-calendar text-gradient pxl-mr-8"></i>
-                                <?php echo get_the_date('d M'); ?>/<?php echo get_the_date('y'); ?>
+                                <span class="icon-post pxl-mr-8"><i class="fas fa-user"></i></span>
+                                <?php echo esc_html__('By', 'safebyte'); ?>&nbsp;<?php the_author_posts_link(); ?>
                             </div>
                         <?php endif; ?>
                         <?php if($archive_category) : ?>
-                            <div class="pxl-item--category">
-                                <i class="flaticon-folder text-gradient pxl-mr-8"></i>
+                            <div class="pxl-item--category pxl-mr-28">
+                                <span class="icon-post pxl-mr-8"><i class="fas fa-tag"></i></span>
                                 <?php the_terms( get_the_ID(), 'category', '', ', ' ); ?>
+                            </div>
+                        <?php endif; ?>
+                        <?php if($archive_comment) : ?>
+                            <div class="pxl-item--comment">
+                                <span class="icon-post pxl-mr-8"><i class="fas fa-comment"></i></span>
+                                <a href="<?php the_permalink(); ?>#comments">
+                                    <?php echo comments_number(esc_html__('No Comments', 'safebyte'),esc_html__('1 Comment', 'safebyte'),esc_html__('% Comments', 'safebyte')); ?>
+                                </a>
                             </div>
                         <?php endif; ?>
                     </div>
@@ -54,28 +48,22 @@ if (!class_exists('Safebyte_Blog')) {
                     <div class="pxl-blog-meta-inner">
                         <?php if($post_author) : ?>
                             <div class="pxl-item--author pxl-mr-30">
-                                <i class="flaticon-user text-gradient pxl-mr-8"></i>
-                                <?php echo esc_html__('by', 'safebyte'); ?>&nbsp;<?php the_author_posts_link(); ?>
-                            </div>
-                        <?php endif; ?>
-                        <?php if($post_comment) : ?>
-                            <div class="pxl-item--comment pxl-mr-30">
-                                <i class="flaticon-chat text-gradient pxl-mr-8"></i>
-                                <a href="<?php the_permalink(); ?>#comments">
-                                    <?php echo comments_number(esc_html__('No Comments', 'safebyte'),esc_html__('1 Comment', 'safebyte'),esc_html__('% Comments', 'safebyte')); ?>
-                                </a>
-                            </div>
-                        <?php endif; ?>
-                        <?php if($post_date) : ?>
-                            <div class="pxl-item--date pxl-mr-30">
-                                <i class="flaticon-calendar text-gradient pxl-mr-8"></i>
-                                <?php echo get_the_date('d M'); ?>/<?php echo get_the_date('y'); ?>
+                                <i class="fas fa-user pxl-mr-8"></i>
+                                <?php echo esc_html__('By', 'safebyte'); ?>&nbsp;<?php the_author_posts_link(); ?>
                             </div>
                         <?php endif; ?>
                         <?php if($post_category) : ?>
-                            <div class="pxl-item--category">
-                                <i class="flaticon-folder text-gradient pxl-mr-8"></i>
+                            <div class="pxl-item--category pxl-mr-30">
+                                <i class="fas fa-tag pxl-mr-8"></i>
                                 <?php the_terms( get_the_ID(), 'category', '', ', ' ); ?>
+                            </div>
+                        <?php endif; ?>
+                        <?php if($post_comment) : ?>
+                            <div class="pxl-item--comment">
+                                <i class="fas fa-comment pxl-mr-8"></i>
+                                <a href="<?php the_permalink(); ?>#comments">
+                                    <?php echo comments_number(esc_html__('No Comments', 'safebyte'),esc_html__('1 Comment', 'safebyte'),esc_html__('% Comments', 'safebyte')); ?>
+                                </a>
                             </div>
                         <?php endif; ?>
                     </div>

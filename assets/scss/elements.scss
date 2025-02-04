@@ -44,6 +44,15 @@ BLOG GRID
     transform-origin: 0% 0%;
 }
 
+.bottom-header-main {
+    background-image: linear-gradient(
+        180deg, 
+        rgba(255, 255, 255, 1) 50%, 
+        rgba(255, 255, 255, 0.8) 70%, 
+        rgba(255, 255, 255, 0) 100%
+    );
+}
+
 // Slider Revolution
 .revslider-initialised {
     .rv-description {
@@ -1557,7 +1566,7 @@ BLOG GRID
                 content: "\f150";
                 font-family: Caseicon;
                 font-size: 9px;
-                margin-left: 8px;
+                margin-left: 4px;
                 line-height: 1;
                 @include transition(all 220ms linear 0ms);
                 display: inline-flex;
@@ -2070,54 +2079,30 @@ BLOG GRID
 
 // Case Counter
 .pxl-counter1 {
-    display: flex;
-    flex-wrap: nowrap;
+    .pxl-counter--holder {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
     .pxl-counter--title {
-        font-size: 14px;
-        text-transform: uppercase;
-        font-weight: 500;
+        opacity: 0.702;
+        font-size: 17px;
+        line-height: 28px;
+        color: #ffffff;
+        font-family: "GTWalsheimPro";
+        max-width: 200px;
+        width: 100%;
     }
     .pxl-counter--number {
-        font-weight: 700;
-        font-size: 78px;
-        color: #000;
-        line-height: 1;
-        display: inline-flex;
-        @extend .ft-secondary;
-        margin-bottom: 2px;
-        position: relative;
-        z-index: 1;
-        &:before {
-            content: "";
-            @include background-gradient-bottom(
-                $gradient_color_from,
-                $gradient_color_to
-            );
-            height: 42px;
-            width: 42px;
-            border-radius: 42px;
-            position: absolute;
-            top: -5px;
-            left: 0;
-            z-index: -1;
-        }
-        &.shape-hide:before {
-            display: none;
-        }
-    }
-    .pxl-counter--icon {
-        line-height: 1;
-        font-size: 58px;
-        svg {
-            height: 58px;
-        }
-        i {
-            @extend .text-gradient-bottom;
-        }
-        + .pxl-counter--holder {
-            .pxl-counter--number::before {
-                display: none;
-            }
+        font-size: 70px;
+        line-height: 70px;
+        color: #ffffff;
+        font-weight: 400;
+        font-family: "Public Sans";
+        display: flex;
+        .pxl-counter--suffix {
+            font-size: 50px;
+            line-height: 50px;
         }
     }
     &.style-2 {
@@ -3189,13 +3174,33 @@ body.single .pxl-breadcrumb {
 
 // Case List
 .pxl-list1 {
+    &.pxl-list-row {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 34px;
+        .pxl--item {
+            + .pxl--item {
+                margin-top: 0;
+            }
+        }
+    }
     label {
         display: inline-block;
     }
     .pxl-item--icon {
-        color: $primary_color;
-        font-size: 24px;
-        line-height: 1;
+        &.pxl-icon--box {
+            --x: 19px;
+            width: var(--x);
+            height: var(--x);
+            @include border-radius(var(--x));
+            background-color: #fff;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            color: $secondary_color;
+        }
     }
     .pxl-item--meta {
         display: flex;
@@ -3206,6 +3211,44 @@ body.single .pxl-breadcrumb {
         flex-wrap: nowrap;
         + .pxl--item {
             margin-top: 20px;
+        }
+    }
+    .pxl-item--number {
+        width: 35px;
+        height: 35px;
+        border-radius: 35px;
+        background-color: $secondary_color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $primary_color;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        &.pxl-box-shadow {
+            box-shadow: 0 10.604px 21.208px rgba(137, 151, 186, 0.25);
+        }
+    }
+    .pxl--item.list-number {
+        gap: 22px;
+        .pxl-item--content {
+            display: flex;
+            flex-direction: column;
+            label {
+                color: $primary_color;
+                font-family: "DM Sans", sans-serif;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 1.41;
+                margin-bottom: 10px;
+            }
+            color: #4a7172;
+            font-family: "Public Sans", sans-serif;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.67;
         }
     }
 }

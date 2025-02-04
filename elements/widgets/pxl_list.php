@@ -19,45 +19,66 @@ pxl_add_custom_widget(
                             'controls' => array(
                                 array(
                                     'name' => 'label',
-                                    'label' => esc_html__('Label', 'safebyte' ),
+                                    'label' => esc_html__('Label', 'safebyte'),
                                     'type' => \Elementor\Controls_Manager::TEXT,
                                     'rows' => 10,
                                     'show_label' => false,
                                 ),
                                 array(
                                     'name' => 'content',
-                                    'label' => esc_html__('Content', 'safebyte' ),
+                                    'label' => esc_html__('Content', 'safebyte'),
                                     'type' => \Elementor\Controls_Manager::TEXTAREA,
                                     'rows' => 10,
                                     'show_label' => false,
+                                ),
+                                array(
+                                    'name' => 'number',
+                                    'label' => esc_html__('Number', 'safebyte'),
+                                    'type' => \Elementor\Controls_Manager::TEXT,
+                                    'default' => '01',
                                 ),
                             ),
                             'title_field' => '{{{ content }}}',
                         ),
                         array(
+                            'name' => 'list_type',
+                            'label' => esc_html__('List Type', 'safebyte'),
+                            'type' => \Elementor\Controls_Manager::SELECT,
+                            'options' => [
+                                'list-icon' => 'Icon List',
+                                'list-number' => 'Number List',
+                            ],
+                            'default' => 'list-icon',
+                        ),
+                        array(
                             'name' => 'icon_type',
-                            'label' => esc_html__('Icon Type', 'safebyte' ),
+                            'label' => esc_html__('Icon Type', 'safebyte'),
                             'type' => \Elementor\Controls_Manager::SELECT,
                             'options' => [
                                 'icon' => 'Icon',
                                 'image' => 'Image',
                             ],
                             'default' => 'icon',
+                            'condition' => [
+                                'list_type' => 'list-icon',
+                            ],
                         ),
                         array(
                             'name' => 'pxl_icon',
-                            'label' => esc_html__('Icon', 'safebyte' ),
+                            'label' => esc_html__('Icon', 'safebyte'),
                             'type' => \Elementor\Controls_Manager::ICONS,
                             'fa4compatibility' => 'icon',
                             'condition' => [
+                                'list_type' => 'list-icon',
                                 'icon_type' => 'icon',
                             ],
                         ),
                         array(
                             'name' => 'icon_image',
-                            'label' => esc_html__( 'Icon Image', 'safebyte' ),
+                            'label' => esc_html__('Icon Image', 'safebyte'),
                             'type' => \Elementor\Controls_Manager::MEDIA,
                             'condition' => [
+                                'list_type' => 'list-icon',
                                 'icon_type' => 'image',
                             ],
                         ),
@@ -65,7 +86,7 @@ pxl_add_custom_widget(
                 ),
                 array(
                     'name' => 'section_style',
-                    'label' => esc_html__('Style', 'safebyte' ),
+                    'label' => esc_html__('Style', 'safebyte'),
                     'tab' => \Elementor\Controls_Manager::TAB_STYLE,
                     'controls' => array_merge(
                         safebyte_widget_color_type([
@@ -75,10 +96,107 @@ pxl_add_custom_widget(
                         ]),
                         array(
                             array(
+                                'name' => 'list_direction',
+                                'label' => esc_html__('List Direction', 'safebyte'),
+                                'type' => \Elementor\Controls_Manager::SELECT,
+                                'control_type' => 'responsive',
+                                'options' => [
+                                    'row' => 'Row',
+                                    'column' => 'Column',
+                                ],
+                                'default' => 'column',
+                            ),
+                            array(
+                                'name' => 'list_gap_column',
+                                'label' => esc_html__('List Gap', 'safebyte'),
+                                'type' => \Elementor\Controls_Manager::SLIDER,
+                                'control_type' => 'responsive',
+                                'size_units' => ['px'],
+                                'range' => [
+                                    'px' => [
+                                        'min' => 0,
+                                        'max' => 3000,
+                                    ],
+                                ],
+                                'selectors' => [
+                                    '{{WRAPPER}} .pxl-list .pxl--item + .pxl--item' => 'margin-top: {{SIZE}}{{UNIT}};',
+                                ],
+                                'condition' => [
+                                    'list_direction' => 'column',
+                                ],
+                            ),
+                            array(
+                                'name' => 'list_gap_row',
+                                'label' => esc_html__('List Gap', 'safebyte'),
+                                'type' => \Elementor\Controls_Manager::SLIDER,
+                                'control_type' => 'responsive',
+                                'size_units' => ['px'],
+                                'range' => [
+                                    'px' => [
+                                        'min' => 0,
+                                        'max' => 3000,
+                                    ],
+                                ],
+                                'selectors' => [
+                                    '{{WRAPPER}} .pxl-list .pxl--item' => 'margin-right: {{SIZE}}{{UNIT}};',
+                                ],
+                                'condition' => [
+                                    'list_direction' => 'row',
+                                ],
+                            ),
+                            array(
+                                'name' => 'icon_box',
+                                'label' => esc_html__('Icon Box', 'safebyte'),
+                                'type' => \Elementor\Controls_Manager::SWITCHER,
+                                'default' => 'false',
+                                'control_type' => 'responsive',
+                            ),
+                            array(
+                                'name' => 'icon_box_color',
+                                'label' => esc_html__('Icon Box Color', 'safebyte'),
+                                'type' => \Elementor\Controls_Manager::COLOR,
+                                'control_type' => 'responsive',
+                                'selectors' => [
+                                    '{{WRAPPER}} .pxl-list .pxl-item--icon.pxl-icon--box' => 'background-color: {{VALUE}};',
+                                ],
+                            ),
+                            array(
+                                'name' => 'icon_box_width',
+                                'label' => esc_html__('Icon Box Width', 'safebyte'),
+                                'type' => \Elementor\Controls_Manager::SLIDER,
+                                'control_type' => 'responsive',
+                                'size_units' => ['px'],
+                                'range' => [
+                                    'px' => [
+                                        'min' => 0,
+                                        'max' => 3000,
+                                    ],
+                                ],
+                                'selectors' => [
+                                    '{{WRAPPER}} .pxl-list .pxl-item--icon.pxl-icon--box' => 'width: {{SIZE}}{{UNIT}};',
+                                ],
+                            ),
+                            array(
+                                'name' => 'icon_box_height',
+                                'label' => esc_html__('Icon Box Height', 'safebyte'),
+                                'type' => \Elementor\Controls_Manager::SLIDER,
+                                'control_type' => 'responsive',
+                                'size_units' => ['px'],
+                                'range' => [
+                                    'px' => [
+                                        'min' => 0,
+                                        'max' => 3000,
+                                    ],
+                                ],
+                                'selectors' => [
+                                    '{{WRAPPER}} .pxl-list .pxl-item--icon.pxl-icon--box' => 'height: {{SIZE}}{{UNIT}};',
+                                ],
+                            ),
+                            array(
                                 'name' => 'icon_margin',
-                                'label' => esc_html__('Icon Margin', 'safebyte' ),
+                                'label' => esc_html__('Icon Margin', 'safebyte'),
                                 'type' => \Elementor\Controls_Manager::DIMENSIONS,
-                                'size_units' => [ 'px' ],
+                                'size_units' => ['px'],
                                 'selectors' => [
                                     '{{WRAPPER}} .pxl-list .pxl-item--icon' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                                 ],
@@ -86,10 +204,10 @@ pxl_add_custom_widget(
                             ),
                             array(
                                 'name' => 'icon_font_size',
-                                'label' => esc_html__('Icon Font Size', 'safebyte' ),
+                                'label' => esc_html__('Icon Font Size', 'safebyte'),
                                 'type' => \Elementor\Controls_Manager::SLIDER,
                                 'control_type' => 'responsive',
-                                'size_units' => [ 'px' ],
+                                'size_units' => ['px'],
                                 'range' => [
                                     'px' => [
                                         'min' => 0,
@@ -102,10 +220,10 @@ pxl_add_custom_widget(
                             ),
                             array(
                                 'name' => 'label_min_width',
-                                'label' => esc_html__('Label Min Width', 'safebyte' ),
+                                'label' => esc_html__('Label Min Width', 'safebyte'),
                                 'type' => \Elementor\Controls_Manager::SLIDER,
                                 'control_type' => 'responsive',
-                                'size_units' => [ 'px', '%' ],
+                                'size_units' => ['px', '%'],
                                 'range' => [
                                     'px' => [
                                         'min' => 0,
@@ -118,7 +236,7 @@ pxl_add_custom_widget(
                             ),
                             array(
                                 'name' => 'label_color',
-                                'label' => esc_html__('Label Color', 'safebyte' ),
+                                'label' => esc_html__('Label Color', 'safebyte'),
                                 'type' => \Elementor\Controls_Manager::COLOR,
                                 'selectors' => [
                                     '{{WRAPPER}} .pxl-list label' => 'color: {{VALUE}};',
@@ -126,7 +244,7 @@ pxl_add_custom_widget(
                             ),
                             array(
                                 'name' => 'label_typography',
-                                'label' => esc_html__('Label Typography', 'safebyte' ),
+                                'label' => esc_html__('Label Typography', 'safebyte'),
                                 'type' => \Elementor\Group_Control_Typography::get_type(),
                                 'control_type' => 'group',
                                 'selector' => '{{WRAPPER}} .pxl-list label',
@@ -134,7 +252,7 @@ pxl_add_custom_widget(
 
                             array(
                                 'name' => 'content_color',
-                                'label' => esc_html__('Content Color', 'safebyte' ),
+                                'label' => esc_html__('Content Color', 'safebyte'),
                                 'type' => \Elementor\Controls_Manager::COLOR,
                                 'selectors' => [
                                     '{{WRAPPER}} .pxl-list .pxl-item--content' => 'color: {{VALUE}};',
@@ -142,17 +260,37 @@ pxl_add_custom_widget(
                             ),
                             array(
                                 'name' => 'content_typography',
-                                'label' => esc_html__('Content Typography', 'safebyte' ),
+                                'label' => esc_html__('Content Typography', 'safebyte'),
                                 'type' => \Elementor\Group_Control_Typography::get_type(),
                                 'control_type' => 'group',
                                 'selector' => '{{WRAPPER}} .pxl-list .pxl-item--content',
                             ),
                             array(
-                                'name' => 'item_spacer',
-                                'label' => esc_html__('Item Spacer', 'safebyte' ),
+                                'name' => 'max_width_content',
+                                'label' => esc_html__('Max Width Content', 'safebyte'),
                                 'type' => \Elementor\Controls_Manager::SLIDER,
                                 'control_type' => 'responsive',
-                                'size_units' => [ 'px' ],
+                                'size_units' => ['px', '%'],
+                                'range' => [
+                                    'px' => [
+                                        'min' => 0,
+                                        'max' => 3000,
+                                    ],
+                                    '%' => [
+                                        'min' => 0,
+                                        'max' => 100,
+                                    ],
+                                ],
+                                'selectors' => [
+                                    '{{WRAPPER}} .pxl-list .pxl-item--content' => 'max-width: {{SIZE}}{{UNIT}};',
+                                ],
+                            ),
+                            array(
+                                'name' => 'item_spacer',
+                                'label' => esc_html__('Item Spacer', 'safebyte'),
+                                'type' => \Elementor\Controls_Manager::SLIDER,
+                                'control_type' => 'responsive',
+                                'size_units' => ['px'],
                                 'range' => [
                                     'px' => [
                                         'min' => 0,
@@ -162,28 +300,94 @@ pxl_add_custom_widget(
                                 'selectors' => [
                                     '{{WRAPPER}} .pxl-list .pxl--item + .pxl--item' => 'margin-top: {{SIZE}}{{UNIT}};',
                                 ],
+                                'condition' => [
+                                    'list-direction' => 'column',
+                                ],
                             ),
                             array(
                                 'name' => 'align_items',
-                                'label' => esc_html__('Align Items', 'safebyte' ),
+                                'label' => esc_html__('Align Items', 'safebyte'),
                                 'type' => \Elementor\Controls_Manager::CHOOSE,
                                 'control_type' => 'responsive',
                                 'options' => [
                                     'flex-start' => [
-                                        'title' => esc_html__( 'Flex Start', 'safebyte' ),
+                                        'title' => esc_html__('Flex Start', 'safebyte'),
                                         'icon' => 'far fa-arrow-alt-to-top',
                                     ],
                                     'Center' => [
-                                        'title' => esc_html__( 'Center', 'safebyte' ),
+                                        'title' => esc_html__('Center', 'safebyte'),
                                         'icon' => 'far fa-arrows-alt-v',
                                     ],
                                     'flex-end' => [
-                                        'title' => esc_html__( 'Flex End', 'safebyte' ),
+                                        'title' => esc_html__('Flex End', 'safebyte'),
                                         'icon' => 'far fa-arrow-alt-to-bottom',
                                     ],
                                 ],
                                 'selectors' => [
                                     '{{WRAPPER}} .pxl-list .pxl--item' => 'align-items: {{VALUE}};',
+                                ],
+                            ),
+                            array(
+                                "name" => 'bg_color_number',
+                                "label" => esc_html__('Background Color Number', 'safebyte'),
+                                "type" => \Elementor\Controls_Manager::COLOR,
+                                "selectors" => [
+                                    '{{WRAPPER}} .pxl-list .pxl-item--number' => 'background-color: {{VALUE}};',
+                                ],
+                                'condition' => [
+                                    'list_type' => 'list-number',
+                                ],
+                            ),
+                            array(
+                                "name" => 'color-number',
+                                "label" => esc_html__('Color Number', 'safebyte'),
+                                "type" => \Elementor\Controls_Manager::COLOR,
+                                "selectors" => [
+                                    '{{WRAPPER}} .pxl-list .pxl-item--number' => 'color: {{VALUE}};',
+                                ],
+                                'condition' => [
+                                    'list_type' => 'list-number',
+                                ],
+                            ),
+                            array(
+                                'name' => 'box_shadow_number',
+                                'label' => esc_html__('Box Shadow Number', 'safebyte'),
+                                'type' => \Elementor\Controls_Manager::SWITCHER,
+                                'default' => 'false',
+                                'condition' => [
+                                    'list_type' => 'list-number',
+                                ],
+                            ),
+                            array(
+                                'name' => 'width_number',
+                                'label' => esc_html__('Width Number', 'safebyte'),
+                                'type' => \Elementor\Controls_Manager::SLIDER,
+                                'control_type' => 'responsive',
+                                'size_units' => ['px'],
+                                'range' => [
+                                    'px' => [
+                                        'min' => 0,
+                                        'max' => 3000,
+                                    ],
+                                ],
+                                'selectors' => [
+                                    '{{WRAPPER}} .pxl-list .pxl-item--number' => 'width: {{SIZE}}{{UNIT}};',
+                                ],
+                            ),
+                            array(
+                                'name' => 'height_number',
+                                'label' => esc_html__('Height Number', 'safebyte'),
+                                'type' => \Elementor\Controls_Manager::SLIDER,
+                                'control_type' => 'responsive',
+                                'size_units' => ['px'],
+                                'range' => [
+                                    'px' => [
+                                        'min' => 0,
+                                        'max' => 3000,
+                                    ],
+                                ],
+                                'selectors' => [
+                                    '{{WRAPPER}} .pxl-list .pxl-item--number' => 'height: {{SIZE}}{{UNIT}};',
                                 ],
                             ),
                         )
