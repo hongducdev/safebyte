@@ -235,9 +235,111 @@ function safebyte_get_grid_ids_by_post_type($pt_supports = [], $args = []){
 
     return $result;
 }
-
 /**
  * End Post Grid Functions
+*/
+
+
+/**
+ * Start Post List Functions
+*/
+function safebyte_get_ids_by_post_type($pt_supports = [], $args = []){
+    $args = wp_parse_args($args, ['condition' => 'post_type', 'custom_condition' => []]);
+    $post_types = safebyte_get_post_type_options($pt_supports);
+    $result = [];
+    if (!is_array($post_types))
+        return $result;
+
+    foreach ($post_types as $name => $label) {
+
+        $posts = safebyte_list_post($name, false);
+
+        $result[] = array(
+            'name' => 'source_' . $name . '_post_ids',
+            'label' => sprintf(esc_html__('Select posts', 'safebyte'), $label),
+            'type' => \Elementor\Controls_Manager::SELECT2,
+            'multiple' => true,
+            'options' => $posts,
+            'label_block' => true,
+            'condition' => array_merge(
+                [
+                    $args['condition'] => [$name]
+                ],
+                $args['custom_condition']
+            )
+        );
+    }
+
+    return $result;
+}
+
+function safebyte_get_term_by_post_type($pt_supports = [], $args = []){
+    $args = wp_parse_args($args, ['condition' => 'post_type', 'custom_condition' => []]);
+    $post_types = safebyte_get_post_type_options($pt_supports);
+    $result = [];
+    if (!is_array($post_types))
+        return $result;
+    foreach ($post_types as $name => $label) {
+
+        $taxonomy = get_object_taxonomies($name, 'names');
+
+
+        if ($name == 'post') $taxonomy = ['category'];
+        if ($name == 'product') $taxonomy = ['product_cat'];
+
+        $options = pxl_get_grid_term_options($name, $taxonomy);
+        if ($name == 'phb_room_type') $options = [];
+        
+        $result[] = array(
+            'name' => 'source_' . $name,
+            'label' => sprintf(esc_html__('Select Term', 'safebyte'), $label),
+            'description' => esc_html__('Get all when no term selected', 'safebyte'),
+            'type' => \Elementor\Controls_Manager::SELECT2,
+            'multiple' => true,
+            'options' => $options,
+            'label_block' => true,
+            'condition' => array_merge(
+                [
+                    $args['condition'] => [$name]
+                ],
+                $args['custom_condition']
+            )
+        );
+    }
+
+    return $result;
+}
+
+function safebyte_get_ids_unselected_by_post_type($pt_supports = [], $args = []){
+    $args = wp_parse_args($args, ['condition' => 'post_type', 'custom_condition' => []]);
+    $post_types = safebyte_get_post_type_options($pt_supports);
+    $result = [];
+    if (!is_array($post_types))
+        return $result;
+    foreach ($post_types as $name => $label) {
+
+        $posts = safebyte_list_post($name, false);
+
+        $result[] = array(
+            'name' => 'source_' . $name . '_post_ids_unselected',
+            'label' => sprintf(esc_html__('Unselected posts', 'safebyte'), $label),
+            'type' => \Elementor\Controls_Manager::SELECT2,
+            'multiple' => true,
+            'options' => $posts,
+            'label_block' => true,
+            'condition' => array_merge(
+                [
+                    $args['condition'] => [$name]
+                ],
+                $args['custom_condition']
+            )
+        );
+    }
+
+    return $result;
+}
+/**
+ * End Post List Functions
 */
 
 
@@ -314,7 +416,7 @@ function safebyte_get_carousel_term_by_post_type($pt_supports = [], $args=[]){
     if (!is_array($post_types))
         return $result;
     foreach ($post_types as $name => $label) {
-         
+        
         $taxonomy = get_object_taxonomies($name, 'names');
         
         if($name == 'post') $taxonomy = ['category'];
@@ -339,6 +441,50 @@ function safebyte_get_carousel_term_by_post_type($pt_supports = [], $args=[]){
 /**
  * End Post Carousel Functions
 */
+
+/**
+ * Start Post List Functions
+*/
+function safebyte_get_post_list_layout($pt_supports = []){
+    $post_types  = safebyte_get_post_type_options($pt_supports); 
+    $result = [];
+    if (!is_array($post_types))
+        return $result;
+    foreach ($post_types as $name => $label) {
+        $result[] = array(
+            'name'     => 'layout_'.$name,
+            'label'    => sprintf(esc_html__( 'Select Template of %s', 'safebyte' ), $label),
+            'type'     => 'layoutcontrol',
+            'default' => 'post-1',
+            'options'  => safebyte_get_list_layout_options($name),
+            'prefix_class' => 'post-layout-',
+            'condition' => [
+                'post_type' => [$name]
+            ]
+        );
+    }
+    return $result;   
+}
+
+function safebyte_get_list_layout_options($post_type_name){
+    $option_layouts = [];
+    switch ($post_type_name) {
+        case 'post':
+        $option_layouts = [
+            'post-1' => [
+                'label' => esc_html__( 'Layout 1', 'safebyte' ),
+                'image' => get_template_directory_uri() . '/elements/assets/img/pxl_post_list/post-layout1.jpg'
+            ],
+        ];
+        break;
+    }
+    return $option_layouts;
+}
+
+/**
+ * End Post List Functions
+*/
+
 
 /* Icon render */ 
 function safebyte_elementor_icon_render( $settings, $args = []){

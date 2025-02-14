@@ -18,6 +18,14 @@ $post_video_link = get_post_meta(get_the_ID(), 'post_video_link', true);
             <?php if(!empty($post_video_link)) : ?>
                 <a href="<?php echo esc_url($post_video_link); ?>" class="post-button-video pxl-action-popup"><i class="caseicon-play1"></i></a>
             <?php endif; ?>
+            <div class="pxl-item--date">
+                <h5 class="pxl-item--date-day">
+                    <?php echo get_the_date('d'); ?>
+                </h5>
+                <h6 class="pxl-item--date-month">
+                    <?php echo get_the_date('M'); ?>
+                </h6>
+            </div>
         <?php echo '</div>';
     } ?>
     <div class="pxl-item--holder">

@@ -46,9 +46,9 @@ BLOG GRID
 
 .bottom-header-main {
     background-image: linear-gradient(
-        180deg, 
-        rgba(255, 255, 255, 1) 50%, 
-        rgba(255, 255, 255, 0.8) 70%, 
+        180deg,
+        rgba(255, 255, 255, 1) 50%,
+        rgba(255, 255, 255, 0.8) 70%,
         rgba(255, 255, 255, 0) 100%
     );
 }
@@ -192,254 +192,50 @@ BLOG GRID
     }
 }
 
-// Case Post Lists
-.pxl-post-list1 {
-    .pxl-item--image {
-        position: absolute;
-        max-width: 180px;
-        border: 3px solid $primary_color;
-        left: -130px;
-        transform: rotate(-16deg);
-        bottom: -28px;
-        z-index: 100;
-        @include transition(all 300ms linear 0ms);
-        opacity: 0;
-        margin-left: -30px;
-        visibility: hidden;
-        @media #{$max-xxl} {
-            display: none;
-        }
-    }
-    .pxl-item--title {
-        --tab-title-color: #000;
-        margin-bottom: 0;
-        font-size: 30px;
-        line-height: 1.16;
-        flex-grow: 1;
-        @media #{$max-lg} {
-            font-size: 22px;
-        }
-        @media #{$max-sm} {
-            font-size: 20px;
-        }
-        span {
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            @include background-gradient-button(
-                to right,
-                $gradient_color_from,
-                $gradient_color_to 50%,
-                var(--tab-title-color) 50%
-            );
-            background-size: 200% 100%;
-            background-position: -100%;
-            transition: all 0.3s ease-in-out;
-            display: inline-block;
-        }
-    }
-    .pxl-item--number {
-        color: #575757;
-        font-size: 20px;
-        font-weight: 700;
-        min-width: 60px;
-        @include transition(all 300ms linear 0ms);
-        @media #{$max-xxl} {
-            min-width: 35px;
-        }
-    }
-    .pxl-item--readmore {
-        font-size: 58px;
-        transform: rotate(-45deg);
-        margin-right: 30px;
-        opacity: 0;
-        z-index: 100;
-        @media #{$max-sm} {
-            font-size: 45px;
-        }
-        i {
-            @extend .text-gradient;
-        }
-        &:hover {
-            transform: rotate(0deg);
-        }
-    }
-    .pxl-item--holder {
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: center;
-        width: 100%;
-    }
-    .pxl-item--link {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 99;
-    }
-    @media #{$max-xxl} {
-        .pxl-item--bg {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            @include transition(all 300ms linear 0ms);
-            transform: scaleY(0);
-            transform-origin: bottom center;
-            &:before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(#000, 0.76);
-            }
-        }
-    }
-    .pxl-post--item {
-        display: flex;
-        align-items: center;
-        padding: 20px 6px;
-        min-height: 161px;
-        position: relative;
-        z-index: 1;
-        &:before,
-        &:after {
-            content: "";
-            position: absolute;
-            height: 2px;
-            width: 100%;
-            background-color: #323232;
-            bottom: 0;
-            right: 0;
-        }
-        &:after {
-            width: 0;
-            @include transition(all 300ms linear 0ms);
-            background-color: $primary_color;
-            z-index: 2;
-        }
-        &:last-child:before {
-            opacity: 0;
-        }
-        &:hover {
-            &:after {
-                width: 100%;
-            }
-            .pxl-item--title span {
-                background-position: 0%;
-            }
-            .pxl-item--image {
-                margin: 0;
-                opacity: 1;
-                visibility: visible;
-            }
-            .pxl-item--readmore {
-                margin-right: 0;
-                opacity: 1;
-            }
-            @media #{$max-xxl} {
-                .pxl-item--bg {
-                    transform: scaleY(1);
-                }
-                .pxl-item--number {
-                    color: #fff;
-                }
-            }
-        }
-    }
-}
-
 // Case Icon Box
 .pxl-icon-box1 {
-    padding: 44px 20px 41px 40px;
-    background-color: #fff;
-    box-shadow: 0 3px 65px rgba(#000000, 0.05);
-    border-radius: 30px;
-    @include transition(all 300ms linear 0ms);
-    position: relative;
-    overflow: hidden;
-    @media #{$max-lg} {
-        padding-left: 20px;
-    }
-    &:before {
-        content: "";
-        height: 4px;
-        position: absolute;
-        bottom: 0;
-        left: 26px;
-        right: 26px;
-        border: 3px dashed #fff;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    &:hover {
+        i,
+        svg,
+        img {
+            animation-name: pxl_wobble_vertical;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 1;
+        }
     }
     .pxl-item--icon {
-        line-height: 1;
-        font-size: 62px;
-        margin-bottom: 12px;
-        i {
-            @extend .text-gradient-move;
-        }
-        svg {
-            height: 62px;
-        }
-    }
-    .pxl-item--title {
-        font-size: 21px;
-        color: #152830;
-        margin-bottom: 7px;
-        @include transition(all 300ms linear 0ms);
-    }
-    .pxl-item--description {
-        font-size: 15px;
-        color: #41494d;
-        line-height: 1.34;
-        @include transition(all 300ms linear 0ms);
-    }
-    .pxl-item--readmore {
-        height: 99px;
-        width: 99px;
-        @include background-gradient-rotate(
-            135deg,
-            $gradient_color_from,
-            $gradient_color_to
-        );
-        position: absolute;
-        top: -20px;
-        right: -10px;
-        display: inline-flex;
-        font-size: 22px;
+        width: 95px;
+        height: 95px;
+        border-radius: 48px;
+        background-color: rgba(#ffffff, 0.149);
+        display: flex;
         justify-content: center;
         align-items: center;
-        color: #000;
-        border-radius: 100px;
-        transform: scale(0);
-        transform-origin: top right;
-        opacity: 0;
+        font-size: 47px;
+        color: #fff;
         @include transition(all 300ms linear 0ms);
-        i {
-            margin-right: 5px;
-            margin-top: 10px;
-        }
     }
-    .pxl-item--link {
-        z-index: 99;
-    }
-    &:hover {
-        background-color: #000;
-        .pxl-item--readmore {
-            transform: scale(1);
-            opacity: 1;
-        }
+    .pxl-item--body {
+        flex: 1;
         .pxl-item--title {
-            color: #fff;
+            font-size: 30px;
+            line-height: 1.1;
+            color: #ffffff;
+            font-weight: 500;
+            font-family: "GTWalsheimPro";
+            margin-bottom: 20px;
         }
         .pxl-item--description {
-            color: #dadada;
-        }
-        .pxl-item--icon i {
-            background-position: 0%;
+            max-width: 430px;
+            font-size: 16px;
+            line-height: 1.5625;
+            color: #cdd4ef;
+            font-weight: 400;
+            font-family: "Public Sans";
         }
     }
 }
@@ -2575,6 +2371,30 @@ BLOG GRID
                 }
             }
         }
+    }
+}
+
+.cf7-blog-full-width {
+    max-width: 470px;
+    width: 100%;
+    > p {
+        position: relative;
+    }
+    .wpcf7-form-control {
+        line-height: 60px;
+        @include border-radius(8px);
+        background-color: rgba(#ffffff, 0.149);
+        border: 1px solid transparent;
+        color: #fff !important;
+    }
+    button {
+        position: absolute !important;
+        height: 60px !important;
+        @include border-radius(8px !important);
+        top: 0;
+        right: 0;
+        z-index: 10;
+        background-color: transparent !important;
     }
 }
 

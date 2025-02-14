@@ -28,6 +28,8 @@
             echo pxl_print_html($thumbnail_icon); ?>
         </div>
     <?php endif; ?>
-    <<?php echo esc_attr($settings['title_tag']); ?> class="pxl-item--title el-empty"><?php echo pxl_print_html($settings['title']); ?></<?php echo esc_attr($settings['title_tag']); ?>>
-    <div class="pxl-item--description el-empty"><?php echo pxl_print_html($settings['desc']); ?></div>
+    <div class="pxl-item--body">
+        <<?php echo esc_attr($settings['title_tag']); ?> class="pxl-item--title el-empty"><?php echo pxl_print_html($settings['title']); ?></<?php echo esc_attr($settings['title_tag']); ?>>
+        <div class="pxl-item--description el-empty"><?php echo pxl_print_html($settings['desc']); ?></div>
+    </div>
 </div>

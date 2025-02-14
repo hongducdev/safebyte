@@ -3,28 +3,28 @@
     clear: both;
     content: "";
 }
+.pxl-item--title {
+    font-size: 26px;
+    line-height: 1.269;
+    color: #0a1119;
+    font-weight: 500;
+    font-family: "GTWalsheimPro";
+    margin-bottom: 20px;
+    @media #{$max-sm} {
+        font-size: 30px;
+    }
+    a {
+        color: inherit;
+        &:hover {
+            color: $primary_color;
+        }
+    }
+}
 .pxl---post {
     .pxl-item--image {
         > a:not(.post-button-video) {
             display: block;
             width: 100%;
-        }
-    }
-    .pxl-item--title {
-        font-size: 26px;
-        line-height: 1.269;
-        color: #0a1119;
-        font-weight: 500;
-        font-family: "GTWalsheimPro";
-        margin-bottom: 20px;
-        @media #{$max-sm} {
-            font-size: 30px;
-        }
-        a {
-            color: inherit;
-            &:hover {
-                color: $primary_color;
-            }
         }
     }
     .pxl-item--divider {
@@ -105,13 +105,45 @@
                 color: $primary_color;
                 font-size: 11px;
             }
+            font-size: 15px;
+            color: #0a1119;
+            font-weight: 400;
+            font-family: "Public Sans";
             a {
-                font-size: 15px;
-                color: #0a1119;
-                font-weight: 400;
-                font-family: "Public Sans";
+                color: inherit;
+                @include transition(all 0.3s linear 0s);
+                &:hover {
+                    color: $primary_color;
+                }
             }
         }
+    }
+}
+
+.pxl-item--date {
+    position: absolute;
+    z-index: 5;
+    background-color: #fff;
+    @include border-radius(8px);
+    text-align: center;
+    padding: 20px 16px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .pxl-item--date-month,
+    .pxl-item--date-day {
+        color: #111111;
+        font-weight: 500;
+        font-family: "Public Sans";
+        font-size: 15px;
+        margin-bottom: 0;
+    }
+    .pxl-item--date-day {
+        font-size: 30px;
+        line-height: 25px;
+        margin-bottom: 8px;
     }
 }
 
@@ -137,11 +169,13 @@
         .pxl-blog-meta {
             font-size: 16px;
             margin-bottom: 16px;
-            .pxl-blog-meta-inner {
-            }
         }
         .pxl-item--image {
             margin-bottom: 26px;
+        }
+        .pxl-item--date {
+            top: 17px;
+            left: 17px;
         }
         .pxl-item--holder {
             padding: 0 25px;
@@ -259,24 +293,6 @@
     }
     .section-hidde-single-post {
         display: none;
-    }
-}
-
-.pxl-post-list1 {
-    list-style: none;
-    margin: 0 0 23px;
-    padding-bottom: 15px;
-    padding-top: 5px;
-    li {
-        &:before {
-            content: "\f119";
-            font-family: "Caseicon";
-            margin-right: 16px;
-            font-size: 13px;
-        }
-        + li {
-            margin-top: 10px;
-        }
     }
 }
 
@@ -713,5 +729,199 @@ body.error404 {
         max-width: 860px;
         margin-left: auto;
         margin-right: auto;
+    }
+}
+
+// Post List
+.pxl-post-list {
+    .result-count {
+        font-size: 15px;
+        line-height: 1.6667;
+        color: #0a1119;
+        font-weight: 400;
+        font-family: "Public Sans";
+    }
+    .orderby.nice-select {
+        height: 50px;
+        background-color: $primary_color;
+        color: #fff;
+        font-size: 15px;
+        font-family: "GTWalsheimPro";
+        border: none;
+        position: relative;
+        &:before {
+            --x: 40px;
+            content: "\f150";
+            font-family: Caseicon;
+            width: var(--x);
+            height: var(--x);
+            line-height: var(--x);
+            @include border-radius(var(--x));
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 13px;
+            color: #111;
+            position: absolute;
+            top: 50%;
+            right: 7px;
+            @include transform(translate(0, -50%));
+        }
+    }
+    .list-item {
+        border: 1px solid #d3d5d6;
+        @include border-radius(8px);
+        padding: 20px;
+        margin-bottom: 50px;
+        @include transition(all 0.3s linear 0s);
+        &:hover {
+            .post-image {
+                img {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+    .post-image {
+        position: relative;
+        @include border-radius(8px);
+        height: 100%;
+        overflow: hidden;
+        img {
+            @include border-radius(8px);
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1);
+            @include transition(all 0.3s linear 0s);
+        }
+        .pxl-item--date {
+            top: 17px;
+            right: 22px;
+        }
+    }
+    .wrap-item-content {
+        .item-content {
+            padding: 40px 34px 58px 40px;
+        }
+    }
+    .item-excerpt {
+        margin-bottom: 43px;
+    }
+
+    .blog-post-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .post-readmore .btn {
+        background-color: $primary_color;
+        color: #fff;
+        @include border-radius(8px);
+        &:hover {
+            background-color: $secondary_color;
+        }
+    }
+
+    .post-shares {
+        .label {
+            display: flex;
+            align-items: center;
+            font-size: 17px;
+            line-height: 1.5294117647;
+            color: #0a1119;
+            font-family: "GTWalsheimPro";
+            gap: 12px;
+            i {
+                width: 43px;
+                height: 43px;
+                @include border-radius(43px);
+                background-color: $secondary_color;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 15px;
+                color: #fff;
+            }
+        }
+    }
+
+    .post-shares {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        position: relative;
+
+        .label {
+            @include transform(translateX(220px));
+            cursor: pointer;
+            @include transition(all 0.3s linear 0s);
+        }
+
+        &:hover {
+            .social-share {
+                .social {
+                    display: flex;
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateX(0);
+                }
+            }
+        }
+    }
+
+    .social-share {
+        .social {
+            display: flex;
+            opacity: 0;
+            visibility: hidden;
+            align-items: center;
+            gap: 8px;
+            transform: translateX(-20px);
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+            .pxl-icon {
+                @for $i from 1 through 4 {
+                    &:nth-child(#{$i}) {
+                        transition: opacity 0.3s linear ($i * 0.1s),
+                            transform 0.3s linear ($i * 0.1s),
+                            background-color 0.3s linear 0s,
+                            color 0.3s linear 0s, box-shadow 0.3s linear 0s;
+                        opacity: 0;
+                        transform: translateY(10px);
+                    }
+                }
+            }
+        }
+
+        .pxl-icon {
+            width: 43px;
+            height: 43px;
+            border-radius: 22px;
+            background-color: #dbe5fc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 15px;
+            color: $primary_color;
+
+            &:hover {
+                background-color: $primary_color;
+                color: #fff;
+                transform: translateY(-3px);
+                box-shadow: 0 4px 12px rgba($primary_color, 0.2);
+            }
+        }
+    }
+
+    .post-shares:hover {
+        .label {
+            @include transform(translateX(0));
+        }
+        .social-share .social .pxl-icon {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 }
