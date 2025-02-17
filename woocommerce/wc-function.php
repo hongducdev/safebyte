@@ -376,8 +376,8 @@ add_filter('woocommerce_get_image_size_thumbnail', function ($size) {
 add_filter('woocommerce_pagination_args', 'safebyte_woocommerce_pagination_args');
 function safebyte_woocommerce_pagination_args($default){
 	$default = array_merge($default, [
-		'prev_text' => '<i class="caseicon-double-chevron-left"></i>',
-		'next_text' => '<i class="caseicon-double-chevron-right"></i>',
+		'prev_text' => '<i class="caseicon-angle-arrow-left"></i>',
+		'next_text' => '<i class="caseicon-angle-arrow-right"></i>',
 		'type'      => 'plain',
 	]);
 	return $default;

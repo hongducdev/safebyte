@@ -140,6 +140,26 @@
                         }
                     );
                 });
+
+                $grid_scope.on("change", ".orderby", function (e) {
+                    e.preventDefault();
+                    var $this = $(this);
+                    var loadmore = $grid_scope.data("loadmore");
+                    loadmore.orderby = $this.val();
+
+                    safebyte_grid_ajax_handler(
+                        $this,
+                        $grid_scope,
+                        $grid_isotope,
+                        {
+                            action: "safebyte_load_more_post_grid",
+                            loadmore: loadmore,
+                            iso_options: isoOptions,
+                            handler_click: "select_orderby",
+                            scrolltop: 0,
+                        }
+                    );
+                });
             });
         }, 300);
 

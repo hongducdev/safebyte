@@ -35,39 +35,11 @@ pxl_add_custom_widget(
                                     'type' => \Elementor\Controls_Manager::TEXT,
                                     'label_block' => true,
                                 ),
-                                array(
-                                    'name' => 'label_position',
-                                    'label' => esc_html__('Label Position', 'safebyte' ),
-                                    'type' => \Elementor\Controls_Manager::SELECT,
-                                    'options' => [
-                                        'ps-top' => 'Top',
-                                        'ps-bottom' => 'Bottom',
-                                    ],
-                                    'default' => 'ps-top',
-                                ),
-                                array(
-                                    'name' => 'color_item',
-                                    'label' => esc_html__( 'Color', 'safebyte' ),
-                                    'type' => \Elementor\Controls_Manager::COLOR,
-                                    'default' => '',
-                                    'selectors' => [
-                                        '{{WRAPPER}} .pxl-icon1 {{CURRENT_ITEM}}' => 'color: {{VALUE}};',
-                                    ],
-                                ),
-                                array(
-                                    'name' => 'color_item_hover',
-                                    'label' => esc_html__( 'Color Hover', 'safebyte' ),
-                                    'type' => \Elementor\Controls_Manager::COLOR,
-                                    'default' => '',
-                                    'selectors' => [
-                                        '{{WRAPPER}} .pxl-icon1 {{CURRENT_ITEM}}:hover' => 'color: {{VALUE}};',
-                                    ],
-                                ),
                             ),
                             'title_field' => '{{{ label }}}',
                         ),
                         array(
-                          'name' => 'align',
+                            'name' => 'align',
                             'label' => esc_html__( 'Alignment', 'safebyte' ),
                             'type' => \Elementor\Controls_Manager::CHOOSE,
                             'control_type' => 'responsive',
@@ -99,6 +71,25 @@ pxl_add_custom_widget(
                             ],
                             'default' => 'icon-horizontal'
                         ),
+                        array(
+                            'name' => 'gap',
+                            'label' => esc_html__( 'Gap', 'safebyte' ),
+                            'type' => \Elementor\Controls_Manager::SLIDER,
+                            'control_type' => 'responsive',
+                            'default' => [
+                                'size' => 20,
+                            ],
+                            'size_units' => [ 'px' ],
+                            'range' => [
+                                'px' => [
+                                    'min' => 0,
+                                    'max' => 100,
+                                ],
+                            ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-icon1' => 'gap: {{SIZE}}{{UNIT}};',
+                            ],
+                        ),
                     ),
                 ),
                 
@@ -109,13 +100,20 @@ pxl_add_custom_widget(
                     'controls' => array(
                         array(
                             'name' => 'style',
-                            'label' => esc_html__('Style', 'safebyte' ),
+                            'label' => esc_html__( 'Style', 'safebyte' ),
                             'type' => \Elementor\Controls_Manager::SELECT,
                             'options' => [
-                                'style-1' => 'Style 1',
-                                'style-2' => 'Style 2 - Box Gradient',
+                                'style-1' => esc_html__( 'Style 1', 'safebyte' ),
+                                'style-2' => esc_html__( 'Style 2', 'safebyte' ),
                             ],
                             'default' => 'style-1',
+                        ),
+                        array(
+                            'name' => 'typography',
+                            'label' => esc_html__( 'Typography', 'safebyte' ),
+                            'type' => \Elementor\Group_Control_Typography::get_type(),
+                            'control_type' => 'group',
+                            'selector' => '{{WRAPPER}} .pxl-icon1 a .pxl-icon-label',
                         ),
                         array(
                             'name' => 'color',
@@ -123,7 +121,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'default' => '',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-icon1 a' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-icon1 a .pxl-icon-label' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -132,67 +130,12 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'default' => '',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-icon1 a:hover' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-icon1 a:hover .pxl-icon-label' => 'color: {{VALUE}};',
                             ],
-                        ),
-                        array(
-                            'name' => 'box_color',
-                            'label' => esc_html__( 'Box Color', 'safebyte' ),
-                            'type' => \Elementor\Controls_Manager::COLOR,
-                            'default' => '',
-                            'selectors' => [
-                                '{{WRAPPER}} .pxl-icon1 a, {{WRAPPER}} .pxl-icon1 a:before' => 'background-color: {{VALUE}};',
-                            ],
-                        ),
-                        array(
-                            'name' => 'box_color_hover',
-                            'label' => esc_html__( 'Box Color Hover', 'safebyte' ),
-                            'type' => \Elementor\Controls_Manager::COLOR,
-                            'default' => '',
-                            'selectors' => [
-                                '{{WRAPPER}} .pxl-icon1 a:hover' => 'background-color: {{VALUE}};',
-                            ],
-                        ),
-                        array(
-                            'name' => 'box_width',
-                            'label' => esc_html__('Box Width', 'safebyte' ),
-                            'type' => \Elementor\Controls_Manager::SLIDER,
-                            'size_units' => [ 'px' ],
-                            'range' => [
-                                'px' => [
-                                    'min' => 0,
-                                    'max' => 300,
-                                ],
-                            ],
-                            'selectors' => [
-                                '{{WRAPPER}} .pxl-icon1 a' => 'width: {{SIZE}}{{UNIT}};',
-                            ],
-                        ),
-                        array(
-                            'name' => 'box_height',
-                            'label' => esc_html__('Box Height', 'safebyte' ),
-                            'type' => \Elementor\Controls_Manager::SLIDER,
-                            'size_units' => [ 'px' ],
-                            'range' => [
-                                'px' => [
-                                    'min' => 0,
-                                    'max' => 300,
-                                ],
-                            ],
-                            'selectors' => [
-                                '{{WRAPPER}} .pxl-icon1 a' => 'height: {{SIZE}}{{UNIT}};',
-                            ],
-                        ),
-                        array(
-                            'name'         => 'icon_box_shadow',
-                            'label' => esc_html__( 'Box Shadow', 'safebyte' ),
-                            'type'         => \Elementor\Group_Control_Box_Shadow::get_type(),
-                            'control_type' => 'group',
-                            'selector'     => '{{WRAPPER}} .pxl-icon1 a',
                         ),
                         array(
                             'name' => 'icon_font_size',
-                            'label' => esc_html__('Font Size', 'safebyte' ),
+                            'label' => esc_html__('Icon Font Size', 'safebyte' ),
                             'type' => \Elementor\Controls_Manager::SLIDER,
                             'control_type' => 'responsive',
                             'size_units' => [ 'px' ],
@@ -203,80 +146,18 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-icon1 a' => 'font-size: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .pxl-icon1 a i' => 'font-size: {{SIZE}}{{UNIT}};',
                             ],
                         ),
                         array(
-                            'name' => 'border_type',
-                            'label' => esc_html__( 'Border Type', 'safebyte' ),
+                            'name' => 'icon_animation',
+                            'label' => esc_html__( 'Icon Animation', 'safebyte' ),
                             'type' => \Elementor\Controls_Manager::SELECT,
                             'options' => [
-                                '' => esc_html__( 'None', 'safebyte' ),
-                                'solid' => esc_html__( 'Solid', 'safebyte' ),
-                                'double' => esc_html__( 'Double', 'safebyte' ),
-                                'dotted' => esc_html__( 'Dotted', 'safebyte' ),
-                                'dashed' => esc_html__( 'Dashed', 'safebyte' ),
-                                'groove' => esc_html__( 'Groove', 'safebyte' ),
+                                'none' => esc_html__( 'None', 'safebyte' ),
+                                'ring' => esc_html__( 'Ring', 'safebyte' ),
                             ],
-                            'selectors' => [
-                                '{{WRAPPER}} .pxl-icon1 a' => 'border-style: {{VALUE}} !important;',
-                            ],
-                        ),
-                        array(
-                            'name' => 'border_width',
-                            'label' => esc_html__( 'Border Width', 'safebyte' ),
-                            'type' => \Elementor\Controls_Manager::DIMENSIONS,
-                            'selectors' => [
-                                '{{WRAPPER}} .pxl-icon1 a' => 'border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;',
-                            ],
-                            'condition' => [
-                                'border_type!' => '',
-                            ],
-                            'responsive' => true,
-                        ),
-                        array(
-                            'name' => 'border_color',
-                            'label' => esc_html__( 'Border Color', 'safebyte' ),
-                            'type' => \Elementor\Controls_Manager::COLOR,
-                            'default' => '',
-                            'selectors' => [
-                                '{{WRAPPER}} .pxl-icon1 a' => 'border-color: {{VALUE}} !important;',
-                            ],
-                            'condition' => [
-                                'border_type!' => '',
-                            ],
-                        ),
-                        array(
-                            'name' => 'border_color_hover',
-                            'label' => esc_html__( 'Border Color Hover', 'safebyte' ),
-                            'type' => \Elementor\Controls_Manager::COLOR,
-                            'default' => '',
-                            'selectors' => [
-                                '{{WRAPPER}} .pxl-icon1 a:hover' => 'border-color: {{VALUE}} !important;',
-                            ],
-                            'condition' => [
-                                'border_type!' => '',
-                            ],
-                        ),
-                        array(
-                            'name' => 'icon_border_radius',
-                            'label' => esc_html__('Border Radius', 'safebyte' ),
-                            'type' => \Elementor\Controls_Manager::DIMENSIONS,
-                            'size_units' => [ 'px' ],
-                            'selectors' => [
-                                '{{WRAPPER}} .pxl-icon1 a' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                            ],
-                        ),
-                        array(
-                            'name' => 'icon_margin',
-                            'label' => esc_html__('Margin', 'safebyte' ),
-                            'type' => \Elementor\Controls_Manager::DIMENSIONS,
-                            'size_units' => [ 'px' ],
-                            'selectors' => [
-                                '{{WRAPPER}} .pxl-icon1 a' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                                '{{WRAPPER}} .pxl-icon1' => 'margin-left: -{{LEFT}}{{UNIT}};margin-right: -{{RIGHT}}{{UNIT}};',
-                            ],
-                            'control_type' => 'responsive',
+                            'default' => 'none',
                         ),
                     ),
                 ),

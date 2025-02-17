@@ -13,20 +13,6 @@ $sg_featured_img_size = safebyte()->get_theme_opt('sg_featured_img_size', '960x5
 $post_video_link = get_post_meta(get_the_ID(), 'post_video_link', true);
 ?>
 <article id="pxl-post-<?php the_ID(); ?>" <?php post_class('pxl---post'); ?>>
-    <?php if (has_post_thumbnail()) {
-        $img  = pxl_get_image_by_size( array(
-            'attach_id'  => get_post_thumbnail_id($post->ID),
-            'thumb_size' => $sg_featured_img_size,
-        ) );
-        $thumbnail    = $img['thumbnail']; ?>
-        <div class="pxl-item--image">
-            <?php echo wp_kses_post($thumbnail); ?>
-            <?php if(!empty($post_video_link)) : ?>
-                <a href="<?php echo esc_url($post_video_link); ?>" class="post-button-video pxl-action-popup"><i class="caseicon-play1"></i></a>
-            <?php endif; ?>        
-        </div>
-    <?php } ?>
-
     <?php safebyte()->blog->get_post_metas(); ?>
 
     <?php if(is_singular('post') && $sg_post_title == 'custom_text') { ?>

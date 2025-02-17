@@ -1,29 +1,33 @@
-input::-moz-placeholder, textarea::-moz-placeholder {
+input::-moz-placeholder,
+textarea::-moz-placeholder {
     color: inherit;
     opacity: 1;
     text-overflow: ellipsis;
 }
-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
     color: inherit;
     opacity: 1;
     text-overflow: ellipsis;
 }
-input::-o-placeholder, textarea::-o-placeholder {
+input::-o-placeholder,
+textarea::-o-placeholder {
     color: inherit;
     opacity: 1;
     text-overflow: ellipsis;
 }
-input::-ms-placeholder, textarea::-ms-placeholder {
+input::-ms-placeholder,
+textarea::-ms-placeholder {
     color: inherit;
     opacity: 1;
     text-overflow: ellipsis;
 }
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    margin: 0; 
+    margin: 0;
 }
 input[type="text"],
 input[type="email"],
@@ -40,25 +44,30 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
-textarea, select, .pxl-select-higthlight, .nice-select {
-    background-color: #F8F8F8;
-    border: 1px solid #F8F8F8;
+textarea,
+select,
+.pxl-select-higthlight,
+.nice-select {
+    border-radius: 8px;
+    background-color: #ffffff;
+    border: 1px solid #cdcdcd;
     color: #454545;
-    padding: 6px 32px;
+    padding: 6px 25px;
     line-height: 1.73;
     font-size: 18px;
     font-weight: 400;
-    height: 60px;
+    height: 55px;
     @include transition(all 300ms linear 0ms);
     @include box-shadow(none);
-    @include border-radius(60px);
     width: 100%;
     outline: none;
-    font-family: inherit;
+    font-size: 15px;
+    color: #0a1119;
+    font-weight: 400;
+    font-family: "Public Sans";
     &:focus {
         outline: 0;
-        border-color: $primary_color;
-        color: #333;
+        border-color: #121c27;
     }
 }
 input[type="range"] {
@@ -75,7 +84,7 @@ textarea {
     padding-bottom: 17px;
     height: 154px;
     margin: 0;
-    border-radius: 20px;
+    border-radius: 8px;
 }
 
 // Comment Form
@@ -104,7 +113,9 @@ textarea {
 .comment-list {
     padding: 0;
     list-style: none;
-    margin-bottom: 40px;
+    padding-bottom: 40px;
+    margin-bottom: 75px;
+    border-bottom: 1px solid #d3d5d6;
     li {
         padding-top: 15px;
         .children {
@@ -158,9 +169,11 @@ textarea {
 }
 
 .comment-title {
-    font-size: 18px;
-    text-transform: uppercase;
-    margin-top: 8px;
+    font-size: 17px;
+    line-height: 1.529;
+    color: #111111;
+    font-weight: 500;
+    font-family: "GTWalsheimPro";
     margin-bottom: 0;
     @media #{$max-sm} {
         font-size: 18px;
@@ -168,17 +181,15 @@ textarea {
     a {
         color: inherit;
         &:hover {
-            color: inherit;
+            color: $primary_color;
         }
     }
 }
 
 .comment-date {
-    font-size: 16px;
-    font-weight: 500;
-    color: $primary_color;
-    margin-bottom: 10px;
-    display: block;
+    color: #4b535d;
+    font-size: 14px;
+    font-family: "Public Sans";
 }
 .comment-content {
     @media #{$max-xs} {
@@ -193,9 +204,11 @@ textarea {
         p:last-child {
             margin-bottom: 0;
         }
-        ol, ul {
+        ol,
+        ul {
             margin-bottom: 32px;
-            ul, ol {
+            ul,
+            ol {
                 margin-bottom: 0;
             }
         }
@@ -208,36 +221,52 @@ textarea {
     }
 }
 .comment-reply {
+    height: 36px;
+    border-radius: 8px;
+    background-color: $primary_color;
+    color: #fff;
+    font-family: "GTWalsheimPro";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 23px;
     @media #{$max-xs} {
         position: absolute;
-        bottom: 20px;
-        left: 20px;
+        right: 0;
+        top: 0;
+    }
+    i {
+        font-size: 10px;
+        margin-right: 5px;
     }
     a {
-        font-size: 16px;
-        font-weight: 600;
-        color: #0A1320;
-        &:hover {
-            color: $primary_color;
-        }
+        color: inherit;
     }
 }
 
+.comments-area {
+    padding-top: 80px;
+}
+
 .comment-inner {
-    display: flex;
-    flex-wrap: nowrap;
-    background-color: #f5f6f6;
-    border-radius: 10px;
-    padding: 20px 20px 38px 20px;
     position: relative;
+}
+
+.comment-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 28px;
     @media #{$max-xs} {
         display: block;
-        padding-bottom: 62px;
     }
 }
 
 .comment-holder {
     margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
     @media #{$max-xs} {
         display: block;
     }
@@ -263,6 +292,7 @@ textarea {
     }
     .comment-form-cookies-consent {
         order: 3;
+        margin-left: 10px;
     }
     .form-submit {
         order: 4;
@@ -271,6 +301,60 @@ textarea {
         width: 100%;
     }
 }
+
+.logged-in {
+    .comment-form {
+        .logged-in-as {
+            font-size: 16px;
+            line-height: 1.625;
+            color: #4b535d;
+            font-weight: 400;
+            font-family: "Public Sans";
+        }
+        .form-submit {
+            button {
+                bottom: 40px;
+            }
+        }
+    }
+}
+
+.comment-form {
+    .form-submit {
+        button {
+            font-size: 0;
+            padding: 0;
+            width: 50px;
+            height: 50px;
+            border-radius: 100px;
+            position: absolute;
+            bottom: 75px;
+            right: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @media screen and (max-width: 580px) {
+                bottom: 100px;
+            }
+            @media #{$max-3xs} {
+                bottom: 120px;
+            }
+            &:before {
+                display: none;
+            }
+            &:after {
+                content: "\F11F";
+                font-family: "Caseicon";
+                font-size: 16px;
+                color: #fff;
+                position: absolute;
+                z-index: 2;
+                line-height: 1;
+            }
+        }
+    }
+}
+
 .single-post .comment-form {
     .row {
         margin: 0 -10px;
@@ -278,19 +362,6 @@ textarea {
             margin-top: 20px;
             padding: 0 10px;
         }
-    }
-}
-
-#commentform {
-    padding: 20px 35px 33px;
-    border: 1px solid #E3E3E3;
-    border-radius: 10px;
-    @media #{$max-sm} {
-        padding-left: 24px;
-        padding-right: 24px;
-    }
-    .form-submit {
-        text-align: center;
     }
 }
 
@@ -302,7 +373,9 @@ textarea {
     margin-top: 15px;
     margin-bottom: 0px;
     color: #222;
-    input, label:before, label:after {
+    input,
+    label:before,
+    label:after {
         position: absolute;
         width: 16px;
         height: 16px;
@@ -313,14 +386,14 @@ textarea {
     label {
         cursor: pointer;
         &:before {
-            content: '';
+            content: "";
             z-index: 1;
             background-color: #e9e9e9;
             border-radius: 0px;
         }
     }
     label:after {
-        content: '\f112';
+        content: "\f112";
         font-family: "Caseicon";
         font-weight: 400;
         z-index: 2;
@@ -365,9 +438,9 @@ textarea {
         font-size: 16px;
         color: #666;
         font-family: inherit;
-        box-shadow: 0 3px 65px rgba(0,0,0,0.08);
+        box-shadow: 0 3px 65px rgba(0, 0, 0, 0.08);
         @include border-radius(0px);
-        @include transition(all .25s cubic-bezier(.645,.045,.355,1));
+        @include transition(all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1));
         opacity: 0;
         margin-top: 30px;
         visibility: hidden;
@@ -375,15 +448,15 @@ textarea {
         li {
             padding: 9px 10px;
             cursor: pointer;
-            @include transition(all .25s cubic-bezier(.645,.045,.355,1));
+            @include transition(all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1));
             line-height: normal !important;
             border-radius: 5px;
             &:first-child {
                 display: none;
             }
             &:hover {
-                color: #0A1320;
-                background-color: rgba(#0A1320, 0.04);
+                color: #0a1320;
+                background-color: rgba(#0a1320, 0.04);
             }
         }
     }
@@ -406,7 +479,7 @@ textarea {
             top: 50%;
             right: 8px;
             @include transform(translate(0, -50%));
-            @include transition(all .25s cubic-bezier(.645,.045,.355,1));
+            @include transition(all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1));
         }
         &.active {
             border-bottom-left-radius: 0px !important;
@@ -424,13 +497,14 @@ textarea {
     }
 }
 
-.pxl-form-date .wpcf7-form-control-wrap, .pxl-form-date .pxl-item-group {
+.pxl-form-date .wpcf7-form-control-wrap,
+.pxl-form-date .pxl-item-group {
     &:after {
         content: "\f150";
         width: 28px;
         height: 28px;
         border-radius: 28px;
-        color: #2D2D2D;
+        color: #2d2d2d;
         line-height: 28px;
         text-align: center;
         font-size: 12px;
@@ -439,7 +513,7 @@ textarea {
         top: 50%;
         right: 10px;
         @include transform(translate(0, -50%));
-        @include transition(all .25s cubic-bezier(.645,.045,.355,1));
+        @include transition(all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1));
     }
 }
 
@@ -455,7 +529,7 @@ textarea {
         width: 28px;
         height: 28px;
         border-radius: 28px;
-        color: #2D2D2D;
+        color: #2d2d2d;
         line-height: 28px;
         text-align: center;
         font-size: 12px;
@@ -463,7 +537,7 @@ textarea {
         top: 50%;
         right: 10px;
         @include transform(translate(0, -50%));
-        @include transition(all .25s cubic-bezier(.645,.045,.355,1));
+        @include transition(all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1));
     }
     ul.list {
         position: absolute;
@@ -478,9 +552,9 @@ textarea {
         font-size: 16px;
         color: #666;
         font-family: inherit;
-        box-shadow: 0 3px 65px rgba(0,0,0,0.08);
+        box-shadow: 0 3px 65px rgba(0, 0, 0, 0.08);
         @include border-radius(0px);
-        @include transition(all .25s cubic-bezier(.645,.045,.355,1));
+        @include transition(all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1));
         opacity: 0;
         visibility: hidden;
         max-width: 350px;
@@ -489,7 +563,7 @@ textarea {
         li {
             padding: 9px 8px;
             cursor: pointer;
-            @include transition(all .25s cubic-bezier(.645,.045,.355,1));
+            @include transition(all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1));
             line-height: normal !important;
             &:hover {
                 color: #101010;
@@ -606,9 +680,19 @@ form .select2-container--default {
 body .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_today {
     color: $primary_color !important;
 }
-body .xdsoft_datetimepicker .xdsoft_label > .xdsoft_select > div > .xdsoft_option:hover,
+body
+    .xdsoft_datetimepicker
+    .xdsoft_label
+    > .xdsoft_select
+    > div
+    > .xdsoft_option:hover,
 body .xdsoft_datetimepicker .xdsoft_calendar td:hover,
-body .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box >div >div:hover {
+body
+    .xdsoft_datetimepicker
+    .xdsoft_timepicker
+    .xdsoft_time_box
+    > div
+    > div:hover {
     background: $secondary_color !important;
     @include box-shadow(none !important);
     color: #fff !important;
@@ -616,10 +700,28 @@ body .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box >div >div:hover 
 body .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_today,
 body .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_default,
 body .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_current,
-body .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_current.xdsoft_disabled:hover,
-body .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box>div>div.xdsoft_current.xdsoft_disabled:hover
-body .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box >div >div.xdsoft_current
-body .xdsoft_datetimepicker .xdsoft_label > .xdsoft_select > div > .xdsoft_option.xdsoft_current,
+body
+    .xdsoft_datetimepicker
+    .xdsoft_calendar
+    td.xdsoft_current.xdsoft_disabled:hover,
+body
+    .xdsoft_datetimepicker
+    .xdsoft_timepicker
+    .xdsoft_time_box
+    > div
+    > div.xdsoft_current.xdsoft_disabled:hover
+    body
+    .xdsoft_datetimepicker
+    .xdsoft_timepicker
+    .xdsoft_time_box
+    > div
+    > div.xdsoft_current
+    body
+    .xdsoft_datetimepicker
+    .xdsoft_label
+    > .xdsoft_select
+    > div
+    > .xdsoft_option.xdsoft_current,
 body .xdsoft_timepicker .xdsoft_time_variant .xdsoft_current {
     background-color: $primary_color !important;
     @include box-shadow(none !important);
@@ -629,7 +731,7 @@ body {
     .xdsoft_datetimepicker {
         font-family: inherit;
         border: none;
-        @include box-shadow(0 5px 20px -5px rgba(0,0,0,0.12));
+        @include box-shadow(0 5px 20px -5px rgba(0, 0, 0, 0.12));
         .xdsoft_calendar {
             th {
                 background-color: #f3f3f3;
@@ -700,7 +802,7 @@ body {
         font-size: 16px;
         color: #fff;
         text-transform: capitalize;
-        background: #16232B;
+        background: #16232b;
         padding: 0 38px;
         @media #{$max-sm} {
             padding-left: 24px;
@@ -713,7 +815,7 @@ body {
     .pxl-file-upload-input {
         width: auto;
         font-size: 16px;
-        color: #0A1320;
+        color: #0a1320;
         background: none;
         font-weight: 500;
         padding: 0 22px;
@@ -740,8 +842,13 @@ body.rtl {
     input[type="datetime"],
     input[type="datetime-local"],
     input[type="color"],
-    textarea, select, .pxl-select-higthlight, .nice-select,
-    .wpcf7 input[type="url"], .wpcf7 input[type="email"], .wpcf7 input[type="tel"] {
+    textarea,
+    select,
+    .pxl-select-higthlight,
+    .nice-select,
+    .wpcf7 input[type="url"],
+    .wpcf7 input[type="email"],
+    .wpcf7 input[type="tel"] {
         direction: rtl;
     }
     .pxl-select .pxl-select-higthlight::before {

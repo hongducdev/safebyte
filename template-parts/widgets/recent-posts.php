@@ -73,7 +73,7 @@ class Safebyte_Recent_Posts_Widget extends WP_Widget
                     <?php endif; ?>
                     <div class="pxl-item--holder">
                         <div class="pxl-item--meta">
-                            <div class="pxl-item--date">
+                            <div class="pxl-item--time">
                                 <?php echo get_the_date('d F Y'); ?>
                             </div>
                         </div>

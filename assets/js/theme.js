@@ -917,11 +917,6 @@
             $("body").removeClass("body-overflow");
             $(this).parent().removeClass("active");
         });
-
-        /* Custom Theme Style */
-        $("blockquote:not(.pxl-blockquote)").append(
-            '<i class="pxl-blockquote-icon flaticon-quote-1 text-gradient"></i>'
-        );
     }
 
     /* Post Grid */

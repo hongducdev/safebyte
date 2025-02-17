@@ -88,22 +88,23 @@ function safebyte_comment_list( $comment, $args, $depth ) {
         <div id="div-comment-<?php comment_ID() ?>" class="comment-body">
 		<?php endif; ?>
 		    <div class="comment-inner">
-		        <?php if ($args['avatar_size'] != 0) : ?> 
-                    <div class="comment-image pxl-mr-25">
-                        <?php echo get_avatar($comment, 90); ?>
-                    </div>
-                <?php endif; ?>
-		        <div class="comment-content">
+                <div class="comment-header">
+                    <?php if ($args['avatar_size'] != 0) : ?> 
+                        <div class="comment-image pxl-mr-25">
+                            <?php echo get_avatar($comment, 90); ?>
+                        </div>
+                    <?php endif; ?>
                     <div class="comment-holder pxl-flex">
     		            <div class="comment-meta pxl-pr-30">
                             <h4 class="comment-title">
                                 <?php printf( '%s', get_comment_author_link() ); ?>
                             </h4>
     		            	<span class="comment-date">
-    	                        <?php echo get_comment_date(); ?>
+    	                        <?php echo get_comment_date('F j, Y \a\t g:i a'); ?>
     	                    </span>
     		            </div>
                         <div class="comment-reply">
+                            <i class="fas fa-reply"></i>
                             <?php comment_reply_link( array_merge( $args, array(
                                 'add_below' => $add_below,
                                 'depth'     => $depth,
@@ -111,8 +112,8 @@ function safebyte_comment_list( $comment, $args, $depth ) {
                             ) ) ); ?>
                         </div>
                     </div>
-		            <div class="comment-text pxl-pr-40"><?php comment_text(); ?></div>
 		        </div>
+                <div class="comment-text"><?php comment_text(); ?></div>
 		    </div>
 		<?php if ( 'div' != $args['style'] ) : ?>
         </div>

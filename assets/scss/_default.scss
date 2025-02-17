@@ -263,74 +263,60 @@ dl + h2 + ul {
     display: block;
 }
 blockquote:not(.pxl-blockquote) {
-    padding: 28px 30px;
-    font-size: 20px;
-    line-height: 1.5;
-    color: #000001;
+    a {
+        color: #fff;
+    }
+    background-repeat: no-repeat;
+    margin: 0;
+    background-position: bottom center;
+    padding: 43px 45px 43px 136px !important;
     position: relative;
-    font-weight: 700;
-    margin: 30px 0 26px;
-    z-index: 1;
-    background-color: #f8f9fa;
-    border-left: 5px solid $gradient_color_from;
-    border-right: 5px solid $gradient_color_to;
-    border-radius: 10px;
-    overflow: hidden;
-    @extend .ft-secondary;
+    border-radius: 8px;
+    background-image: linear-gradient(270deg, #0d2565 0%, #204ab0 100%);
+    position: relative;
+    @media (max-width: 575px) {
+        padding: 20px !important;
+    }
     &:before {
-        content: "";
-        @include background-horizontal(
-            $gradient_color_from,
-            $gradient_color_to
-        );
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0.1;
-        z-index: -1;
-    }
-    @media #{$max-sm} {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-    cite {
-        position: relative;
-        padding-left: 76px;
-        font-size: 18px;
-        text-transform: uppercase;
-        font-weight: 500;
-        @extend .ft-secondary;
-        @extend .text-gradient;
-        font-style: normal;
-        margin-top: 15px;
-        display: inline-block;
-        &:before {
-            content: "";
-            width: 65px;
-            height: 2px;
-            @include background-horizontal(
-                $gradient_color_from,
-                $gradient_color_to
-            );
-            position: absolute;
-            top: 50%;
-            left: 0;
-            transform: translate(0, -50%);
+        content: "“";
+        width: 51px;
+        height: 51px;
+        top: 53px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 1000px;
+        text-align: center;
+        line-height: 90px;
+        left: 48px;
+        font-family: "GTWalsheimPro", sans-serif;
+        color: #fff;
+        font-size: 65px;
+        @media (max-width: 575px) {
+            display: none;
         }
     }
-    .pxl-blockquote-icon {
-        line-height: 1;
-        font-size: 56px;
-        position: absolute;
-        top: 10px;
-        left: 18px;
-        transform: scale(-1);
-        opacity: 0.47;
-    }
     p {
-        margin-bottom: 0 !important;
+        font-family: "GTWalsheimPro", Sans-serif;
+        font-size: 16px;
+        color: #fff;
+        line-height: 1.625;
+        z-index: 2;
+        @include transition(all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1));
+    }
+    a:hover {
+        color: $primary_color;
+    }
+    cite {
+        display: block;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        padding-top: 27px;
+        margin-top: 22px;
+        font-weight: 500;
+        font-style: normal;
+        margin-left: -90px;
+        @media (max-width: 575px) {
+            margin-left: 0;
+        }
     }
     &.wp-block-quote {
         p {

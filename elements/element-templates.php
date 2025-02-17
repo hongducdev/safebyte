@@ -715,14 +715,14 @@ function safebyte_get_post_list_layout1($posts = [], $settings = [])
                                 <div class="pxl-item--meta pxl-blog-meta">
                                     <div class="pxl-blog-meta-inner">
                                         <?php if ($show_author == 'true') : ?>
-                                            <div class="pxl-item--author pxl-mr-28">
+                                            <div class="pxl-item--author">
                                                 <span class="icon-post pxl-mr-8"><i class="fas fa-user"></i></span>
                                                 <?php echo esc_html__('By', 'safebyte'); ?>&nbsp;<?php the_author_posts_link(); ?>
                                             </div>
                                         <?php endif; ?>
                                         <?php if ($show_category == 'true') : ?>
                                             </span>
-                                            <div class="pxl-item--category pxl-mr-28">
+                                            <div class="pxl-item--category">
                                                 <span class="icon-post pxl-mr-8"><i class="fas fa-tag"></i></span>
                                                 <?php the_terms($post->ID, 'category', '', ', ', ''); ?>
                                             </div>
@@ -777,11 +777,10 @@ function safebyte_get_post_list_layout1($posts = [], $settings = [])
                                                 <div class="social ">
                                                     <a class="pxl-icon icon-facebook fab fa-facebook" title="<?php echo esc_attr__('Facebook', 'safebyte'); ?>" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_permalink($post->ID)); ?>"></a>
                                                     <a class="pxl-icon icon-twitter fab fa-twitter" title="<?php echo esc_attr__('Twitter', 'safebyte'); ?>" target="_blank" href="https://twitter.com/intent/tweet?original_referer=<?php echo urldecode(home_url('/')); ?>&url=<?php echo urlencode(get_permalink($post->ID)); ?>&text=<?php echo get_the_title($post->ID); ?>%20"></a>
-                                                    <a class="pxl-icon icon-linkedin fab fa-linkedin-in" title="<?php echo esc_attr__('Linkedin', 'safebyte'); ?>" target="_blank" href="https://www.linkedin.com/cws/share?url=<?php echo urlencode(get_permalink($post->ID)); ?>"></a>
-                                                    <a href="javascript:void(0);" class="skype-share pxl-icon fab fa-skype" data-href="<?php echo urlencode(get_permalink($post->ID)); ?>" data-lang="en-US" data-text="<?php echo get_the_title($post->ID); ?>"></a>
+                                                    <a class="pxl-icon icon-skype fab fa-skype" title="<?php echo esc_attr__('Skype', 'safebyte'); ?>" target="_blank" href="https://web.skype.com/share?url=<?php echo urlencode(get_permalink($post->ID)); ?>&text=<?php echo get_the_title($post->ID); ?>%20"></a>
+                                                    <a href="https://t.me/share/url?url=<?php echo urlencode(get_permalink($post->ID)); ?>" class="telegram-share pxl-icon fab fa-telegram" title="<?php echo esc_attr__('Telegram', 'safebyte'); ?>" target="_blank" data-href="https://t.me/share/url?url=<?php echo urlencode(get_permalink($post->ID)); ?>" data-lang="en-US" data-text="<?php echo get_the_title($post->ID); ?>"></a>
                                                 </div>
                                             </div>
-
                                         </div>
                                     <?php endif; ?>
                                 </div>

@@ -176,7 +176,7 @@ if (!class_exists('Safebyte_Page')) {
                 if ( ! empty( $entry['url'] ) )
                 {
                     printf(
-                        '<a class="breadcrumb-hidden" href="%1$s">%2$s<i class="flaticon-breadcrumb text-gradient3"></i></a>',
+                        '<a class="breadcrumb-hidden" href="%1$s">%2$s<i class="fas fa-arrow-right"></i></a>',
                         esc_url( $entry['url'] ),
                         esc_attr( $entry_label )
                     );
@@ -251,8 +251,8 @@ if (!class_exists('Safebyte_Page')) {
                 'current'  => $paged,
                 'mid_size' => 1,
                 'add_args' => array_map( 'urlencode', $query_args ),
-                'prev_text' => '<i class="caseicon-double-chevron-left"></i>',
-                'next_text' => '<i class="caseicon-double-chevron-right"></i>',
+                'prev_text' => '<i class="caseicon-angle-arrow-left"></i>',
+                'next_text' => '<i class="caseicon-angle-arrow-right"></i>',
                 'before_page_number' => '<span>',
                 'after_page_number' => '</span>',
             );
