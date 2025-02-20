@@ -8665,6 +8665,10 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
 .bg-our-team {
   filter: grayscale(100%);
 }
+.icon-contact-services i, .icon-contact-services svg {
+  font-size: 52px;
+  transform: rotate(125deg);
+}
 @media screen and (max-width: 777px) {
   .revslider-initialised .rv-description {
     font-size: 17px !important;
@@ -8896,6 +8900,81 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
   font-weight: 500;
   font-family: "GTWalsheimPro";
   margin-bottom: 20px;
+}
+.pxl-icon-box3 {
+  display: flex;
+}
+.pxl-icon-box3:hover .pxl-item--icon {
+  border-color: var(--primary-color);
+  background-color: var(--primary-color);
+  color: #fff;
+}
+.pxl-icon-box3:hover .pxl-item--icon i, .pxl-icon-box3:hover .pxl-item--icon svg {
+  animation-name: pxl_wobble_vertical;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+.pxl-icon-box3 .pxl-item--icon {
+  width: 74px;
+  height: 74px;
+  -webkit-border-radius: 37px;
+  -khtml-border-radius: 37px;
+  -moz-border-radius: 37px;
+  -ms-border-radius: 37px;
+  -o-border-radius: 37px;
+  border-radius: 37px;
+  background-color: #fff;
+  border: 1px solid #cdcdcd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: var(--secondary-color);
+  -webkit-transition: all 300ms linear 0ms;
+  -khtml-transition: all 300ms linear 0ms;
+  -moz-transition: all 300ms linear 0ms;
+  -ms-transition: all 300ms linear 0ms;
+  -o-transition: all 300ms linear 0ms;
+  transition: all 300ms linear 0ms;
+}
+.pxl-icon-box3 .pxl-item--holder {
+  flex: 1;
+}
+.pxl-icon-box3 .pxl-item--title {
+  font-size: 23px;
+  line-height: 1;
+  color: #0a1119;
+  font-weight: 500;
+  font-family: "GTWalsheimPro";
+  margin-bottom: 20px;
+}
+.pxl-icon-box3 .pxl-item--description {
+  font-size: 16px;
+  line-height: 1.625;
+  color: #666;
+  font-weight: 400;
+  font-family: "Public Sans";
+}
+@keyframes pxl_wobble_vertical {
+  16.65% {
+    transform: translateY(8px);
+  }
+  33.3% {
+    transform: translateY(-6px);
+  }
+  49.95% {
+    transform: translateY(4px);
+  }
+  66.6% {
+    transform: translateY(-2px);
+  }
+  83.25% {
+    transform: translateY(1px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 .pxl-accordion1.style-default .pxl-icon--action {
   position: absolute;
@@ -9487,6 +9566,45 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
 .pxl-link.style-hover-divider2 li.active .pxl-link--text:before, .pxl-link.style-hover-divider2 li.active .pxl-link--text:after {
   width: 50%;
 }
+.pxl-link.style-hover-divider3 a .pxl-link--icon {
+  color: #b5bcc2;
+  -webkit-transition: all 300ms linear 0ms;
+  -khtml-transition: all 300ms linear 0ms;
+  -moz-transition: all 300ms linear 0ms;
+  -ms-transition: all 300ms linear 0ms;
+  -o-transition: all 300ms linear 0ms;
+  transition: all 300ms linear 0ms;
+}
+.pxl-link.style-hover-divider3 a .pxl-link--text {
+  color: #0a1119;
+  position: relative;
+  font-family: "GTWalsheimPro";
+  font-size: 18px;
+}
+.pxl-link.style-hover-divider3 a .pxl-link--text:before {
+  content: "";
+  width: 0;
+  height: 1px;
+  background-color: #0a1119;
+  position: absolute;
+  bottom: 0;
+  left: auto;
+  right: 0;
+  -webkit-transition: all 300ms linear 0ms;
+  -khtml-transition: all 300ms linear 0ms;
+  -moz-transition: all 300ms linear 0ms;
+  -ms-transition: all 300ms linear 0ms;
+  -o-transition: all 300ms linear 0ms;
+  transition: all 300ms linear 0ms;
+}
+.pxl-link.style-hover-divider3 a:hover .pxl-link--icon {
+  color: #0a1119;
+}
+.pxl-link.style-hover-divider3 a:hover .pxl-link--text:before {
+  width: 100%;
+  right: auto;
+  left: 0;
+}
 .pxl-link.style-square-shape1 a {
   font-size: 17px;
   position: relative;
@@ -9650,6 +9768,13 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
   justify-content: center;
   font-size: 16px;
   color: #fff;
+}
+.pxl-icon1.style-3 {
+  line-height: 1;
+}
+.pxl-icon1.style-3 i, .pxl-icon1.style-3 svg {
+  font-size: 28px;
+  color: #111;
 }
 @-webkit-keyframes ring {
   0% {
@@ -11412,6 +11537,56 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
   background-color: var(--primary-color);
   font-size: 15px !important;
   font-family: "GTWalsheimPro", sans-serif;
+}
+.cf7-services .cf7-services-footer .cf7-services-footer-col-1 {
+  display: flex;
+  align-items: center;
+}
+.cf7-services .cf7-services-footer .cf7-services-footer-col-1 p {
+  margin-bottom: 0 !important;
+  display: flex;
+  align-items: center;
+}
+.cf7-services .cf7-services-footer .cf7-services-footer-col-1 .wpcf7-form-control-wrap {
+  margin-bottom: 0 !important;
+}
+.cf7-services .cf7-services-footer .cf7-services-footer-col-2 p {
+  margin-bottom: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.cf7-services .cf7-services-footer .wpcf7-list-item {
+  margin-left: 0 !important;
+  font-size: 15px;
+  letter-spacing: 0px;
+  line-height: 1.7333;
+  color: #666;
+  font-weight: 400;
+  font-family: "Public Sans";
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.cf7-services .cf7-services-footer button {
+  height: 50px !important;
+  border-radius: 8px !important;
+  padding: 0 35px !important;
+  background-color: var(--primary-color);
+  font-size: 15px !important;
+  font-family: "GTWalsheimPro", sans-serif;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-transition: all 300ms linear 0ms;
+  -khtml-transition: all 300ms linear 0ms;
+  -moz-transition: all 300ms linear 0ms;
+  -ms-transition: all 300ms linear 0ms;
+  -o-transition: all 300ms linear 0ms;
+  transition: all 300ms linear 0ms;
+}
+.cf7-services .cf7-services-footer button:hover {
+  background-color: var(--secondary-color);
 }
 .pxl-navigation-carousel.style-1 .pxl-navigation-arrow {
   width: 65px;

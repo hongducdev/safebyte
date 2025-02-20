@@ -12,12 +12,12 @@
         <a class="pxl-item--link" <?php pxl_print_html($widget->get_render_attribute_string( 'item_link' )); ?>></a>
     <?php } ?>
     <?php if ( $settings['icon_type'] == 'icon' && !empty($settings['pxl_icon']['value']) ) : ?>
-        <div class="pxl-item--icon pxl-mr-32">
+        <div class="pxl-item--icon pxl-mr-28">
             <?php \Elementor\Icons_Manager::render_icon( $settings['pxl_icon'], [ 'aria-hidden' => 'true', 'class' => '' ], 'i' ); ?>
         </div>
     <?php endif; ?>
     <?php if ( $settings['icon_type'] == 'image' && !empty($settings['icon_image']['id']) ) : ?>
-        <div class="pxl-item--icon pxl-mr-32">
+        <div class="pxl-item--icon pxl-mr-28">
             <?php $img_icon  = pxl_get_image_by_size( array(
                     'attach_id'  => $settings['icon_image']['id'],
                     'thumb_size' => 'full',

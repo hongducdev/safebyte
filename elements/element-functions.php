@@ -46,7 +46,7 @@ if(!function_exists('safebyte_register_custom_icon_library')){
                 'displayPrefix' => 'flaticon',
                 'labelIcon' => 'flaticon-it',
                 'ver' => '1.0.0',
-                'fetchJson' => get_template_directory_uri() . '/assets/fonts/flaticon/flaticon-08.js',
+                'fetchJson' => get_template_directory_uri() . '/assets/fonts/flaticon/flaticon-safebyte.js',
                 'native' => true,
             ],
 

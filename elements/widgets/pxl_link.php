@@ -86,6 +86,7 @@ pxl_add_custom_widget(
                                 'style-default' => 'Default',
                                 'style-hover-divider' => 'Hover Divider 1',
                                 'style-hover-divider2' => 'Hover Divider 2',
+                                'style-hover-divider3' => 'Hover Divider 3',
                                 'style-square-shape1' => 'Square Shape 1',
                                 'style-characters' => 'Characters',
                                 'style-round-box' => 'Round Box',
