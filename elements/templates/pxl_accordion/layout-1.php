@@ -24,7 +24,7 @@ if(!empty($accordion)) : ?>
                         </span>
                     <?php endif; ?>
                     <span class="pxl-title--text"><?php echo wp_kses_post($title); ?></span>
-                    <?php if($settings['style'] == 'style-default') : ?><span class="pxl-icon--action"><span class="pxl-icon--plus pxl-icon--gradient"><span></span></span></span><?php endif; ?>
+                    <?php if($settings['style'] == 'style-default') : ?><span class="pxl-icon--action"><span class="pxl-icon--plus"><span></span></span></span><?php endif; ?>
                 </<?php pxl_print_html($settings['title_tag']); ?>>
                 <div id="<?php echo esc_attr($wg_id.'-'.$pxl_id); ?>" class="pxl-accordion--content" <?php if($is_active){ ?>style="display: block;"<?php } ?>><?php echo wp_kses_post(nl2br($desc)); ?></div>
             </div>

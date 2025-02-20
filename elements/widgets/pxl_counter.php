@@ -91,9 +91,6 @@
                                 'image' => 'Image',
                             ],
                             'default' => 'icon',
-                            'condition' => [
-                                'layout' => '2',
-                            ],
                         ),
                         array(
                             'name' => 'pxl_icon',
@@ -102,9 +99,6 @@
                             'fa4compatibility' => 'icon',
                             'condition' => [
                                 'icon_type' => 'icon',
-                            ],
-                            'condition' => [
-                                'layout' => '2',
                             ],
                         ),
                         array(
@@ -117,7 +111,7 @@
                             ],
                         ),
                         array(
-                          'name' => 'align',
+                            'name' => 'align',
                             'label' => esc_html__( 'Alignment', 'safebyte' ),
                             'type' => \Elementor\Controls_Manager::CHOOSE,
                             'control_type' => 'responsive',

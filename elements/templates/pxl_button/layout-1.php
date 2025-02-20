@@ -35,7 +35,7 @@ if($template > 0 ){
         <?php } ?>
         <span class="pxl--btn-text" data-text="<?php echo esc_attr($settings['text']); ?>">
             <?php if($settings['btn_text_effect'] == 'btn-text-nina' || $settings['btn_text_effect'] == 'btn-text-nanuk') {
-                    $chars = preg_split('//u', $settings['text'], null, PREG_SPLIT_NO_EMPTY);
+                    $chars = preg_split('//u', $settings['text'], -1, PREG_SPLIT_NO_EMPTY);
 
                     foreach ($chars as $value) {
                         if($value == ' ') {

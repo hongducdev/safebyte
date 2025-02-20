@@ -9,7 +9,6 @@
         if ( $settings['item_link']['nofollow'] ) {
             $widget->add_render_attribute( 'item_link', 'rel', 'nofollow' );
         } ?>
-        <div class="pxl-item--readmore"><i class="flaticon-right-arrow-1 rtl-icon"></i></div>
         <a class="pxl-item--link" <?php pxl_print_html($widget->get_render_attribute_string( 'item_link' )); ?>></a>
     <?php } ?>
 

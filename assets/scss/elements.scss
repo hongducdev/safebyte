@@ -53,6 +53,15 @@ BLOG GRID
     );
 }
 
+.page-title-section {
+    overflow: hidden;
+    filter: grayscale(100%);
+}
+
+.bg-our-team {
+    filter: grayscale(100%);
+}
+
 // Slider Revolution
 .revslider-initialised {
     .rv-description {
@@ -241,204 +250,61 @@ BLOG GRID
 }
 
 .pxl-icon-box2 {
-    .pxl-item--holder {
-        position: relative;
-        overflow: hidden;
-        box-shadow: 0 0 0 2px #61646e inset;
-        border-radius: 20px;
-        padding: 56px 40px;
-        @media #{$max-lg} {
-            padding-left: 30px;
-            padding-right: 30px;
-        }
-    }
-    .pxl-item--icon {
-        line-height: 1;
-        font-size: 47px;
-        color: $primary_color;
-        margin-bottom: 22px;
-        svg {
-            height: 47px;
-        }
-    }
-    .pxl-item--title {
-        margin-bottom: 14px;
-        font-size: 22px;
-        @media #{$max-lg} {
-            font-size: 20px;
-        }
-    }
-    .pxl-item--description {
-        font-size: 17px;
-        line-height: 1.41;
-        @media #{$max-lg} {
-            font-size: 16px;
-        }
-    }
-    .pxl-item--backdrop {
-        border-radius: 20px;
-        z-index: 99;
-        overflow: hidden;
-        &:before {
-            content: "";
-            z-index: 1;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: inherit;
-            background-color: rgba(#000, 0.12);
-        }
-        .pxl-item--readmore {
-            text-align: center;
-            position: absolute;
-            top: 50%;
-            left: 0;
-            right: 0;
-            transform: translate(0, -50%);
-            z-index: 99;
-            .btn {
-                font-size: 17px;
-                line-height: 60px;
-                padding: 0 46px;
-            }
-        }
-        .pxl-backdrop--icon1,
-        .pxl-backdrop--icon2 {
-            font-size: 130px;
-            line-height: 1;
-            position: absolute;
-            opacity: 0.92;
-            z-index: 100;
-        }
-        .pxl-backdrop--icon1 {
-            bottom: -22px;
-            left: -28px;
-        }
-        .pxl-backdrop--icon2 {
-            top: -22px;
-            right: -28px;
-            transform: scale(-1);
-        }
-    }
-}
-
-.pxl-icon-box3 {
     display: flex;
-    flex-wrap: nowrap;
-    @media #{$max-md2} {
-        display: block;
+    align-items: center;
+    gap: 26px;
+    .pxl-item--body {
+        flex: 1;
     }
     .pxl-item--icon {
-        min-width: 64px;
-        height: 68px;
-        width: 64px;
-        border-radius: 20px;
-        @include background-gradient-3colors(
-            45deg,
-            $gradient_first_color,
-            $gradient_color_to 44%,
-            $gradient_color_from 80%
-        );
-        font-size: 24px;
-        color: #fff;
+        width: 40px;
+        height: 40px;
+        @include border-radius(20px);
         display: inline-flex;
-        justify-content: center;
         align-items: center;
-        overflow: hidden;
-        @media #{$max-md2} {
-            margin: 0 0 22px 0;
-        }
+        justify-content: center;
+        background-color: $primary_color;
+        font-size: 16px;
+        color: #fff;
     }
     .pxl-item--title {
-        margin-top: 6px;
-        margin-bottom: 3px;
-        font-size: 24px;
-        @media #{$max-md2} {
-            font-size: 20px;
-        }
-    }
-    .pxl-item--description {
-        font-size: 16px;
-        color: #626262;
-        line-height: 1.625;
-    }
-    &:hover {
-        .pxl-item--icon {
-            i,
-            svg,
-            img {
-                -o-animation: toRightFromLeft 0.3s forwards;
-                -ms-animation: toRightFromLeft 0.3s forwards;
-                -webkit-animation: toRightFromLeft 0.3s forwards;
-                animation: toRightFromLeft 0.3s forwards;
-            }
-        }
+        font-size: 20px;
+        line-height: 1.65;
+        color: #0a1119;
+        font-weight: 500;
+        font-family: "GTWalsheimPro";
+        margin-bottom: 20px;
     }
 }
 
 // Case Accordion
 .pxl-accordion1 {
     &.style-default {
-        .pxl-title--number {
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translate(0, -50%);
-            width: 36px;
-            height: 30px;
-            line-height: 30px;
-            color: #fff;
-            border-radius: 0 30px 30px 0;
-            @include background-horizontal(
-                $gradient_color_from,
-                $gradient_color_to
-            );
-            font-size: 14px;
-            font-weight: 500;
-            @extend .ft-secondary;
-            text-align: center;
-        }
         .pxl-icon--action {
             position: absolute;
             right: 19px;
-            top: 50%;
+            top: 42%;
             transform: translate(0, -50%);
         }
         .pxl-accordion--title {
             position: relative;
-            padding: 22px 45px 22px 54px;
             font-size: 20px;
             font-weight: 500;
+            padding: 20px 0;
         }
         .pxl-accordion--content {
-            padding: 22px 0 26px;
             position: relative;
-            margin: 0 35px;
-            &:before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                background-color: #d6d6d8;
-                height: 1px;
-                width: 0;
-                @include transition(all 300ms linear 0ms);
-                margin: auto;
-            }
+            font-family: "Public Sans";
+            font-size: 16px;
+            line-height: 1.625;
+            margin-bottom: 25px;
+            color: #4b535d;
         }
         .pxl--item {
-            border: 1px solid #d6d6d8;
-            border-radius: 5px;
+            border-bottom: 1px solid rgba(#121c27, 0.149);
             @include transition(all 300ms linear 0ms);
-            + .pxl--item {
-                margin-top: 20px;
-            }
             &:hover,
             &.active {
-                border-color: $primary_color;
                 .pxl-accordion--content:before {
                     width: 100%;
                 }
@@ -652,15 +518,19 @@ BLOG GRID
     /* Style Heading */
 
     /* Style Sub */
-    .px-sub-title-shape {
-        font-size: 18px;
-        color: #000001;
-        font-weight: 700;
-        margin-bottom: 4px;
-        .pxl-item--subtext {
-            display: inline-flex;
-            position: relative;
-        }
+    .px-sub-title-box {
+        height: 43px;
+        font-size: 14px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #ffffff;
+        font-family: "GTWalsheimPro";
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $primary_color;
+        padding: 0 30px;
+        @include border-radius(8px);
     }
     .px-sub-title-shape2 {
         font-size: 20px;
@@ -1060,6 +930,7 @@ BLOG GRID
 .pxl-icon1 {
     &.style-1 {
         display: inline-flex;
+        flex-wrap: wrap;
         gap: 20px;
         flex-direction: row;
         &.icon-vertical {
@@ -2125,156 +1996,251 @@ BLOG GRID
 
 // Case Counter
 .pxl-counter1 {
-    .pxl-counter--holder {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    @media #{$max-3xs} {
+        flex-direction: column;
+    }
+    .pxl-item--icon {
+        width: 65px;
+        height: 65px;
+        @include border-radius(65px);
+        background-color: #fff;
+        color: $primary_color;
+        font-size: 30px;
         display: flex;
         align-items: center;
-        gap: 40px;
+        justify-content: center;
     }
-    .pxl-counter--title {
-        opacity: 0.702;
-        font-size: 17px;
-        line-height: 28px;
-        color: #ffffff;
-        font-family: "GTWalsheimPro";
-        max-width: 200px;
-        width: 100%;
+    .pxl-item--body {
+        display: flex;
+        flex-direction: column;
     }
     .pxl-counter--number {
-        font-size: 70px;
-        line-height: 70px;
+        display: flex;
+        align-items: start;
+        @media #{$max-3xs} {
+            justify-content: center;
+        }
+    }
+    .pxl-counter--value {
+        font-size: 45px;
         color: #ffffff;
         font-weight: 400;
         font-family: "Public Sans";
-        display: flex;
-        .pxl-counter--suffix {
-            font-size: 50px;
-            line-height: 50px;
-        }
+        line-height: 1;
+        margin-bottom: 14px;
     }
-    &.style-2 {
-        .pxl-counter--suffix,
-        .pxl-counter--prefix {
-            color: $primary_color;
-            font-size: 74%;
-        }
-        .pxl-counter--number::before {
-            display: none;
-        }
+    .pxl-counter--suffix {
+        font-size: 20px;
+        color: #ffffff;
+        font-weight: 400;
+        font-family: "Public Sans";
+    }
+    .pxl-counter--title {
+        font-size: 16px;
+        line-height: 1.5625;
+        color: #ffffff;
+        font-family: "GTWalsheimPro";
     }
 }
 
 // Case Pricing
 .pxl-pricing1 {
-    position: relative;
-    z-index: 1;
-    border-radius: 20px;
-    @include background-gradient-4colors(
-        to bottom,
-        $gradient_color_from2 25%,
-        $gradient_color_from 50%,
-        $gradient_color_to2 75%,
-        $gradient_color_to 100%
-    );
-    padding: 30px 45px 50px;
-    font-size: 20px;
-    color: #cccccc;
-    line-height: 1.5;
-    @media #{$max-sm} {
-        padding-left: 30px;
-        padding-right: 30px;
-        padding-bottom: 40px;
-    }
-    &:before {
-        content: "";
-        position: absolute;
-        top: 3px;
-        left: 3px;
-        right: 3px;
-        bottom: 3px;
-        background-color: #202021;
-        z-index: -1;
-        border-radius: 18px;
-    }
-    .pxl-pricing--top {
-        margin-bottom: 16px;
-        span {
-            display: inline-block;
-            line-height: 35px;
-            background-color: #fff;
-            padding: 0 19px;
-            border-radius: 35px;
-            font-size: 12px;
-            font-weight: 700;
-            color: #121212;
-            text-transform: uppercase;
-        }
-    }
-    .pxl-pricing--price {
-        font-size: 70px;
-        line-height: 1;
-        font-weight: 700;
-        color: #fff;
-        @extend .ft-secondary;
-        margin-bottom: 4px;
-        display: flex;
-        flex-wrap: wrap;
-        @media #{$max-sm} {
-            font-size: 60px;
-        }
-        .pxl-pricing--currency {
-            font-size: 40px;
-            position: relative;
-            top: 4px;
-            @media #{$max-sm} {
-                font-size: 36px;
+    padding: 45px 13px 30px 13px;
+    border-radius: 8px;
+    background-color: #fff;
+    border: 1px solid #cdcdcd;
+    &:hover {
+        .pxl-pricing--download {
+            &:hover {
+                background-color: $primary_color;
+                border-color: $primary_color;
+                span {
+                    color: #fff;
+                }
+                i {
+                    background-color: #fff;
+                    color: #000;
+                }
             }
         }
     }
-    .pxl-pricing--subtitle {
-        margin-bottom: 34px;
-        @media #{$max-lg} {
-            font-size: 16px;
-        }
+    .pxl-pricing--top {
+        font-size: 14px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        color: #111111;
+        font-family: "GTWalsheimPro";
+        padding-bottom: 20px;
+        margin-bottom: 35px;
+        border-bottom: 1px solid #cdcdcd;
+        margin-left: 23px;
+        margin-right: 23px;
     }
-    .pxl-pricing--title {
-        font-size: 25px;
-        font-weight: 700;
-        color: #fff;
-        margin-bottom: 3px;
-    }
-    .pxl-pricing--feature {
-        margin-bottom: 40px;
-        list-style: none;
-        font-weight: 600;
-        font-size: 21px;
-        color: #e4e4e4;
-        @media #{$max-lg} {
-            font-size: 18px;
+    .pxl-pricing--header {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 18px;
+        margin-left: 23px;
+        margin-right: 23px;
+        .pxl-pricing--price {
+            font-size: 55px;
+            line-height: 1.27;
+            color: $primary_color;
+            font-weight: 400;
+            font-family: "Public Sans";
+            display: flex;
         }
-        li {
+        .pxl-pricing--title {
+            height: 32px;
+            border-radius: 5px;
+            background-color: #e5edfd;
+            font-size: 15px;
+            color: $primary_color;
+            font-family: "GTWalsheimPro";
             display: flex;
             align-items: center;
-            + li {
-                margin-top: 12px;
+            justify-content: center;
+            padding: 0 24px;
+        }
+    }
+    .pxl-pricing--subtitle {
+        font-size: 16px;
+        line-height: 1.5625;
+        color: #666666;
+        font-weight: 400;
+        font-family: "Public Sans";
+        margin-bottom: 34px;
+        margin-left: 23px;
+        margin-right: 23px;
+    }
+    .pxl-pricing--download {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        @include border-radius(25px);
+        background-color: #fff;
+        border: 1px solid #cdcdcd;
+        padding-left: 26px;
+        padding-right: 5px;
+        @include transition(all 300ms linear 0ms);
+        span {
+            font-size: 15px;
+            letter-spacing: 0px;
+            color: #0a1119;
+            font-family: "GTWalsheimPro";
+            @include transition(all 300ms linear 0ms);
+        }
+        i {
+            width: 40px;
+            height: 40px;
+            @include border-radius(20px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            background-color: $primary_color;
+            @include transition(all 300ms linear 0ms);
+        }
+    }
+    ul.pxl-pricing--feature {
+        list-style: none;
+        margin: 36px 23px;
+        li {
+            font-size: 15px;
+            font-family: "GTWalsheimPro";
+            color: #848b94;
+            margin-bottom: 20px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &.active {
+                color: #000;
+                i {
+                    color: $primary_color;
+                    font-size: 12px;
+                }
             }
         }
     }
     .pxl-pricing--button {
+        margin-left: 23px;
+        margin-right: 23px;
         .btn {
-            @include background-gradient-button(
-                to right,
-                $primary_color 0%,
-                $gradient_color_from 50%,
-                $gradient_color_to 100%
-            );
-            background-size: 200%;
-            background-position: 0 100%;
-            @media #{$min-xl2} {
-                line-height: 62px;
-                padding: 0 46px;
-            }
+            background-color: $primary_color;
+            color: #fff;
+            @include transition(0.3s all linear 0s);
             &:hover {
-                background-position: 100% 0;
+                background-color: $secondary_color;
+            }
+        }
+    }
+    &.popular {
+        border-color: $secondary_color;
+        background-color: $secondary_color;
+        &:hover {
+            .pxl-pricing--download {
+                &:hover {
+                    border-color: #cdcdcd;
+                    background-color: #fff;
+                    span {
+                        color: #0a1119;
+                    }
+                    i {
+                        background-color: $primary_color;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        .pxl-pricing--top {
+            color: #fff;
+            i {
+                font-size: 12px;
+            }
+            border-color: rgba(#fff, 0.149);
+        }
+        .pxl-pricing--header {
+            .pxl-pricing--price {
+                color: #fff;
+            }
+            .pxl-pricing--title {
+                background-color: rgba(#fff, 0.149);
+                color: #fff;
+            }
+        }
+        .pxl-pricing--subtitle {
+            color: #cdd4ef;
+        }
+        .pxl-pricing--download {
+            border-color: $primary_color;
+            background-color: $primary_color;
+            span {
+                color: #fff;
+            }
+            i {
+                background-color: #fff;
+                color: #0a1119;
+            }
+        }
+        ul.pxl-pricing--feature {
+            li.active {
+                color: #fff;
+                i {
+                    color: #fff;
+                }
+            }
+        }
+        .pxl-pricing--button {
+            .btn {
+                background-color: #fff;
+                color: #0a1119;
             }
         }
     }
@@ -2668,6 +2634,28 @@ BLOG GRID
         z-index: 10;
         background-color: transparent !important;
         color: #111 !important;
+    }
+}
+
+.cf7-contact-us {
+    width: 100%;
+    input.wpcf7-form-control {
+        height: 55px;
+        border-radius: 8px;
+        background-color: #ffffff;
+        border: 1px solid #cdcdcd;
+    }
+    textarea.wpcf7-form-control {
+        height: 222px !important;
+    }
+    button {
+        margin-top: 30px;
+        height: 55px !important;
+        border-radius: 8px !important;
+        padding: 0 35px !important;
+        background-color: $primary_color;
+        font-size: 15px !important;
+        font-family: "GTWalsheimPro", sans-serif;
     }
 }
 
@@ -3247,6 +3235,10 @@ body.single .pxl-breadcrumb {
     label {
         display: inline-block;
     }
+    .pxl-item--content {
+        color: #0a1119;
+        font-family: "GTWalsheimPro";
+    }
     .pxl-item--icon {
         &.pxl-icon--box {
             --x: 19px;
@@ -3295,15 +3287,15 @@ body.single .pxl-breadcrumb {
             flex-direction: column;
             label {
                 color: $primary_color;
-                font-family: "DM Sans", sans-serif;
+                font-family: "GTWalsheimPro";
                 font-size: 24px;
                 font-style: normal;
                 font-weight: 500;
                 line-height: 1.41;
                 margin-bottom: 10px;
             }
-            color: #4a7172;
-            font-family: "Public Sans", sans-serif;
+            color: #0a1119;
+            font-family: "GTWalsheimPro";
             font-size: 15px;
             font-style: normal;
             font-weight: 400;

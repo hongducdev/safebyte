@@ -1,7 +1,7 @@
 <?php
 $html_id = pxl_get_element_id($settings);
 $editor_title = $widget->get_settings_for_display( 'title' );
-$editor_title = $widget->parse_text_editor( $editor_title ); 
+$editor_title = !is_null($editor_title) ? $widget->parse_text_editor( $editor_title ) : '';
 
 $sg_post_title = safebyte()->get_theme_opt('sg_post_title', 'default');
 $sg_post_title_text = safebyte()->get_theme_opt('sg_post_title_text');
@@ -21,9 +21,6 @@ $sg_portfolio_title_text = safebyte()->get_theme_opt('sg_portfolio_title_text');
 		<?php if(!empty($settings['sub_title'])) : ?>
 			<div class="pxl-item--subtitle <?php echo esc_attr($settings['sub_title_style'].' '.$settings['pxl_animate_sub']); ?>" data-wow-delay="<?php echo esc_attr($settings['pxl_animate_delay_sub']); ?>ms">
 				<span class="pxl-item--subtext">
-					<?php if($settings['sub_title_style'] == 'px-sub-title-shape') : ?>
-						<i class="flaticon-heading text-gradient pxl-mr-10 pxl-icon--heading"></i>
-					<?php endif; ?>
 					<?php if($settings['sub_title_style'] == 'px-sub-title-shape2' || $settings['sub_title_style'] == 'px-sub-title-shape5') : ?>
 						<span class="pxl-heading-icon pxl-mr-10">
 							<i class="flaticon-icon-menu text-gradient-top"></i>

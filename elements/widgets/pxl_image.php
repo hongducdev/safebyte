@@ -162,6 +162,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Border Radius', 'safebyte' ),
                             'type' => \Elementor\Controls_Manager::DIMENSIONS,
                             'size_units' => [ 'px' ],
+                            'control_type' =>'responsive',
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-image-single img, {{WRAPPER}} .pxl-item--inner' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
@@ -171,6 +172,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Border Radius Hover', 'safebyte' ),
                             'type' => \Elementor\Controls_Manager::DIMENSIONS,
                             'size_units' => [ 'px' ],
+                            'control_type' =>'responsive',
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-image-single:hover img, {{WRAPPER}} .pxl-image-single:hover .pxl-item--inner' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],

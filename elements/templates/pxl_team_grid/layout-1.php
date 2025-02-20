@@ -13,7 +13,7 @@ $col_xs = 12 / intval($col_xs);
 
 $grid_sizer = "col-xl-{$col_xl} col-lg-{$col_lg} col-md-{$col_md} col-sm-{$col_sm} col-{$col_xs}";
 $item_class = "pxl-grid-item col-xl-{$col_xl} col-lg-{$col_lg} col-md-{$col_md} col-sm-{$col_sm} col-{$col_xs}";
-$image_size = !empty($settings['img_size']) ? $settings['img_size'] : '354x354';
+$image_size = !empty($settings['img_size']) ? $settings['img_size'] : '410x475';
 
 if ( ! empty( $settings['wg_btn_link']['url'] ) ) {
     $widget->add_render_attribute( 'button', 'href', $settings['wg_btn_link']['url'] );
@@ -64,18 +64,29 @@ if ( ! empty( $settings['wg_btn_link']['url'] ) ) {
                                 <?php if(!empty($social)): 
                                     $team_social = json_decode($social, true); ?>
                                     <div class="pxl-item--social">
-                                        <?php foreach ($team_social as $value): ?>
-                                            <a href="<?php echo esc_url($value['url']); ?>" target="_blank"><i class="<?php echo esc_attr($value['icon']); ?>"></i></a>
-                                        <?php endforeach; ?>
+                                        <div class="pxl-item--social-inner">
+                                            <div class="pxl-item--social-list">
+                                                <?php foreach ($team_social as $value): ?>
+                                                    <a href="<?php echo esc_url($value['url']); ?>" target="_blank"><i class="<?php echo esc_attr($value['icon']); ?>"></i></a>
+                                                <?php endforeach; ?>
+                                            </div>
+                                            <div class="pxl-item--social-share">
+                                                <i class="fas fa-share-alt"></i>
+                                            </div>
+                                        </div>
                                     </div>
                                 <?php endif; ?>
                             </div>
                         <?php } ?>
                         <div class="pxl-item--holder pxl-text-center pxl-transition">
-                            <h3 class="pxl-item--title"><?php echo pxl_print_html($title); ?></h3>
+                            <h3 class="pxl-item--title">
+                                <?php if ( ! empty( $value['item_link']['url'] ) ) { ?><a <?php echo implode( ' ', [ $link_attributes ] ); ?>><?php } ?>
+                                    <?php echo pxl_print_html($title); ?>
+                                <?php if ( ! empty( $value['item_link']['url'] ) ) { ?></a><?php } ?>
+                            </h3>
                             <div class="pxl-item--position"><span><?php echo pxl_print_html($position); ?></span></div>
                         </div>
-                   </div>
+                    </div>
                 </div>
             <?php endforeach; ?>
             <div class="grid-sizer <?php echo esc_attr($grid_sizer); ?>"></div>

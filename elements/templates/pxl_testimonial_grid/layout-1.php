@@ -25,17 +25,12 @@ $item_class = "pxl-grid-item col-xl-{$col_xl} col-lg-{$col_lg} col-md-{$col_md} 
                 ?>
                 <div class="<?php echo esc_attr($item_class); ?>">
                     <div class="pxl-item--inner <?php echo esc_attr($settings['pxl_animate']); ?>">
-                        <div class="pxl-item--star">
-                            <span class="pxl-star--inner text-gradient">
-                                <i class="flaticon-star"></i>
-                                <i class="flaticon-star"></i>
-                                <i class="flaticon-star"></i>
-                                <i class="flaticon-star"></i>
-                                <i class="flaticon-star"></i>
-                            </span>
+                        
+                        <div class="pxl-item--body">
+                            <div class="pxl-item--qoute">
+                            </div>
+                            <div class="pxl-item--desc el-empty"><?php echo pxl_print_html($desc); ?></div>
                         </div>
-                        <div class="pxl-item--desc el-empty"><?php echo pxl_print_html($desc); ?></div>
-                        <div class="pxl-item--divider"></div>
                         <div class="pxl-item--holder">
                             <?php if(!empty($image['id'])) { 
                                 $img = pxl_get_image_by_size( array(
@@ -44,19 +39,26 @@ $item_class = "pxl-grid-item col-xl-{$col_xl} col-lg-{$col_lg} col-md-{$col_md} 
                                     'class' => 'no-lazyload',
                                 ));
                                 $thumbnail = $img['thumbnail'];?>
-                                <div class="pxl-item--avatar pxl-mr-18">
+                                <div class="pxl-item--avatar pxl-mr-26">
                                     <?php echo wp_kses_post($thumbnail); ?>
                                 </div>
                             <?php } ?>
                             <div class="pxl-item--meta pxl-mr-20">
-                                <h6 class="pxl-item--title el-empty"><?php echo pxl_print_html($title); ?></h6>
+                                <h6 class="pxl-item--title el-empty"><?php echo pxl_print_html($title); ?> 
+                                    <div class="pxl-item--star">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </h6>
                                 <?php if(!empty($position)) : ?>
                                     <div class="pxl-item--position"><?php echo pxl_print_html($position); ?></div>
                                 <?php endif; ?>
                             </div>
-                            <div class="pxl-item--icon"><i class="flaticon-quote-2 text-gradient"></i></div>
                         </div>
-                   </div>
+                    </div>
                 </div>
             <?php endforeach; ?>
             <div class="grid-sizer <?php echo esc_attr($grid_sizer); ?>"></div>

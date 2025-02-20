@@ -54,28 +54,11 @@ pxl_add_custom_widget(
                             'show_label' => false,
                         ),
                         array(
-                            'name' => 'btn_text',
-                            'label' => esc_html__('Button Text', 'safebyte' ),
-                            'type' => \Elementor\Controls_Manager::TEXT,
-                            'label_block' => true,
-                            'condition' => [
-                                'layout' => ['2'],
-                            ],
-                        ),
-                        array(
-                            'name' => 'btn_link',
-                            'label' => esc_html__('Button Link', 'safebyte' ),
-                            'type' => \Elementor\Controls_Manager::URL,
-                            'condition' => [
-                                'layout' => ['2'],
-                            ],
-                        ),
-                        array(
                             'name' => 'item_link',
                             'label' => esc_html__('Item Link', 'safebyte' ),
                             'type' => \Elementor\Controls_Manager::URL,
                             'condition' => [
-                                'layout' => ['1','3'],
+                                'layout' => ['1', '2', '3'],
                             ],
                         ),
                         array(
@@ -103,17 +86,6 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::MEDIA,
                             'condition' => [
                                 'icon_type' => 'image',
-                            ],
-                        ),
-                        array(
-                            'name' => 'image_box',
-                            'label' => esc_html__( 'Image', 'safebyte' ),
-                            'type' => \Elementor\Controls_Manager::MEDIA,
-                            'condition' => [
-                                'layout' => '2',
-                            ],
-                            'selectors' => [
-                                '{{WRAPPER}} .pxl-icon-box .pxl-item--backdrop' => 'background-image: url( {{URL}} );',
                             ],
                         ),
                         array(

@@ -33,7 +33,17 @@ pxl_add_custom_widget(
                     'controls' => array(
                         array(
                             'name' => 'popular',
-                            'label' => esc_html__('Popular', 'safebyte'),
+                            'label' => esc_html__('Popular','safebyte'),
+                            'type' => \Elementor\Controls_Manager::SELECT,
+                            'options' => [
+                                'yes' => 'Yes',
+                                'no' => 'No',
+                            ],
+                            'default' => 'no'
+                        ),
+                        array(
+                            'name' => 'plan',
+                            'label' => esc_html__('Plan', 'safebyte'),
                             'type' => \Elementor\Controls_Manager::TEXT,
                             'label_block' => true,
                         ),
@@ -47,6 +57,18 @@ pxl_add_custom_widget(
                             'name' => 'sub_title',
                             'label' => esc_html__('Sub Title', 'safebyte'),
                             'type' => \Elementor\Controls_Manager::TEXT,
+                            'label_block' => true,
+                        ),
+                        array(
+                            'name' => 'btn_download_text',
+                            'label' => esc_html__('Button Download Text','safebyte'),
+                            'type' => \Elementor\Controls_Manager::TEXT,
+                            'label_block' => true,
+                        ),
+                        array(
+                            'name' => 'btn_download_link',
+                            'label' => esc_html__('Button Download Link','safebyte'),
+                            'type' => \Elementor\Controls_Manager::URL,
                             'label_block' => true,
                         ),
                         array(

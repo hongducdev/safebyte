@@ -125,12 +125,12 @@ pxl_add_custom_widget(
                             ],
                         ),
                         array(
-                            'name' => 'color_hover',
-                            'label' => esc_html__( 'Icon Color Hover', 'safebyte' ),
+                            'name' => 'color_icon',
+                            'label' => esc_html__( 'Icon Color', 'safebyte' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'default' => '',
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-icon1 a:hover .pxl-icon-label' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-icon1 a i' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
