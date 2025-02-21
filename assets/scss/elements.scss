@@ -4113,7 +4113,7 @@ body.rtl {
         position: absolute;
         width: 440px;
         height: 440px;
-        left: 176px; // 40% của 440px
+        left: 176px;
         top: 176px;
 
         .circle-outer {
@@ -4182,5 +4182,50 @@ body.rtl {
     }
     100% {
         transform: rotate(360deg);
+    }
+}
+
+// Case Global
+.pxl-global {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .pxl-global-inner {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 750px;
+        height: 100%;
+        background-image: url(../img/global.png);
+        background-size: cover;
+    }
+    .pxl-global-support {
+        position: absolute;
+        height: 60px;
+        border-radius: 8px;
+        filter: drop-shadow(0px 4px 9px rgba(255, 255, 255, 0.35));
+        background-color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 34px;
+        .pxl-global-support-icon {
+            width: 19px;
+            height: 19px;
+            @include border-radius(19px);
+            background-color: #00ba00;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            color: #fff;
+            margin-right: 18px;
+        }
+        .pxl-global-support-title {
+            font-size: 17px;
+            color: #111111;
+            font-family: "GTWalsheimPro";
+        }
     }
 }
