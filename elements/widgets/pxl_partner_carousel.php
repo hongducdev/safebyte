@@ -45,6 +45,12 @@ pxl_add_custom_widget(
                     'tab' => \Elementor\Controls_Manager::TAB_SETTINGS,
                     'controls' => array(
                         array(
+                            'name' => 'image_size',
+                            'label' => esc_html__('Image Size', 'safebyte'),
+                            'type' => \Elementor\Controls_Manager::TEXT,
+                            'default' => '150x50',
+                        ),
+                        array(
                             'name' => 'col_xs',
                             'label' => esc_html__('Columns XS Devices', 'safebyte' ),
                             'type' => \Elementor\Controls_Manager::SELECT,

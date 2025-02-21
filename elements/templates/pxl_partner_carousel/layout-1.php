@@ -17,6 +17,7 @@ $autoplay = $widget->get_setting('autoplay', false);
 $autoplay_speed = $widget->get_setting('autoplay_speed', 5000);
 $infinite = $widget->get_setting('infinite', false);  
 $speed = $widget->get_setting('speed', 500);
+$image_size = $widget->get_setting('image_size', '150x50');
 $opts = [
     'slide_direction'               => 'horizontal',
     'slide_percolumn'               => 1, 
@@ -68,18 +69,21 @@ if(isset($settings['partner']) && !empty($settings['partner']) && count($setting
                         ?>
                         <div class="pxl-swiper-slide">
                             <div class="pxl-item--inner <?php echo esc_attr($settings['pxl_animate']); ?>" data-wow-delay="<?php echo esc_attr($settings['pxl_animate_delay']); ?>ms">
-                                 <?php if(!empty($logo['id'])) { 
+                                <?php if(!empty($logo['id'])) { 
                                     $img_logo = pxl_get_image_by_size( array(
                                         'attach_id'  => $logo['id'],
-                                        'thumb_size' => 'full',
+                                        'thumb_size' => $image_size,
                                         'class' => 'no-lazyload',
                                     ));
                                     $thumbnail_logo = $img_logo['thumbnail'];?>
                                     <div class="pxl-item--logo">
-                                        <a <?php echo implode( ' ', [ $link_attributes ] ); ?>><?php echo wp_kses_post($thumbnail_logo); ?></a>
+                                        <a <?php echo implode( ' ', [ $link_attributes ] ); ?>>
+                                            <?php echo wp_kses_post($thumbnail_logo); ?>
+                                            <?php echo wp_kses_post($thumbnail_logo); ?>
+                                        </a>
                                     </div>
                                 <?php } ?>
-                           </div>
+                            </div>
                         </div>
                     <?php endforeach; ?>
                 </div>

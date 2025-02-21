@@ -10783,12 +10783,83 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
 }
 .pxl-partner-carousel1 .pxl-item--logo {
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
-  margin-bottom: 2px;
 }
-.pxl-partner-carousel1 .pxl-item--logo:hover a {
-  transform: scale(0.9);
+.pxl-partner-carousel1 .pxl-item--logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.pxl-partner-carousel1 .pxl-item--logo a {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  padding: 10px;
+}
+.pxl-partner-carousel1 .pxl-item--logo a img {
+  display: block;
+  width: auto;
+  margin: 0 auto;
+  position: relative;
+  max-height: 50px;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.pxl-partner-carousel1 .pxl-item--logo a img:nth-child(1) {
+  opacity: 1;
+  filter: grayscale(100%);
+  transform-origin: center;
+  transform: scale(1) translateZ(0);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.pxl-partner-carousel1 .pxl-item--logo a img:nth-child(2) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  filter: grayscale(0%);
+  transform: translate(-50%, -50%) scale(0.8) translateZ(0);
+  clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+}
+.pxl-partner-carousel1 .pxl-item--logo a:hover img:nth-child(1) {
+  opacity: 0;
+  transform: scale(1.2) translateZ(0);
+  filter: grayscale(100%) blur(5px);
+  clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+}
+.pxl-partner-carousel1 .pxl-item--logo a:hover img:nth-child(2) {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1) translateZ(0);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.pxl-partner-carousel1 .pxl-item--logo a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease;
+}
+.pxl-partner-carousel1 .pxl-item--logo a:hover::after {
+  width: 120%;
+  height: 120%;
+  opacity: 0;
+}
+@keyframes ripple {
+  .pxl-partner-carousel1 .pxl-item--logo a 0% {
+    width: 0;
+    height: 0;
+    opacity: 0.5;
+  }
+  .pxl-partner-carousel1 .pxl-item--logo a 100% {
+    width: 120%;
+    height: 120%;
+    opacity: 0;
+  }
 }
 .pxl-partner-carousel1 .pxl-swiper-wrapper {
   align-items: center;
