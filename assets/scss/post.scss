@@ -552,10 +552,10 @@
 }
 
 body.error404 {
-    #pxl-header-default,
-    #pxl-page-title-default,
-    #pxl-footer-default {
-        display: none;
+    #pxl-header-elementor,
+    #pxl-page-title-elementor,
+    #pxl-footer-elementor{
+        display: none !important;
     }
     #pxl-main {
         padding: 0;

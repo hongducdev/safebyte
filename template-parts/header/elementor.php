@@ -11,16 +11,15 @@ $header_type = get_post_meta( $post_header->ID, 'header_type', true );
 $header_sidebar_style = get_post_meta( $post_header->ID, 'header_sidebar_style', true );
 $page_mobile_style = safebyte()->get_page_opt('page_mobile_style');
 $opt_mobile_style = safebyte()->get_opt('opt_mobile_style');
-$mobile_display = safebyte()->get_opt('mobile_display');
+$header_display = safebyte()->get_opt('header_display');
 if(isset($page_mobile_style) && !empty($page_mobile_style) && $page_mobile_style != 'inherit') {
     $opt_mobile_style = $page_mobile_style;
 }
 $header_mobile_layout = safebyte()->get_opt('header_mobile_layout');
 $header_mobile_layout_count = (int)safebyte()->get_opt('header_mobile_layout');
 $post_header_mobile = get_post($header_mobile_layout);
-$header_mobile_type = get_post_meta( $post_header_mobile->ID, 'header_mobile_type', true );
 ?>
-<header id="pxl-header-elementor" class="is-sticky pxl-header-<?php echo esc_attr($header_mobile); ?>">
+<header id="pxl-header-elementor" class="is-sticky pxl-header-<?php echo esc_attr($header_display); ?>">
 	<?php if(isset($args['header_layout']) && $args['header_layout'] > 0) : ?>
 		<div class="pxl-header-elementor-main <?php echo esc_attr($header_type); ?> <?php echo esc_attr($header_sidebar_style); ?>">
             <?php if($header_sidebar_style == 'px-header-sidebar-style2') { echo '<div class="px-header-sidebar-inner">'; } ?>

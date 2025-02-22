@@ -55,7 +55,18 @@ BLOG GRID
 
 .page-title-section {
     overflow: hidden;
+    position: relative;
     filter: grayscale(100%);
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(../img/noise.png);
+        filter: invert(1);
+    }
 }
 
 .bg-our-team {
@@ -68,6 +79,10 @@ BLOG GRID
         font-size: 52px;
         transform: rotate(125deg);
     }
+}
+
+.pxl-rain-drop-height {
+    height: 100%;
 }
 
 // Slider Revolution
@@ -2915,6 +2930,32 @@ BLOG GRID
     }
 }
 
+.cf7-coming-soon {
+    max-width: 576px;
+    width: 100%;
+    margin: 0 auto;
+    > p {
+        position: relative;
+    }
+    .wpcf7-form-control {
+        line-height: 60px;
+        @include border-radius(30px);
+        background-color: #fff;
+        border: 1px solid transparent;
+        color: #111 !important;
+    }
+    button {
+        position: absolute !important;
+        height: 60px !important;
+        @include border-radius(30px !important);
+        top: 0;
+        right: 0;
+        z-index: 10;
+        background-color: transparent !important;
+        color: #111 !important;
+    }
+}
+
 // Case Navigation Carousel
 .pxl-navigation-carousel {
     &.style-1 {
@@ -4078,6 +4119,10 @@ body.rtl {
 .pxl-countdown {
     display: flex;
     align-items: center;
+    @media #{$max-xsx} {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
     .countdown-item {
         padding: 0 100px;
         position: relative;
@@ -4092,9 +4137,23 @@ body.rtl {
             color: #ffffff;
             font-weight: 400;
             font-family: "Public Sans";
+            @media #{$max-md} {
+                display: none;
+            }
         }
         &:last-child:before {
             display: none;
+        }
+        @media #{$max-lg} {
+            padding: 0 50px;
+        }
+
+        @media #{$max-md} {
+            padding: 0 20px;
+        }
+
+        @media #{$max-xsx} {
+            padding: 0;
         }
     }
     .countdown-item-inner {
@@ -4108,6 +4167,14 @@ body.rtl {
             font-weight: 400;
             font-family: "Public Sans";
             margin-bottom: 20px;
+
+            @media #{$max-md} {
+                font-size: 60px;
+            }
+
+            @media #{$max-3xs} {
+                font-size: 40px;
+            }
         }
         .countdown-period {
             font-family: "GTWalsheimPro";
@@ -4115,6 +4182,10 @@ body.rtl {
             font-size: 15px;
             line-height: 1;
             text-transform: uppercase;
+
+            @media #{$max-md} {
+                font-size: 12px;
+            }
         }
     }
 }
@@ -4280,6 +4351,14 @@ body.rtl {
         height: 100%;
         background-image: url(../img/global.png);
         background-size: cover;
+        @media #{$max-xsx} {
+            max-width: 400px;
+            width: 100%;
+        }
+        @media #{$max-3xs} {
+            max-width: 300px !important;
+            width: 100% !important;
+        }
     }
     .pxl-global-support {
         position: absolute;
@@ -4291,6 +4370,43 @@ body.rtl {
         align-items: center;
         justify-content: center;
         padding: 0 34px;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        cursor: pointer;
+        overflow: hidden;
+        &:hover {
+            transform: translateY(-5px);
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
+            box-shadow: 0 10px 20px rgba(0, 186, 0, 0.15);
+
+            .pxl-global-support-icon {
+                transform: rotate(360deg);
+                background-color: #008800;
+            }
+
+            .pxl-global-support-title {
+                color: #008800;
+            }
+
+            &::before {
+                transform: translateX(100%);
+            }
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -75%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(
+                to right,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.3) 100%
+            );
+            transform: skewX(-25deg);
+            transition: all 0.75s;
+        }
+
         .pxl-global-support-icon {
             width: 19px;
             height: 19px;
@@ -4302,11 +4418,114 @@ body.rtl {
             font-size: 10px;
             color: #fff;
             margin-right: 18px;
+            transition: all 0.4s ease;
         }
+
         .pxl-global-support-title {
+            flex: 1;
             font-size: 17px;
             color: #111111;
             font-family: "GTWalsheimPro";
+            transition: color 0.4s ease;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+                width: 0;
+                height: 1px;
+                background-color: #008800;
+                transition: width 0.3s ease;
+            }
         }
+
+        &:hover .pxl-global-support-title::after {
+            width: 100%;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        animation: slideIn 0.5s ease forwards;
+        @media screen and (max-width: 480px) {
+            height: 50px;
+            padding: 0 10px;
+            .pxl-global-support-title {
+                font-size: 14px;
+            }
+            .pxl-global-support-icon {
+                width: 14px;
+                height: 14px;
+                font-size: 8px;
+            }
+        }
+    }
+
+    @for $i from 1 through 6 {
+        .pxl-global-support:nth-child(#{$i}) {
+            animation-delay: #{$i * 0.1}s;
+        }
+    }
+}
+
+// Case Rain Drop
+.pxl-rain-drop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.pxl-rain-drop-item {
+    position: relative;
+    height: 100%;
+    min-height: 400px;
+    width: 1px;
+    background-color: rgba(#fff, 0.149);
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 3px;
+        height: 80px;
+        border-radius: 1px;
+        background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 1) 100%
+        );
+        animation: pxl-rain-drop 3s linear infinite;
+    }
+    @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+            &:before {
+                animation-duration: #{2 + ($i * 0.2)}s;
+            }
+        }
+    }
+}
+
+@keyframes pxl-rain-drop {
+    from {
+        top: 0;
+    }
+    to {
+        top: calc(100% - 80px);
     }
 }

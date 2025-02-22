@@ -18,13 +18,6 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::REPEATER,
                             'controls' => array(
                                 array(
-                                    'name' => 'test',
-                                    'label' => esc_html__('Test', 'safebyte'),
-                                    'type' => \Elementor\Controls_Manager::TEXT,
-                                    'default' => '{{CURRENT_ITEM}}',
-                                    'label_block' => true,
-                                ),
-                                array(
                                     'name' => 'title',
                                     'label' => esc_html__('Title', 'safebyte'),
                                     'type' => \Elementor\Controls_Manager::TEXT,

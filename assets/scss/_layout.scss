@@ -1,3 +1,14 @@
+// Start Header
+//--------------------------------------------------
+#pxl-header-elementor {
+	&.pxl-header-hide {
+		display: none !important;
+	}
+}
+
+// End Header
+//--------------------------------------------------
+
 // Start Main
 //--------------------------------------------------
 @media #{$min-xxl} {
@@ -291,7 +302,7 @@ body.elementor-editor-active {
 }
 
 #pxl-footer-elementor {
-	.pxl-footer-hide {
+	&.pxl-footer-hide {
 		display: none !important;
 	}
 	.footer-elementor-inner > .container {
