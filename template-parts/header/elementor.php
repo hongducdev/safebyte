@@ -12,6 +12,7 @@ $header_sidebar_style = get_post_meta( $post_header->ID, 'header_sidebar_style',
 $page_mobile_style = safebyte()->get_page_opt('page_mobile_style');
 $opt_mobile_style = safebyte()->get_opt('opt_mobile_style');
 $header_display = safebyte()->get_opt('header_display');
+$mobile_display = safebyte()->get_opt('mobile_display');
 if(isset($page_mobile_style) && !empty($page_mobile_style) && $page_mobile_style != 'inherit') {
     $opt_mobile_style = $page_mobile_style;
 }

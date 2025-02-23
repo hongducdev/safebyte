@@ -1665,7 +1665,7 @@ a, a:hover, a:focus, a:before, a:after {
   outline: none;
   text-decoration: none;
 }
-.ft-secondary, .pxl--post-footer label, .widget_recent_comments ul, .widget_recent_comments ol, .widget_rss .rsswidget, .widget_block .wp-block-search__label, .widget_block .wp-block-group__inner-container > h2, .widget_block .wp-block-latest-posts__list, .widget_block .wp-block-latest-comments, .pxl-wg-categories .pxl-category--inner span, .pxl-contact-info-widget .pxl-phone--number, .pxl-process1 .pxl-item--number, .pxl-call-phone1.style-1 .pxl-item--number, .pxl-call-phone1.style-2 .pxl-item--number, .pxl-mailchimp-l1.style-box [type="email"], .pxl-mailchimp-l1.style-box2 [type="email"], .pxl-button-video1 .slider-video-title, .pxl-tabs1 .pxl-tab--title, .pxl-banner1 .pxl-banner-bottom .pxl-counter--bnumber, .pxl-progressbar-1.style-1 .pxl--holder, .pxl-recent-news1 .pxl-post--date, .pxl-contact-form .pxl-form--label, #pxl-cart-sidebar .pxl-widget-cart-sidebar .widget_shopping_title, #pxl-cart-sidebar .pxl-widget-cart-sidebar .widget_shopping_cart .widget_shopping_cart_footer p.total, .woocommerce #pxl-sidebar-area .widget_products ul li a, .woocommerce .nice-select, .woocommerce-page .nice-select, .woocommerce #respond input#submit, .woocommerce-page #respond input#submit, .woocommerce a.button, .woocommerce-page a.button, .woocommerce a.wc-forward, .woocommerce-page a.wc-forward, .woocommerce button.button, .woocommerce-page button.button, .woocommerce input.button, .woocommerce-page input.button, .woocommerce .cart button.button, .woocommerce-page .cart button.button, .woocommerce a.button.alt, .woocommerce-page a.button.alt, .woocommerce button.button:disabled, .woocommerce-page button.button:disabled, .woocommerce a.button:disabled, .woocommerce-page a.button:disabled, .woocommerce button.button:disabled[disabled], .woocommerce-page button.button:disabled[disabled], .woocommerce button.button.alt, .woocommerce-page button.button.alt, .woocommerce .woocommerce-topbar div.woocommerce-result-count, .woocommerce .woocommerce-product-inner .woocommerce-product-content .woocommerce-add-to-cart .button, .woocommerce .woocommerce-product-inner .woocommerce-product-content .woocommerce-add-to-cart .wc-forward, .single-product .woocommerce-social-share label, .single-product #pxl-content-area div.product .entry-summary .price, .single-product > div.product .entry-summary .price, .single-product #pxl-content-area div.product .woocommerce-tabs .woocommerce-Tabs-panel--reviews .comment-reply-title, .single-product > div.product .woocommerce-tabs .woocommerce-Tabs-panel--reviews .comment-reply-title, body #yith-quick-view-modal #yith-quick-view-content .entry-summary form.cart label, .pxl-blog-style3 .pxl-post--button, .pxl-blog-style3 .pxl-post--button, .btn {
+.ft-secondary, .pxl--post-footer label, .widget_recent_comments ul, .widget_recent_comments ol, .widget_rss .rsswidget, .widget_block .wp-block-search__label, .widget_block .wp-block-group__inner-container > h2, .widget_block .wp-block-latest-posts__list, .widget_block .wp-block-latest-comments, .pxl-wg-categories .pxl-category--inner span, .pxl-contact-info-widget .pxl-phone--number, .pxl-call-phone1.style-1 .pxl-item--number, .pxl-call-phone1.style-2 .pxl-item--number, .pxl-mailchimp-l1.style-box [type="email"], .pxl-mailchimp-l1.style-box2 [type="email"], .pxl-button-video1 .slider-video-title, .pxl-tabs1 .pxl-tab--title, .pxl-banner1 .pxl-banner-bottom .pxl-counter--bnumber, .pxl-progressbar-1.style-1 .pxl--holder, .pxl-recent-news1 .pxl-post--date, .pxl-contact-form .pxl-form--label, #pxl-cart-sidebar .pxl-widget-cart-sidebar .widget_shopping_title, #pxl-cart-sidebar .pxl-widget-cart-sidebar .widget_shopping_cart .widget_shopping_cart_footer p.total, .woocommerce #pxl-sidebar-area .widget_products ul li a, .woocommerce .nice-select, .woocommerce-page .nice-select, .woocommerce #respond input#submit, .woocommerce-page #respond input#submit, .woocommerce a.button, .woocommerce-page a.button, .woocommerce a.wc-forward, .woocommerce-page a.wc-forward, .woocommerce button.button, .woocommerce-page button.button, .woocommerce input.button, .woocommerce-page input.button, .woocommerce .cart button.button, .woocommerce-page .cart button.button, .woocommerce a.button.alt, .woocommerce-page a.button.alt, .woocommerce button.button:disabled, .woocommerce-page button.button:disabled, .woocommerce a.button:disabled, .woocommerce-page a.button:disabled, .woocommerce button.button:disabled[disabled], .woocommerce-page button.button:disabled[disabled], .woocommerce button.button.alt, .woocommerce-page button.button.alt, .woocommerce .woocommerce-topbar div.woocommerce-result-count, .woocommerce .woocommerce-product-inner .woocommerce-product-content .woocommerce-add-to-cart .button, .woocommerce .woocommerce-product-inner .woocommerce-product-content .woocommerce-add-to-cart .wc-forward, .single-product .woocommerce-social-share label, .single-product #pxl-content-area div.product .entry-summary .price, .single-product > div.product .entry-summary .price, .single-product #pxl-content-area div.product .woocommerce-tabs .woocommerce-Tabs-panel--reviews .comment-reply-title, .single-product > div.product .woocommerce-tabs .woocommerce-Tabs-panel--reviews .comment-reply-title, body #yith-quick-view-modal #yith-quick-view-content .entry-summary form.cart label, .pxl-blog-style3 .pxl-post--button, .pxl-blog-style3 .pxl-post--button, .btn {
   font-family: "Fira Sans", sans-serif;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -8690,11 +8690,6 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
   font-size: 52px;
   transform: rotate(125deg);
 }
-.pxl-rain-drop-coming-soon {
-  width: 100%;
-  min-height: 100vh;
-  height: 100%;
-}
 .pxl-rain-drop-height {
   height: 100%;
 }
@@ -8785,71 +8780,167 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
   opacity: 0;
 }
 .pxl-process1 {
-  text-align: center;
-}
-.pxl-process1 .pxl-item--icon {
-  margin-bottom: 32px;
   position: relative;
-  width: 100px;
-  height: 100px;
-  background-color: #fff;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  color: #000;
-  border-radius: 100px;
-  z-index: 1;
+  padding-left: 150px;
 }
-.pxl-process1 .pxl-item--icon i {
-  font-size: 46px;
+@media (max-width: 991px) {
+  .pxl-process1 {
+    padding-left: 100px;
+  }
 }
-.pxl-process1 .pxl-item--icon i.flaticon-cloud-computing {
-  font-size: 52px;
+@media (max-width: 767px) {
+  .pxl-process1 {
+    padding-left: 0;
+  }
 }
-.pxl-process1 .pxl-item--icon svg {
-  height: 46px;
-}
-.pxl-process1 .pxl-item--icon:before {
+.pxl-process1:before {
+  position: absolute;
   content: "";
-  z-index: -1;
-  position: absolute;
-  top: 8px;
-  left: 7px;
+  top: 0;
+  left: 30px;
   height: 100%;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.15);
-  border-radius: inherit;
-  -webkit-transition: all 300ms linear 0ms;
-  -khtml-transition: all 300ms linear 0ms;
-  -moz-transition: all 300ms linear 0ms;
-  -ms-transition: all 300ms linear 0ms;
-  -o-transition: all 300ms linear 0ms;
-  transition: all 300ms linear 0ms;
+  width: 1px;
+  background-color: #e1e1e1;
 }
-.pxl-process1 .pxl-item--number {
+@media (max-width: 767px) {
+  .pxl-process1:before {
+    display: none;
+  }
+}
+.pxl-process1 .pxl-item--image {
+  width: 300px;
+  min-width: 300px;
+  -webkit-border-radius: 300px;
+  -khtml-border-radius: 300px;
+  -moz-border-radius: 300px;
+  -ms-border-radius: 300px;
+  -o-border-radius: 300px;
+  border-radius: 300px;
+}
+@media (max-width: 575px) {
+  .pxl-process1 .pxl-item--image {
+    width: 250px;
+    min-width: 250px;
+  }
+}
+.pxl-process1 .pxl-item--image img {
+  width: 100%;
+  -webkit-border-radius: 300px;
+  -khtml-border-radius: 300px;
+  -moz-border-radius: 300px;
+  -ms-border-radius: 300px;
+  -o-border-radius: 300px;
+  border-radius: 300px;
+  object-fit: cover;
+}
+.pxl-process1 .pxl-item--inner {
+  padding: 50px 50px 50px 0;
+  display: flex;
+  align-items: center;
+  column-gap: 80px;
+  border-bottom: 1px solid #d3d5d6;
+}
+@media (max-width: 991px) {
+  .pxl-process1 .pxl-item--inner {
+    column-gap: 30px;
+    padding-right: 0;
+  }
+}
+@media (max-width: 767px) {
+  .pxl-process1 .pxl-item--inner {
+    display: block;
+  }
+}
+.pxl-process1 .pxl-item--step {
   position: absolute;
-  top: -5px;
-  right: -7px;
-  width: 35px;
-  height: 35px;
-  background-color: var(--gradient-color-from);
-  border-radius: 35px;
-  border: 4px solid var(--gradient-color-to);
-  line-height: 25px;
-  font-size: 14px;
-  font-weight: 700;
+  width: 61px;
+  height: 61px;
+  border-radius: 1000px;
+  background-color: var(--primary-color);
+  font-family: "GTWalsheimPro";
+  line-height: 61px;
+  font-size: 20px;
+  text-align: center;
   color: #fff;
+  font-weight: 500;
+  top: 50%;
+  left: 0;
+  transform: translatey(-50%);
+}
+.pxl-process1 .pxl-item--step:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--primary-color);
+  border-radius: 1000px;
+  -webkit-transition: all 0.45s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -khtml-transition: all 0.45s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -moz-transition: all 0.45s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -ms-transition: all 0.45s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: all 0.45s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.45s cubic-bezier(0.645, 0.045, 0.355, 1);
+  z-index: -1;
+}
+@media (max-width: 767px) {
+  .pxl-process1 .pxl-item--step {
+    top: 50px;
+    left: 20px;
+    transform: translatey(0%);
+  }
 }
 .pxl-process1 .pxl-item--title {
-  font-size: 22px;
-  margin-bottom: 9px;
+  font-size: 26px;
+  font-weight: 500;
+  color: #111;
+  line-height: 40px;
 }
-.pxl-process1 .pxl-item--desc {
-  font-size: 17px;
-  line-height: 1.768;
+@media (max-width: 767px) {
+  .pxl-process1 .pxl-item--title {
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
 }
-.pxl-process1:hover .pxl-item--icon:before {
-  left: -7px;
+.pxl-process1 .pxl-item--description {
+  font-size: 16px;
+  font-weight: 400;
+  color: #4b535d;
+  line-height: 26px;
+  font-family: "Public Sans", sans-serif;
+}
+.pxl-process1 .pxl-list-text {
+  margin-top: 27px;
+  margin-bottom: 0;
+}
+.pxl-process1 .pxl-list-text li {
+  padding-left: 25px;
+  font-size: 15px;
+  line-height: 25px;
+  color: #111;
+  position: relative;
+  list-style-type: none;
+}
+.pxl-process1 .pxl-list-text li:before {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  top: 50%;
+  left: 0;
+  border-radius: 100px;
+  transform: translatey(-50%);
+  background-color: var(--primary-color);
+}
+.pxl-process1 .pxl-list-text li + li {
+  margin-top: 20px;
+}
+.pxl-process1:hover .pxl-item--step:before {
+  top: -13px;
+  left: -13px;
+  right: -13px;
+  bottom: -13px;
 }
 .pxl-icon-box1 {
   display: flex;

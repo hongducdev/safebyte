@@ -159,67 +159,139 @@ BLOG GRID
 
 // Case Process
 .pxl-process1 {
-    text-align: center;
-    .pxl-item--icon {
-        margin-bottom: 32px;
-        position: relative;
-        width: 100px;
-        height: 100px;
-        background-color: #fff;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        color: #000;
-        border-radius: 100px;
-        z-index: 1;
-        i {
-            font-size: 46px;
-            &.flaticon-cloud-computing {
-                font-size: 52px;
-            }
-        }
-        svg {
-            height: 46px;
-        }
-        &:before {
-            content: "";
-            z-index: -1;
-            position: absolute;
-            top: 8px;
-            left: 7px;
-            height: 100%;
-            width: 100%;
-            background-color: rgba(#fff, 0.15);
-            border-radius: inherit;
-            @include transition(all 300ms linear 0ms);
+    position: relative;
+    padding-left: 150px;
+    @media (max-width: 991px) {
+        padding-left: 100px;
+    }
+    @media (max-width: 767px) {
+        padding-left: 0;
+    }
+    &:before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 30px;
+        height: 100%;
+        width: 1px;
+        background-color: #e1e1e1;
+        @media (max-width: 767px) {
+            display: none;
         }
     }
-    .pxl-item--number {
+    .pxl-item--image {
+        width: 300px;
+        min-width: 300px;
+        @include border-radius(300px);
+        @media (max-width: 575px) {
+            width: 250px;
+            min-width: 250px;
+        }
+        img {
+            width: 100%;
+            @include border-radius(300px);
+            object-fit: cover;
+        }
+    }
+    .pxl-item--inner {
+        padding: 50px 50px 50px 0;
+        display: flex;
+        align-items: center;
+        column-gap: 80px;
+        border-bottom: 1px solid #d3d5d6;
+        @media (max-width: 991px) {
+            column-gap: 30px;
+            padding-right: 0;
+        }
+        @media (max-width: 767px) {
+            display: block;
+        }
+    }
+    .pxl-item--step {
         position: absolute;
-        top: -5px;
-        right: -7px;
-        width: 35px;
-        height: 35px;
-        background-color: $gradient_color_from;
-        border-radius: 35px;
-        border: 4px solid $gradient_color_to;
-        line-height: 25px;
-        font-size: 14px;
-        font-weight: 700;
+        width: 61px;
+        height: 61px;
+        border-radius: 1000px;
+        background-color: $primary_color;
+        font-family: "GTWalsheimPro";
+        line-height: 61px;
+        font-size: 20px;
+        text-align: center;
         color: #fff;
-        @extend .ft-secondary;
+        font-weight: 500;
+        top: 50%;
+        left: 0;
+        transform: translatey(-50%);
+        &:before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: $primary_color;
+            border-radius: 1000px;
+            @include transition(all 0.45s cubic-bezier(0.645, 0.045, 0.355, 1));
+            z-index: -1;
+        }
+        @media (max-width: 767px) {
+            top: 50px;
+            left: 20px;
+            transform: translatey(0%);
+        }
     }
     .pxl-item--title {
-        font-size: 22px;
-        margin-bottom: 9px;
+        font-size: 26px;
+        font-weight: 500;
+        color: #111;
+        line-height: 40px;
+        @media (max-width: 767px) {
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
     }
-    .pxl-item--desc {
-        font-size: 17px;
-        line-height: 1.768;
+    .pxl-item--description {
+        font-size: 16px;
+        font-weight: 400;
+        color: #4b535d;
+        line-height: 26px;
+        font-family: "Public Sans", sans-serif;
+    }
+    .pxl-list-text {
+        margin-top: 27px;
+        margin-bottom: 0;
+        li {
+            padding-left: 25px;
+            font-size: 15px;
+            line-height: 25px;
+            color: #111;
+            @extend .ft-theme-default;
+            position: relative;
+            list-style-type: none;
+            &:before {
+                position: absolute;
+                content: "";
+                width: 6px;
+                height: 6px;
+                top: 50%;
+                left: 0;
+                border-radius: 100px;
+                transform: translatey(-50%);
+                background-color: $primary_color;
+            }
+            + li {
+                margin-top: 20px;
+            }
+        }
     }
     &:hover {
-        .pxl-item--icon:before {
-            left: -7px;
+        .pxl-item--step {
+            &:before {
+                top: -13px;
+                left: -13px;
+                right: -13px;
+                bottom: -13px;
+            }
         }
     }
 }
