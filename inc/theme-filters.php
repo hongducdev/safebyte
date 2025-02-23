@@ -434,6 +434,7 @@ function safebyte_update_elementor_font_groups_control($font_groups){
 add_filter( 'elementor/fonts/additional_fonts', 'safebyte_update_elementor_font_control' );
 function safebyte_update_elementor_font_control($additional_fonts){
   $additional_fonts['Julietta-Messie'] = 'pxlfonts';
+  $additional_fonts['GTWalsheimPro'] = 'pxlfonts';
   return $additional_fonts;
 }
 

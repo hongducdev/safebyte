@@ -13433,6 +13433,54 @@ body.rtl .pxl-button-video1 .slider-video-icon i {
     top: calc(100% - 80px);
   }
 }
+.pxl-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 55px;
+  border-radius: 27px;
+  filter: drop-shadow(0px 6px 8px rgba(0, 0, 0, 0.07));
+  background-color: #f1f7f7;
+  padding: 0 40px;
+}
+.pxl-status .pxl-status-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.pxl-status .pxl-status-item .pxl-status-item--icon {
+  width: 8px;
+  height: 8px;
+  -webkit-border-radius: 8px;
+  -khtml-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  background-color: #6edc1d;
+  -webkit-transition: all 0.4s ease;
+  -khtml-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  animation: pxl-status-icon 1s linear infinite;
+}
+.pxl-status .pxl-status-item .pxl-status-item--title {
+  font-size: 16px;
+  line-height: 30px;
+  color: #111;
+  font-weight: 400;
+  font-family: "Public Sans";
+}
+@keyframes pxl-status-icon {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .blockUI {
   position: absolute;
   top: 0;

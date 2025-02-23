@@ -4601,3 +4601,47 @@ body.rtl {
         top: calc(100% - 80px);
     }
 }
+
+// Case Status
+
+.pxl-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 55px;
+    border-radius: 27px;
+    filter: drop-shadow(0px 6px 8px rgba(0, 0, 0, 0.07));
+    background-color: #f1f7f7;
+    padding: 0 40px;
+
+    .pxl-status-item {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        .pxl-status-item--icon {
+            width: 8px;
+            height: 8px;
+            @include border-radius(8px);
+            background-color: #6edc1d;
+            @include transition(all 0.4s ease);
+            animation: pxl-status-icon 1s linear infinite;
+        }
+
+        .pxl-status-item--title {
+            font-size: 16px;
+            line-height: 30px;
+            color: #111111;
+            font-weight: 400;
+            font-family: "Public Sans";
+        }
+    }
+}
+
+@keyframes pxl-status-icon {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
