@@ -45,7 +45,7 @@ $widget->add_render_attribute( 'carousel', [
     'data-settings' => wp_json_encode($opts)
 ]);
 if(isset($settings['testimonial']) && !empty($settings['testimonial']) && count($settings['testimonial'])): ?>
-    <div class="pxl-swiper-slider pxl-testimonial-carousel pxl-testimonial-carousel1 <?php echo esc_attr($settings['style_l1']); ?>" <?php if($drap !== false) : ?>data-cursor-drap="<?php echo esc_html__('DRAG', 'safebyte'); ?>"<?php endif; ?>>
+    <div class="pxl-swiper-slider pxl-testimonial-carousel pxl-testimonial-carousel1" <?php if($drap !== false) : ?>data-cursor-drap="<?php echo esc_html__('DRAG', 'safebyte'); ?>"<?php endif; ?>>
         <div class="pxl-carousel-inner">
 
             <div <?php pxl_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
@@ -56,31 +56,10 @@ if(isset($settings['testimonial']) && !empty($settings['testimonial']) && count(
                         $desc = isset($value['desc']) ? $value['desc'] : '';
                         $image = isset($value['image']) ? $value['image'] : '';
                         $icon_image = isset($value['icon_image']) ? $value['icon_image'] : '';
+                        $star_rating = isset($value['star_rating']) ? $value['star_rating'] : 5;
                         ?>
                         <div class="pxl-swiper-slide">
                             <div class="pxl-item--inner <?php echo esc_attr($settings['pxl_animate']); ?>" data-wow-delay="<?php echo esc_attr($settings['pxl_animate_delay']); ?>ms">
-                                <?php if(!empty($icon_image['id'])) { 
-                                    $img_icon = pxl_get_image_by_size( array(
-                                        'attach_id'  => $icon_image['id'],
-                                        'thumb_size' => '30x30',
-                                        'class' => 'no-lazyload',
-                                    ));
-                                    $thumbnail_icon = $img_icon['thumbnail'];?>
-                                    <?php if($settings['style_l1'] == 'style-1') : ?>
-                                        <div class="pxl-item--rating">
-                                            <div class="pxl-item--icon pxl-mr-22">
-                                                <?php echo wp_kses_post($thumbnail_icon); ?>
-                                            </div>
-                                            <div class="pxl-item--star text-gradient pxl-item--flexnw pxl-mr-22">
-                                                <i class="flaticon-star"></i>
-                                                <i class="flaticon-star"></i>
-                                                <i class="flaticon-star"></i>
-                                                <i class="flaticon-star"></i>
-                                                <i class="flaticon-star"></i>
-                                            </div>
-                                        </div>
-                                    <?php endif; ?>
-                                <?php } ?>
                                 <div class="pxl-item--desc el-empty"><?php echo pxl_print_html($desc); ?></div>
                                 <div class="pxl-item--holder pxl-item--flexnw">
                                     <?php if(!empty($image['id'])) { 
@@ -95,39 +74,18 @@ if(isset($settings['testimonial']) && !empty($settings['testimonial']) && count(
                                         </div>
                                     <?php } ?>
                                     <div class="pxl-item--meta">
-                                        <h5 class="pxl-item--title el-empty"><?php echo pxl_print_html($title); ?></h5>
+                                        <div class="pxl-item--header">
+                                            <h5 class="pxl-item--title el-empty"><?php echo pxl_print_html($title); ?></h5>
+                                            <div class="pxl-item--rating">
+                                                <?php for($i = 0; $i < $star_rating; $i++): ?>
+                                                    <i class="fas fa-star"></i>
+                                                <?php endfor; ?>
+                                            </div>
+                                        </div>
                                         <div class="pxl-item--position el-empty"><?php echo pxl_print_html($position); ?></div>
                                     </div>
-                                    <?php if($settings['style_l1'] == 'style-2') : ?>
-                                        <div class="pxl-item--rating pxl-ml-20 pxl-screen--lg">
-                                            <div class="pxl-item--icon pxl-mr-22">
-                                                <?php echo wp_kses_post($thumbnail_icon); ?>
-                                            </div>
-                                            <div class="pxl-item--star text-gradient pxl-item--flexnw">
-                                                <i class="flaticon-star"></i>
-                                                <i class="flaticon-star"></i>
-                                                <i class="flaticon-star"></i>
-                                                <i class="flaticon-star"></i>
-                                                <i class="flaticon-star"></i>
-                                            </div>
-                                        </div>
-                                    <?php endif; ?>
                                 </div>
-                                <?php if($settings['style_l1'] == 'style-2') : ?>
-                                    <div class="pxl-item--rating pxl-ml-20 pxl-screen--md">
-                                        <div class="pxl-item--icon pxl-mr-22">
-                                            <?php echo wp_kses_post($thumbnail_icon); ?>
-                                        </div>
-                                        <div class="pxl-item--star text-gradient pxl-item--flexnw">
-                                            <i class="flaticon-star"></i>
-                                            <i class="flaticon-star"></i>
-                                            <i class="flaticon-star"></i>
-                                            <i class="flaticon-star"></i>
-                                            <i class="flaticon-star"></i>
-                                        </div>
-                                    </div>
-                                <?php endif; ?>
-                           </div>
+                            </div>
                         </div>
                     <?php endforeach; ?>
                 </div>

@@ -554,7 +554,7 @@
 body.error404 {
     #pxl-header-elementor,
     #pxl-page-title-elementor,
-    #pxl-footer-elementor{
+    #pxl-footer-elementor {
         display: none !important;
     }
     #pxl-main {
@@ -903,6 +903,78 @@ body.error404 {
         @include border-radius(8px);
         &:hover {
             background-color: $secondary_color;
+        }
+    }
+}
+.pxl-post-navigation-custom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .pxl-navigation--prev {
+        i {
+            transform: rotate(180deg);
+        }
+    }
+    .pxl-icon-link {
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+        font-size: 15px;
+        @extend .ft-theme-default;
+        letter-spacing: 2px;
+        font-weight: 500;
+        color: #121315;
+        font-family: "GTWalsheimPro";
+        @media (max-width: 575px) {
+            font-size: 0;
+        }
+        &.disabled {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        .pxl-item-icon {
+            display: inline-flex;
+            width: 61px;
+            height: 61px;
+            border-radius: 1000px;
+            background-color: $primary_color;
+            align-items: center;
+            justify-content: center;
+            font-size: 17px;
+            color: #fff;
+        }
+    }
+    .pxl--item-grid {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        position: relative;
+        @include transition(all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1));
+
+        .bl {
+            position: absolute;
+            width: 7px;
+            height: 7px;
+            background-color: $primary_color;
+            border-radius: 100px;
+            @include transition(all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1));
+
+            &.bl1 {
+                top: 0;
+                left: 0;
+            }
+            &.bl2 {
+                top: 0;
+                right: 0;
+            }
+            &.bl3 {
+                bottom: 0;
+                right: 0;
+            }
+            &.bl4 {
+                bottom: 0;
+                left: 0;
+            }
         }
     }
 }

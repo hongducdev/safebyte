@@ -235,6 +235,15 @@ pxl_add_custom_widget(
                             ],
                         ),
                         array(
+                            'name' => 'icon_bg_color',
+                            'label' => esc_html__('Background Color', 'safebyte' ),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-icon-box .pxl-item--icon' => 'background-color: {{VALUE}};',
+                            ],
+                            
+                        ),
+                        array(
                             'name' => 'icon_font_size',
                             'label' => esc_html__('Size', 'safebyte' ),
                             'type' => \Elementor\Controls_Manager::SLIDER,

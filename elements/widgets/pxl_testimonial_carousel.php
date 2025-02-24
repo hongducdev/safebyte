@@ -86,21 +86,16 @@ pxl_add_custom_widget(
                                     'type' => \Elementor\Controls_Manager::MEDIA,
                                     'description' => 'Apply some layouts.'
                                 ),
+                                array(
+                                    'name' =>  'star_rating',
+                                    'label' => esc_html__('Star Rating', 'safebyte' ),
+                                    'type' => \Elementor\Controls_Manager::NUMBER,
+                                    'default' => 5,
+                                    'min' => 1,
+                                    'max' => 5,
+                                )
                             ),
                             'title_field' => '{{{ title }}}',
-                        ),
-                        array(
-                            'name' => 'style_l1',
-                            'label' => esc_html__('Style', 'safebyte' ),
-                            'type' => \Elementor\Controls_Manager::SELECT,
-                            'default' => 'style-1',
-                            'options' => [
-                                'style-1' => 'Style 1',
-                                'style-2' => 'Style 2',
-                            ],
-                            'condition' => [
-                                'layout' => ['1'],
-                            ],
                         ),
                     ),
                 ),

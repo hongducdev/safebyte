@@ -47,6 +47,7 @@ pxl_add_custom_widget(
                             'options' => [
                                 'list-icon' => 'Icon List',
                                 'list-number' => 'Number List',
+                                'list-circle' => 'Circle List',
                             ],
                             'default' => 'list-icon',
                         ),

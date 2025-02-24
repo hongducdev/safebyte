@@ -11,34 +11,34 @@ TESTIMONIALS GRID
         padding: 50px;
         border-radius: 8px;
         background-color: #ecf2fe;
-		margin-bottom: 30px;
-		@include transition(all 300ms linear 0ms);
-		&:last-child {
-			margin-bottom: 0;
-		}
-		&:nth-child(2n) {
-			.pxl-item--star {
-				i {
-					color: $primary_color;
-				}
-			}
-		}
-		&:hover {
-			box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.05);
-		}
-		@media #{$max-xsx} {
-			padding: 30px 15px;
-		}
+        margin-bottom: 30px;
+        @include transition(all 300ms linear 0ms);
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &:nth-child(2n) {
+            .pxl-item--star {
+                i {
+                    color: $primary_color;
+                }
+            }
+        }
+        &:hover {
+            box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.05);
+        }
+        @media #{$max-xsx} {
+            padding: 30px 15px;
+        }
     }
     .pxl-item--body {
         display: flex;
         align-items: center;
         gap: 48px;
         margin-bottom: 45px;
-		@media #{$max-sm} {
-			gap: 20px;
-			flex-direction: column;
-		}
+        @media #{$max-sm} {
+            gap: 20px;
+            flex-direction: column;
+        }
         .pxl-item--qoute {
             display: inline-flex;
             align-items: center;
@@ -72,11 +72,11 @@ TESTIMONIALS GRID
     .pxl-item--holder {
         display: flex;
         align-items: center;
-		@media #{$max-xsx} {
-			flex-direction: column;
-			gap: 15px;
-			text-align: center;
-		}
+        @media #{$max-xsx} {
+            flex-direction: column;
+            gap: 15px;
+            text-align: center;
+        }
         .pxl-item--avatar {
             img {
                 width: 61px;
@@ -91,103 +91,71 @@ TESTIMONIALS GRID
             color: #0a1119;
             font-weight: 500;
             font-family: "GTWalsheimPro";
-			margin-bottom: 0;
-			display: flex;
-			align-items: center;
-			gap: 28px;
+            margin-bottom: 0;
+            display: flex;
+            align-items: center;
+            gap: 28px;
         }
-		.pxl-item--star {
-			i {
-				font-size: 12px;
-				color: #0a1119;
-			}
-		}
-		.pxl-item--position {
-			color: #666;
-			font-size: 15px;
-			font-family: "Public Sans";
-		}
+        .pxl-item--star {
+            i {
+                font-size: 12px;
+                color: #0a1119;
+            }
+        }
+        .pxl-item--position {
+            color: #666;
+            font-size: 15px;
+            font-family: "Public Sans";
+        }
     }
 }
 
 // Testimonial Carousel
 .pxl-testimonial-carousel1 {
-    .pxl-item--rating {
-        display: inline-flex;
-        align-items: center;
-        padding: 12px;
-        background-color: rgba(#6f2ac7, 0.08);
-        border-radius: 35px;
-        font-size: 25px;
-        line-height: 1;
-        letter-spacing: 2px;
-        @media #{$max-lg} {
-            font-size: 20px;
-        }
+    .pxl-item--desc {
+        font-size: 17px;
+        line-height: 1.76;
+        color: #111111;
+        font-family: "GTWalsheimPro";
+        margin-bottom: 40px;
     }
     .pxl-item--avatar {
-        width: 77px;
-        min-width: 77px;
-        @media #{$max-lg} {
-            width: 60px;
-            min-width: 60px;
-        }
+        width: 61px;
+        height: 61px;
+        @include border-radius(61px);
         img {
-            border-radius: 77px;
-            border: 2px solid $primary_color;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            @include border-radius(61px);
         }
     }
-    .pxl-item--desc {
-        border-bottom: 1px solid #b8b8b8;
-        padding-top: 38px;
-        margin-bottom: 49px;
-        padding-bottom: 41px;
-        font-size: 24px;
-        color: #838383;
-        font-weight: 500;
-        line-height: 1.5;
-        @media #{$max-lg} {
-            font-size: 18px;
-        }
+    .pxl-item--header {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin-bottom: 10px;
     }
     .pxl-item--title {
+        font-size: 17px;
+        line-height: 1.53;
+        color: #0a1119;
+        font-weight: 500;
+        font-family: "GTWalsheimPro";
         margin-bottom: 0;
-        @media #{$max-lg} {
-            font-size: 20px;
+    }
+    .pxl-item--rating {
+        display: flex;
+        align-items: center;
+        i {
+            font-size: 12px;
+            color: $primary_color;
         }
     }
     .pxl-item--position {
-        font-size: 24px;
-        color: #6d6d6d;
-        @media #{$max-lg} {
-            font-size: 18px;
-        }
-    }
-    &.style-2 {
-        .pxl-item--desc {
-            padding-top: 0;
-        }
-        .pxl-item--rating {
-            padding: 0;
-            background-color: transparent;
-            &.pxl-screen--md {
-                display: none;
-            }
-            @media #{$max-md2} {
-                &.pxl-screen--lg {
-                    display: none;
-                }
-                &.pxl-screen--md {
-                    display: inline-flex;
-                    background-color: rgba(#6f2ac7, 0.08);
-                    margin: 32px 0 0 0;
-                    padding: 12px;
-                }
-            }
-        }
-        .pxl-item--meta {
-            flex-grow: 1;
-        }
+        color: #848b94;
+        font-size: 15px;
+        font-family: "Public Sans";
     }
 }
 

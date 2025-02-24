@@ -29,6 +29,10 @@
         safebyte_panel_anchor_toggle();
         safebyte_post_grid();
         safebyte_header_left_scroll();
+
+        document.querySelectorAll(".pxl-sphere").forEach((sphere) => {
+            new PXLSphere(sphere);
+        });
     });
 
     $(window).on("scroll", function () {
@@ -1251,5 +1255,169 @@
 
             scrollZoom();
         });
+    }
+
+    // Sphere Animation
+    class PXLSphere {
+        constructor(element) {
+            this.element = element;
+            this.canvas = element.querySelector("canvas");
+            this.ctx = this.canvas.getContext("2d");
+
+            // Get data attributes
+            this.size = parseInt(element.dataset.size) || 400;
+            this.radius = parseInt(element.dataset.radius) || this.size * 0.3;
+            this.sphereColor = element.dataset.color || "#fff";
+            this.rotationType = element.dataset.rotation || "y_axis";
+            this.rotationSpeed = parseFloat(element.dataset.speed) || 0.005;
+            this.customXSpeed = parseFloat(element.dataset.xspeed) || 0.003;
+            this.customYSpeed = parseFloat(element.dataset.yspeed) || 0.005;
+            this.tiltAngle =
+                ((parseFloat(element.dataset.tilt) || -30) * Math.PI) / 180;
+
+            // Setup canvas
+            this.canvas.width = this.size;
+            this.canvas.height = this.size;
+
+            // Initialize angles
+            this.angleX = this.tiltAngle;
+            this.angleY = 0;
+
+            this.init();
+        }
+
+        init() {
+            this.points = [];
+            for (
+                let lat = -Math.PI / 2;
+                lat <= Math.PI / 2;
+                lat += Math.PI / 10
+            ) {
+                for (let lon = 0; lon < 2 * Math.PI; lon += Math.PI / 10) {
+                    let x = Math.cos(lat) * Math.cos(lon);
+                    let y = Math.sin(lat);
+                    let z = Math.cos(lat) * Math.sin(lon);
+                    this.points.push({ x, y, z });
+                }
+            }
+            this.animate();
+        }
+
+        rotate(point, angleX, angleY) {
+            let cosX = Math.cos(angleX),
+                sinX = Math.sin(angleX);
+            let cosY = Math.cos(angleY),
+                sinY = Math.sin(angleY);
+
+            let y = point.y * cosX - point.z * sinX;
+            let z = point.y * sinX + point.z * cosX;
+            let x = point.x * cosY - z * sinY;
+            z = point.x * sinY + z * cosY;
+            return { x, y, z };
+        }
+
+        drawSphere() {
+            this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+            this.ctx.strokeStyle = this.sphereColor;
+            this.ctx.lineWidth = 1;
+            const cx = this.canvas.width / 2;
+            const cy = this.canvas.height / 2;
+
+            // Draw latitude lines
+            for (
+                let lat = -Math.PI / 2;
+                lat <= Math.PI / 2;
+                lat += Math.PI / 10
+            ) {
+                let circlePoints = [];
+                for (let lon = 0; lon < 2 * Math.PI; lon += Math.PI / 20) {
+                    let x = Math.cos(lat) * Math.cos(lon);
+                    let y = Math.sin(lat);
+                    let z = Math.cos(lat) * Math.sin(lon);
+                    let rotatedPoint = this.rotate(
+                        { x, y, z },
+                        this.angleX,
+                        this.angleY
+                    );
+                    circlePoints.push(rotatedPoint);
+                }
+                this.ctx.beginPath();
+                circlePoints.forEach((p, i) => {
+                    if (i === 0) {
+                        this.ctx.moveTo(
+                            cx + p.x * this.radius,
+                            cy + p.y * this.radius
+                        );
+                    } else {
+                        this.ctx.lineTo(
+                            cx + p.x * this.radius,
+                            cy + p.y * this.radius
+                        );
+                    }
+                });
+                this.ctx.closePath();
+                this.ctx.stroke();
+            }
+
+            // Draw longitude lines
+            for (let lon = 0; lon < 2 * Math.PI; lon += Math.PI / 10) {
+                let circlePoints = [];
+                for (
+                    let lat = -Math.PI / 2;
+                    lat <= Math.PI / 2;
+                    lat += Math.PI / 20
+                ) {
+                    let x = Math.cos(lat) * Math.cos(lon);
+                    let y = Math.sin(lat);
+                    let z = Math.cos(lat) * Math.sin(lon);
+                    let rotatedPoint = this.rotate(
+                        { x, y, z },
+                        this.angleX,
+                        this.angleY
+                    );
+                    circlePoints.push(rotatedPoint);
+                }
+                this.ctx.beginPath();
+                circlePoints.forEach((p, i) => {
+                    if (i === 0) {
+                        this.ctx.moveTo(
+                            cx + p.x * this.radius,
+                            cy + p.y * this.radius
+                        );
+                    } else {
+                        this.ctx.lineTo(
+                            cx + p.x * this.radius,
+                            cy + p.y * this.radius
+                        );
+                    }
+                });
+                this.ctx.stroke();
+            }
+        }
+
+        updateRotation() {
+            switch (this.rotationType) {
+                case "y_axis":
+                    this.angleY += this.rotationSpeed;
+                    break;
+                case "x_axis":
+                    this.angleX += this.rotationSpeed;
+                    break;
+                case "both_axis":
+                    this.angleX += this.rotationSpeed;
+                    this.angleY += this.rotationSpeed;
+                    break;
+                case "custom":
+                    this.angleX += this.customXSpeed;
+                    this.angleY += this.customYSpeed;
+                    break;
+            }
+        }
+
+        animate() {
+            this.updateRotation();
+            this.drawSphere();
+            requestAnimationFrame(() => this.animate());
+        }
     }
 })(jQuery);

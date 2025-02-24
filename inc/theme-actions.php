@@ -103,6 +103,9 @@ add_action( 'wp_enqueue_scripts', 'safebyte_scripts' );
 function safebyte_scripts() {  
     $safebyte_version = wp_get_theme( get_template() );
 
+    /* Chart Libs */
+    wp_enqueue_script( 'chart', get_template_directory_uri() . '/assets/js/libs/chart.js', array( 'jquery' ), '1.1.0', true );
+
     /* Popup Libs */
     wp_enqueue_style('magnific-popup', get_template_directory_uri() . '/assets/css/libs/magnific-popup.css', array(), '1.1.0');
     wp_enqueue_script( 'magnific-popup', get_template_directory_uri() . '/assets/js/libs/magnific-popup.min.js', array( 'jquery' ), '1.1.0', true );
