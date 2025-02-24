@@ -19,6 +19,10 @@ if (!function_exists('safebyte_get_post_grid')) {
                 safebyte_get_portfolio_grid_layout2($posts, $settings);
                 break;
 
+            case 'portfolio-3':
+                safebyte_get_portfolio_grid_layout3($posts, $settings);
+                break;
+
             case 'service-1':
                 safebyte_get_service_grid_layout1($posts, $settings);
                 break;
@@ -144,7 +148,7 @@ function safebyte_get_portfolio_grid_layout1($posts = [], $settings = [])
 {
     extract($settings);
 
-    $images_size = !empty($img_size) ? $img_size : '587x383';
+    $images_size = !empty($img_size) ? $img_size : '410x520';
 
     if (is_array($posts)):
         foreach ($posts as $key => $post):
@@ -188,29 +192,37 @@ function safebyte_get_portfolio_grid_layout1($posts = [], $settings = [])
                             'thumb_size' => $images_size
                         ));
                         $thumbnail    = $img['thumbnail'];
+                        $portfolio_excerpt = get_post_meta($post->ID, 'portfolio_excerpt', true);
                         ?>
-                        <div class="pxl-post--featured hover-imge-effect3">
+                        <div class="pxl-post--featured">
                             <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo wp_kses_post($thumbnail); ?></a>
-                            <?php if ($show_button == 'true'): ?>
-                                <a class="pxl-post--readmore pxl-fl-middle" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
-                                    <i class="flaticon-right-arrow-2"></i>
-                                </a>
-                            <?php endif; ?>
-                        </div>
-                        <div class="pxl-post--holder">
-                            <div class="pxl-post--meta">
-                                <?php if ($show_category == 'true'): ?>
-                                    <div class="pxl-post--category link-none">
-                                        <?php the_terms($post->ID, 'portfolio-category', '', ' '); ?>
+                            <div class="pxl-post--holder">
+                                <div class="pxl-post--meta">
+                                    <?php if ($show_category == 'true'): ?>
+                                        <div class="pxl-post--category link-none">
+                                            <?php the_terms($post->ID, 'portfolio-category', '', ', '); ?>
+                                        </div>
+                                    <?php endif; ?>
+                                    <h5 class="pxl-post--title"><?php echo esc_attr(get_the_title($post->ID)); ?></h5>
+                                </div>
+                                <?php if ($show_excerpt == 'true' && !empty($portfolio_excerpt)) : ?>
+                                    <div class="pxl-post--content">
+                                        <?php echo wp_trim_words($portfolio_excerpt, $num_words, $more = null); ?>
                                     </div>
                                 <?php endif; ?>
-                                <h5 class="pxl-post--title"><?php echo esc_attr(get_the_title($post->ID)); ?></h5>
+                                <?php if ($show_button == 'true'): ?>
+                                    <a class="pxl-post--readmore pxl-fl-middle" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
+                                        <span>
+                                            <?php if (!empty($button_text)) {
+                                                echo esc_attr($button_text);
+                                            } else {
+                                                echo esc_html__('Read More', 'safebyte');
+                                            } ?>
+                                        </span>
+                                        <i class="flaticon-next"></i>
+                                    </a>
+                                <?php endif; ?>
                             </div>
-                            <?php if ($show_button == 'true'): ?>
-                                <a class="pxl-post--readmore pxl-fl-middle <?php if ($button_box_gradient == 'style-2') : ?>pxl-gradient-rotate<?php endif; ?>" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
-                                    <i class="flaticon-right-arrow-2"></i>
-                                </a>
-                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
@@ -223,7 +235,7 @@ function safebyte_get_portfolio_grid_layout2($posts = [], $settings = [])
 {
     extract($settings);
 
-    $images_size = !empty($img_size) ? $img_size : '600x600';
+    $images_size = !empty($img_size) ? $img_size : '638x368';
 
     if (is_array($posts)):
         foreach ($posts as $key => $post):
@@ -268,22 +280,20 @@ function safebyte_get_portfolio_grid_layout2($posts = [], $settings = [])
                             'thumb_size' => $images_size
                         ));
                         $thumbnail    = $img['thumbnail'];
-                        $gradient_from = safebyte()->get_opt('gradient_color', ['from' => '#6000ff'])['from'];
-                        $gradient_to = safebyte()->get_opt('gradient_color', ['to' => '#fe0054'])['to'];
                         ?>
                         <div class="pxl-post--featured hover-imge-effect3">
-                            <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo wp_kses_post($thumbnail); ?></a>
-                        </div>
-                        <div class="pxl-post--holder">
-                            <svg class="pxl-post--angle" xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 100 100" version="1.1" preserveAspectRatio="none">
-                                <path stroke="" stroke-width="0" d="M0 100 L100 0 L200 100"></path>
-                            </svg>
+                            <?php echo wp_kses_post($thumbnail); ?>
                             <?php if ($show_category == 'true'): ?>
                                 <div class="pxl-post--category link-none">
                                     <?php the_terms($post->ID, 'portfolio-category', '', ' '); ?>
                                 </div>
                             <?php endif; ?>
-                            <h5 class="pxl-post--title"><?php echo esc_attr(get_the_title($post->ID)); ?></h5>
+                        </div>
+                        <div class="pxl-post--holder">
+                            <h5 class="pxl-post--title">
+                                <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a>
+                            </h5>
+                            <div class="pxl-post-divider"></div>
                             <?php if ($show_excerpt == 'true' && !empty($portfolio_excerpt)): ?>
                                 <div class="pxl-post--content">
                                     <?php echo wp_trim_words($portfolio_excerpt, $num_words, $more = null); ?>
@@ -291,16 +301,92 @@ function safebyte_get_portfolio_grid_layout2($posts = [], $settings = [])
                             <?php endif; ?>
                             <?php if ($show_button == 'true'): ?>
                                 <div class="pxl-post--readmore">
-                                    <a class="btn btn-text-parallax btn-icon-box" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
-                                        <span class="pxl--btn-text"><?php if (!empty($button_text)) {
-                                                                        echo esc_attr($button_text);
-                                                                    } else {
-                                                                        echo esc_html__('Read More', 'safebyte');
-                                                                    } ?></span>
-                                        <span class="pxl--btn-icon"><i class="flaticon-up-right-arrow"></i></span>
+                                    <a href="<?php echo esc_url(get_permalink($post->ID)); ?>">
+                                        <?php if (!empty($button_text)) {
+                                            echo esc_attr($button_text);
+                                        } else {
+                                            echo esc_html__('Read More', 'safebyte');
+                                        } ?>
+                                        <i class="flaticon-right-arrow"></i>
                                     </a>
                                 </div>
                             <?php endif; ?>
+                        </div>
+                    </div>
+                </div>
+            <?php endif; ?>
+        <?php endforeach;
+    endif;
+}
+
+function safebyte_get_portfolio_grid_layout3($posts = [], $settings = [])
+{
+    extract($settings);
+
+    $images_size = !empty($img_size) ? $img_size : '378x272';
+
+    if (is_array($posts)):
+        foreach ($posts as $key => $post):
+            $item_class = "pxl-grid-item col-xl-{$col_xl} col-lg-{$col_lg} col-md-{$col_md} col-sm-{$col_sm} col-{$col_xs}";
+            if (isset($grid_masonry) && !empty($grid_masonry[$key]) && (count($grid_masonry) > 1)) {
+                if ($grid_masonry[$key]['col_xl_m'] == 'col-66') {
+                    $col_xl_m = '66-pxl';
+                } else {
+                    $col_xl_m = 12 / $grid_masonry[$key]['col_xl_m'];
+                }
+                if ($grid_masonry[$key]['col_lg_m'] == 'col-66') {
+                    $col_lg_m = '66-pxl';
+                } else {
+                    $col_lg_m = 12 / $grid_masonry[$key]['col_lg_m'];
+                }
+                $col_md_m = 12 / $grid_masonry[$key]['col_md_m'];
+                $col_sm_m = 12 / $grid_masonry[$key]['col_sm_m'];
+                $col_xs_m = 12 / $grid_masonry[$key]['col_xs_m'];
+                $item_class = "pxl-grid-item col-xl-{$col_xl_m} col-lg-{$col_lg_m} col-md-{$col_md_m} col-sm-{$col_sm_m} col-{$col_xs_m}";
+
+                $img_size_m = $grid_masonry[$key]['img_size_m'];
+                if (!empty($img_size_m)) {
+                    $images_size = $img_size_m;
+                }
+            } elseif (!empty($img_size)) {
+                $images_size = $img_size;
+            }
+
+            if (!empty($tax))
+                $filter_class = pxl_get_term_of_post_to_class($post->ID, array_unique($tax));
+            else
+                $filter_class = '';
+
+            $img_id = get_post_thumbnail_id($post->ID);
+            $portfolio_excerpt = get_post_meta($post->ID, 'portfolio_excerpt', true);
+            if (has_post_thumbnail($post->ID) && wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), false)): ?>
+                <div class="<?php echo esc_attr($item_class . ' ' . $filter_class); ?>">
+                    <div class="pxl-post--inner <?php echo esc_attr($pxl_animate); ?>" data-wow-duration="1.2s">
+                        <?php $img_id = get_post_thumbnail_id($post->ID);
+                        $img          = pxl_get_image_by_size(array(
+                            'attach_id'  => $img_id,
+                            'thumb_size' => $images_size
+                        ));
+                        $thumbnail    = $img['thumbnail'];
+                        ?>
+                        <div class="pxl-post--holder">
+                            <?php if ($show_category == 'true'): ?>
+                                <div class="pxl-post--category link-none">
+                                    <?php the_terms($post->ID, 'portfolio-category', '', '-'); ?>
+                                </div>
+                            <?php endif; ?>
+                            <h5 class="pxl-post--title">
+                                <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a>
+                            </h5>
+                            <div class="pxl-post-divider"></div>
+                            <?php if ($show_excerpt == 'true' && !empty($portfolio_excerpt)): ?>
+                                <div class="pxl-post--content">
+                                    <?php echo wp_trim_words($portfolio_excerpt, $num_words, $more = null); ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                        <div class="pxl-post--featured hover-imge-effect3">
+                            <?php echo wp_kses_post($thumbnail); ?>
                         </div>
                     </div>
                 </div>

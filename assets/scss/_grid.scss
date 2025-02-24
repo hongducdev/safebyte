@@ -33,7 +33,10 @@ Grid Reset
     }
 }
 
-.pxl-grid, .pxl-post-carousel, .pxl-post-modern, .pxl-swiper-slider {
+.pxl-grid,
+.pxl-post-carousel,
+.pxl-post-modern,
+.pxl-swiper-slider {
     .pxl-post--featured {
         position: relative;
     }
@@ -41,7 +44,8 @@ Grid Reset
         @extend .pxl-spill;
         z-index: 99;
     }
-    .pxl-post--image img, .pxl-post--featured img {
+    .pxl-post--image img,
+    .pxl-post--featured img {
         width: 100%;
     }
     .pxl-post--title a {
@@ -50,10 +54,11 @@ Grid Reset
             color: inherit;
         }
     }
-    .pxl-post--category { 
+    .pxl-post--category {
         position: relative;
-        &.link-none:before, &.deactive-click:before {
-            content: '';
+        &.link-none:before,
+        &.deactive-click:before {
+            content: "";
             position: absolute;
             top: 0;
             left: 0;
@@ -94,8 +99,8 @@ Grid Reset
         top: 50%;
         left: 50%;
         margin-left: -10px;
-        animation: pxl_spin .6s infinite linear;
-        -webkit-animation: pxl_spin .6s infinite linear;
+        animation: pxl_spin 0.6s infinite linear;
+        -webkit-animation: pxl_spin 0.6s infinite linear;
         box-sizing: border-box;
         z-index: 2;
         margin-top: -10px;
@@ -126,6 +131,9 @@ Grid Reset
         flex-wrap: wrap;
     }
     &.style-1 {
+        .pxl--filter-inner {
+            column-gap: 80px;
+        }
         justify-content: center;
         display: flex;
         flex-wrap: wrap;
@@ -137,36 +145,42 @@ Grid Reset
             margin: 10px 17px 10px 17px;
         }
         .filter-item {
-            font-size: 16px;
-            color: #969696;
-            font-weight: 700;
-            margin: 10px 17px 10px 17px;
+            padding-bottom: 7px;
+            padding-top: 15px;
+            z-index: 2;
+            justify-content: center;
+            position: relative;
+            font-family: "GTWalsheimPro";
+            font-weight: 500;
+            @include transition(all 300ms linear 0ms);
             &:before {
-                content: '';
+                content: "";
                 width: 0;
                 left: 0;
                 right: 0;
                 margin: auto;
                 bottom: 1px;
-                background-color: #535667;
+                background-color: #111;
                 height: 1px;
                 @include transition(all 300ms linear 0ms);
                 position: absolute;
             }
-            &.active {
-                color: #01062e;
+            &.active,
+            &:hover {
+                color: #111;
                 &:before {
                     width: 100%;
                 }
             }
+            .filter-item--count {
+                font-size: 15px;
+                position: absolute;
+                top: 10px;
+                right: -13px;
+            }
         }
         .pxl--filter-inner {
-            border: 1px solid #e7e7e7;
-            border-radius: 72px;
-            width: 100%;
-            max-width: 820px;
             justify-content: center;
-            padding: 13px 10px;
         }
     }
 }

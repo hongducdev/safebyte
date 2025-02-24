@@ -41,11 +41,12 @@ $post_type = $widget->get_setting('post_type', 'portfolio');
 $layout = $widget->get_setting('layout_'.$post_type, 'portfolio-1');
 
 $show_button = $widget->get_setting('show_button');
-$button_box_gradient = $widget->get_setting('button_box_gradient');
 $show_category = $widget->get_setting('show_category');
 $img_size = $widget->get_setting('img_size');
 $grid_masonry = $widget->get_setting('grid_masonry');
 $pxl_animate = $widget->get_setting('pxl_animate');
+$show_excerpt = $widget->get_setting('show_excerpt');
+$num_words = $widget->get_setting('num_words');
 
 $load_more = array(
     'tax'             => $tax,
@@ -71,10 +72,11 @@ $load_more = array(
     'pagination_type' => $pagination_type,
     'show_category'   => $show_category,
     'show_button'     => $show_button,
-    'button_box_gradient'     => $button_box_gradient,
     'img_size'        => $img_size,
     'grid_masonry'    => $grid_masonry,
     'pxl_animate'     => $pxl_animate,
+    'show_excerpt'    => $show_excerpt,
+    'num_words'       => $num_words,
 );
 
 $wrap_attrs = [
@@ -102,13 +104,31 @@ if( count($posts) <= 0){
     <?php if ($select_post_by == 'term_selected' && $filter == "true"): ?>
         <div class="pxl-grid-filter <?php echo esc_attr($filter_type) ?> style-1">
             <div class="pxl--filter-inner">
-                <span class="filter-label"><?php echo esc_html__('Filter By :', 'safebyte'); ?></span>
-                <span class="filter-item active" data-filter="*"><?php echo esc_html($filter_default_title); ?></span>
+                <span class="filter-item active" data-filter="*">
+                    <span class="filter-item--title">
+                        <?php echo esc_html($filter_default_title); ?>
+                    </span>
+                    <span class="filter-item--count">
+                        <?php echo esc_html($total); ?>
+                    </span>
+                </span>
                 <?php foreach ($categories as $category): ?>
                     <?php $category_arr = explode('|', $category); ?>
-                    <?php $term = get_term_by('slug',$category_arr[0], $category_arr[1]); ?>
+                    <?php $term = get_term_by('slug',$category_arr[0], $category_arr[1]);
+                    $tax_count = 0;
+                    foreach ($posts as $post) {
+                        if (has_term($category_arr[0], $category_arr[1], $post->ID)) {
+                            $tax_count++;
+                        }
+                    }
+                    ?>
                     <span class="filter-item" data-filter="<?php echo esc_attr('.' . $term->slug); ?>">
-                        <?php echo esc_html($term->name); ?>
+                        <span class="filter-item--title">
+                            <?php echo esc_html($term->name); ?>
+                        </span>
+                        <span class="filter-item--count">
+                            <?php echo esc_html($tax_count); ?>
+                        </span>
                     </span>
                 <?php endforeach; ?>
             </div>

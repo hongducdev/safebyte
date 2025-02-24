@@ -153,6 +153,10 @@ function safebyte_get_grid_layout_options($post_type_name){
                     'label' => esc_html__( 'Layout 2', 'safebyte' ),
                     'image' => get_template_directory_uri() . '/elements/assets/img/pxl_post_grid/portfolio-layout2.jpg'
                 ],
+                'portfolio-3' => [
+                    'label' => esc_html__( 'Layout 3', 'safebyte' ),
+                    'image' => get_template_directory_uri() . '/elements/assets/img/pxl_post_grid/portfolio-layout3.jpg'
+                ],
             ];
             break;
 

@@ -374,7 +374,7 @@ pxl_add_custom_widget(
                                     [
                                         'terms' => [
                                             ['name' => 'post_type', 'operator' => '==', 'value' => 'portfolio'],
-                                            ['name' => 'layout_portfolio', 'operator' => 'in', 'value' => ['portfolio-1','portfolio-2']]
+                                            ['name' => 'layout_portfolio', 'operator' => 'in', 'value' => ['portfolio-1','portfolio-2', 'portfolio-3']]
                                         ]
                                     ]
                                 ],
@@ -427,27 +427,6 @@ pxl_add_custom_widget(
                             ]
                         ),
                         array(
-                            'name' => 'button_box_gradient',
-                            'label' => esc_html__('Button Box Gradient', 'safebyte' ),
-                            'type' => \Elementor\Controls_Manager::SELECT,
-                            'options' => [
-                                'style-1' => 'Style 1',
-                                'style-2' => 'Style 2',
-                            ],
-                            'default' => 'style-1',
-                            'conditions' => [
-                                'relation' => 'or',
-                                'terms' => [
-                                    [
-                                        'terms' => [
-                                            ['name' => 'post_type', 'operator' => '==', 'value' => 'portfolio'],
-                                            ['name' => 'layout_portfolio', 'operator' => 'in', 'value' => ['portfolio-1']]
-                                        ]
-                                    ],
-                                ],
-                            ]
-                        ),
-                        array(
                             'name' => 'button_text',
                             'label' => esc_html__('Button Text', 'safebyte' ),
                             'type' => \Elementor\Controls_Manager::TEXT,
@@ -464,7 +443,7 @@ pxl_add_custom_widget(
                                     [
                                         'terms' => [
                                             ['name' => 'post_type', 'operator' => '==', 'value' => 'portfolio'],
-                                            ['name' => 'layout_portfolio', 'operator' => 'in', 'value' => ['portfolio-2']],
+                                            ['name' => 'layout_portfolio', 'operator' => 'in', 'value' => ['portfolio-1', 'portfolio-2']],
                                             ['name' => 'show_button', 'operator' => '==', 'value' => 'true']
                                         ]
                                     ],
@@ -488,7 +467,7 @@ pxl_add_custom_widget(
                                     [
                                         'terms' => [
                                             ['name' => 'post_type', 'operator' => '==', 'value' => 'portfolio'],
-                                            ['name' => 'layout_portfolio', 'operator' => 'in', 'value' => ['portfolio-2']]
+                                            ['name' => 'layout_portfolio', 'operator' => 'in', 'value' => ['portfolio-1', 'portfolio-2', 'portfolio-3']]
                                         ]
                                     ],
                                 ],
@@ -513,7 +492,7 @@ pxl_add_custom_widget(
                                     [
                                         'terms' => [
                                             ['name' => 'post_type', 'operator' => '==', 'value' => 'portfolio'],
-                                            ['name' => 'layout_portfolio', 'operator' => 'in', 'value' => ['portfolio-2']],
+                                            ['name' => 'layout_portfolio', 'operator' => 'in', 'value' => ['portfolio-1', 'portfolio-2', 'portfolio-3']],
                                             ['name' => 'show_excerpt', 'operator' => '==', 'value' => 'true']
                                         ]
                                     ],

@@ -38,7 +38,7 @@ $filter_alignment = $widget->get_setting('filter_alignment', 'center');
 $pagination_type = $widget->get_setting('pagination_type', 'pagination');
 
 $post_type = $widget->get_setting('post_type', 'portfolio');
-$layout = $widget->get_setting('layout_'.$post_type, 'portfolio-2');
+$layout = $widget->get_setting('layout_'.$post_type, 'portfolio-3');
 
 $show_button = $widget->get_setting('show_button');
 $show_category = $widget->get_setting('show_category');
@@ -81,7 +81,7 @@ $load_more = array(
 
 $wrap_attrs = [
     'id'               => $html_id,
-    'class'            => trim('pxl-grid pxl-portfolio-grid pxl-portfolio-grid-layout2 pxl-portfolio-style2'),
+    'class'            => trim('pxl-grid pxl-portfolio-grid pxl-portfolio-grid-layout3 pxl-portfolio-style3'),
     'data-start-page'  => $paged,
     'data-max-pages'   => $max,
     'data-total'       => $total,
