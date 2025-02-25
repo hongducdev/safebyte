@@ -8785,6 +8785,9 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
 .pxl-rain-drop-height {
   height: 100%;
 }
+.pxl-twisted-arrow {
+  transform: rotate(30deg);
+}
 @media screen and (max-width: 777px) {
   .revslider-initialised .rv-description {
     font-size: 17px !important;
@@ -9187,6 +9190,100 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
   100% {
     transform: translateY(0);
   }
+}
+.pxl-icon-box4 {
+  border-radius: 8px;
+  border: 1px solid rgba(18, 28, 39, 0.149);
+  background-color: #fff;
+  padding: 55px 50px 35px 50px;
+  -webkit-transition: all 300ms linear 0ms;
+  -khtml-transition: all 300ms linear 0ms;
+  -moz-transition: all 300ms linear 0ms;
+  -ms-transition: all 300ms linear 0ms;
+  -o-transition: all 300ms linear 0ms;
+  transition: all 300ms linear 0ms;
+}
+@media screen and (max-width: 575px) {
+  .pxl-icon-box4 {
+    padding: 30px 20px;
+  }
+}
+.pxl-icon-box4:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+.pxl-icon-box4:hover .pxl-item--header .pxl-item--icon {
+  color: #fff;
+}
+.pxl-icon-box4:hover .pxl-item--header .pxl-item--icon svg path {
+  fill: #fff;
+}
+.pxl-icon-box4:hover .pxl-item--header .pxl-item--title {
+  color: #fff;
+}
+.pxl-icon-box4:hover .pxl-item--divider {
+  background-color: rgba(255, 255, 255, 0.149);
+}
+.pxl-icon-box4:hover .pxl-item--description {
+  color: #fff;
+}
+.pxl-icon-box4 .pxl-item--header {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+@media screen and (max-width: 575px) {
+  .pxl-icon-box4 .pxl-item--header {
+    flex-direction: column;
+  }
+}
+.pxl-icon-box4 .pxl-item--header .pxl-item--icon {
+  color: var(--primary-color);
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pxl-icon-box4 .pxl-item--header .pxl-item--icon svg {
+  width: 40px;
+  height: 40px;
+}
+.pxl-icon-box4 .pxl-item--header .pxl-item--icon svg path {
+  fill: var(--primary-color);
+  -webkit-transition: all 300ms linear 0ms;
+  -khtml-transition: all 300ms linear 0ms;
+  -moz-transition: all 300ms linear 0ms;
+  -ms-transition: all 300ms linear 0ms;
+  -o-transition: all 300ms linear 0ms;
+  transition: all 300ms linear 0ms;
+}
+.pxl-icon-box4 .pxl-item--header .pxl-item--title {
+  font-size: 26px;
+  line-height: 55px;
+  color: #111;
+  font-weight: 500;
+  font-family: "GTWalsheimPro";
+  margin-bottom: 0;
+  -webkit-transition: all 300ms linear 0ms;
+  -khtml-transition: all 300ms linear 0ms;
+  -moz-transition: all 300ms linear 0ms;
+  -ms-transition: all 300ms linear 0ms;
+  -o-transition: all 300ms linear 0ms;
+  transition: all 300ms linear 0ms;
+}
+.pxl-icon-box4 .pxl-item--divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(18, 28, 39, 0.149);
+  margin: 30px 0;
+}
+.pxl-icon-box4 .pxl-item--description {
+  -webkit-transition: all 300ms linear 0ms;
+  -khtml-transition: all 300ms linear 0ms;
+  -moz-transition: all 300ms linear 0ms;
+  -ms-transition: all 300ms linear 0ms;
+  -o-transition: all 300ms linear 0ms;
+  transition: all 300ms linear 0ms;
 }
 .pxl-accordion1.style-default .pxl-icon--action {
   position: absolute;

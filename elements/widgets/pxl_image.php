@@ -352,6 +352,12 @@ pxl_add_custom_widget(
                             ],
                         ),
                         array(
+                            'name' => 'overlay',
+                            'label' => esc_html__('Overlay', 'safebyte' ),
+                            'type' => \Elementor\Controls_Manager::SWITCHER,
+                            'default' => 'false',
+                        ),
+                        array(
                             'name' => 'overlay_color',
                             'label' => esc_html__('Overlay Color', 'safebyte' ),
                             'type' => \Elementor\Controls_Manager::COLOR,

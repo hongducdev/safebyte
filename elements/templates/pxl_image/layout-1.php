@@ -48,7 +48,7 @@ if($settings['img_effect'] == 'pxl-image-parallax') { wp_enqueue_script( 'pxl-pa
                         <?php if ( ! empty( $settings['image_link']['url'] ) ) { ?><a <?php pxl_print_html($widget->get_render_attribute_string( 'image_link' )); ?>><?php } ?>
                             <?php if ( ! empty( $img_id ) ) { echo wp_kses_post($thumbnail); } ?>
                         <?php if ( ! empty( $settings['image_link']['url'] ) ) { ?></a><?php } ?>
-                        <?php if(!empty($settings['overlay_color'])) : ?>
+                        <?php if($settings['overlay'] == 'true') : ?>
                             <div class="pxl-overlay-color"></div>
                         <?php endif; ?>
                     </div>

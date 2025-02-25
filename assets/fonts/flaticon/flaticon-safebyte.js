@@ -2,12 +2,12 @@
     "icons": [
 	    "maps-and-flags",
 		"chat",
-		"crown",
 		"align-bottom",
 		"bookmarks",
-		"user",
-		"umbrella",
+		"crown",
 		"piggy-bank",
+		"umbrella",
+		"user",
 		"arrow",
 		"back-up",
 		"cloud-gear-automation",
@@ -26,6 +26,12 @@
 		"top-right",
 		"user-gear",
 		"user-shield",
-		"wallet"
+		"wallet",
+		"checklist",
+		"leadership",
+		"puzzle",
+		"shield",
+		"target",
+		"growth"
 	]
 }

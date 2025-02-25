@@ -23,7 +23,7 @@ if(isset($settings['icons']) && !empty($settings['icons']) && count($settings['i
             }
             $link_attributes = $widget->get_render_attribute_string( $link_key ); ?>
             <?php if ( ! empty( $value['pxl_icon'] ) ) : ?>
-                <div class="pxl-icon-item">
+                <div class="pxl-icon-item <?php echo esc_attr($settings['icon_animation']); ?>">
                     <a <?php echo implode( ' ', [ $link_attributes ] ); ?>>
                         <?php if ( $is_new ):
                             \Elementor\Icons_Manager::render_icon( $value['pxl_icon'], [ 'aria-hidden' => 'true' ] );

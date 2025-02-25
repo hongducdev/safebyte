@@ -43,22 +43,22 @@
 .flaticon-chat:before {
     content: "\f102";
 }
-.flaticon-crown:before {
+.flaticon-align-bottom:before {
     content: "\f103";
 }
-.flaticon-align-bottom:before {
+.flaticon-bookmarks:before {
     content: "\f104";
 }
-.flaticon-bookmarks:before {
+.flaticon-crown:before {
     content: "\f105";
 }
-.flaticon-user:before {
+.flaticon-piggy-bank:before {
     content: "\f106";
 }
 .flaticon-umbrella:before {
     content: "\f107";
 }
-.flaticon-piggy-bank:before {
+.flaticon-user:before {
     content: "\f108";
 }
 .flaticon-arrow:before {
@@ -117,4 +117,22 @@
 }
 .flaticon-wallet:before {
     content: "\f11b";
+}
+.flaticon-checklist:before {
+    content: "\f11c";
+}
+.flaticon-leadership:before {
+    content: "\f11d";
+}
+.flaticon-puzzle:before {
+    content: "\f11e";
+}
+.flaticon-shield:before {
+    content: "\f11f";
+}
+.flaticon-target:before {
+    content: "\f120";
+}
+.flaticon-growth:before {
+    content: "\f121";
 }

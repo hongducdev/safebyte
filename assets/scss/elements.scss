@@ -85,6 +85,10 @@ BLOG GRID
     height: 100%;
 }
 
+.pxl-twisted-arrow {
+    transform: rotate(30deg);
+}
+
 // Slider Revolution
 .revslider-initialised {
     .rv-description {
@@ -439,6 +443,82 @@ BLOG GRID
     }
     100% {
         transform: translateY(0);
+    }
+}
+
+.pxl-icon-box4 {
+    border-radius: 8px;
+    border: 1px solid rgba(#121c27, 0.149);
+    background-color: #fff;
+    padding: 55px 50px 35px 50px;
+    @include transition(all 300ms linear 0ms);
+    @media #{$max-xs} {
+        padding: 30px 20px;
+    }
+    &:hover {
+        background-color: $primary_color;
+        border-color: $primary_color;
+        .pxl-item--header {
+            .pxl-item--icon {
+                color: #fff;
+                svg {
+                    path {
+                        fill: #fff;
+                    }
+                }
+            }
+            .pxl-item--title {
+                color: #fff;
+            }
+        }
+        .pxl-item--divider {
+            background-color: rgba(#fff, 0.149);
+        }
+        .pxl-item--description {
+            color: #fff;
+        }
+    }
+    .pxl-item--header {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        @media #{$max-xs} {
+            flex-direction: column;
+        }
+        .pxl-item--icon {
+            color: $primary_color;
+            font-size: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            svg {
+                width: 40px;
+                height: 40px;
+                path {
+                    fill: $primary_color;
+                    @include transition(all 300ms linear 0ms);
+                }
+            }
+        }
+        .pxl-item--title {
+            font-size: 26px;
+            line-height: 55px;
+            color: #111111;
+            font-weight: 500;
+            font-family: "GTWalsheimPro";
+            margin-bottom: 0;
+            @include transition(all 300ms linear 0ms);
+        }
+    }
+
+    .pxl-item--divider {
+        width: 100%;
+        height: 1px;
+        background-color: rgba(#121c27, 0.149);
+        margin: 30px 0;
+    }
+    .pxl-item--description {
+        @include transition(all 300ms linear 0ms);
     }
 }
 
@@ -4676,5 +4756,3 @@ body.rtl {
         height: 100%;
     }
 }
-
-
