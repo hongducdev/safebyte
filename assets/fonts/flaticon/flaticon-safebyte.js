@@ -32,6 +32,18 @@
 		"puzzle",
 		"shield",
 		"target",
-		"growth"
+		"growth",
+		"steering-wheel",
+		"share",
+		"robotic-arm",
+		"open-box",
+		"internet",
+		"deposit",
+		"christmas-tree",
+		"connection",
+		"bolt",
+		"agriculture",
+		"protection",
+		"robotic-arm-1"
 	]
 }

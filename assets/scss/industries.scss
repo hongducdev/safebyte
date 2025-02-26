@@ -1,0 +1,127 @@
+.pxl-industries-grid-layout1 {
+    .pxl-grid-item {
+        margin-bottom: 30px;
+    }
+    .pxl-post--inner {
+        border: 1px solid #cdcdcd;
+        @include border-radius(8px);
+        @include transition(all 0.3s linear 0ms);
+        padding: 20px 45px 40px 45px;
+        @media #{$max-sm} {
+            padding: 20px 20px 40px 20px;
+        }
+        &:hover {
+            background-color: $secondary-color;
+            border-color: $secondary-color;
+            .pxl-post--title {
+                color: #fff;
+            }
+            .pxl-post--content {
+                color: #cdd4ef;
+            }
+            .content-top {
+                &:before {
+                    width: 0%;
+                }
+                &:after {
+                    width: 100%;
+                    left: 0;
+                    right: auto;
+                }
+                .pxl-post--icon {
+                    i {
+                        transform: rotateY(360deg);
+                    }
+                }
+            }
+        }
+    }
+    .content-top {
+        display: flex;
+        align-content: center;
+        position: relative;
+        gap: 20px;
+        --x: 79px;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        &:before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #cdcdcd;
+            @include transition(all 0.3s linear 0ms);
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: auto;
+            right: 0;
+            width: 0%;
+            height: 1px;
+            background-color: rgba(#fff, 0.149);
+            @include transition(all 0.3s linear 0ms);
+        }
+        .pxl-post--icon {
+            width: var(--x);
+            height: var(--x);
+            @include border-radius(50%);
+            background-color: $primary-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            i {
+                color: #fff;
+                font-size: 45px;
+                @include transition(all 0.3s linear 0ms);
+                transform: rotateY(0deg);
+            }
+        }
+        .pxl-post--featured {
+            width: var(--x);
+            height: var(--x);
+            @include border-radius(50%);
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    .pxl-post--title {
+        font-size: 20px;
+        color: #111111;
+        font-weight: 500;
+        display: inline;
+        font-family: "GTWalsheimPro";
+        @include transition(all 0.3s linear 0ms);
+        position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 1px;
+            background-color: #cdcdcd;
+            @include transition(all 0.3s linear 0ms);
+        }
+        &:hover {
+            &:before {
+                width: 100%;
+            }
+        }
+    }
+
+    .pxl-post--content {
+        font-size: 16px;
+        line-height: 26px;
+        color: #666666;
+        font-weight: 400;
+        @include transition(all 0.3s linear 0ms);
+        margin-top: 20px;
+    }
+}

@@ -89,6 +89,34 @@ BLOG GRID
     transform: rotate(30deg);
 }
 
+.industries-button-arrow {
+    i {
+        transform: rotate(90deg);
+        &:before {
+            animation: industries-button-arrow 1.5s cubic-bezier(0.4, 0, 0.2, 1)
+                infinite;
+        }
+    }
+}
+
+@keyframes industries-button-arrow {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(5px);
+    }
+    50% {
+        transform: translateX(8px);
+    }
+    75% {
+        transform: translateX(5px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
 // Slider Revolution
 .revslider-initialised {
     .rv-description {
@@ -2185,85 +2213,49 @@ BLOG GRID
 
 // Case Progressbar
 .pxl-progressbar-1 {
-    .pxl-item--icon {
-        width: 57px;
-        height: 57px;
-        font-size: 28px;
-        color: #000;
-        border-radius: 10px;
-        background-color: #fff;
-        box-shadow: 0 0 46px rgba(#121212, 0.14);
+    .pxl--holder {
+        font-size: 16px;
+        color: #111111;
+        @extend .ft-secondary;
+        font-weight: 700;
     }
-    &.style-1 {
-        .pxl--holder {
-            font-size: 16px;
-            color: #111111;
-            @extend .ft-secondary;
-            font-weight: 700;
-        }
-        .pxl--meta {
-            margin-bottom: 11px;
-        }
-        .pxl-progressbar--wrap {
-            height: 7px;
-            background-color: #e1e1e1;
-        }
-        .pxl--progressbar {
-            height: 7px;
-            @include background-horizontal(
-                $gradient_color_from,
-                $gradient_color_to
-            );
-        }
-        .pxl--item {
-            display: flex;
-            flex-wrap: nowrap;
-            align-items: center;
-            + .pxl--item {
-                margin-top: 39px;
-            }
+    .pxl--meta {
+        margin-bottom: 11px;
+        font-size: 18px;
+        letter-spacing: 0px;
+        line-height: 26px;
+        color: #111111;
+        font-weight: 500;
+        font-family: "GTWalsheimPro";
+    }
+    .pxl-progressbar--wrap {
+        height: 2px;
+        background-color: rgba(#121c27, 0.149);
+        @include border-radius(2px);
+    }
+    .pxl--progressbar {
+        height: 2px;
+        background-color: $third_color;
+        @include border-radius(2px);
+        position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 9px;
+            height: 9px;
+            background-color: $third_color;
+            @include border-radius(9px);
+            transform: translateY(-50%);
         }
     }
-    &.style-2 {
-        .pxl--holder {
-            font-size: 18px;
-            color: #454545;
-        }
-        .pxl--meta {
-            margin-bottom: 8px;
-        }
-        .pxl-progressbar--wrap {
-            height: 8px;
-            border-radius: 8px;
-            background-color: #{"rgba(var(--primary-color-rgb),0.08)"};
-        }
-        .pxl--progressbar {
-            height: 8px;
-            background-color: $primary_color;
-            border-radius: 8px;
-            position: relative;
-            &:before {
-                content: "";
-                width: 8px;
-                height: 20px;
-                border-radius: 80px;
-                position: absolute;
-                right: 0;
-                top: -6px;
-                background-color: $primary_color;
-            }
-        }
-        .pxl--percentage {
-            font-weight: 500;
-            color: $primary_color;
-        }
-        .pxl--item {
-            display: flex;
-            flex-wrap: nowrap;
-            align-items: center;
-            + .pxl--item {
-                margin-top: 12px;
-            }
+    .pxl--item {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        + .pxl--item {
+            margin-top: 39px;
         }
     }
 }

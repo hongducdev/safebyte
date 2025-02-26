@@ -12,6 +12,9 @@ $sg_product_ptitle_text = safebyte()->get_theme_opt('sg_product_ptitle_text');
 $sg_service_title = safebyte()->get_theme_opt('sg_service_title', 'default');
 $sg_service_title_text = safebyte()->get_theme_opt('sg_service_title_text');
 
+$sg_industries_title = safebyte()->get_theme_opt('sg_industries_title', 'default');
+$sg_industries_title_text = safebyte()->get_theme_opt('sg_industries_title_text');
+
 $sg_portfolio_title = safebyte()->get_theme_opt('sg_portfolio_title', 'default');
 $sg_portfolio_title_text = safebyte()->get_theme_opt('sg_portfolio_title_text');
 ?>
@@ -47,6 +50,9 @@ $sg_portfolio_title_text = safebyte()->get_theme_opt('sg_portfolio_title_text');
 				
 				<?php } elseif(is_singular('service') && $sg_service_title == 'custom_text' && !empty($sg_service_title_text) && $settings['source_type'] == 'title') { ?>
 					<?php echo pxl_print_html($sg_service_title_text); ?>
+
+				<?php } elseif(is_singular('industries') && $sg_industries_title == 'custom_text' && !empty($sg_industries_title_text) && $settings['source_type'] == 'title') { ?>
+					<?php echo pxl_print_html($sg_industries_title_text); ?>
 
 				<?php } elseif(is_singular('product') && $sg_product_ptitle == 'custom_text' && !empty($sg_product_ptitle_text) && $settings['source_type'] == 'title') { ?>
 					<?php echo pxl_print_html($sg_product_ptitle_text); ?>

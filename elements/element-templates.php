@@ -27,6 +27,10 @@ if (!function_exists('safebyte_get_post_grid')) {
                 safebyte_get_service_grid_layout1($posts, $settings);
                 break;
 
+            case 'industries-1':
+                safebyte_get_industries_grid_layout1($posts, $settings);
+                break;
+
 
             default:
                 return false;
@@ -504,6 +508,108 @@ function safebyte_get_service_grid_layout1($posts = [], $settings = [])
 }
 // End Service Grid
 //-------------------------------------------------
+
+// Start Industries Grid
+//--------------------------------------------------
+function safebyte_get_industries_grid_layout1($posts = [], $settings = []){ 
+    extract($settings);
+    $images_size = !empty($img_size) ? $img_size : 'full';
+    if (is_array($posts)):
+        $count_pos = 1;
+        foreach ($posts as $key => $post):
+            $item_class = "pxl-grid-item col-xl-{$col_xl} col-lg-{$col_lg} col-md-{$col_md} col-sm-{$col_sm} col-{$col_xs}";
+            if(isset($grid_masonry) && !empty($grid_masonry[$key]) && (count($grid_masonry) > 1)) {
+                if($grid_masonry[$key]['col_xl_m'] == 'col-66') {
+                    $col_xl_m = '66-pxl';
+                } else {
+                    $col_xl_m = 12 / $grid_masonry[$key]['col_xl_m'];
+                }
+                if($grid_masonry[$key]['col_lg_m'] == 'col-66') {
+                    $col_lg_m = '66-pxl';
+                } else {
+                    $col_lg_m = 12 / $grid_masonry[$key]['col_lg_m'];
+                }
+                $col_md_m = 12 / $grid_masonry[$key]['col_md_m'];
+                $col_sm_m = 12 / $grid_masonry[$key]['col_sm_m'];
+                $col_xs_m = 12 / $grid_masonry[$key]['col_xs_m'];
+                $item_class = "pxl-grid-item col-xl-{$col_xl_m} col-lg-{$col_lg_m} col-md-{$col_md_m} col-sm-{$col_sm_m} col-{$col_xs_m}";
+
+                $img_size_m = $grid_masonry[$key]['img_size_m'];
+                if(!empty($img_size_m)) {
+                    $images_size = $img_size_m;
+                }
+            } elseif (!empty($img_size)) {
+                $images_size = $img_size;
+            }
+
+            if(!empty($tax))
+                $filter_class = pxl_get_term_of_post_to_class($post->ID, array_unique($tax));
+            else 
+                $filter_class = '';
+            $img_id = get_post_thumbnail_id($post->ID);
+            $industries_excerpt = get_post_meta($post->ID, 'industries_excerpt', true);
+            $industries_external_link = get_post_meta($post->ID, 'industries_external_link', true);
+            $industries_icon_type = get_post_meta($post->ID, 'industries_icon_type', true);
+            $industries_icon_font = get_post_meta($post->ID, 'industries_icon_font', true);
+            $industries_icon_img = get_post_meta($post->ID, 'industries_icon_img', true); 
+            if (has_post_thumbnail($post->ID) && wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), false)): 
+                if($img_id) {
+                    $img = pxl_get_image_by_size( array(
+                        'attach_id'  => $img_id,
+                        'thumb_size' => $images_size,
+                        'class' => 'no-lazyload',
+                    ));
+                    $thumbnail = $img['thumbnail'];
+                } else {
+                    $thumbnail = get_the_post_thumbnail($post->ID, $images_size);
+                } 
+            endif;?>
+            <div class="<?php echo esc_attr($item_class . ' ' . $filter_class); ?>">
+                <div class="pxl-post--inner <?php echo esc_attr($pxl_animate); ?>" data-wow-duration="1.2s">
+                    <div class="content-top">
+                        <?php if($industries_icon_type == 'icon' && !empty($industries_icon_font)) : ?>
+                            <div class="pxl-post--icon">
+                                <i class="<?php echo esc_attr($industries_icon_font); ?>"></i>
+                            </div>
+                        <?php endif; ?>
+                        <?php if($industries_icon_type == 'image' && !empty($industries_icon_img)) : 
+                            $icon_img = pxl_get_image_by_size( array(
+                                'attach_id'  => $industries_icon_img['id'],
+                                'thumb_size' => 'full',
+                            ));
+                            $icon_thumbnail = $icon_img['thumbnail'];
+                            ?>
+                            <div class="pxl-post--icon">
+                                <?php echo wp_kses_post($icon_thumbnail); ?>
+                            </div>
+                        <?php endif; ?>
+                        <div class="pxl-post--featured hover-imge-effect3">
+                            <a href="<?php echo esc_url(get_permalink( $post->ID )); ?>">   
+                                <?php echo wp_kses_post($thumbnail); ?>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pxl-holder-content">
+                        <h3 class="pxl-post--title">
+                            <a href="<?php if(!empty($industries_external_link)) { echo esc_url($industries_external_link); } else { echo esc_url(get_permalink( $post->ID )); } ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a>
+                        </h3>
+
+                        <?php if($show_excerpt == 'true'): ?>
+                            <div class="pxl-post--content">
+                                <?php if($show_excerpt == 'true'): ?>
+                                    <?php echo wp_trim_words( $post->post_excerpt, $num_words, null ); ?>
+                                <?php endif; ?>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+        <?php endforeach;
+    endif;
+}
+// End Industries Grid
+//--------------------------------------------------
+
 
 // Start Product Grid
 //--------------------------------------------------

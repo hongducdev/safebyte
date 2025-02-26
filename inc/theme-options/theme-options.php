@@ -963,6 +963,74 @@ Redux::setSection($opt_name, array(
     )
 ));
 
+Redux::setSection($opt_name, array(
+    'title'      => esc_html__('Industry', 'safebyte'),
+    'icon'       => 'el el-cog',
+    'fields'     => array(
+        array(
+            'id'       => 'industries_display',
+            'type'     => 'button_set',
+            'title'    => esc_html__('Industry', 'safebyte'),
+            'options'  => array(
+                'on' => esc_html__('On', 'safebyte'),
+                'off' => esc_html__('Off', 'safebyte'),
+            ),
+            'default'  => 'on',
+        ),
+        array(
+            'id'       => 'sg_industries_title',
+            'type'     => 'button_set',
+            'title'    => esc_html__('Page Title Type', 'safebyte'),
+            'options'  => array(
+                'default' => esc_html__('Default', 'safebyte'),
+                'custom_text' => esc_html__('Custom Text', 'safebyte'),
+            ),
+            'default'  => 'default',
+            'required' => array( 0 => 'industries_display', 1 => 'equals', 2 => 'on' ),
+            'force_output' => true
+        ),
+        array(
+            'id'      => 'sg_industries_title_text',
+            'type'    => 'text',
+            'title'   => esc_html__('Page Title Text', 'safebyte'),
+            'default' => 'Single Industry',
+            'required' => array( 0 => 'sg_industries_title', 1 => 'equals', 2 => 'custom_text' ),
+        ),
+        array(
+            'id'      => 'industries_slug',
+            'type'    => 'text',
+            'title'   => esc_html__('Industry Slug', 'safebyte'),
+            'default' => '',
+            'desc'     => 'Default: industries',
+            'required' => array( 0 => 'industries_display', 1 => 'equals', 2 => 'on' ),
+            'force_output' => true
+        ),
+        array(
+            'id'      => 'industries_name',
+            'type'    => 'text',
+            'title'   => esc_html__('Industry Name', 'safebyte'),
+            'default' => '',
+            'desc'     => 'Default: Industries',
+            'required' => array( 0 => 'industries_display', 1 => 'equals', 2 => 'on' ),
+            'force_output' => true
+        ),
+        array(
+            'id'    => 'archive_industries_link',
+            'type'  => 'select',
+            'title' => esc_html__( 'Custom Archive Page Link', 'safebyte' ), 
+            'data'  => 'page',
+            'args'  => array(
+                'post_type'      => 'page',
+                'posts_per_page' => -1,
+                'orderby'        => 'title',
+                'order'          => 'ASC',
+            ),
+            'required' => array( 0 => 'industries_display', 1 => 'equals', 2 => 'on' ),
+            'force_output' => true
+        ),
+    )
+));
+
 /*--------------------------------------------------------------
 # Shop
 --------------------------------------------------------------*/

@@ -21,6 +21,12 @@
             pxl_swiper_handler($scope);
         } );
   
+        elementorFrontend.hooks.addAction(
+            "frontend/element_ready/pxl_text_carousel.default",
+            function ($scope) {
+                pxl_swiper_handler($scope);
+            }
+        );
     } );
     
     

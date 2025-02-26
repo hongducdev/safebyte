@@ -1,5 +1,5 @@
 <?php
-$pt_supports = ['post','portfolio','service'];
+$pt_supports = ['post','portfolio','service','industries'];
 pxl_add_custom_widget(
     array(
         'name' => 'pxl_post_grid',
@@ -470,6 +470,12 @@ pxl_add_custom_widget(
                                             ['name' => 'layout_portfolio', 'operator' => 'in', 'value' => ['portfolio-1', 'portfolio-2', 'portfolio-3']]
                                         ]
                                     ],
+                                    [
+                                        'terms' => [
+                                            ['name' => 'post_type', 'operator' => '==', 'value' => 'industries'],
+                                            ['name' => 'layout_industries', 'operator' => 'in', 'value' => ['industries-1']]
+                                        ]
+                                    ],
                                 ],
                             ]
                         ),
@@ -493,6 +499,13 @@ pxl_add_custom_widget(
                                         'terms' => [
                                             ['name' => 'post_type', 'operator' => '==', 'value' => 'portfolio'],
                                             ['name' => 'layout_portfolio', 'operator' => 'in', 'value' => ['portfolio-1', 'portfolio-2', 'portfolio-3']],
+                                            ['name' => 'show_excerpt', 'operator' => '==', 'value' => 'true']
+                                        ]
+                                    ],
+                                    [
+                                        'terms' => [
+                                            ['name' => 'post_type', 'operator' => '==', 'value' => 'industries'],
+                                            ['name' => 'layout_industries', 'operator' => 'in', 'value' => ['industries-1']],
                                             ['name' => 'show_excerpt', 'operator' => '==', 'value' => 'true']
                                         ]
                                     ],

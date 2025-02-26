@@ -76,6 +76,9 @@ TESTIMONIALS GRID
 # Testimonial Grid
 # Testimonial Carousel
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Text Carousel
+--------------------------------------------------------------*/
 @media (min-width: 768px) and (max-width: 1024px) {
   .elementor .elementor-hidden-tablet {
     display: none !important;
@@ -1678,7 +1681,7 @@ a, a:hover, a:focus, a:before, a:after {
   outline: none;
   text-decoration: none;
 }
-.ft-secondary, .pxl--post-footer label, .widget_recent_comments ul, .widget_recent_comments ol, .widget_rss .rsswidget, .widget_block .wp-block-search__label, .widget_block .wp-block-group__inner-container > h2, .widget_block .wp-block-latest-posts__list, .widget_block .wp-block-latest-comments, .pxl-wg-categories .pxl-category--inner span, .pxl-contact-info-widget .pxl-phone--number, .pxl-call-phone1.style-1 .pxl-item--number, .pxl-call-phone1.style-2 .pxl-item--number, .pxl-mailchimp-l1.style-box [type="email"], .pxl-mailchimp-l1.style-box2 [type="email"], .pxl-button-video1 .slider-video-title, .pxl-tabs1 .pxl-tab--title, .pxl-banner1 .pxl-banner-bottom .pxl-counter--bnumber, .pxl-progressbar-1.style-1 .pxl--holder, .pxl-recent-news1 .pxl-post--date, .pxl-contact-form .pxl-form--label, #pxl-cart-sidebar .pxl-widget-cart-sidebar .widget_shopping_title, #pxl-cart-sidebar .pxl-widget-cart-sidebar .widget_shopping_cart .widget_shopping_cart_footer p.total, .woocommerce #pxl-sidebar-area .widget_products ul li a, .woocommerce .nice-select, .woocommerce-page .nice-select, .woocommerce #respond input#submit, .woocommerce-page #respond input#submit, .woocommerce a.button, .woocommerce-page a.button, .woocommerce a.wc-forward, .woocommerce-page a.wc-forward, .woocommerce button.button, .woocommerce-page button.button, .woocommerce input.button, .woocommerce-page input.button, .woocommerce .cart button.button, .woocommerce-page .cart button.button, .woocommerce a.button.alt, .woocommerce-page a.button.alt, .woocommerce button.button:disabled, .woocommerce-page button.button:disabled, .woocommerce a.button:disabled, .woocommerce-page a.button:disabled, .woocommerce button.button:disabled[disabled], .woocommerce-page button.button:disabled[disabled], .woocommerce button.button.alt, .woocommerce-page button.button.alt, .woocommerce .woocommerce-topbar div.woocommerce-result-count, .woocommerce .woocommerce-product-inner .woocommerce-product-content .woocommerce-add-to-cart .button, .woocommerce .woocommerce-product-inner .woocommerce-product-content .woocommerce-add-to-cart .wc-forward, .single-product .woocommerce-social-share label, .single-product #pxl-content-area div.product .entry-summary .price, .single-product > div.product .entry-summary .price, .single-product #pxl-content-area div.product .woocommerce-tabs .woocommerce-Tabs-panel--reviews .comment-reply-title, .single-product > div.product .woocommerce-tabs .woocommerce-Tabs-panel--reviews .comment-reply-title, body #yith-quick-view-modal #yith-quick-view-content .entry-summary form.cart label, .pxl-blog-style3 .pxl-post--button, .pxl-blog-style3 .pxl-post--button, .btn {
+.ft-secondary, .pxl--post-footer label, .widget_recent_comments ul, .widget_recent_comments ol, .widget_rss .rsswidget, .widget_block .wp-block-search__label, .widget_block .wp-block-group__inner-container > h2, .widget_block .wp-block-latest-posts__list, .widget_block .wp-block-latest-comments, .pxl-wg-categories .pxl-category--inner span, .pxl-contact-info-widget .pxl-phone--number, .pxl-call-phone1.style-1 .pxl-item--number, .pxl-call-phone1.style-2 .pxl-item--number, .pxl-mailchimp-l1.style-box [type="email"], .pxl-mailchimp-l1.style-box2 [type="email"], .pxl-button-video1 .slider-video-title, .pxl-tabs1 .pxl-tab--title, .pxl-banner1 .pxl-banner-bottom .pxl-counter--bnumber, .pxl-progressbar-1 .pxl--holder, .pxl-recent-news1 .pxl-post--date, .pxl-contact-form .pxl-form--label, #pxl-cart-sidebar .pxl-widget-cart-sidebar .widget_shopping_title, #pxl-cart-sidebar .pxl-widget-cart-sidebar .widget_shopping_cart .widget_shopping_cart_footer p.total, .woocommerce #pxl-sidebar-area .widget_products ul li a, .woocommerce .nice-select, .woocommerce-page .nice-select, .woocommerce #respond input#submit, .woocommerce-page #respond input#submit, .woocommerce a.button, .woocommerce-page a.button, .woocommerce a.wc-forward, .woocommerce-page a.wc-forward, .woocommerce button.button, .woocommerce-page button.button, .woocommerce input.button, .woocommerce-page input.button, .woocommerce .cart button.button, .woocommerce-page .cart button.button, .woocommerce a.button.alt, .woocommerce-page a.button.alt, .woocommerce button.button:disabled, .woocommerce-page button.button:disabled, .woocommerce a.button:disabled, .woocommerce-page a.button:disabled, .woocommerce button.button:disabled[disabled], .woocommerce-page button.button:disabled[disabled], .woocommerce button.button.alt, .woocommerce-page button.button.alt, .woocommerce .woocommerce-topbar div.woocommerce-result-count, .woocommerce .woocommerce-product-inner .woocommerce-product-content .woocommerce-add-to-cart .button, .woocommerce .woocommerce-product-inner .woocommerce-product-content .woocommerce-add-to-cart .wc-forward, .single-product .woocommerce-social-share label, .single-product #pxl-content-area div.product .entry-summary .price, .single-product > div.product .entry-summary .price, .single-product #pxl-content-area div.product .woocommerce-tabs .woocommerce-Tabs-panel--reviews .comment-reply-title, .single-product > div.product .woocommerce-tabs .woocommerce-Tabs-panel--reviews .comment-reply-title, body #yith-quick-view-modal #yith-quick-view-content .entry-summary form.cart label, .pxl-blog-style3 .pxl-post--button, .pxl-blog-style3 .pxl-post--button, .btn {
   font-family: "Fira Sans", sans-serif;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -8788,6 +8791,29 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
 .pxl-twisted-arrow {
   transform: rotate(30deg);
 }
+.industries-button-arrow i {
+  transform: rotate(90deg);
+}
+.industries-button-arrow i:before {
+  animation: industries-button-arrow 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+@keyframes industries-button-arrow {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(8px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 @media screen and (max-width: 777px) {
   .revslider-initialised .rv-description {
     font-size: 17px !important;
@@ -11010,85 +11036,64 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
   fill: #fff;
   height: 48px;
 }
-.pxl-progressbar-1 .pxl-item--icon {
-  width: 57px;
-  height: 57px;
-  font-size: 28px;
-  color: #000;
-  border-radius: 10px;
-  background-color: #fff;
-  box-shadow: 0 0 46px rgba(18, 18, 18, 0.14);
-}
-.pxl-progressbar-1.style-1 .pxl--holder {
+.pxl-progressbar-1 .pxl--holder {
   font-size: 16px;
   color: #111;
   font-weight: 700;
 }
-.pxl-progressbar-1.style-1 .pxl--meta {
+.pxl-progressbar-1 .pxl--meta {
   margin-bottom: 11px;
-}
-.pxl-progressbar-1.style-1 .pxl-progressbar--wrap {
-  height: 7px;
-  background-color: #e1e1e1;
-}
-.pxl-progressbar-1.style-1 .pxl--progressbar {
-  height: 7px;
-  background-color: var(--gradient-color-from);
-  background-image: -webkit-gradient(linear, right top, left top, from(var(--gradient-color-from)), to(var(--gradient-color-to)));
-  background-image: -webkit-linear-gradient(to right, var(--gradient-color-from), var(--gradient-color-to));
-  background-image: -moz-linear-gradient(to right, var(--gradient-color-from), var(--gradient-color-to));
-  background-image: -ms-linear-gradient(to right, var(--gradient-color-from), var(--gradient-color-to));
-  background-image: -o-linear-gradient(to right, var(--gradient-color-from), var(--gradient-color-to));
-  background-image: linear-gradient(to right, var(--gradient-color-from), var(--gradient-color-to));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='var(--gradient-color-from)', endColorStr='var(--gradient-color-to)', gradientType='1');
-}
-.pxl-progressbar-1.style-1 .pxl--item {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-}
-.pxl-progressbar-1.style-1 .pxl--item + .pxl--item {
-  margin-top: 39px;
-}
-.pxl-progressbar-1.style-2 .pxl--holder {
   font-size: 18px;
-  color: #454545;
+  letter-spacing: 0px;
+  line-height: 26px;
+  color: #111;
+  font-weight: 500;
+  font-family: "GTWalsheimPro";
 }
-.pxl-progressbar-1.style-2 .pxl--meta {
-  margin-bottom: 8px;
+.pxl-progressbar-1 .pxl-progressbar--wrap {
+  height: 2px;
+  background-color: rgba(18, 28, 39, 0.149);
+  -webkit-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
 }
-.pxl-progressbar-1.style-2 .pxl-progressbar--wrap {
-  height: 8px;
-  border-radius: 8px;
-  background-color: rgba(var(--primary-color-rgb),0.08);
-}
-.pxl-progressbar-1.style-2 .pxl--progressbar {
-  height: 8px;
-  background-color: var(--primary-color);
-  border-radius: 8px;
+.pxl-progressbar-1 .pxl--progressbar {
+  height: 2px;
+  background-color: var(--third-color);
+  -webkit-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
   position: relative;
 }
-.pxl-progressbar-1.style-2 .pxl--progressbar:before {
+.pxl-progressbar-1 .pxl--progressbar:before {
   content: "";
-  width: 8px;
-  height: 20px;
-  border-radius: 80px;
   position: absolute;
+  top: 50%;
   right: 0;
-  top: -6px;
-  background-color: var(--primary-color);
+  width: 9px;
+  height: 9px;
+  background-color: var(--third-color);
+  -webkit-border-radius: 9px;
+  -khtml-border-radius: 9px;
+  -moz-border-radius: 9px;
+  -ms-border-radius: 9px;
+  -o-border-radius: 9px;
+  border-radius: 9px;
+  transform: translateY(-50%);
 }
-.pxl-progressbar-1.style-2 .pxl--percentage {
-  font-weight: 500;
-  color: var(--primary-color);
-}
-.pxl-progressbar-1.style-2 .pxl--item {
+.pxl-progressbar-1 .pxl--item {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
 }
-.pxl-progressbar-1.style-2 .pxl--item + .pxl--item {
-  margin-top: 12px;
+.pxl-progressbar-1 .pxl--item + .pxl--item {
+  margin-top: 39px;
 }
 .pxl-partner-carousel1 .pxl-item--logo {
   display: flex;
@@ -22703,4 +22708,336 @@ body.rtl .widget_search .search-submit {
   font-weight: 700;
   font-style: normal;
   src: url('../fonts/walsheim/GTWalsheimPro-Bold.woff2') format('woff2'), url('../fonts/walsheim/GTWalsheimPro-Bold.woff') format('woff');
+}
+.pxl-industries-grid-layout1 .pxl-grid-item {
+  margin-bottom: 30px;
+}
+.pxl-industries-grid-layout1 .pxl-post--inner {
+  border: 1px solid #cdcdcd;
+  -webkit-border-radius: 8px;
+  -khtml-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-transition: all 0.3s linear 0ms;
+  -khtml-transition: all 0.3s linear 0ms;
+  -moz-transition: all 0.3s linear 0ms;
+  -ms-transition: all 0.3s linear 0ms;
+  -o-transition: all 0.3s linear 0ms;
+  transition: all 0.3s linear 0ms;
+  padding: 20px 45px 40px 45px;
+}
+@media screen and (max-width: 767px) {
+  .pxl-industries-grid-layout1 .pxl-post--inner {
+    padding: 20px 20px 40px 20px;
+  }
+}
+.pxl-industries-grid-layout1 .pxl-post--inner:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+.pxl-industries-grid-layout1 .pxl-post--inner:hover .pxl-post--title {
+  color: #fff;
+}
+.pxl-industries-grid-layout1 .pxl-post--inner:hover .pxl-post--content {
+  color: #cdd4ef;
+}
+.pxl-industries-grid-layout1 .pxl-post--inner:hover .content-top:before {
+  width: 0%;
+}
+.pxl-industries-grid-layout1 .pxl-post--inner:hover .content-top:after {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+.pxl-industries-grid-layout1 .pxl-post--inner:hover .content-top .pxl-post--icon i {
+  transform: rotateY(360deg);
+}
+.pxl-industries-grid-layout1 .content-top {
+  display: flex;
+  align-content: center;
+  position: relative;
+  gap: 20px;
+  --x: 79px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+.pxl-industries-grid-layout1 .content-top:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #cdcdcd;
+  -webkit-transition: all 0.3s linear 0ms;
+  -khtml-transition: all 0.3s linear 0ms;
+  -moz-transition: all 0.3s linear 0ms;
+  -ms-transition: all 0.3s linear 0ms;
+  -o-transition: all 0.3s linear 0ms;
+  transition: all 0.3s linear 0ms;
+}
+.pxl-industries-grid-layout1 .content-top:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: auto;
+  right: 0;
+  width: 0%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.149);
+  -webkit-transition: all 0.3s linear 0ms;
+  -khtml-transition: all 0.3s linear 0ms;
+  -moz-transition: all 0.3s linear 0ms;
+  -ms-transition: all 0.3s linear 0ms;
+  -o-transition: all 0.3s linear 0ms;
+  transition: all 0.3s linear 0ms;
+}
+.pxl-industries-grid-layout1 .content-top .pxl-post--icon {
+  width: var(--x);
+  height: var(--x);
+  -webkit-border-radius: 50%;
+  -khtml-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pxl-industries-grid-layout1 .content-top .pxl-post--icon i {
+  color: #fff;
+  font-size: 45px;
+  -webkit-transition: all 0.3s linear 0ms;
+  -khtml-transition: all 0.3s linear 0ms;
+  -moz-transition: all 0.3s linear 0ms;
+  -ms-transition: all 0.3s linear 0ms;
+  -o-transition: all 0.3s linear 0ms;
+  transition: all 0.3s linear 0ms;
+  transform: rotateY(0deg);
+}
+.pxl-industries-grid-layout1 .content-top .pxl-post--featured {
+  width: var(--x);
+  height: var(--x);
+  -webkit-border-radius: 50%;
+  -khtml-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+.pxl-industries-grid-layout1 .content-top .pxl-post--featured img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.pxl-industries-grid-layout1 .pxl-post--title {
+  font-size: 20px;
+  color: #111;
+  font-weight: 500;
+  display: inline;
+  font-family: "GTWalsheimPro";
+  -webkit-transition: all 0.3s linear 0ms;
+  -khtml-transition: all 0.3s linear 0ms;
+  -moz-transition: all 0.3s linear 0ms;
+  -ms-transition: all 0.3s linear 0ms;
+  -o-transition: all 0.3s linear 0ms;
+  transition: all 0.3s linear 0ms;
+  position: relative;
+}
+.pxl-industries-grid-layout1 .pxl-post--title:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background-color: #cdcdcd;
+  -webkit-transition: all 0.3s linear 0ms;
+  -khtml-transition: all 0.3s linear 0ms;
+  -moz-transition: all 0.3s linear 0ms;
+  -ms-transition: all 0.3s linear 0ms;
+  -o-transition: all 0.3s linear 0ms;
+  transition: all 0.3s linear 0ms;
+}
+.pxl-industries-grid-layout1 .pxl-post--title:hover:before {
+  width: 100%;
+}
+.pxl-industries-grid-layout1 .pxl-post--content {
+  font-size: 16px;
+  line-height: 26px;
+  color: #666;
+  font-weight: 400;
+  -webkit-transition: all 0.3s linear 0ms;
+  -khtml-transition: all 0.3s linear 0ms;
+  -moz-transition: all 0.3s linear 0ms;
+  -ms-transition: all 0.3s linear 0ms;
+  -o-transition: all 0.3s linear 0ms;
+  transition: all 0.3s linear 0ms;
+  margin-top: 20px;
+}
+.pxl-text-carousel1 .pxl-item--title {
+  color: #111;
+  font-family: "GTWalsheimPro";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.17;
+  margin-bottom: 18px;
+}
+.pxl-text-carousel1 .pxl-item--desc {
+  color: #111;
+  font-family: "GTWalsheimPro";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.75;
+}
+.pxl-text-carousel1 .pxl-wrap-arrow {
+  margin-top: 36px;
+  column-gap: 25px;
+}
+.pxl-text-carousel1 .pxl-wrap-arrow .pxl-swiper-arrow {
+  cursor: pointer;
+}
+.pxl-text-carousel1 .pxl-wrap-arrow .pxl-swiper-arrow.pxl-swiper-arrow-prev i {
+  transform: rotate(180deg);
+}
+.pxl-text-carousel1 .pxl-wrap-arrow .pxl-swiper-arrow.swiper-button-disabled {
+  pointer-events: none;
+}
+.pxl-text-carousel1 .pxl-wrap-arrow .pxl-swiper-arrow.swiper-button-disabled i {
+  color: #cdcdcd;
+  opacity: 0.5;
+}
+.pxl-text-carousel1 .pxl-wrap-arrow i {
+  color: #111;
+  font-size: 30px;
+  line-height: 1;
+}
+.pxl-text-carousel2 .pxl-swiper-container {
+  margin: 0;
+}
+.pxl-text-carousel2 .pxl-item--inner:hover .pxl-item--title:after {
+  transform: scale(1);
+}
+.pxl-text-carousel2 .pxl-item--milestone {
+  color: #fff;
+  font-family: "GTWalsheimPro";
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+.pxl-text-carousel2 .pxl-item--title {
+  color: #fff;
+  font-family: "GTWalsheimPro";
+  font-size: 23px;
+  margin-top: 13px;
+  padding-bottom: 37px;
+  margin-bottom: 0;
+  position: relative;
+}
+.pxl-text-carousel2 .pxl-item--title:before {
+  --x: 11px;
+  content: "";
+  position: absolute;
+  width: var(--x);
+  height: var(--x);
+  background-color: #fff;
+  -webkit-border-radius: 50%;
+  -khtml-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  bottom: calc(var(--x) / -2);
+  left: 0;
+  z-index: 3;
+}
+.pxl-text-carousel2 .pxl-item--title:after {
+  --x: 35px;
+  content: "";
+  position: absolute;
+  width: var(--x);
+  height: var(--x);
+  border: 1px solid #353e47;
+  -webkit-border-radius: 50%;
+  -khtml-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  bottom: calc(var(--x) / -2);
+  left: -13px;
+  transform: scale(0);
+  z-index: 1;
+  -webkit-transition: all 0.3s ease-in-out;
+  -khtml-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.pxl-text-carousel2 .pxl-item--desc {
+  padding-top: 40px;
+  padding-right: 45px;
+  margin-bottom: 0;
+  color: #cdd4ef;
+  position: relative;
+}
+.pxl-text-carousel2 .pxl-item--desc:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.149);
+  opacity: 0;
+}
+.pxl-text-carousel2 .pxl-wrap-arrow {
+  position: absolute;
+  top: 72px;
+  left: -135px;
+  right: -135px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pxl-text-carousel2 .pxl-wrap-arrow:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.149);
+  transform: translateY(-50%);
+}
+.pxl-text-carousel2 .pxl-wrap-arrow .pxl-swiper-arrow {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.pxl-text-carousel2 .pxl-wrap-arrow .pxl-swiper-arrow i {
+  color: #111;
+  font-size: 20px;
+  line-height: 1;
+}
+.pxl-text-carousel2 .pxl-wrap-arrow .pxl-swiper-arrow.pxl-swiper-arrow-prev i {
+  transform: rotate(180deg);
+}
+.pxl-text-carousel2 .pxl-wrap-arrow .pxl-swiper-arrow.swiper-button-disabled {
+  pointer-events: none;
+}
+.pxl-text-carousel2 .pxl-wrap-arrow .pxl-swiper-arrow.swiper-button-disabled i {
+  color: #cdcdcd;
+  opacity: 0.5;
 }

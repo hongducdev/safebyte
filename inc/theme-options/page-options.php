@@ -388,6 +388,93 @@ function safebyte_page_options_register( $metabox ) {
 				],
 			]
 		],
+		'industries' => [
+			'opt_name'            => 'pxl_industries_options',
+			'display_name'        => esc_html__( 'Industry Options', 'safebyte' ),
+			'show_options_object' => false,
+			'context'  => 'advanced',
+			'priority' => 'default',
+			'sections'  => [
+				'header' => [
+					'title'  => esc_html__( 'General', 'safebyte' ),
+					'icon'   => 'el-icon-website',
+					'fields' => array_merge(
+						array(
+							array(
+					            'id'=> 'industries_external_link',
+					            'type' => 'text',
+					            'title' => esc_html__('External Link', 'safebyte'),
+					            'validate' => 'url',
+					            'default' => '',
+					        ),
+							array(
+					            'id'=> 'industries_excerpt',
+					            'type' => 'textarea',
+					            'title' => esc_html__('Excerpt', 'safebyte'),
+					            'validate' => 'html_custom',
+					            'default' => '',
+					        ),
+					        array(
+					            'id'       => 'industries_icon_type',
+					            'type'     => 'button_set',
+					            'title'    => esc_html__('Icon Type', 'safebyte'),
+					            'options'  => array(
+					                'icon'  => esc_html__('Icon', 'safebyte'),
+					                'image'  => esc_html__('Image', 'safebyte'),
+					            ),
+					            'default'  => 'icon'
+					        ),
+					        array(
+					            'id'       => 'industries_icon_font',
+					            'type'     => 'pxl_iconpicker',
+					            'title'    => esc_html__('Icon', 'safebyte'),
+					            'required' => array( 0 => 'industries_icon_type', 1 => 'equals', 2 => 'icon' ),
+            					'force_output' => true
+					        ),
+					        array(
+					            'id'       => 'industries_icon_img',
+					            'type'     => 'media',
+					            'title'    => esc_html__('Icon Image', 'safebyte'),
+					            'default' => '',
+					            'required' => array( 0 => 'industries_icon_type', 1 => 'equals', 2 => 'image' ),
+				            	'force_output' => true
+					        ),
+					        array(
+								'id'             => 'content_spacing',
+								'type'           => 'spacing',
+								'output'         => array( '#pxl-wapper #pxl-main' ),
+								'right'          => false,
+								'left'           => false,
+								'mode'           => 'padding',
+								'units'          => array( 'px' ),
+								'units_extended' => 'false',
+								'title'          => esc_html__( 'Content Spacing Top/Bottom', 'safebyte' ),
+								'default'        => array(
+									'padding-top'    => '',
+									'padding-bottom' => '',
+									'units'          => 'px',
+								)
+							),
+						),
+						safebyte_footer_opts([
+							'default'         => true,
+							'default_value'   => '-1'
+						])
+				    )
+				],
+				'page_title' => [
+					'title'  => esc_html__( 'Page Title', 'safebyte' ),
+					'icon'   => 'el el-indent-left',
+					'fields' => array_merge(
+				        safebyte_page_title_opts([
+							'default'         => true,
+							'default_value'   => '-1'
+						])
+				    )
+				],
+			]
+		],
+		
 
 		'pxl-template' => [ //post_type
 			'opt_name'            => 'pxl_hidden_template_options',

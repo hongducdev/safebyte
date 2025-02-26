@@ -151,6 +151,9 @@ pxl_add_custom_widget(
                                 'type' => \Elementor\Controls_Manager::SWITCHER,
                                 'default' => 'false',
                                 'control_type' => 'responsive',
+                                'condition' => [
+                                    'list_type' => 'list-icon',
+                                ],
                             ),
                             array(
                                 'name' => 'icon_box_color',
@@ -159,6 +162,9 @@ pxl_add_custom_widget(
                                 'control_type' => 'responsive',
                                 'selectors' => [
                                     '{{WRAPPER}} .pxl-list .pxl-item--icon.pxl-icon--box' => 'background-color: {{VALUE}};',
+                                ],
+                                'condition' => [
+                                    'icon_box' => 'true',
                                 ],
                             ),
                             array(
@@ -176,6 +182,9 @@ pxl_add_custom_widget(
                                 'selectors' => [
                                     '{{WRAPPER}} .pxl-list .pxl-item--icon.pxl-icon--box' => 'width: {{SIZE}}{{UNIT}};',
                                 ],
+                                'condition' => [
+                                    'icon_box' => 'true',
+                                ],
                             ),
                             array(
                                 'name' => 'icon_box_height',
@@ -192,6 +201,9 @@ pxl_add_custom_widget(
                                 'selectors' => [
                                     '{{WRAPPER}} .pxl-list .pxl-item--icon.pxl-icon--box' => 'height: {{SIZE}}{{UNIT}};',
                                 ],
+                                'condition' => [
+                                    'icon_box' => 'true',
+                                ],
                             ),
                             array(
                                 'name' => 'icon_margin',
@@ -202,6 +214,9 @@ pxl_add_custom_widget(
                                     '{{WRAPPER}} .pxl-list .pxl-item--icon' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                                 ],
                                 'control_type' => 'responsive',
+                                'condition' => [
+                                    'icon_box' => 'true',
+                                ],
                             ),
                             array(
                                 'name' => 'icon_font_size',
@@ -217,6 +232,9 @@ pxl_add_custom_widget(
                                 ],
                                 'selectors' => [
                                     '{{WRAPPER}} .pxl-list .pxl-item--icon' => 'font-size: {{SIZE}}{{UNIT}};',
+                                ],
+                                'condition' => [
+                                    'icon_box' => 'true',
                                 ],
                             ),
                             array(
@@ -250,7 +268,19 @@ pxl_add_custom_widget(
                                 'control_type' => 'group',
                                 'selector' => '{{WRAPPER}} .pxl-list label',
                             ),
-
+                            array(
+                                'name' => 'label_margin',
+                                'label' => esc_html__('Label Margin', 'safebyte'),
+                                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                                'size_units' => ['px'],
+                                'selectors' => [
+                                    '{{WRAPPER}} .pxl-list label' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                ],
+                                'control_type' => 'responsive',
+                                'condition' => [
+                                    'list_type' => 'list-circle',
+                                ],
+                            ),
                             array(
                                 'name' => 'content_color',
                                 'label' => esc_html__('Content Color', 'safebyte'),

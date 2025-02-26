@@ -151,6 +151,56 @@ pxl_add_custom_widget(
                             ],
                         ),
                         array(
+                            'name' => 'icon_width',
+                            'label' => esc_html__( 'Icon Width', 'safebyte' ),
+                            'type' => \Elementor\Controls_Manager::SLIDER,
+                            'control_type' => 'responsive',
+                            'size_units' => [ 'px' ],
+                            'range' => [
+                                'px' => [
+                                    'min' => 0,
+                                    'max' => 300,
+                                ],
+                            ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-icon1 a i' => 'width: {{SIZE}}{{UNIT}};',
+                            ],
+                            'condition' => [
+                                'style' => 'style-2',
+                            ],
+                        ),
+                        array(
+                            'name' => 'icon_height',
+                            'label' => esc_html__( 'Icon Height', 'safebyte' ),
+                            'type' => \Elementor\Controls_Manager::SLIDER,
+                            'control_type' => 'responsive',
+                            'size_units' => [ 'px' ],
+                            'range' => [
+                                'px' => [
+                                    'min' => 0,
+                                    'max' => 300,
+                                ],
+                            ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-icon1 a i' => 'height: {{SIZE}}{{UNIT}};',
+                            ],
+                            'condition' => [
+                                'style' => 'style-2',
+                            ],
+                        ),
+                        array(
+                            'name' => 'icon_border_radius',
+                            'label' => esc_html__( 'Border Radius', 'safebyte' ),
+                            'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                            'size_units' => [ 'px', '%' ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-icon1 a i' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                            ],
+                            'condition' => [
+                                'style' => 'style-2',
+                            ],
+                        ),
+                        array(
                             'name' => 'icon_animation',
                             'label' => esc_html__( 'Icon Animation', 'safebyte' ),
                             'type' => \Elementor\Controls_Manager::SELECT,

@@ -9,15 +9,6 @@ if(isset($settings['progressbar']) && !empty($settings['progressbar'])):
                 'aria-hidden' => 'true',
             ] ); ?>
             <div class="pxl--item <?php echo esc_attr($settings['pxl_animate']); ?>" data-wow-delay="<?php echo esc_attr($settings['pxl_animate_delay']); ?>ms">
-                <?php if ( !empty($progressbar['pxl_icon']['value']) ) : ?>
-                    <div class="pxl-item--icon pxl-fl-middle pxl-mr-18">
-                        <?php if ( $is_new ):
-                            \Elementor\Icons_Manager::render_icon( $progressbar['pxl_icon'], [ 'aria-hidden' => 'true' ] );
-                        elseif(!empty($progressbar['pxl_icon'])): ?>
-                            <i class="<?php echo esc_attr( $progressbar['pxl_icon'] ); ?>" aria-hidden="true"></i>
-                        <?php endif; ?>
-                    </div>
-                <?php endif; ?>
                 <div class="pxl--holder pxl-flex-grow">
                     <div class="pxl--meta pxl-flex-middle">
                         <div class="pxl--title pxl-flex-grow el-empty pxl-mr-10"><?php echo pxl_print_html($progressbar['title']); ?></div>

@@ -20,12 +20,10 @@
                         <div class="pxl-item--icon"><?php echo pxl_print_html($thumbnail_icon); ?></div>
                     <?php endif; ?>
                 </div>
-                <?php if(!empty($value['content'])) : ?>
-                    <div class="pxl-item--content">
-                        <label class="pxl-empty"><?php echo esc_html($value['label']); ?></label>
-                        <?php echo pxl_print_html($value['content'])?>
-                    </div>
-                <?php endif; ?>
+                <div class="pxl-item--content">
+                    <label class="pxl-empty"><?php echo esc_html($value['label']); ?></label>
+                    <?php echo pxl_print_html($value['content'])?>
+                </div>
             </div>
         <?php endforeach; ?>
     </div>

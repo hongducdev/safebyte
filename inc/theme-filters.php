@@ -59,7 +59,7 @@ function safebyte_add_cpt_support() {
     $cpt_support = get_option( 'elementor_cpt_support' );
     
     if( ! $cpt_support ) {
-        $cpt_support = [ 'page', 'post', 'portfolio', 'service', 'footer', 'pxl-template' ];
+        $cpt_support = [ 'page', 'post', 'portfolio', 'service', 'industries', 'footer', 'pxl-template' ];
         update_option( 'elementor_cpt_support', $cpt_support );
     }
     
@@ -70,6 +70,11 @@ function safebyte_add_cpt_support() {
 
     else if( ! in_array( 'service', $cpt_support ) ) {
         $cpt_support[] = 'service';
+        update_option( 'elementor_cpt_support', $cpt_support );
+    }
+
+    else if( ! in_array( 'industries', $cpt_support ) ) {
+        $cpt_support[] = 'industries';
         update_option( 'elementor_cpt_support', $cpt_support );
     }
 
@@ -99,6 +104,9 @@ function safebyte_add_post_type( $postypes ) {
 	$service_display = safebyte()->get_theme_opt('service_display', 'on');
 	$service_slug = safebyte()->get_theme_opt('service_slug', 'service');
 	$service_name = safebyte()->get_theme_opt('service_name', 'Services');
+	$industries_display = safebyte()->get_theme_opt('industries_display', 'on');
+	$industries_slug = safebyte()->get_theme_opt('industries_slug', 'industries');
+	$industries_name = safebyte()->get_theme_opt('industries_name', 'Industries');
 	if($portfolio_display == 'on') {
 		$portfolio_status = true;
 	} else {
@@ -108,6 +116,11 @@ function safebyte_add_post_type( $postypes ) {
 		$service_status = true;
 	} else {
 		$service_status = false;
+	}
+	if($industries_display == 'on') {
+		$industries_status = true;
+	} else {
+		$industries_status = false;
 	}
 
 	$postypes['portfolio'] = array(
@@ -131,6 +144,17 @@ function safebyte_add_post_type( $postypes ) {
  		 	),
 		),
 	);
+
+	$postypes['industries'] = array(
+		'status' => $industries_status,
+		'item_name'  => $industries_name,
+		'items_name' => $industries_name,
+		'args'       => array(
+			'rewrite'             => array(
+				'slug'       => $industries_slug,
+		 	),
+		),
+	);
   
 	return $postypes;
 }
@@ -148,6 +172,13 @@ function safebyte_get_post_type_archive_link($link, $post_type){
 
 	if( $post_type == 'service'){
 		$port_archive_link = safebyte()->get_theme_opt('archive_service_link', '');
+		    if( !empty($port_archive_link) ){ 
+		  	$link = get_permalink($port_archive_link);
+		}
+	}
+
+	if( $post_type == 'industries'){
+		$port_archive_link = safebyte()->get_theme_opt('archive_industries_link', '');
 		    if( !empty($port_archive_link) ){ 
 		  	$link = get_permalink($port_archive_link);
 		}
@@ -181,6 +212,19 @@ function safebyte_add_tax( $taxonomies ) {
 			'rewrite'             => array(
                 'slug'       => 'service-category'
  		 	),
+		),
+		'labels'     => array()
+	);
+
+	$taxonomies['industries-category'] = array(
+		'status'     => true,
+		'post_type'  => array( 'industries' ),
+		'taxonomy'   => 'Industry Categories',
+		'taxonomies' => 'Industry Categories',
+		'args'       => array(
+			'rewrite'             => array(
+                'slug'       => 'industries-category'
+		 	),
 		),
 		'labels'     => array()
 	);
