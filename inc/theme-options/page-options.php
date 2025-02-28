@@ -386,6 +386,16 @@ function safebyte_page_options_register( $metabox ) {
 						])
 				    )
 				],
+				'page_title' => [
+					'title'  => esc_html__( 'Page Title', 'safebyte' ),
+					'icon'   => 'el el-indent-left',
+					'fields' => array_merge(
+				        safebyte_page_title_opts([
+							'default'         => true,
+							'default_value'   => '-1'
+						])
+				    )
+				],
 			]
 		],
 		'industries' => [

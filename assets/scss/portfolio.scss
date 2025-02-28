@@ -6,7 +6,7 @@ Portfolio Style
 # Portfolio Details
 --------------------------------------------------------------*/
 
-.pxl-portfolio-grid-layout1 {
+.pxl-portfolio-style-1 {
     .pxl-grid-item {
         margin-bottom: 30px;
     }
@@ -80,7 +80,7 @@ Portfolio Style
 
         .pxl-post--category {
             margin-bottom: 25px;
-            height: 33px;
+            min-height: 33px;
             border-radius: 17px;
             background-color: #dce7fc;
             padding: 0 40px;
@@ -328,6 +328,16 @@ Portfolio Style
     }
 }
 
+.pxl-portfolio-carousel1 {
+    .pxl-swiper-dots-wrap {
+        display: flex;
+        justify-content: center;
+        .pxl-swiper-dots {
+            display: inline-flex;
+        }
+    }
+}
+
 // Portfolio Details
 
 .pxl-project-info1 {
@@ -448,99 +458,6 @@ Portfolio Style
         }
         &:last-child {
             padding-right: 0;
-        }
-    }
-}
-
-.pxl-portfolio-style1 .pxl-post--readmore.pxl-gradient-rotate {
-    @include background-gradient-rotate(
-        135deg,
-        $gradient_color_from,
-        $gradient_color_to
-    );
-}
-
-.pxl-portfolio-carousel1 {
-    .pxl-post--category {
-        font-size: 18px;
-        text-transform: uppercase;
-        font-weight: 500;
-        color: #fff;
-        @media #{$max-xl} {
-            font-size: 16px;
-        }
-    }
-    .pxl-post--title {
-        color: #fff;
-        margin-bottom: 0;
-        font-size: 30px;
-        @media #{$max-xl} {
-            font-size: 24px;
-        }
-    }
-    .pxl-post--holder {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        padding: 30px 45px 41px;
-        z-index: 77;
-        @include transition(all 300ms linear 0ms);
-        opacity: 0;
-        transform: translateY(100%);
-        @media #{$max-xl} {
-            padding-left: 30px;
-            padding-right: 30px;
-        }
-    }
-    .pxl-post--button {
-        width: 67px;
-        height: 67px;
-        background-color: #fff;
-        border-radius: 67px;
-        position: absolute;
-        top: 44px;
-        right: 54px;
-        font-size: 18px;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        color: #000;
-        z-index: 77;
-        @include transition(all 300ms linear 0ms);
-        opacity: 0;
-        transform: translateY(-110px);
-    }
-    .pxl-post--inner {
-        border-radius: 20px;
-        position: relative;
-        overflow: hidden;
-        &:before {
-            content: "";
-            z-index: 66;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            @include background-horizontal(
-                $gradient_color_from,
-                $gradient_color_to
-            );
-            opacity: 0;
-            transform: scale(2);
-            @include transition(all 300ms linear 0ms);
-        }
-        &:hover {
-            &:before {
-                opacity: 0.86;
-                transform: scale(1);
-            }
-            .pxl-post--holder,
-            .pxl-post--button {
-                opacity: 1;
-                transform: translateY(0%);
-            }
         }
     }
 }

@@ -118,7 +118,7 @@ pxl_add_custom_widget(
                         ),
                         array(
                             'name' => 'color',
-                            'label' => esc_html__( 'Color', 'safebyte' ),
+                            'label' => esc_html__( 'Label Color', 'safebyte' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'default' => '',
                             'selectors' => [
@@ -132,6 +132,15 @@ pxl_add_custom_widget(
                             'default' => '',
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-icon1 a i' => 'color: {{VALUE}};',
+                            ],
+                        ),
+                        array(
+                            'name' => 'icon_bg_color',
+                            'label' => esc_html__('Background Color', 'safebyte' ),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'default' => '',
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-icon1 a i' => 'background-color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -207,7 +216,6 @@ pxl_add_custom_widget(
                             'options' => [
                                 'none' => esc_html__( 'None', 'safebyte' ),
                                 'ring' => esc_html__( 'Ring', 'safebyte' ),
-                                'animated' => esc_html__( 'Animated', 'safebyte' ),
                             ],
                             'default' => 'none',
                         ),

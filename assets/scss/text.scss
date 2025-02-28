@@ -50,7 +50,7 @@
     .pxl-swiper-container {
         margin: 0;
     }
-    .pxl-item--inner  {
+    .pxl-item--inner {
         &:hover {
             .pxl-item--title {
                 &:after {
@@ -111,10 +111,20 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
+            width: calc(100% + 30px);
             height: 1px;
             background-color: rgba(#fff, 0.149);
             opacity: 0;
+        }
+        @media #{$max-xl} {
+            &:before {
+                opacity: 1;
+            }
+        }
+    }
+    .pxl-swiper-bottom {
+        @media #{$max-xl} {
+            justify-content: center;
         }
     }
     .pxl-wrap-arrow {
@@ -125,6 +135,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+
         &:before {
             content: "";
             position: absolute;
@@ -134,6 +145,14 @@
             height: 1px;
             background-color: rgba(#fff, 0.149);
             transform: translateY(-50%);
+        }
+        @media #{$max-xl} {
+            position: static;
+            margin-top: 30px;
+            gap: 30px;
+            &:before {
+                display: none;
+            }
         }
         .pxl-swiper-arrow {
             width: 65px;
@@ -162,5 +181,84 @@
                 }
             }
         }
+    }
+}
+
+.pxl-text-carousel3 {
+    .pxl-carousel-inner {
+        position: relative;
+        overflow: unset;
+        &:before {
+            position: absolute;
+            content: "";
+            width: calc(100% + 83px + 83px);
+            height: 1px;
+            background-color: rgba(#121c27, 0.149);
+            top: 140px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        @media #{$max-xl} {
+            &:before {
+                width: 100%;
+            }
+        }
+    }
+    .pxl-item--inner {
+        text-align: center;
+        &:hover {
+            .pxl-item--title {
+                &:after {
+                    transform: translateX(calc(50% - 17.5px)) scale(1);
+                }
+            }
+        }
+    }
+    .pxl-swiper-icon {
+        margin-bottom: 30px;
+        i {
+            font-size: 26px;
+            color: $primary_color;
+        }
+    }
+    .pxl-item--title {
+        font-size: 23px;
+        line-height: 40px;
+        color: #111111;
+        font-weight: 500;
+        font-family: "GTWalsheimPro";
+        padding-bottom: 40px;
+        position: relative;
+        margin-bottom: 0;
+        &:before {
+            content: "";
+            position: absolute;
+            bottom: -5.5px;
+            left: 50%;
+            width: 11px;
+            height: 11px;
+            @include border-radius(50%);
+            background-color: $primary_color;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            width: 35px;
+            height: 35px;
+            border: 1px solid $primary_color;
+            @include border-radius(50%);
+            bottom: calc(35px / -2);
+            left: calc(50% - 17.5px);
+            transform: translateX(calc(50% - 17.5px)) scale(0);
+            @include transition(all 0.3s linear 0ms);
+            z-index: 2;
+        }
+    }
+    .pxl-item--desc {
+        padding-top: 40px;
+        position: relative;
     }
 }

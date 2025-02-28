@@ -44,6 +44,15 @@
 		"bolt",
 		"agriculture",
 		"protection",
-		"robotic-arm-1"
+		"robotic-arm-1",
+		"box",
+		"open-folder",
+		"star",
+		"incoming-call",
+		"car-simple",
+		"currency-circle-dollar",
+		"database",
+		"lock-simple-open",
+		"mountains"
 	]
 }

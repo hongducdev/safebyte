@@ -30,6 +30,10 @@
                                     'label' => esc_html__('Layout 1', 'safebyte' ),
                                     'image' => get_template_directory_uri() . '/elements/assets/img/pxl_counter/layout1.jpg'
                                 ],
+                                '2' => [
+                                    'label' => esc_html__('Layout 2', 'safebyte' ),
+                                    'image' => get_template_directory_uri() . '/elements/assets/img/pxl_counter/layout2.jpg'
+                                ],
                             ],
                         ),
                     ),
@@ -188,6 +192,22 @@
                             'control_type' => 'group',
                             'selector' => '{{WRAPPER}} .pxl-counter .pxl-counter--title',
                         ),
+                        array(
+                            'name' => 'title_max_width',
+                            'label' => esc_html__('Max Width', 'safebyte' ),
+                            'type' => \Elementor\Controls_Manager::SLIDER,
+                            'control_type' => 'responsive',
+                            'size_units' => [ 'px' ],
+                            'range' => [
+                                'px' => [
+                                    'min' => 0,
+                                    'max' => 300,
+                                ],
+                            ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-counter .pxl-counter--title' => 'max-width: {{SIZE}}{{UNIT}};',
+                            ],
+                        )
                     ),
                 ),
                 array(
@@ -254,6 +274,14 @@
                                 '{{WRAPPER}} .pxl-counter .pxl-counter--icon' => 'margin-bottom: {{SIZE}}{{UNIT}};',
                             ],
                             'separator' => 'after',
+                        ),
+                        array(
+                            'name' => 'icon_bg_color',
+                            'label' => esc_html__('Background Color', 'safebyte' ),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-counter .pxl-counter--icon' => 'background-color: {{VALUE}};',
+                            ],
                         ),
                     ),
                 ),

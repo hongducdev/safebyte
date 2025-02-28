@@ -242,9 +242,6 @@ pxl_add_custom_widget(
                                 '4' => '4',
                                 '6' => '6',
                             ],
-                            'condition' => [
-                                'layout!' => ['2'],
-                            ],
                         ),
                         array(
                             'name' => 'col_sm',
@@ -258,9 +255,6 @@ pxl_add_custom_widget(
                                 '3' => '3',
                                 '4' => '4',
                                 '6' => '6',
-                            ],
-                            'condition' => [
-                                'layout!' => ['2'],
                             ],
                         ),
                         array(
@@ -276,9 +270,6 @@ pxl_add_custom_widget(
                                 '4' => '4',
                                 '6' => '6',
                             ],
-                            'condition' => [
-                                'layout!' => ['2'],
-                            ],
                         ),
                         array(
                             'name' => 'col_lg',
@@ -292,9 +283,6 @@ pxl_add_custom_widget(
                                 '3' => '3',
                                 '4' => '4',
                                 '6' => '6',
-                            ],
-                            'condition' => [
-                                'layout!' => ['2'],
                             ],
                         ),
                         array(
@@ -311,9 +299,6 @@ pxl_add_custom_widget(
                                 '5' => '5',
                                 '6' => '6',
                             ],
-                            'condition' => [
-                                'layout!' => ['2'],
-                            ],
                         ),
                         array(
                             'name' => 'col_xxl',
@@ -327,9 +312,6 @@ pxl_add_custom_widget(
                                 '4' => '4',
                                 '5' => '5',
                                 '6' => '6',
-                            ],
-                            'condition' => [
-                                'layout!' => ['2'],
                             ],
                         ),
 
@@ -345,9 +327,6 @@ pxl_add_custom_widget(
                                 '4' => '4',
                                 '5' => '5',
                                 '6' => '6',
-                            ],
-                            'condition' => [
-                                'layout!' => ['2'],
                             ],
                         ),
                         array(

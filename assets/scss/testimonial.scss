@@ -160,140 +160,99 @@ TESTIMONIALS GRID
 }
 
 .pxl-testimonial-carousel2 {
-    .pxl-heading .pxl-item--title {
-        font-size: 52px;
-        line-height: 1.14;
-        margin-bottom: 33px;
-    }
-    .pxl-screen-mobile {
-        display: none;
-        padding: 0 23px;
-    }
-    @media #{$max-sm} {
-        .pxl-screen-desktop {
-            display: none;
+    .pxl-item--desc {
+        font-size: 20px;
+        line-height: 1.75;
+        color: #0d2665;
+        font-weight: 400;
+        font-family: "Public Sans";
+        padding: 54px 86px 50px 50px;
+        @include border-radius(8px);
+        background-color: rgba(#e5edfd, 0.749);
+        position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 28px solid transparent;
+            border-right: 0;
+            border-top: 28px solid rgba(#e5edfd, 0.749);
+            bottom: -28px;
+            left: 28px;
         }
-        .pxl-screen-mobile {
-            display: block;
+        @media #{$max-3xs} {
+            padding: 30px 15px;
+        }
+    }
+    .pxl-item--holder {
+        margin-top: 30px;
+        padding-left: 74px;
+        @media #{$max-3xs} {
+            padding-left: 0;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+            text-align: center;
         }
     }
     .pxl-item--avatar {
-        padding: 0 23px;
-        width: 50%;
-        text-align: center;
-        @media #{$max-sm} {
+        width: 61px;
+        height: 61px;
+        @include border-radius(61px);
+        img {
             width: 100%;
-        }
-        + .pxl-item--holder {
-            width: 50%;
-            @media #{$max-sm} {
-                width: 100%;
-                margin-top: 32px;
-            }
+            height: 100%;
+            object-fit: cover;
+            @include border-radius(61px);
         }
     }
-    .pxl-testimonial--meta {
-        .pxl-item--desc {
-            color: #5f5f5f;
-            margin-bottom: 46px;
-        }
-        .pxl-item--position {
-            font-size: 17px;
-            color: #373737;
-            line-height: normal;
+    .pxl-item--header {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        @media #{$max-3xs} {
+            flex-direction: column-reverse;
+            gap: 4px;
         }
         .pxl-item--title {
-            margin-top: -2px;
+            font-size: 18px;
+            font-family: "GTWalsheimPro";
             margin-bottom: 0;
-            font-size: 23px;
-            font-family: inherit;
-            span {
-                @extend .text-gradient;
+        }
+        .pxl-item--rating {
+            display: flex;
+            align-items: center;
+            i {
+                font-size: 14px;
+                color: $primary_color;
             }
         }
     }
-    .pxl-item--inner {
-        margin: 0 -23px;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        .pxl-item--holder {
-            padding: 0 23px;
-        }
-    }
-    .pxl-swiper-thumbs {
-        padding: 0;
-        margin: 30px 0;
-        overflow: visible;
-        .pxl-item--thumb {
-            width: 115px;
-            border-radius: 115px;
-            border: 2px solid #fff;
-            @include transition(all 300ms linear 0ms);
-            position: relative;
-            @media #{$max-sm} {
-                width: 60px;
-                border-radius: 60px;
-            }
-            &:before {
-                content: "";
-                width: 3px;
-                height: 45px;
-                position: absolute;
-                @include background-gradient-bottom(
-                    $gradient_color_to,
-                    $gradient_color_from
-                );
-                top: -19px;
-                left: 0;
-                right: 0;
-                margin: auto;
-                @include transition(all 300ms linear 0ms);
-                opacity: 0;
-                z-index: 9;
-            }
-            img {
-                border-radius: 115px;
+
+    .pxl-swiper-arrow-wrap {
+        margin-top: 0;
+        position: absolute;
+        right: 0;
+        bottom: 20px;
+        z-index: 10;
+        .pxl-swiper-arrow {
+            width: auto;
+            height: auto;
+            background-color: transparent;
+            border: 0;
+            color: #0d2665;
+            font-size: 20px;
+            &.pxl-swiper-arrow-prev {
+                i {
+                    transform: rotate(180deg);
+                }
             }
         }
-        .swiper-slide {
-            padding: 0 10px;
-            @media #{$max-sm} {
-                padding: 0 2px;
-            }
-        }
-        .swiper-slide-thumb-active .pxl-item--thumb {
-            border-color: $primary_color;
-            &:before {
-                top: -39px;
-                opacity: 1;
-            }
-        }
-    }
-    @media #{$max-sm} {
-        .pxl-swiper-arrow-wrap.style-2 .pxl-swiper-arrow {
-            width: 40px;
-            margin: 0;
-        }
-    }
-    @media #{$min-xl} {
-        .pxl-swiper-arrow-wrap {
-            position: absolute;
-            top: 50%;
-            left: 115px;
-            z-index: 99;
-            margin: 0;
-            transform: rotate(90deg) translateX(-50%);
-            transform-origin: top left;
-        }
-        .pxl-swiper-thumbs {
-            margin: 0;
-            .pxl-item--thumb img {
-                transform: rotate(-90deg);
-            }
-        }
-        .pxl-carousel-inner {
-            padding-left: 160px;
+        @media #{$max-sm} {
+            column-gap: 30px;
+            position: static;
+            margin-top: 15px;
         }
     }
 }

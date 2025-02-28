@@ -214,9 +214,6 @@ pxl_add_custom_widget(
                                     '{{WRAPPER}} .pxl-list .pxl-item--icon' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                                 ],
                                 'control_type' => 'responsive',
-                                'condition' => [
-                                    'icon_box' => 'true',
-                                ],
                             ),
                             array(
                                 'name' => 'icon_font_size',

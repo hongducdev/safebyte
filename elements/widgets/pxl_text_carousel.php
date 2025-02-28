@@ -33,6 +33,10 @@ pxl_add_custom_widget(
                                     'label' => esc_html__('Layout 2', 'safebyte'),
                                     'image' => get_template_directory_uri() . '/elements/assets/img/pxl_text_carousel/layout2.jpg'
                                 ],
+                                '3' => [
+                                    'label' => esc_html__('Layout 3', 'safebyte'),
+                                    'image' => get_template_directory_uri() . '/elements/assets/img/pxl_text_carousel/layout3.jpg'
+                                ],
                             ],
                         ),
                     ),

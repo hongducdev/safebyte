@@ -37,6 +37,18 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::ICONS,
                             'fa4compatibility' => 'icon',
                         ),
+                        array(
+                            'name' => 'button_text',
+                            'label' => esc_html__('Button Text', 'safebyte' ),
+                            'type' => \Elementor\Controls_Manager::TEXT,
+                            'label_block' => true,
+                        ),
+                        array(
+                            'name' => 'button_link',
+                            'label' => esc_html__('Button Link', 'safebyte' ),
+                            'type' => \Elementor\Controls_Manager::URL,
+                            'label_block' => true,
+                        )
                     ),
                 ),
                 array(

@@ -117,6 +117,26 @@ BLOG GRID
     }
 }
 
+.section-hidden {
+    .elementor-column {
+        overflow: hidden !important;
+    }
+}
+
+.interest-col-industry {
+    &:hover {
+        .pxl-icon-list {
+            .pxl-icon-item {
+                i {
+                    &:before {
+                        animation: toRightFromLeft 0.5s ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+}
+
 // Slider Revolution
 .revslider-initialised {
     .rv-description {
@@ -406,6 +426,11 @@ BLOG GRID
 
 .pxl-icon-box3 {
     display: flex;
+    flex-direction: row;
+    @media #{$max-3xs} {
+        flex-direction: column;
+        gap: 15px;
+    }
     &:hover {
         .pxl-item--icon {
             border-color: $primary_color;
@@ -450,6 +475,19 @@ BLOG GRID
         color: #666666;
         font-weight: 400;
         font-family: "Public Sans";
+    }
+    &.style-2 {
+        .pxl-item--icon {
+            background-color: rgba(#ffffff, 0.149);
+            border: none;
+            color: #fff;
+        }
+        .pxl-item--title {
+            color: #fff;
+        }
+        .pxl-item--description {
+            color: #cdd4ef;
+        }
     }
 }
 
@@ -550,6 +588,41 @@ BLOG GRID
     }
 }
 
+.pxl-icon-box5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 216px;
+    height: 216px;
+    border-radius: 1000px;
+    background-color: $primary_color;
+    gap: 16px;
+    text-align: center;
+    @include transition(all 300ms linear 0ms);
+    &:hover {
+        background-color: $secondary_color;
+    }
+    .pxl-item--icon {
+        display: inline;
+        svg {
+            width: 45px;
+            height: 45px;
+            path {
+                fill: #fff;
+            }
+        }
+    }
+    .pxl-item--title {
+        font-size: 15px;
+        letter-spacing: 0px;
+        line-height: 26px;
+        color: #ffffff;
+        font-family: "GTWalsheimPro";
+        margin-bottom: 0;
+    }
+}
+
 // Case Accordion
 .pxl-accordion1 {
     &.style-default {
@@ -593,6 +666,86 @@ BLOG GRID
                 }
             }
         }
+    }
+}
+
+.pxl-accordion2 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    .pxl--item {
+        &.active {
+            .pxl-accordion--title {
+                @include border-radius(8px 8px 0 0);
+            }
+            .pxl-icon--action {
+                i {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+    .pxl-accordion--title {
+        padding: 16px 35px 15px;
+        font-size: 17px;
+        font-weight: 500;
+        font-family: "GTWalsheimPro";
+        color: #fff;
+        @include border-radius(8px);
+        @include transition(all 300ms linear 0ms);
+        position: relative;
+        overflow: hidden;
+        background-color: $secondary_color;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &:before {
+            position: absolute;
+            content: "";
+            top: 0;
+            right: 0;
+            background-color: #fff;
+            opacity: 0.15;
+            width: 120px;
+            height: 100%;
+            clip-path: polygon(40% 0, 100% 0, 100% 100%, 0% 100%);
+        }
+    }
+    .pxl-icon--action {
+        i {
+            font-size: 12px;
+            transform: rotate(0deg);
+            @include transition(all 300ms linear 0ms);
+        }
+    }
+    .pxl-accordion--content {
+        padding: 45px 40px 50px;
+        background-color: #edf0f6;
+        @include border-radius(0 0 8px 8px);
+        @media #{$max-xsx} {
+            padding: 30px 20px;
+        }
+    }
+    .pxl-accordion--content-item {
+        padding: 25px 0;
+        border-top: 1px solid rgba(#121c27, 0.149);
+        span {
+            font-size: 17px;
+            color: #0a1119;
+            font-family: "GTWalsheimPro";
+        }
+        &:first-child {
+            padding-top: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            border-top: none;
+        }
+    }
+    a.btn {
+        margin-top: 15px;
+        color: #fff;
+        background-color: $primary_color;
     }
 }
 
@@ -758,7 +911,6 @@ BLOG GRID
     }
     .pxl-title--highlight {
         color: $primary_color;
-        display: inline-flex;
     }
     .pxl-image--highlight {
         width: 108px;
@@ -1831,7 +1983,8 @@ BLOG GRID
         width: 67px;
         height: 67px;
         border-radius: 67px;
-        background-color: #fff;
+        background-color: transparent;
+        border: 1px solid #cdcdcd;
         font-size: 28px;
         color: #000;
         display: inline-flex;
@@ -2406,6 +2559,61 @@ BLOG GRID
         line-height: 1.5625;
         color: #ffffff;
         font-family: "GTWalsheimPro";
+    }
+}
+
+.pxl-counter2 {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-direction: row;
+    @media #{$max-xsx} {
+        flex-direction: column;
+        gap: 0;
+    }
+    .pxl-item--icon {
+        width: 57px;
+        height: 57px;
+        @include border-radius(57px);
+        background-color: $third_color;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        i {
+            font-size: 24px;
+            color: #fff;
+        }
+    }
+    .pxl-counter--holder {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        flex-direction: row;
+        @media #{$max-xsx} {
+            gap: 0;
+            flex-direction: column;
+        }
+        .pxl-counter--number {
+            font-size: 55px;
+            color: #111111;
+            font-weight: 400;
+            font-family: "Public Sans";
+            display: flex;
+            .pxl-counter--suffix {
+                font-size: 40px;
+            }
+        }
+        .pxl-counter--title {
+            font-size: 18px;
+            letter-spacing: 0px;
+            line-height: 1.5;
+            color: #666666;
+            font-family: "GTWalsheimPro";
+            @media #{$max-xsx} {
+                line-height: 1;
+            }
+        }
     }
 }
 
@@ -3768,11 +3976,12 @@ body.single .pxl-breadcrumb {
 .pxl-btn-video {
     position: relative;
     &.style1 {
-        width: 60px;
-        height: 60px;
-        border-radius: 60px;
+        width: 68px;
+        height: 68px;
+        border-radius: 68px;
         display: inline-flex;
-        background-color: #fff;
+        background-color: transparent;
+        border: 1px solid #cdcdcd;
         justify-content: center;
         align-items: center;
         font-size: 20px;

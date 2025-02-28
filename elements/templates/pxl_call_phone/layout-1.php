@@ -22,5 +22,10 @@ if ( ! empty( $settings['phone_link']['url'] ) ) {
             <div class="pxl-item--title pxl-empty"><?php echo esc_attr($settings['title']); ?></div>
             <div class="pxl-item--number pxl-empty"><?php echo esc_attr($settings['number']); ?></div>
         </div>
+        <?php if ( !empty($settings['button_text']) ) : ?>
+            <a class="pxl-item--button pxl-fl-middle pxl-mr-20" <?php pxl_print_html($widget->get_render_attribute_string( 'button' )); ?>>
+                <?php echo esc_attr($settings['button_text']); ?>
+            </a>
+        <?php endif; ?>
     </div>
 </div>

@@ -11,6 +11,29 @@ pxl_add_custom_widget(
         'params' => array(
             'sections' => array(
                 array(
+                    'name' => 'section_layout',
+                    'label' => esc_html__('Layout', 'safebyte' ),
+                    'tab' => \Elementor\Controls_Manager::TAB_LAYOUT,
+                    'controls' => array(
+                        array(
+                            'name' => 'layout',
+                            'label' => esc_html__('Templates', 'safebyte' ),
+                            'type' => 'layoutcontrol',
+                            'default' => '1',
+                            'options' => [
+                                '1' => [
+                                    'label' => esc_html__('Layout 1', 'safebyte' ),
+                                    'image' => get_template_directory_uri() . '/elements/assets/img/pxl_accordion/layout1.jpg'
+                                ],
+                                '2' => [
+                                    'label' => esc_html__('Layout 2', 'safebyte' ),
+                                    'image' => get_template_directory_uri() . '/elements/assets/img/pxl_accordion/layout2.jpg'
+                                ],
+                            ],
+                        ),
+                    ),
+                ),
+                array(
                     'name' => 'section_content',
                     'label' => esc_html__('Content', 'safebyte' ),
                     'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
@@ -58,6 +81,36 @@ pxl_add_custom_widget(
                                     'name' => 'number',
                                     'label' => esc_html__('Number', 'safebyte' ),
                                     'type' => \Elementor\Controls_Manager::TEXT,
+                                    'label_block' => true,
+                                ),
+                                array(
+                                    'name' => 'job_description',
+                                    'label' => esc_html__('Job Description', 'safebyte' ),
+                                    'type' => \Elementor\Controls_Manager::TEXTAREA,
+                                    'rows' => 10,
+                                ),
+                                array(
+                                    'name' => 'request',
+                                    'label' => esc_html__('Request', 'safebyte' ),
+                                    'type' => \Elementor\Controls_Manager::TEXT,
+                                    'label_block' => true,
+                                ),
+                                array(
+                                    'name' => 'salary_received',
+                                    'label' => esc_html__('Salary Received', 'safebyte' ),
+                                    'type' => \Elementor\Controls_Manager::TEXT,
+                                    'label_block' => true,
+                                ),
+                                array(
+                                    'name' => 'button_text',
+                                    'label' => esc_html__('Button Text', 'safebyte' ),
+                                    'type' => \Elementor\Controls_Manager::TEXT,
+                                    'label_block' => true,
+                                ),
+                                array(
+                                    'name' => 'button_link',
+                                    'label' => esc_html__('Button Link', 'safebyte' ),
+                                    'type' => \Elementor\Controls_Manager::URL,
                                     'label_block' => true,
                                 ),
                             ),

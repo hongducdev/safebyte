@@ -135,6 +135,17 @@ pxl_add_custom_widget(
                                 ],
                             ),
                             array(
+                                "name" => "btn_divider_color",
+                                "label" => esc_html__("Divider Color", "safebyte"),
+                                "type" => \Elementor\Controls_Manager::COLOR,
+                                "selectors" => [
+                                    "{{WRAPPER}} .pxl-button .btn .pxl--btn-text:before" => "background-color: {{VALUE}};"
+                                ],
+                                "condition" => [
+                                    "btn_style" => ["btn-text-underline"],
+                                ],
+                            ),
+                            array(
                                 'name' => 'btn_bg_color',
                                 'label' => esc_html__('Background Color', 'safebyte' ),
                                 'type' => \Elementor\Controls_Manager::COLOR,

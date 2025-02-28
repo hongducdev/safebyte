@@ -35,6 +35,10 @@ pxl_add_custom_widget(
                                     'label' => esc_html__('Layout 4', 'safebyte' ),
                                     'image' => get_template_directory_uri() . '/elements/assets/img/pxl_icon_box/layout4.jpg'
                                 ],
+                                '5' => [
+                                    'label' => esc_html__('Layout 5', 'safebyte' ),
+                                    'image' => get_template_directory_uri() . '/elements/assets/img/pxl_icon_box/layout5.jpg'
+                                ],
                             ],
                         ),
                     ),
@@ -56,13 +60,16 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::TEXTAREA,
                             'rows' => 10,
                             'show_label' => false,
+                            'condition' => [
+                                'layout' => ['1', '2', '3', '4'],
+                            ],
                         ),
                         array(
                             'name' => 'item_link',
                             'label' => esc_html__('Item Link', 'safebyte' ),
                             'type' => \Elementor\Controls_Manager::URL,
                             'condition' => [
-                                'layout' => ['1', '2', '3'],
+                                'layout' => ['1', '2', '3', '5'],
                             ],
                         ),
                         array(
@@ -121,10 +128,11 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::SELECT,
                             'options' => [
                                 'style-1' => 'Style 1',
+                                'style-2' => 'Style 2',
                             ],
                             'default' => 'style-1',
                             'condition' => [
-                                'layout' => '1',
+                                'layout' => '3',
                             ],
                         ),
                     ),
@@ -233,6 +241,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-icon-box .pxl-item--icon i' => 'color: {{VALUE}};text-fill-color: {{VALUE}};-webkit-text-fill-color: {{VALUE}};background-image: none;',
+                                '{{WRAPPER}} .pxl-icon-box .pxl-item--icon svg path' => 'fill: {{VALUE}};',
                             ],
                             'condition' => [
                                 'icon_type' => 'icon',
