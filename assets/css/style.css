@@ -1660,7 +1660,7 @@ a, a:hover, a:focus, a:before, a:after {
   outline: none;
   text-decoration: none;
 }
-.ft-secondary, .pxl--post-footer label, .widget_recent_comments ul, .widget_recent_comments ol, .widget_rss .rsswidget, .widget_block .wp-block-search__label, .widget_block .wp-block-group__inner-container > h2, .widget_block .wp-block-latest-posts__list, .widget_block .wp-block-latest-comments, .pxl-wg-categories .pxl-category--inner span, .pxl-contact-info-widget .pxl-phone--number, .pxl-call-phone1.style-1 .pxl-item--number, .pxl-call-phone1.style-2 .pxl-item--number, .pxl-mailchimp-l1.style-box [type="email"], .pxl-mailchimp-l1.style-box2 [type="email"], .pxl-button-video1 .slider-video-title, .pxl-tabs1 .pxl-tab--title, .pxl-banner1 .pxl-banner-bottom .pxl-counter--bnumber, .pxl-progressbar-1 .pxl--holder, .pxl-recent-news1 .pxl-post--date, .pxl-contact-form .pxl-form--label, #pxl-cart-sidebar .pxl-widget-cart-sidebar .widget_shopping_title, #pxl-cart-sidebar .pxl-widget-cart-sidebar .widget_shopping_cart .widget_shopping_cart_footer p.total, .woocommerce #pxl-sidebar-area .widget_products ul li a, .woocommerce .nice-select, .woocommerce-page .nice-select, .woocommerce #respond input#submit, .woocommerce-page #respond input#submit, .woocommerce a.button, .woocommerce-page a.button, .woocommerce a.wc-forward, .woocommerce-page a.wc-forward, .woocommerce button.button, .woocommerce-page button.button, .woocommerce input.button, .woocommerce-page input.button, .woocommerce .cart button.button, .woocommerce-page .cart button.button, .woocommerce a.button.alt, .woocommerce-page a.button.alt, .woocommerce button.button:disabled, .woocommerce-page button.button:disabled, .woocommerce a.button:disabled, .woocommerce-page a.button:disabled, .woocommerce button.button:disabled[disabled], .woocommerce-page button.button:disabled[disabled], .woocommerce button.button.alt, .woocommerce-page button.button.alt, .woocommerce .woocommerce-topbar div.woocommerce-result-count, .woocommerce .woocommerce-product-inner .woocommerce-product-content .woocommerce-add-to-cart .button, .woocommerce .woocommerce-product-inner .woocommerce-product-content .woocommerce-add-to-cart .wc-forward, .single-product .woocommerce-social-share label, .single-product #pxl-content-area div.product .entry-summary .price, .single-product > div.product .entry-summary .price, .single-product #pxl-content-area div.product .woocommerce-tabs .woocommerce-Tabs-panel--reviews .comment-reply-title, .single-product > div.product .woocommerce-tabs .woocommerce-Tabs-panel--reviews .comment-reply-title, body #yith-quick-view-modal #yith-quick-view-content .entry-summary form.cart label, .pxl-blog-style3 .pxl-post--button, .pxl-blog-style3 .pxl-post--button, .btn {
+.ft-secondary, .pxl--post-footer label, .widget_recent_comments ul, .widget_recent_comments ol, .widget_rss .rsswidget, .widget_block .wp-block-search__label, .widget_block .wp-block-group__inner-container > h2, .widget_block .wp-block-latest-posts__list, .widget_block .wp-block-latest-comments, .pxl-wg-categories .pxl-category--inner span, .pxl-contact-info-widget .pxl-phone--number, .pxl-mailchimp-l1.style-box [type="email"], .pxl-mailchimp-l1.style-box2 [type="email"], .pxl-button-video1 .slider-video-title, .pxl-banner1 .pxl-banner-bottom .pxl-counter--bnumber, .pxl-progressbar-1 .pxl--holder, .pxl-recent-news1 .pxl-post--date, .pxl-contact-form .pxl-form--label, #pxl-cart-sidebar .pxl-widget-cart-sidebar .widget_shopping_title, #pxl-cart-sidebar .pxl-widget-cart-sidebar .widget_shopping_cart .widget_shopping_cart_footer p.total, .woocommerce #pxl-sidebar-area .widget_products ul li a, .woocommerce .nice-select, .woocommerce-page .nice-select, .woocommerce #respond input#submit, .woocommerce-page #respond input#submit, .woocommerce a.button, .woocommerce-page a.button, .woocommerce a.wc-forward, .woocommerce-page a.wc-forward, .woocommerce button.button, .woocommerce-page button.button, .woocommerce input.button, .woocommerce-page input.button, .woocommerce .cart button.button, .woocommerce-page .cart button.button, .woocommerce a.button.alt, .woocommerce-page a.button.alt, .woocommerce button.button:disabled, .woocommerce-page button.button:disabled, .woocommerce a.button:disabled, .woocommerce-page a.button:disabled, .woocommerce button.button:disabled[disabled], .woocommerce-page button.button:disabled[disabled], .woocommerce button.button.alt, .woocommerce-page button.button.alt, .woocommerce .woocommerce-topbar div.woocommerce-result-count, .woocommerce .woocommerce-product-inner .woocommerce-product-content .woocommerce-add-to-cart .button, .woocommerce .woocommerce-product-inner .woocommerce-product-content .woocommerce-add-to-cart .wc-forward, .single-product .woocommerce-social-share label, .single-product #pxl-content-area div.product .entry-summary .price, .single-product > div.product .entry-summary .price, .single-product #pxl-content-area div.product .woocommerce-tabs .woocommerce-Tabs-panel--reviews .comment-reply-title, .single-product > div.product .woocommerce-tabs .woocommerce-Tabs-panel--reviews .comment-reply-title, body #yith-quick-view-modal #yith-quick-view-content .entry-summary form.cart label, .pxl-blog-style3 .pxl-post--button, .pxl-blog-style3 .pxl-post--button, .btn {
   font-family: "Fira Sans", sans-serif;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -4508,7 +4508,7 @@ body.rtl .pxl-box-hover1 .pxl-item--inner:hover:before {
   color: var(--secondary-color);
   fill: var(--secondary-color);
 }
-.text-gradient, .swiper-filter-wrap .filter-item.active span, .pxl-contact-info-widget .pxl-item--icon i, .pxl-text-editor.highlight-gradient .pxl-text--highlight, .pxl-heading .px-text-gradient span, .pxl-heading .px-sub-title-shape4 i, .pxl-heading .px-sub-title-shape5 .pxl-item--subtext, .pxl-link .pxl-type-gradient .pxl-link--icon i, .pxl-call-phone1.style-2 .pxl-item--icon i, .pxl-tabs2 .pxl-tabs--title .pxl-title--text, .pxl-contact-form .pxl-form--label span, .pxl-social-icons1 a i, .pxl-contact-info1 .pxl-item--icon i, .pxl-showcase1.style-1 .pxl-item--label, .pxl-showcase2 .pxl-item--label, .pxl-btn-video.style1 i, .pxl-info-box1 .pxl-item--icon i, .woocommerce .woocommerce-product-inner .woocommerce-product-content .woocommerce-product--price .price, .single-product #pxl-content-area div.product .woocommerce-product-gallery .flex-direction-nav a:hover:before, .single-product > div.product .woocommerce-product-gallery .flex-direction-nav a:hover:before, .single-product #pxl-content-area div.product .entry-summary .price .amount, .single-product > div.product .entry-summary .price .amount, .pxl-blog-style2 .pxl-post--meta .pxl-meta--inner, .pxl-blog-style3 .pxl-post--category a, .pxl-blog-style2 .pxl-post--meta .pxl-meta--inner, .pxl-blog-style3 .pxl-post--category a {
+.text-gradient, .swiper-filter-wrap .filter-item.active span, .pxl-contact-info-widget .pxl-item--icon i, .pxl-text-editor.highlight-gradient .pxl-text--highlight, .pxl-heading .px-text-gradient span, .pxl-heading .px-sub-title-shape4 i, .pxl-heading .px-sub-title-shape5 .pxl-item--subtext, .pxl-link .pxl-type-gradient .pxl-link--icon i, .pxl-tabs2 .pxl-tabs--title .pxl-title--text, .pxl-contact-form .pxl-form--label span, .pxl-social-icons1 a i, .pxl-contact-info1 .pxl-item--icon i, .pxl-showcase1.style-1 .pxl-item--label, .pxl-showcase2 .pxl-item--label, .pxl-btn-video.style1 i, .pxl-info-box1 .pxl-item--icon i, .woocommerce .woocommerce-product-inner .woocommerce-product-content .woocommerce-product--price .price, .single-product #pxl-content-area div.product .woocommerce-product-gallery .flex-direction-nav a:hover:before, .single-product > div.product .woocommerce-product-gallery .flex-direction-nav a:hover:before, .single-product #pxl-content-area div.product .entry-summary .price .amount, .single-product > div.product .entry-summary .price .amount, .pxl-blog-style2 .pxl-post--meta .pxl-meta--inner, .pxl-blog-style3 .pxl-post--category a, .pxl-blog-style2 .pxl-post--meta .pxl-meta--inner, .pxl-blog-style3 .pxl-post--category a {
   background-color: var(--gradient-color-from);
   background-image: -webkit-gradient(linear, right top, left top, from(var(--gradient-color-from)), to(var(--gradient-color-to)));
   background-image: -webkit-linear-gradient(to right, var(--gradient-color-from), var(--gradient-color-to));
@@ -9353,6 +9353,145 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
   font-family: "GTWalsheimPro";
   margin-bottom: 0;
 }
+.pxl-icon-box6 {
+  text-align: center;
+  padding: 49px 40px 40px 40px;
+  -webkit-border-radius: 8px;
+  -khtml-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-transition: all 300ms linear 0ms;
+  -khtml-transition: all 300ms linear 0ms;
+  -moz-transition: all 300ms linear 0ms;
+  -ms-transition: all 300ms linear 0ms;
+  -o-transition: all 300ms linear 0ms;
+  transition: all 300ms linear 0ms;
+  border: 1px solid #cdcdcd;
+  box-shadow: 0 5px 0 #cdcdcd;
+}
+.pxl-icon-box6:hover .pxl-item--icon {
+  background-color: var(--secondary-color);
+}
+.pxl-icon-box6:hover .pxl-item--icon i {
+  animation: toRightFromLeft 0.5s forwards;
+}
+.pxl-icon-box6 .pxl-item--icon {
+  width: 87px;
+  height: 87px;
+  -webkit-border-radius: 8px;
+  -khtml-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  background-color: var(--primary-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  color: #fff;
+  -webkit-transition: all 300ms linear 0ms;
+  -khtml-transition: all 300ms linear 0ms;
+  -moz-transition: all 300ms linear 0ms;
+  -ms-transition: all 300ms linear 0ms;
+  -o-transition: all 300ms linear 0ms;
+  transition: all 300ms linear 0ms;
+  margin-bottom: 30px;
+}
+.pxl-icon-box6 .pxl-item--title {
+  font-size: 25px;
+  line-height: 40px;
+  color: #111;
+  font-weight: 500;
+  font-family: "GTWalsheimPro";
+  margin-bottom: 25px;
+}
+.pxl-icon-box6 .pxl-item--desc {
+  font-size: 15px;
+  line-height: 1.667;
+}
+.pxl-icon-box7 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.pxl-icon-box7:hover .pxl-item--divider:before {
+  width: 0;
+  left: 0;
+  right: auto;
+}
+.pxl-icon-box7:hover .pxl-item--divider:after {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+.pxl-icon-box7 .pxl-item--icon {
+  width: 45px;
+  height: 45px;
+  background-color: rgba(255, 255, 255, 0.149);
+  -webkit-border-radius: 45px;
+  -khtml-border-radius: 45px;
+  -moz-border-radius: 45px;
+  -ms-border-radius: 45px;
+  -o-border-radius: 45px;
+  border-radius: 45px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+.pxl-icon-box7 .pxl-item--title {
+  font-size: 23px;
+  color: #fff;
+}
+.pxl-icon-box7 .pxl-item--divider {
+  width: 100%;
+  height: 1px;
+  position: relative;
+  margin-bottom: 25px;
+}
+.pxl-icon-box7 .pxl-item--divider:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: auto;
+  opacity: 0.149;
+  background: #fff;
+  -webkit-transition: all 0.3s linear 0ms;
+  -khtml-transition: all 0.3s linear 0ms;
+  -moz-transition: all 0.3s linear 0ms;
+  -ms-transition: all 0.3s linear 0ms;
+  -o-transition: all 0.3s linear 0ms;
+  transition: all 0.3s linear 0ms;
+}
+.pxl-icon-box7 .pxl-item--divider:after {
+  content: "";
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: auto;
+  background: #fff;
+  -webkit-transition: all 0.3s linear 0ms;
+  -khtml-transition: all 0.3s linear 0ms;
+  -moz-transition: all 0.3s linear 0ms;
+  -ms-transition: all 0.3s linear 0ms;
+  -o-transition: all 0.3s linear 0ms;
+  transition: all 0.3s linear 0ms;
+}
+.pxl-icon-box7 .pxl-item--desc {
+  color: #cdd4ef;
+}
 .pxl-accordion1.style-default .pxl-icon--action {
   position: absolute;
   right: 19px;
@@ -9503,7 +9642,7 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
 .pxl-text-editor .pxl-item--inner {
   display: inline-block;
 }
-.pxl-text-editor .pxl-item--inner.text-gradient, .pxl-text-editor .swiper-filter-wrap .filter-item.active span.pxl-item--inner, .swiper-filter-wrap .filter-item.active .pxl-text-editor span.pxl-item--inner, .pxl-text-editor .pxl-contact-info-widget .pxl-item--icon i.pxl-item--inner, .pxl-contact-info-widget .pxl-item--icon .pxl-text-editor i.pxl-item--inner, .pxl-text-editor .pxl-text-editor.highlight-gradient .pxl-text--highlight.pxl-item--inner, .pxl-text-editor.highlight-gradient .pxl-text-editor .pxl-text--highlight.pxl-item--inner, .pxl-text-editor .pxl-heading .px-text-gradient span.pxl-item--inner, .pxl-heading .px-text-gradient .pxl-text-editor span.pxl-item--inner, .pxl-text-editor .pxl-heading .px-sub-title-shape4 i.pxl-item--inner, .pxl-heading .px-sub-title-shape4 .pxl-text-editor i.pxl-item--inner, .pxl-text-editor .pxl-heading .px-sub-title-shape5 .pxl-item--subtext.pxl-item--inner, .pxl-heading .px-sub-title-shape5 .pxl-text-editor .pxl-item--subtext.pxl-item--inner, .pxl-text-editor .pxl-link .pxl-type-gradient .pxl-link--icon i.pxl-item--inner, .pxl-link .pxl-type-gradient .pxl-link--icon .pxl-text-editor i.pxl-item--inner, .pxl-text-editor .pxl-call-phone1.style-2 .pxl-item--icon i.pxl-item--inner, .pxl-call-phone1.style-2 .pxl-item--icon .pxl-text-editor i.pxl-item--inner, .pxl-text-editor .pxl-tabs2 .pxl-tabs--title .pxl-title--text.pxl-item--inner, .pxl-tabs2 .pxl-tabs--title .pxl-text-editor .pxl-title--text.pxl-item--inner, .pxl-text-editor .pxl-contact-form .pxl-form--label span.pxl-item--inner, .pxl-contact-form .pxl-form--label .pxl-text-editor span.pxl-item--inner, .pxl-text-editor .pxl-social-icons1 a i.pxl-item--inner, .pxl-social-icons1 a .pxl-text-editor i.pxl-item--inner, .pxl-text-editor .pxl-contact-info1 .pxl-item--icon i.pxl-item--inner, .pxl-contact-info1 .pxl-item--icon .pxl-text-editor i.pxl-item--inner, .pxl-text-editor .pxl-showcase1.style-1 .pxl-item--label.pxl-item--inner, .pxl-showcase1.style-1 .pxl-text-editor .pxl-item--label.pxl-item--inner, .pxl-text-editor .pxl-showcase2 .pxl-item--label.pxl-item--inner, .pxl-showcase2 .pxl-text-editor .pxl-item--label.pxl-item--inner, .pxl-text-editor .pxl-btn-video.style1 i.pxl-item--inner, .pxl-btn-video.style1 .pxl-text-editor i.pxl-item--inner, .pxl-text-editor .pxl-info-box1 .pxl-item--icon i.pxl-item--inner, .pxl-info-box1 .pxl-item--icon .pxl-text-editor i.pxl-item--inner, .pxl-text-editor .woocommerce .woocommerce-product-inner .woocommerce-product-content .woocommerce-product--price .price.pxl-item--inner, .woocommerce .woocommerce-product-inner .woocommerce-product-content .woocommerce-product--price .pxl-text-editor .price.pxl-item--inner, .pxl-text-editor .single-product #pxl-content-area div.product .woocommerce-product-gallery .flex-direction-nav a:hover:before.pxl-item--inner, .single-product #pxl-content-area div.product .woocommerce-product-gallery .flex-direction-nav .pxl-text-editor a:hover:before.pxl-item--inner, .pxl-text-editor .single-product > div.product .woocommerce-product-gallery .flex-direction-nav a:hover:before.pxl-item--inner, .single-product > div.product .woocommerce-product-gallery .flex-direction-nav .pxl-text-editor a:hover:before.pxl-item--inner, .pxl-text-editor .single-product #pxl-content-area div.product .entry-summary .price .amount.pxl-item--inner, .single-product #pxl-content-area div.product .entry-summary .price .pxl-text-editor .amount.pxl-item--inner, .pxl-text-editor .single-product > div.product .entry-summary .price .amount.pxl-item--inner, .single-product > div.product .entry-summary .price .pxl-text-editor .amount.pxl-item--inner, .pxl-text-editor .pxl-blog-style2 .pxl-post--meta .pxl-meta--inner.pxl-item--inner, .pxl-blog-style2 .pxl-post--meta .pxl-text-editor .pxl-meta--inner.pxl-item--inner, .pxl-text-editor .pxl-blog-style3 .pxl-post--category a.pxl-item--inner, .pxl-blog-style3 .pxl-post--category .pxl-text-editor a.pxl-item--inner, .pxl-text-editor .pxl-blog-style2 .pxl-post--meta .pxl-meta--inner.pxl-item--inner, .pxl-blog-style2 .pxl-post--meta .pxl-text-editor .pxl-meta--inner.pxl-item--inner, .pxl-text-editor .pxl-blog-style3 .pxl-post--category a.pxl-item--inner, .pxl-blog-style3 .pxl-post--category .pxl-text-editor a.pxl-item--inner {
+.pxl-text-editor .pxl-item--inner.text-gradient, .pxl-text-editor .swiper-filter-wrap .filter-item.active span.pxl-item--inner, .swiper-filter-wrap .filter-item.active .pxl-text-editor span.pxl-item--inner, .pxl-text-editor .pxl-contact-info-widget .pxl-item--icon i.pxl-item--inner, .pxl-contact-info-widget .pxl-item--icon .pxl-text-editor i.pxl-item--inner, .pxl-text-editor .pxl-text-editor.highlight-gradient .pxl-text--highlight.pxl-item--inner, .pxl-text-editor.highlight-gradient .pxl-text-editor .pxl-text--highlight.pxl-item--inner, .pxl-text-editor .pxl-heading .px-text-gradient span.pxl-item--inner, .pxl-heading .px-text-gradient .pxl-text-editor span.pxl-item--inner, .pxl-text-editor .pxl-heading .px-sub-title-shape4 i.pxl-item--inner, .pxl-heading .px-sub-title-shape4 .pxl-text-editor i.pxl-item--inner, .pxl-text-editor .pxl-heading .px-sub-title-shape5 .pxl-item--subtext.pxl-item--inner, .pxl-heading .px-sub-title-shape5 .pxl-text-editor .pxl-item--subtext.pxl-item--inner, .pxl-text-editor .pxl-link .pxl-type-gradient .pxl-link--icon i.pxl-item--inner, .pxl-link .pxl-type-gradient .pxl-link--icon .pxl-text-editor i.pxl-item--inner, .pxl-text-editor .pxl-tabs2 .pxl-tabs--title .pxl-title--text.pxl-item--inner, .pxl-tabs2 .pxl-tabs--title .pxl-text-editor .pxl-title--text.pxl-item--inner, .pxl-text-editor .pxl-contact-form .pxl-form--label span.pxl-item--inner, .pxl-contact-form .pxl-form--label .pxl-text-editor span.pxl-item--inner, .pxl-text-editor .pxl-social-icons1 a i.pxl-item--inner, .pxl-social-icons1 a .pxl-text-editor i.pxl-item--inner, .pxl-text-editor .pxl-contact-info1 .pxl-item--icon i.pxl-item--inner, .pxl-contact-info1 .pxl-item--icon .pxl-text-editor i.pxl-item--inner, .pxl-text-editor .pxl-showcase1.style-1 .pxl-item--label.pxl-item--inner, .pxl-showcase1.style-1 .pxl-text-editor .pxl-item--label.pxl-item--inner, .pxl-text-editor .pxl-showcase2 .pxl-item--label.pxl-item--inner, .pxl-showcase2 .pxl-text-editor .pxl-item--label.pxl-item--inner, .pxl-text-editor .pxl-btn-video.style1 i.pxl-item--inner, .pxl-btn-video.style1 .pxl-text-editor i.pxl-item--inner, .pxl-text-editor .pxl-info-box1 .pxl-item--icon i.pxl-item--inner, .pxl-info-box1 .pxl-item--icon .pxl-text-editor i.pxl-item--inner, .pxl-text-editor .woocommerce .woocommerce-product-inner .woocommerce-product-content .woocommerce-product--price .price.pxl-item--inner, .woocommerce .woocommerce-product-inner .woocommerce-product-content .woocommerce-product--price .pxl-text-editor .price.pxl-item--inner, .pxl-text-editor .single-product #pxl-content-area div.product .woocommerce-product-gallery .flex-direction-nav a:hover:before.pxl-item--inner, .single-product #pxl-content-area div.product .woocommerce-product-gallery .flex-direction-nav .pxl-text-editor a:hover:before.pxl-item--inner, .pxl-text-editor .single-product > div.product .woocommerce-product-gallery .flex-direction-nav a:hover:before.pxl-item--inner, .single-product > div.product .woocommerce-product-gallery .flex-direction-nav .pxl-text-editor a:hover:before.pxl-item--inner, .pxl-text-editor .single-product #pxl-content-area div.product .entry-summary .price .amount.pxl-item--inner, .single-product #pxl-content-area div.product .entry-summary .price .pxl-text-editor .amount.pxl-item--inner, .pxl-text-editor .single-product > div.product .entry-summary .price .amount.pxl-item--inner, .single-product > div.product .entry-summary .price .pxl-text-editor .amount.pxl-item--inner, .pxl-text-editor .pxl-blog-style2 .pxl-post--meta .pxl-meta--inner.pxl-item--inner, .pxl-blog-style2 .pxl-post--meta .pxl-text-editor .pxl-meta--inner.pxl-item--inner, .pxl-text-editor .pxl-blog-style3 .pxl-post--category a.pxl-item--inner, .pxl-blog-style3 .pxl-post--category .pxl-text-editor a.pxl-item--inner, .pxl-text-editor .pxl-blog-style2 .pxl-post--meta .pxl-meta--inner.pxl-item--inner, .pxl-blog-style2 .pxl-post--meta .pxl-text-editor .pxl-meta--inner.pxl-item--inner, .pxl-text-editor .pxl-blog-style3 .pxl-post--category a.pxl-item--inner, .pxl-blog-style3 .pxl-post--category .pxl-text-editor a.pxl-item--inner {
   background-image: -webkit-gradient(linear, left top, left bottom, from(var(--gradient-color-from)), to(var(--gradient-color-to)));
   background-image: -webkit-linear-gradient(to bottom, var(--gradient-color-from), var(--gradient-color-to));
   background-image: -moz-linear-gradient(to bottom, var(--gradient-color-from), var(--gradient-color-to));
@@ -10472,86 +10611,84 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
     transform: rotate(0);
   }
 }
-.pxl-call-phone1.style-1 .pxl-item--icon {
-  width: 49px;
-  height: 49px;
-  border: 2px solid var(--gradient-color-to);
-  border-radius: 49px;
-  background-color: #fff;
-  font-size: 20px;
-  color: #000;
-  box-shadow: 2px 4px 0 0 var(--gradient-color-from);
+.pxl-call-phone {
+  display: inline-flex;
+  flex-direction: column;
+  background-color: var(--secondary-color);
+  -webkit-border-radius: 8px;
+  -khtml-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  padding: 40px 18px 20px 18px;
+  text-align: center;
 }
-.pxl-call-phone1.style-1 .pxl-item--title {
-  color: var(--gradient-color-to);
-  font-size: 13px;
-  font-weight: 500;
-  text-transform: uppercase;
-  margin-bottom: 1px;
-}
-.pxl-call-phone1.style-1 .pxl-item--number {
-  font-size: 20px;
-  font-weight: 700;
-  color: #000;
-  line-height: normal;
-}
-.pxl-call-phone1.style-2 .pxl-item--icon {
-  width: 60px;
-  height: 60px;
-  border: 2px solid #f5f3f3;
-  border-radius: 60px;
-  background-color: #fff;
-  font-size: 21px;
-  margin-right: 12px;
-}
-.pxl-call-phone1.style-2 .pxl-item--title {
-  color: #000;
-  font-size: 16px;
-  margin-bottom: 1px;
-}
-.pxl-call-phone1.style-2 .pxl-item--number {
-  font-size: 24px;
-  font-weight: 700;
-  color: #000;
-  line-height: normal;
-}
-.pxl-call-phone1.style-3 {
-  font-size: 18px;
-  line-height: 1.25;
-  color: #2c2c2b;
-}
-.pxl-call-phone1.style-3 .pxl-item--icon {
-  width: 49px;
-  height: 49px;
-  border: 2px solid #000;
-  border-radius: 49px;
-  background-color: transparent;
-  font-size: 21px;
-  margin-right: 12px;
-  color: #000;
-}
-.pxl-call-phone1.style-3 .pxl-item--title {
-  font-weight: 700;
-}
-.pxl-call-phone1 .pxl-item--inner {
-  display: flex;
-  flex-wrap: nowrap;
+.pxl-call-phone .pxl-item--icon {
+  width: 61px;
+  height: 61px;
+  background-color: rgba(255, 255, 255, 0.149);
+  -webkit-border-radius: 61px;
+  -khtml-border-radius: 61px;
+  -moz-border-radius: 61px;
+  -ms-border-radius: 61px;
+  -o-border-radius: 61px;
+  border-radius: 61px;
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 35px;
 }
-@media screen and (max-width: 1400px) {
-  .pxl-call-hidden-content .pxl-call-phone .pxl-item--icon {
-    margin: 0;
-  }
-  .pxl-call-hidden-content .pxl-call-phone .pxl-item--meta {
-    display: none;
-  }
+.pxl-call-phone .pxl-item--icon i {
+  animation: phone-ring 2s infinite;
 }
-@media screen and (max-width: 1600px) {
-  .pxl-call-hidden-xl .pxl-call-phone .pxl-item--icon {
-    margin: 0;
+.pxl-call-phone .pxl-item--meta {
+  font-size: 18px;
+  font-family: "GTWalsheimPro";
+}
+.pxl-call-phone .pxl-item--title {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.pxl-call-phone .pxl-item--number {
+  color: #6491ff;
+  margin-bottom: 25px;
+}
+.pxl-call-phone .pxl-item--button {
+  width: 100%;
+  background-color: var(--primary-color);
+  color: #fff;
+  -webkit-transition: all 300ms linear 0ms;
+  -khtml-transition: all 300ms linear 0ms;
+  -moz-transition: all 300ms linear 0ms;
+  -ms-transition: all 300ms linear 0ms;
+  -o-transition: all 300ms linear 0ms;
+  transition: all 300ms linear 0ms;
+}
+.pxl-call-phone .pxl-item--button:hover {
+  background-color: var(--secondary-color);
+}
+@keyframes phone-ring {
+  0% {
+    transform: rotate3d(0, 0, 1, 0);
   }
-  .pxl-call-hidden-xl .pxl-call-phone .pxl-item--meta {
-    display: none;
+  20%, 32%, 44%, 56%, 68%, 80% {
+    transform: rotate3d(0, 0, 1, 0);
+  }
+  23%, 35%, 47%, 59%, 71% {
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+  26%, 38%, 50%, 62%, 74% {
+    transform: rotate3d(0, 0, 1, 0);
+  }
+  29%, 41%, 53%, 65%, 77% {
+    transform: rotate3d(0, 0, 1, -15deg);
+  }
+  100% {
+    transform: rotate3d(0, 0, 1, 0);
   }
 }
 .pxl-mailchimp-l1 .mc4wp-form-fields {
@@ -10797,83 +10934,40 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
   text-decoration: underline;
   margin: 0 18px;
 }
-.pxl-tabs1 .pxl-tab--title {
-  font-size: 19px;
-  font-weight: 700;
-  color: #4b4b4b;
-  display: inline-block;
-  line-height: 44px;
-  margin-right: 36px;
-  position: relative;
-  --tab-title-color: #4b4b4b;
+.pxl-tabs1 .pxl-tabs--title {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+  flex-wrap: wrap;
 }
-.pxl-tabs1 .pxl-tab--title:before {
-  content: "";
-  width: 0;
-  left: 0;
-  right: 0;
-  position: absolute;
-  bottom: -4px;
-  background-color: var(--gradient-color-from);
-  background-image: -webkit-gradient(linear, right top, left top, from(var(--gradient-color-from)), to(var(--gradient-color-to)));
-  background-image: -webkit-linear-gradient(to right, var(--gradient-color-from), var(--gradient-color-to));
-  background-image: -moz-linear-gradient(to right, var(--gradient-color-from), var(--gradient-color-to));
-  background-image: -ms-linear-gradient(to right, var(--gradient-color-from), var(--gradient-color-to));
-  background-image: -o-linear-gradient(to right, var(--gradient-color-from), var(--gradient-color-to));
-  background-image: linear-gradient(to right, var(--gradient-color-from), var(--gradient-color-to));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='var(--gradient-color-from)', endColorStr='var(--gradient-color-to)', gradientType='1');
+.pxl-tabs1 .pxl-tab--title {
+  height: 55px;
+  background-color: var(--secondary-color);
+  -webkit-border-radius: 8px;
+  -khtml-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  padding: 0 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 500;
+  font-family: "Public Sans";
   -webkit-transition: all 300ms linear 0ms;
   -khtml-transition: all 300ms linear 0ms;
   -moz-transition: all 300ms linear 0ms;
   -ms-transition: all 300ms linear 0ms;
   -o-transition: all 300ms linear 0ms;
   transition: all 300ms linear 0ms;
-  height: 4px;
 }
-.pxl-tabs1 .pxl-tab--title .pxl-title--text {
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-image: -webkit-linear-gradient(to right, var(--gradient-color-from), var(--gradient-color-to) 50%, var(--tab-title-color) 50%);
-  background-image: -moz-linear-gradient(to right, var(--gradient-color-from), var(--gradient-color-to) 50%, var(--tab-title-color) 50%);
-  background-image: -ms-linear-gradient(to right, var(--gradient-color-from), var(--gradient-color-to) 50%, var(--tab-title-color) 50%);
-  background-image: -o-linear-gradient(to right, var(--gradient-color-from), var(--gradient-color-to) 50%, var(--tab-title-color) 50%);
-  background-image: linear-gradient(to right, var(--gradient-color-from), var(--gradient-color-to) 50%, var(--tab-title-color) 50%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='', endColorStr='');
-  background-size: 200% 100%;
-  background-position: -100%;
-  transition: all 0.3s ease-in-out;
-}
-.pxl-tabs1 .pxl-tab--title.active .pxl-title--text {
-  background-position: 0%;
-}
-.pxl-tabs1 .pxl-tab--title.active:before {
-  width: 100%;
-}
-.pxl-tabs1 .pxl-tab--icon {
-  line-height: 1;
-  font-size: 75px;
-  color: #0d0d0d;
-  padding: 0 10px;
-}
-.pxl-tabs1 .pxl-tab--icon svg {
-  height: 75px;
-}
-.pxl-tabs1 .pxl-tab--content {
-  font-size: 18px;
-  color: #454545;
-}
-@media screen and (max-width: 1200px) {
-  .pxl-tabs1 .pxl-tab--content {
-    font-size: 17px;
-  }
-}
-.pxl-tabs1 .pxl-content--inner {
-  display: flex;
-  flex-wrap: nowrap;
-}
-.pxl-tabs1 .pxl-tabs--title {
-  border-bottom: 4px solid #f0f0f0;
-  margin-bottom: 24px;
+.pxl-tabs1 .pxl-tab--title.active, .pxl-tabs1 .pxl-tab--title:hover {
+  background-color: var(--primary-color);
 }
 .pxl-tabs2 .pxl-tab--control {
   width: 58px;

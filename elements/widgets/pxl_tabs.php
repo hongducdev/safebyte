@@ -60,7 +60,6 @@ pxl_add_custom_widget(
                                     'label' => esc_html__('Icon', 'safebyte' ),
                                     'type' => \Elementor\Controls_Manager::ICONS,
                                     'fa4compatibility' => 'icon',
-                                    'description' => 'Apply layout 1.'
                                 ),
                                 array(
                                     'name' => 'content_type',

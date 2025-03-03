@@ -39,6 +39,14 @@ pxl_add_custom_widget(
                                     'label' => esc_html__('Layout 5', 'safebyte' ),
                                     'image' => get_template_directory_uri() . '/elements/assets/img/pxl_icon_box/layout5.jpg'
                                 ],
+                                '6' => [
+                                    'label' => esc_html__('Layout 6', 'safebyte' ),
+                                    'image' => get_template_directory_uri() . '/elements/assets/img/pxl_icon_box/layout6.jpg'
+                                ],
+                                '7' => [
+                                    'label' => esc_html__('Layout 7', 'safebyte' ),
+                                    'image' => get_template_directory_uri() . '/elements/assets/img/pxl_icon_box/layout7.jpg'
+                                ],
                             ],
                         ),
                     ),
@@ -61,7 +69,7 @@ pxl_add_custom_widget(
                             'rows' => 10,
                             'show_label' => false,
                             'condition' => [
-                                'layout' => ['1', '2', '3', '4'],
+                                'layout' => ['1', '2', '3', '4', '6', '7'],
                             ],
                         ),
                         array(
@@ -69,7 +77,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Item Link', 'safebyte' ),
                             'type' => \Elementor\Controls_Manager::URL,
                             'condition' => [
-                                'layout' => ['1', '2', '3', '5'],
+                                'layout' => ['1', '2', '3', '5', '6'],
                             ],
                         ),
                         array(

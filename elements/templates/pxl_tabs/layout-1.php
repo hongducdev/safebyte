@@ -16,19 +16,9 @@ if(isset($settings['tabs']) && !empty($settings['tabs']) && count($settings['tab
             </div>
 
             <div class="pxl-tabs--content">
-                <?php foreach ($settings['tabs'] as $key => $content) : 
-                    $icon_key = $widget->get_repeater_setting_key( 'pxl_icon', 'icons', $key );
-                    $widget->add_render_attribute( $icon_key, [
-                        'class' => $content['pxl_icon'],
-                        'aria-hidden' => 'true',
-                    ] ); ?>
+                <?php foreach ($settings['tabs'] as $key => $content) : ?>
                     <div id="<?php echo esc_attr($html_id.'-'.$content['_id']); ?>" class="pxl-tab--content <?php if($settings['tab_active'] == $key + 1) { echo 'active'; } ?> <?php if($content['content_type'] == 'template') { echo 'pxl-tabs--elementor'; } ?>" <?php if($settings['tab_active'] == $key + 1) { ?>style="display: block;"<?php } ?>>
                         <div class="pxl-content--inner">
-                            <?php if ( !empty($content['pxl_icon']) ) : ?>
-                                <div class="pxl-tab--icon pxl-mr-30">
-                                    <?php \Elementor\Icons_Manager::render_icon( $content['pxl_icon'], [ 'aria-hidden' => 'true', 'class' => '' ], 'i' ); ?>
-                                </div>
-                            <?php endif; ?>
 
                             <?php if($content['content_type'] == 'df' && !empty($content['desc'])) {
                                 echo pxl_print_html($content['desc']); 

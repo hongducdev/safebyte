@@ -57,17 +57,6 @@ pxl_add_custom_widget(
                     'tab' => \Elementor\Controls_Manager::TAB_STYLE,
                     'controls' => array(
                         array(
-                            'name' => 'style',
-                            'label' => esc_html__('Style', 'safebyte' ),
-                            'type' => \Elementor\Controls_Manager::SELECT,
-                            'options' => [
-                                'style-1' => 'Style 1',
-                                'style-2' => 'Style 2',
-                                'style-3' => 'Style 3',
-                            ],
-                            'default' => 'style-1',
-                        ),
-                        array(
                             'name' => 'icon_font_size',
                             'label' => esc_html__('Icon Font Size', 'safebyte' ),
                             'type' => \Elementor\Controls_Manager::SLIDER,
@@ -80,7 +69,7 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-call-phone1 .pxl-item--icon' => 'font-size: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .pxl-call-phone .pxl-item--icon' => 'font-size: {{SIZE}}{{UNIT}};',
                             ],
                         ),
                         array(
@@ -95,7 +84,16 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-call-phone1 .pxl-item--icon' => 'width: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .pxl-call-phone .pxl-item--icon' => 'width: {{SIZE}}{{UNIT}};',
+                            ],
+                        ),
+                        array(
+                            'name' => 'border_radius',
+                            'label' => esc_html__('Border Radius', 'safebyte' ),
+                            'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                            'size_units' => [ 'px' ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-call-phone' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                         ),
                         array(
@@ -110,7 +108,7 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-call-phone1 .pxl-item--icon' => 'height: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .pxl-call-phone .pxl-item--icon' => 'height: {{SIZE}}{{UNIT}};',
                             ],
                         ),
                         array(
@@ -119,7 +117,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::DIMENSIONS,
                             'size_units' => [ 'px' ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-call-phone1 .pxl-item--icon' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .pxl-call-phone .pxl-item--icon' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                             'control_type' => 'responsive',
                         ),
@@ -128,7 +126,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Icon Box Color', 'safebyte' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-call-phone1 .pxl-item--icon' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-call-phone .pxl-item--icon' => 'background-color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -136,7 +134,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Icon Color', 'safebyte' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-call-phone1 .pxl-item--icon' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-call-phone .pxl-item--icon' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -144,7 +142,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Title Color', 'safebyte' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-call-phone1 .pxl-item--title' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-call-phone .pxl-item--title' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -152,14 +150,14 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Title Typography', 'safebyte' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-call-phone1 .pxl-item--title',
+                            'selector' => '{{WRAPPER}} .pxl-call-phone .pxl-item--title',
                         ),
                         array(
                             'name' => 'number_color',
                             'label' => esc_html__('Number Color', 'safebyte' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-call-phone1 .pxl-item--number' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-call-phone .pxl-item--number' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -167,7 +165,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Number Typography', 'safebyte' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-call-phone1 .pxl-item--number',
+                            'selector' => '{{WRAPPER}} .pxl-call-phone .pxl-item--number',
                         ),
                     ),
                 ),
