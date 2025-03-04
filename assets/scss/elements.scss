@@ -2127,6 +2127,7 @@ BLOG GRID
         gap: 13px;
         align-items: center;
         flex-wrap: wrap;
+        margin-bottom: 50px;
     }
     .pxl-tab--title {
         height: 55px;
@@ -4915,7 +4916,12 @@ body.rtl {
     min-height: 400px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    &.style-1 {
+        justify-content: space-around;
+    }
+    &.style-2 {
+        justify-content: space-evenly;
+    }
 }
 
 .pxl-rain-drop-item {
@@ -4949,11 +4955,19 @@ body.rtl {
 }
 
 @keyframes pxl-rain-drop {
-    from {
+    0% {
         top: 0;
+        opacity: 0;
     }
-    to {
+    10% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
         top: calc(100% - 80px);
+        opacity: 0;
     }
 }
 

@@ -262,3 +262,63 @@
         position: relative;
     }
 }
+
+.pxl-text-carousel4 {
+    .pxl-swiper-container {
+        margin: 0;
+    }
+    .pxl-swiper-slide {
+        &:first-child {
+            .pxl-item--header {
+                &:before {
+                    display: none;
+                }
+            }
+        }
+    }
+    .pxl-item--inner {
+        text-align: center;
+    }
+    .pxl-item--header {
+        width: 100%;
+        position: relative;
+        margin-bottom: 32px;
+        &:before {
+            content: "\F110";
+            font-family: "Flaticon";
+            position: absolute;
+            top: 50%;
+            left: -22px;
+            transform: translateY(-50%);
+            font-size: 16px;
+            color: #ffffff;
+        }
+    }
+    .pxl-item--step {
+        height: 33px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 16px;
+        background-color: rgba(#fff, 0.149);
+        padding: 0 20px;
+        font-size: 13px;
+        color: #ffffff;
+        font-family: "GTWalsheimPro";
+    }
+    .pxl-item--title {
+        font-size: 26px;
+        line-height: 30px;
+        color: #ffffff;
+        font-weight: 500;
+        font-family: "GTWalsheimPro";
+        max-width: 300px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    .pxl-item--desc {
+        color: #cdd4ef;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}

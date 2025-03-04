@@ -8,7 +8,7 @@ if(isset($settings['tabs']) && !empty($settings['tabs']) && count($settings['tab
             <div class="pxl-tabs--title">
                 <?php foreach ($settings['tabs'] as $key => $title) :  ?>
                     <span class="pxl-tab--title pxl-cursor--cta <?php if($settings['tab_active'] == $key + 1) { echo 'active'; } ?>" data-target="#<?php echo esc_attr($html_id.'-'.$title['_id']); ?>">
-                       <span class="pxl-title--text">
+                        <span class="pxl-title--text">
                             <?php echo pxl_print_html($title['title']); ?>
                         </span>
                     </span>
@@ -19,7 +19,6 @@ if(isset($settings['tabs']) && !empty($settings['tabs']) && count($settings['tab
                 <?php foreach ($settings['tabs'] as $key => $content) : ?>
                     <div id="<?php echo esc_attr($html_id.'-'.$content['_id']); ?>" class="pxl-tab--content <?php if($settings['tab_active'] == $key + 1) { echo 'active'; } ?> <?php if($content['content_type'] == 'template') { echo 'pxl-tabs--elementor'; } ?>" <?php if($settings['tab_active'] == $key + 1) { ?>style="display: block;"<?php } ?>>
                         <div class="pxl-content--inner">
-
                             <?php if($content['content_type'] == 'df' && !empty($content['desc'])) {
                                 echo pxl_print_html($content['desc']); 
                             } elseif($content['content_type'] == 'template' && !empty($content['content_template'])) {

@@ -125,5 +125,185 @@ Service Style
     }
 }
 
+.pxl-service-info {
+    display: flex;
+    gap: 54px;
+    align-items: center;
+    border: 1px solid #cdcdcd;
+    @include border-radius(8px);
+    padding: 24px 124px 24px 24px;
+    position: relative;
+    @media #{$max-lg} {
+        flex-direction: column;
+        padding: 24px;
+    }
+    @media #{$max-xs} {
+        padding: 15px;
+        gap: 0;
+    }
+    &:hover {
+        .pxl-service-info__image {
+            img {
+                @include transform(scale(1.1) rotate(2deg));
+            }
+            &:before {
+                animation: pxl-shine 1s linear forwards;
+                animation-delay: 0.1s;
+            }
+        }
+        .pxl-service-info__icon {
+            i {
+                transform: rotateY(360deg);
+            }
+        }
+    }
+    &__image {
+        height: 436px;
+        width: 512px;
+        @include border-radius(8px);
+        overflow: hidden;
+        position: relative;
+        @media #{$max-lg} {
+            width: 100%;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            @include transition(all 0.3s linear 0ms);
+            @include transform(scale(1) rotate(0deg));
+            position: relative;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -200%;
+            width: 100%;
+            height: 100%;
+            @include transform(skewx(-20deg));
+            background-image: -webkit-gradient(
+                linear,
+                left top,
+                right top,
+                from(transparent),
+                color-stop(rgba(255, 255, 255, 0.35)),
+                to(transparent)
+            );
+            background-image: linear-gradient(
+                to right,
+                transparent,
+                rgba(255, 255, 255, 0.35),
+                transparent
+            );
+            z-index: 1;
+            pointer-events: none;
+        }
+    }
+    &__content {
+        --x: 87px;
+        flex: 1;
+        display: flex;
+        gap: 40px;
+        @media #{$max-xs} {
+            flex-direction: column;
+            margin-top: calc(var(--x) / 2 * -1);
+        }
+    }
+    &__icon {
+        width:  var(--x);
+        height: var(--x);
+        border-radius: 8px;
+        background-color: $primary_color;
+        display: flex;
+        flex-shrink: 0;
+        flex-grow: 0;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 40px;
+        z-index: 3;
+        i {
+            transform: rotateY(0deg);
+            @include transition(all 0.3s linear 0ms);
+        }
+        @media #{$max-xs} {
+            margin-left: calc(var(--x) / 2);
+        }
+    }
+    &__wrap {
+        flex: 1;
+    }
+    &__title {
+        font-size: 30px;
+        color: #111111;
+        font-weight: 500;
+        font-family: "GTWalsheimPro";
+        margin-bottom: 30px;
+        line-height: 1;
+    }
+    &__lists {
+        margin-top: 30px;
+        margin-bottom: 0;
+        list-style: none;
+        li {
+            font-size: 16px;
+            line-height: 38px;
+            color: #111111;
+            font-weight: 400;
+            font-family: "Public Sans";
+            padding-left: 24px;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                background-color: $primary_color;
+            }
+        }
+    }
+    &__link {
+        width: 73px;
+        height: 73px;
+        border-radius: 50%;
+        background-color: $primary_color;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 24px;
+        @include transition(all 0.3s linear 0ms);
+        position: absolute;
+        right: 54px;
+        bottom: 75px;
+        &:hover {
+            background-color: $secondary_color;
+            color: #fff;
+        }
+        @media #{$max-xsx} {
+            height: 55px;
+            width: 100%;
+            position: static;
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            @include border-radius(8px);
+        }
+    }
+}
+
+@keyframes pxl-shine {
+    100% {
+        left: 200%;
+    }
+}
+
 body.rtl {
 }

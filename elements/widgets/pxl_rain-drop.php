@@ -18,6 +18,16 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::NUMBER,
                             'default' => 4,
                         ),
+                        array(
+                            'name' => 'style',
+                            'label' => esc_html__('Style', 'safebyte'),
+                            'type' => \Elementor\Controls_Manager::SELECT,
+                            'options' => [
+                                'style-1' => 'Style 1',
+                                'style-2' => 'Style 2',
+                            ],
+                            'default' => 'style-1',
+                        )
                     )
                 ),
             )
