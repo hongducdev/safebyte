@@ -131,6 +131,13 @@
     }
 }
 
+.widget_product_categories {
+    .product-categories {
+        border: 1px solid #d3d5d6;
+        @include border-radius(0 0 8px 8px);
+    }
+}
+
 .widget_tag_cloud {
     .tagcloud {
         padding: 35px;

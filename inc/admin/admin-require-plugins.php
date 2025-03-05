@@ -69,6 +69,14 @@ function safebyte_register_required_plugins() {
             'logo'        => $images . '/woo.png',
             'description' => esc_html__( 'WooCommerce is the world’s most popular open-source eCommerce solution.', 'safebyte' ),
         ),
+
+        array(
+            'name'               => esc_html__('Wishlist', 'invadex'),
+            'slug'               => "woo-smart-wishlist",
+            'required'           => false,
+            'logo'        => $images . '/woo-smart-wishlist.png',
+            'description' => esc_html__( 'WPC Smart Wishlist is a simple but powerful tool that can help your customer save products for buying later.', 'invadex' ),
+        ),
     );
  
 

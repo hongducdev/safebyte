@@ -37,15 +37,52 @@ add_action( 'init', 'safebyte_cwoocommerce_remove_function' );
 /* Product Category */
 add_action( 'woocommerce_before_shop_loop', 'safebyte_woocommerce_nav_top', 2 );
 function safebyte_woocommerce_nav_top() { ?>
+	<?php
+		$columns = isset($_GET['col']) ? sanitize_text_field($_GET['col']) : safebyte()->get_theme_opt('products_columns', 2);
+		$view_mode = isset($_GET['view']) ? sanitize_text_field($_GET['view']) : safebyte()->get_theme_opt('shop_layout', 'grid');
+		$view_mode_class = '';
+		if($view_mode == 'grid') {
+			$view_mode_class = 'grid-mode';
+		} else {
+			$view_mode_class = 'list-mode';
+		}
+	?>
+
 	<div class="woocommerce-topbar">
 		<div class="woocommerce-result-count">
 			<?php woocommerce_result_count(); ?>
 		</div>
-		<div class="woocommerce-topbar-ordering">
-			<?php woocommerce_catalog_ordering(); ?>
+		<div class="woocommerce-topbar-right-group">
+			<div class="woocommerce-topbar-ordering">
+				<?php woocommerce_catalog_ordering(); ?>
+			</div>
+			<div class="view-mode-btn grid-mode" data-view="grid <?php echo esc_attr($columns); ?>">
+				<div class="view-mode-btn-inner">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+			<div class="view-mode-btn list-mode" data-view="list">
+				<span></span>
+			</div>
 		</div>
 	</div>
 <?php }
+
+function display_new_badge_on_products()
+{
+	global $product;
+	$newness_days = 30;
+	$created = strtotime($product->get_date_created());
+	$html = '';
+	if ((time() - (60 * 60 * 24 * $newness_days)) < $created) {
+		$html = '<span class="new">' . esc_html__('New', 'invadex') . '</span>';
+	}
+	return $html;
+}
+
 
 add_filter( 'woocommerce_after_shop_loop_item', 'safebyte_woocommerce_product' );
 function safebyte_woocommerce_product() {
@@ -60,23 +97,37 @@ function safebyte_woocommerce_product() {
 			<a class="woocommerce-product-details" href="<?php the_permalink(); ?>">
 				<?php woocommerce_template_loop_product_thumbnail(); ?>
 			</a>
+			<div class="woocommerce-badges <?php echo esc_attr($product->is_on_sale() ? 'sale' : 'new'); ?>">
+				<?php if ($product->is_on_sale()) : ?>
+					<span><?php echo esc_html__('Sale', 'invadex'); ?></span>
+				<?php else : ?>
+					<?php pxl_print_html(display_new_badge_on_products($product->get_id())); ?>
+				<?php endif; ?>
+			</div>
+			<div class="woocommerce-product-buttons">
+				<?php if ( ! $product->managing_stock() && ! $product->is_in_stock() ) { ?>
+				<?php } else { ?>
+					<div class="woocommerce-product-button add-cart">
+						<?php woocommerce_template_loop_add_to_cart(); ?>
+					</div>
+				<?php } ?>
+				<?php if (class_exists('WPCleverWoosw')) : ?>
+					<div class="woocommerce-product-button wishlist">
+						<?php echo do_shortcode('[woosw id="' . esc_attr($product->get_id()) . '"]'); ?>
+					</div>
+				<?php endif; ?>
+			</div>
 		</div>
 		<div class="woocommerce-product-content">
+			<div class="woocommerce-product--price">
+				<?php woocommerce_template_loop_price(); ?>
+			</div>
 			<h4 class="woocommerce-product-title">
 				<a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a>
 			</h4>
 			<div class="woocommerce-product--rating">
 				<?php woocommerce_template_loop_rating(); ?>
 			</div>
-			<div class="woocommerce-product--price">
-				<?php woocommerce_template_loop_price(); ?>
-			</div>
-			<?php if ( ! $product->managing_stock() && ! $product->is_in_stock() ) { ?>
-			<?php } else { ?>
-				<div class="woocommerce-add-to-cart">
-			    	<?php woocommerce_template_loop_add_to_cart(); ?>
-				</div>
-			<?php } ?>
 		</div>
 	</div>
 <?php }
@@ -366,8 +417,8 @@ add_filter('woocommerce_get_image_size_gallery_thumbnail', function ($size) {
 });
 
 add_filter('woocommerce_get_image_size_thumbnail', function ($size) {
-    $size['width'] = 600;
-    $size['height'] = 506;
+    $size['width'] = 685;
+    $size['height'] = 750;
     $size['crop'] = 1;
     return $size;
 });
@@ -394,6 +445,6 @@ function safebyte_woocommerce_loop_add_to_cart_link($button, $product, $args){
 		isset( $args['attributes'] ) ? wc_implode_html_attributes( $args['attributes'] ) : '',
 		esc_html( $product->add_to_cart_text() ),
 		esc_html( $product->add_to_cart_text() ),
-		'<i class="flaticon-shopping-bag pxl-mr-10"></i><span class="btn-cart-overlay"></span><span class="pxl-cart-loader"></span>'
+		'<i class="fas fa-shopping-cart"></i><span class="btn-cart-overlay"></span><span class="pxl-cart-loader"></span>'
 	);
 }

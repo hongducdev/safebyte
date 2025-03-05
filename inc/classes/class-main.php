@@ -239,7 +239,7 @@ if (!class_exists('Safebyte_Main')) {
             return $options;
         }
 
-        public function get_sidebar_args($args = []){
+        public function get_sidebar_args($args = []) {
             $args = wp_parse_args($args, [
                 'type' => 'blog',
                 'content_col' => '9'
@@ -249,6 +249,10 @@ if (!class_exists('Safebyte_Main')) {
 
             $sidebar_reg = is_singular( 'post' ) ? 'blog' : $args['type'];
             $sidebar_reg = is_singular( 'product' ) ? 'shop' : $sidebar_reg;
+
+            if ($sidebar_reg === 'shop') {
+                $args['content_col'] = '8';
+            }
 
             $sidebar_active = is_active_sidebar('sidebar-'.$sidebar_reg);
   
