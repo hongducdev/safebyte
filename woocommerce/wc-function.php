@@ -56,7 +56,7 @@ function safebyte_woocommerce_nav_top() { ?>
 			<div class="woocommerce-topbar-ordering">
 				<?php woocommerce_catalog_ordering(); ?>
 			</div>
-			<div class="view-mode-btn grid-mode" data-view="grid <?php echo esc_attr($columns); ?>">
+			<div class="view-mode-btn grid-mode active" data-view="grid columns-<?php echo esc_attr($columns); ?>">
 				<div class="view-mode-btn-inner">
 					<span></span>
 					<span></span>
@@ -64,7 +64,7 @@ function safebyte_woocommerce_nav_top() { ?>
 					<span></span>
 				</div>
 			</div>
-			<div class="view-mode-btn list-mode" data-view="list">
+			<div class="view-mode-btn list-mode" data-view="list columns-1">
 				<span></span>
 			</div>
 		</div>
@@ -91,6 +91,7 @@ function safebyte_woocommerce_product() {
 	if(isset($_GET['shop-layout'])) {
         $shop_layout = $_GET['shop-layout'];
     }
+	$number_words_excerpt = safebyte()->get_theme_opt('product_number_words_excerpt', 25);
 	?>
 	<div class="woocommerce-product-inner item-layout-<?php echo esc_attr($shop_layout); ?>">
 		<div class="woocommerce-product-header">
@@ -127,6 +128,23 @@ function safebyte_woocommerce_product() {
 			</h4>
 			<div class="woocommerce-product--rating">
 				<?php woocommerce_template_loop_rating(); ?>
+			</div>
+			<?php if ($number_words_excerpt > 0) : ?>
+				<div class="woocommerce-short-description">
+					<span class="short-descripion-text">
+						<?php echo wp_trim_words( get_the_excerpt($product->get_id()), $number_words_excerpt, $more = null); ?>
+					</span>
+				</div>
+			<?php endif; ?>
+			<div class="woocommerce-product-divider"></div>
+			<div class="woocommerce-product-add-cart-grid">
+				<?php if ( ! $product->managing_stock() && ! $product->is_in_stock() ) { ?>
+				<?php } else { ?>
+					<?php woocommerce_template_loop_add_to_cart(); ?>
+				<?php } ?>
+				<?php if (class_exists('WPCleverWoosw')) : ?>
+					<?php echo do_shortcode('[woosw id="' . esc_attr($product->get_id()) . '"]'); ?>
+				<?php endif; ?>
 			</div>
 		</div>
 	</div>
@@ -182,9 +200,16 @@ function safebyte_woocommerce_sg_product_rating() { global $product; ?>
 	<div class="woocommerce-sg-product-rating">
 		<?php woocommerce_template_single_rating(); ?>
 	</div>
+	<div class="woocommerce-sg-product-wishlist">
+		<?php if (class_exists('WPCleverWoosw')) { ?>
+			<div class="woocommerce-wishlist">
+		    	<?php echo do_shortcode('[woosw id="'.esc_attr( $product->get_id() ).'"]'); ?>
+			</div>
+		<?php } ?>
+	</div>
 <?php }
 
-add_action( 'woocommerce_single_product_summary', 'safebyte_woocommerce_sg_product_price', 15 );
+add_action( 'woocommerce_single_product_summary', 'safebyte_woocommerce_sg_product_price', 0 );
 function safebyte_woocommerce_sg_product_price() { ?>
 	<div class="woocommerce-sg-product-price">
 		<?php woocommerce_template_single_price(); ?>
@@ -198,16 +223,21 @@ function safebyte_woocommerce_sg_product_excerpt() { ?>
 	</div>
 <?php }
 
-add_action( 'woocommerce_single_product_summary', 'safebyte_woocommerce_sg_product_button', 30 );
-function safebyte_woocommerce_sg_product_button() { 
-	global $product;
-	?>
-	<div class="woocommerce-sg-product-button">
-		<?php if (class_exists('WPCleverWoosw')) { ?>
-			<div class="woocommerce-wishlist">
-		    	<?php echo do_shortcode('[woosw id="'.esc_attr( $product->get_id() ).'"]'); ?>
-			</div>
-		<?php } ?>
+add_action( 'woocommerce_before_add_to_cart_quantity', 'custom_before_quantity_input_field', 25 );
+	function custom_before_quantity_input_field() { ?>
+		<?php echo '<div class="quantity-label">' . esc_html__( 'Quantity', 'safebyte' ) . '</div>'; ?>
+	<?php } 
+
+/* Custom Text Add to cart - Single product */
+	add_filter( 'woocommerce_product_single_add_to_cart_text', 'safebyte_add_to_cart_button_text_single' ); 
+	function safebyte_add_to_cart_button_text_single() {
+		echo esc_html__('Add to Cart', 'safebyte').'<i class="fas fa-shopping-cart"></i>';
+	}
+
+add_action( 'woocommerce_single_product_summary', 'safebyte_woocommerce_sg_product_meta', 30 );
+function safebyte_woocommerce_sg_product_meta() { ?>
+	<div class="woocommerce-sg-product-meta">
+		<h3 class="label-info-product"><?php echo esc_html__('Info Product','safebyte') ?></h3>
 	</div>
 <?php }
 
@@ -216,11 +246,11 @@ function safebyte_woocommerce_sg_social_share() {
 	$product_social_share = safebyte()->get_theme_opt( 'product_social_share', false );
 	if($product_social_share) : ?>
 		<div class="woocommerce-social-share">
-			<label class="pxl-mr-20"><?php echo esc_html__('Share:', 'safebyte'); ?></label>
-			<a class="fb-social pxl-mr-10" title="<?php echo esc_attr__('Facebook', 'safebyte'); ?>" target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>"><i class="caseicon-facebook"></i></a>
-	        <a class="tw-social pxl-mr-10" title="<?php echo esc_attr__('Twitter', 'safebyte'); ?>" target="_blank" href="https://twitter.com/intent/tweet?url=<?php the_permalink(); ?>&text=<?php the_title(); ?>%20"><i class="caseicon-twitter"></i></a>
-	        <a class="pin-social pxl-mr-10" title="<?php echo esc_attr__('Pinterest', 'safebyte'); ?>" target="_blank" href="http://pinterest.com/pin/create/button/?url=<?php the_permalink(); ?>&description=<?php the_title(); ?>%20"><i class="caseicon-pinterest"></i></a>
-	        <a class="lin-social pxl-mr-10" title="<?php echo esc_attr__('LinkedIn', 'safebyte'); ?>" target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>&title=<?php the_title(); ?>%20"><i class="caseicon-linkedin"></i></a>
+			<label class="pxl-mr-20"><i class="fas fa-share-alt"></i><?php echo esc_html__('Share:', 'safebyte'); ?></label>
+			<a class="fb-social pxl-mr-10" title="<?php echo esc_attr__('Facebook', 'safebyte'); ?>" target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>"><i class="fab fa-facebook"></i></a>
+	        <a class="tw-social pxl-mr-10" title="<?php echo esc_attr__('Twitter', 'safebyte'); ?>" target="_blank" href="https://twitter.com/intent/tweet?url=<?php the_permalink(); ?>&text=<?php the_title(); ?>%20"><i class="fab fa-twitter"></i></a>
+	        <a class="sky-social pxl-mr-10" title="<?php echo esc_attr__('Skype', 'safebyte'); ?>" target="_blank" href="https://join.skype.com/invite/<?php the_permalink(); ?>"><i class="fab fa-skype"></i></a>
+	        <a class="tele-social pxl-mr-10" title="<?php echo esc_attr__('Telegram', 'safebyte'); ?>" target="_blank" href="https://t.me/share/url?url=<?php the_permalink(); ?>&text=<?php the_title(); ?>%20"><i class="fab fa-telegram"></i></a>
     </div>
 <?php endif; }
 

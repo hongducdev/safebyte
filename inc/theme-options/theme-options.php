@@ -1076,6 +1076,17 @@ if(class_exists('Woocommerce')) {
                     'max'           => 50,
                     'display_value' => 'text'
                 ),
+                array(
+                    'title'         => esc_html__('Number words excerpt', 'safebyte'),
+                    'id'            => 'product_number_words_excerpt',
+                    'type'          => 'slider',
+                    'subtitle'      => esc_html__('Number words to show in excerpt', 'safebyte'),
+                    'default'       => 25,
+                    'min'           => 3,
+                    'step'          => 1,
+                    'max'           => 50,
+                    'display_value' => 'text',
+                ),
             )
         )
     ));
@@ -1085,6 +1096,7 @@ if(class_exists('Woocommerce')) {
         'icon'  => 'el-icon-pencil',
         'subsection' => true,
         'fields'     => array_merge(
+            safebyte_sidebar_pos_opts([ 'prefix' => 'single_product_']),
             array(
                 array(
                     'id'       => 'single_img_size',
@@ -1121,7 +1133,7 @@ if(class_exists('Woocommerce')) {
                     'title'    => esc_html__('Social Share', 'safebyte'),
                     'default'  => false
                 ),
-            )
+            ),
         )
     ));
 }

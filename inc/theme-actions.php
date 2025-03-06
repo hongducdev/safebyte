@@ -427,11 +427,11 @@ function safebyte_cart_hidden_sidebar() {
                         'id'    : $pid
                     },
                     success: function (response) {
-                        $('#pxl-cart-sidebar').addClass('active');
-                        $("#pxl-cart-sidebar .pxl-item--close").on('click', function () {
-                            $('body').removeClass('body-overflow');
-                            $('#pxl-cart-sidebar').removeClass('active');
-                        });
+                        // $('#pxl-cart-sidebar').addClass('active');
+                        // $("#pxl-cart-sidebar .pxl-item--close").on('click', function () {
+                        //     $('body').removeClass('body-overflow');
+                        //     $('#pxl-cart-sidebar').removeClass('active');
+                        // });
                     }
                 });
             });

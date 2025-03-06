@@ -591,6 +591,19 @@
     }
     form .form-row {
         padding: 0 0 15px;
+        .input-text {
+            border: 1px solid rgba(#121c27, 0.149);
+            height: 55px;
+            @include border-radius(8px);
+            color: #0a1119;
+            font-weight: 400;
+            font-size: 15px;
+            font-family: "Public Sans";
+            padding: 0 24px;
+            &:focus {
+                border-color: $primary_color;
+            }
+        }
     }
     table.cart td.actions .coupon .input-text {
         margin-right: 15px;
@@ -642,14 +655,17 @@
         }
     }
     form .select2-container--default .select2-selection {
-        border: 1px solid #f8f8f8;
-        @include border-radius(30px);
-        height: 60px;
-        background-color: #f8f8f8;
+        border: 1px solid rgba(#121c27, 0.149);
+        @include border-radius(8px);
+        height: 55px;
+        background-color: transparent;
         .select2-selection__rendered {
-            line-height: 60px;
-            padding-left: 32px;
+            line-height: 55px;
+            padding: 0 24px;
             color: #454545;
+            font-size: 15px;
+            font-weight: 400;
+            font-family: "Public Sans";
         }
     }
     .select2-container--open .select2-results li.select2-results__option {
@@ -677,15 +693,10 @@
         display: inline-block;
         cursor: pointer;
         border: none;
-        @include background-gradient-button(
-            to right,
-            $gradient_color_from 0%,
-            $gradient_color_to 51%,
-            $gradient_color_from 100%
-        );
-        background-size: 200%, auto;
-        text-transform: uppercase;
-        @extend .ft-secondary;
+        background-color: $primary_color;
+        font-family: "GTWalsheimPro";
+        font-weight: 500;
+        text-transform: capitalize;
         &:hover,
         &:focus,
         &:active,
@@ -694,14 +705,7 @@
             outline: medium none;
             text-decoration: none;
             color: #fff;
-            background-position: right center;
-            @include background-gradient-button(
-                to right,
-                $gradient_color_from 0%,
-                $gradient_color_to 51%,
-                $gradient_color_from 100%
-            );
-            background-color: transparent;
+            background-color: $secondary_color;
         }
     }
     button.button:disabled,
@@ -726,13 +730,13 @@
     #pxl-wapper .quantity {
         position: relative;
         display: inline-flex;
-        @include border-radius(50px);
+        @include border-radius(8px);
+        border: none;
         .qty {
             padding: 0 30px;
-            border: 1px solid rgba(#020626, 0.1);
             color: #23272a;
-            @include border-radius(0px);
-            background-color: transparent;
+            border: none;
+            background-color: #dbe5fc;
             font-size: 16px;
             font-weight: 500;
             -moz-appearance: textfield;
@@ -741,35 +745,58 @@
                 -webkit-appearance: none;
                 margin: 0;
             }
-            height: 46px;
-            width: 98px;
-            text-align: left;
-            border-radius: 46px;
+            height: 56px;
+            width: 126px;
+            text-align: center;
+            border-radius: 8px;
         }
     }
     #pxl-wapper .quantity-icon {
         position: absolute;
-        right: 22px;
-        font-size: 8px;
-        color: #4a4c51;
         cursor: pointer;
-        width: 10px;
-        height: 10px;
+        width: 27px;
+        height: 27px;
+        border-radius: 27px;
         justify-content: center;
+        background-color: #c5d2f0;
         display: inline-flex;
         align-items: center;
+        top: 50%;
+        transform: translateY(-50%);
         &.quantity-down {
-            bottom: 12px;
+            left: 15px;
             &:before {
-                content: "\f13c";
-                font-family: "Caseicon";
+                content: "";
+                width: 8px;
+                height: 1px;
+                background-color: #121c27;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                @include transform(translate(-50%, -50%));
             }
         }
         &.quantity-up {
-            top: 12px;
+            right: 15px;
             &:before {
-                content: "\f148";
-                font-family: "Caseicon";
+                content: "";
+                width: 8px;
+                height: 1px;
+                background-color: #121c27;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                @include transform(translate(-50%, -50%));
+            }
+            &:after {
+                content: "";
+                width: 1px;
+                height: 8px;
+                background-color: #121c27;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                @include transform(translate(-50%, -50%));
             }
         }
     }
@@ -945,6 +972,9 @@
             align-items: center;
             justify-content: space-between;
             margin-bottom: 30px;
+            .total {
+                font-size: 500px;
+            }
         }
         ul {
             li {
@@ -1173,9 +1203,9 @@
             }
         }
         @media #{$min-lg} {
-			&.columns-2 li.product {
-				width: 50%;
-			}
+            &.columns-2 li.product {
+                width: 50%;
+            }
             &.columns-5 li.product {
                 width: calc(20% - 1px);
                 width: -webkit-calc(20% - 1px);
@@ -1389,162 +1419,306 @@
             }
         }
     }
-    .woocommerce-product-inner {
-        @include transition(all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1));
-        z-index: 1;
-        position: relative;
-        text-align: center;
-        .woocommerce-product-header {
-            margin-bottom: 25px;
-            position: relative;
-            img {
-                width: auto;
-                display: inline-block;
-                object-position: center;
-                object-fit: cover;
-                @include border-radius(8px);
-                margin-bottom: 0 !important;
+    ul.products {
+        .woocommerce-product-inner {
+            .woocommerce-product-header {
+                position: relative;
             }
-            .woocommerce-badges {
-                position: absolute;
-                top: 0;
-                right: 0;
-                height: 33px;
-                @include border-radius(0 8px 0 0);
-                background-color: $primary_color;
-                color: #fff;
-                font-size: 15px;
-                font-weight: 500;
-                font-family: "GTWalsheimPro";
-                padding: 0 26px;
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-                &.new {
-                    background-color: #121c27;
+            .woocommerce-product-content {
+                .woocommerce-product-title {
+                    margin-bottom: 5px;
+                    font-size: 20px;
+                    font-weight: 500;
+                }
+                .woocommerce-product--price {
+                    font-size: 17px;
+                    font-weight: 500;
+                    margin-bottom: 6px;
+                    font-family: "GTWalsheimPro";
+                    color: #848b94;
+                    del {
+                        position: relative;
+                        padding-right: 9px;
+                        margin-right: 9px;
+                        &:before {
+                            content: "/";
+                            position: absolute;
+                            font-size: 17px;
+                            color: #0a1119;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            right: -9px;
+                            line-height: 1;
+                            font-family: "GTWalsheimPro";
+                        }
+                    }
+                    .price {
+                        display: inline-block;
+                        color: #0a1119;
+                    }
                 }
             }
-            .woocommerce-product-buttons {
-                position: absolute;
-                left: 50%;
-                bottom: 35px;
-                transform: translateX(-50%);
-                display: flex;
-                align-items: center;
-                gap: 12px;
-                opacity: 0;
-                visibility: hidden;
-                transition: all 0.3s ease;
-            }
-            .woocommerce-product-button {
-                button,
-                a {
-                    width: 50px;
-                    height: 50px;
-                    @include border-radius(25px);
+        }
+        .woocommerce-product-inner {
+            @include transition(all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1));
+            z-index: 1;
+            position: relative;
+            text-align: center;
+            .woocommerce-product-header {
+                position: relative;
+                margin-bottom: 25px;
+                img {
+                    width: auto;
+                    display: inline-block;
+                    object-position: center;
+                    object-fit: cover;
+                    @include border-radius(8px);
+                    margin-bottom: 0 !important;
+                }
+                .woocommerce-badges {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    height: 33px;
+                    @include border-radius(0 8px 0 0);
                     background-color: $primary_color;
-                    background-image: none !important;
+                    color: #fff;
+                    font-size: 15px;
+                    font-weight: 500;
+                    font-family: "GTWalsheimPro";
+                    padding: 0 26px;
                     display: inline-flex;
                     align-items: center;
                     justify-content: center;
-                    padding: 0;
-                    margin: 0 !important;
-                    position: relative;
-                    &:hover {
+                    &.new {
+                        background-color: #121c27;
+                    }
+                }
+                .woocommerce-product-buttons {
+                    position: absolute;
+                    left: 50%;
+                    bottom: 35px;
+                    transform: translateX(-50%);
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all 0.3s ease;
+                }
+                .woocommerce-product-button {
+                    button,
+                    a {
+                        width: 50px;
+                        height: 50px;
+                        @include border-radius(25px);
                         background-color: $primary_color;
+                        background-image: none !important;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 0;
+                        margin: 0 !important;
+                        position: relative;
+                        &:hover {
+                            background-color: $primary_color;
+                        }
+                        transform: translateY(10px);
+                        @include transition(all 0.3s linear 0s);
                     }
-                    transform: translateY(10px);
-                    @include transition(all 0.3s linear 0s);
+                    &.add-cart {
+                        font-size: 18px;
+                        .pxl-btn-text {
+                            display: none !important;
+                        }
+                        .added_to_cart {
+                            display: none !important;
+                        }
+                        .loading {
+                            &:after {
+                                margin-left: 0;
+                                top: 3px;
+                                right: 18px;
+                            }
+                            i {
+                                display: none !important;
+                            }
+                        }
+                        .added {
+                            &:after {
+                                margin-left: 0;
+                            }
+                            i {
+                                display: none !important;
+                            }
+                        }
+                    }
+                    &.wishlist {
+                        .woosw-btn-icon {
+                            font-size: 24px;
+                        }
+                        .woosw-btn-text {
+                            display: none !important;
+                        }
+                    }
+                    &:nth-child(1) {
+                        button,
+                        a {
+                            transition-delay: 0s;
+                        }
+                    }
+                    &:nth-child(2) {
+                        button,
+                        a {
+                            transition-delay: 0.1s;
+                        }
+                    }
+                    &:nth-child(3) {
+                        button,
+                        a {
+                            transition-delay: 0.2s;
+                        }
+                    }
                 }
-                &.add-cart {
-                    font-size: 18px;
-                    .pxl-btn-text {
-                        display: none !important;
+            }
+            .woocommerce-product-content {
+                .woocommerce-product--rating {
+                    display: flex;
+                    justify-content: center;
+                    .star-rating {
+                        margin: 0 0 3px;
+                        letter-spacing: 5px;
+                        color: $primary_color;
                     }
                 }
-                &.wishlist {
-                    .woosw-btn-icon {
-                        font-size: 24px;
-                    }
-                    .woosw-btn-text {
-                        display: none !important;
-                    }
+                .woocommerce-product-divider {
+                    display: none;
                 }
-                &:nth-child(1) {
+                .woocommerce-short-description {
+                    display: none;
+                }
+                .woocommerce-product-add-cart-grid {
+                    display: none;
+                }
+            }
+            &:hover {
+                &:after {
+                    opacity: 1;
+                }
+                .woocommerce-product-buttons {
+                    opacity: 1;
+                    visibility: visible;
+                }
+                .woocommerce-product-button {
                     button,
                     a {
-                        transition-delay: 0s;
-                    }
-                }
-                &:nth-child(2) {
-                    button,
-                    a {
-                        transition-delay: 0.1s;
-                    }
-                }
-                &:nth-child(3) {
-                    button,
-                    a {
-                        transition-delay: 0.2s;
+                        transform: translateY(0);
                     }
                 }
             }
         }
-        .woocommerce-product-content {
-            .woocommerce-product-title {
-                margin-bottom: 5px;
-                font-size: 20px;
-                font-weight: 500;
-            }
-            .woocommerce-product--price {
-                font-size: 17px;
-                font-weight: 500;
-                margin-bottom: 6px;
-				font-family: "GTWalsheimPro";
-				color: #848b94;
-				del {
-					position: relative;
-					padding-right: 9px;
-					margin-right: 9px;
-					&:before {
-						content: "/";
-						position: absolute;
-						font-size: 17px;
-						color: #0a1119;
-						top: 50%;
-						transform: translateY(-50%);
-						right: -9px;
-						line-height: 1;
-						font-family: "GTWalsheimPro";
-					}
-				}
-                .price {
-                    display: inline-block;
-					color: #0a1119;
-                }
-            }
-            .woocommerce-product--rating {
+        &.list {
+            .woocommerce-product-inner {
+                @include transition(
+                    all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1)
+                );
                 display: flex;
-                justify-content: center;
-                .star-rating {
-                    margin: 0 0 3px;
-                    letter-spacing: 5px;
-					color: $primary_color;
+                align-items: center;
+                &:hover {
+                    .woocommerce-product-header {
+                        img {
+                            transform: scale(1.05);
+                        }
+                    }
                 }
-            }
-        }
-        &:hover {
-            &:after {
-                opacity: 1;
-            }
-            .woocommerce-product-buttons {
-                opacity: 1;
-                visibility: visible;
-            }
-            .woocommerce-product-button {
-                button,
-                a {
-                    transform: translateY(0);
+                .woocommerce-product-header {
+                    position: relative;
+                    overflow: hidden;
+                    height: 100%;
+                    margin: 0;
+                    width: 100%;
+                    max-width: 300px;
+                    @include border-radius(8px);
+                    @include transition(all 0.3s linear 0s);
+                    img {
+                        width: 100%;
+                        height: auto;
+                        display: inline-block;
+                        object-position: center;
+                        object-fit: cover;
+                        @include border-radius(8px);
+                        margin-bottom: 0 !important;
+                        transform: scale(1);
+                        @include transition(all 0.3s linear 0s);
+                    }
+                    .woocommerce-product-buttons {
+                        display: none;
+                    }
+                }
+                .woocommerce-product-content {
+                    flex-basis: 50%;
+                    flex-grow: 1;
+                    padding: 7px 15px 20px 32px;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    text-align: left;
+                    .woocommerce-product-divider {
+                        display: block;
+                        width: 100%;
+                        height: 1px;
+                        background-color: rgba(#0a1119, 0.149);
+                        margin: 20px 0;
+                    }
+                    .woocommerce-product-title {
+                        margin-bottom: 10px;
+                    }
+                    .woocommerce-product--rating {
+                        justify-content: start;
+                    }
+                    .woocommerce-short-description {
+                        display: block;
+                    }
+                    .woocommerce-product-add-cart-grid {
+                        display: flex;
+                        align-items: center;
+                        gap: 15px;
+                        a {
+                            margin-top: 0;
+                            i {
+                                margin-left: 10px;
+                            }
+                            &.added {
+                                i {
+                                    display: none;
+                                }
+                            }
+                            &.loading {
+                                &:after {
+                                    top: 0;
+                                }
+                                i {
+                                    display: none;
+                                }
+                            }
+                        }
+                        .added_to_cart {
+                            display: none;
+                        }
+                        button {
+                            height: 46px;
+                            font-size: 14px;
+                            font-weight: 500;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-direction: row-reverse;
+                            gap: 10px;
+                            i {
+                                font-size: 16px;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -1634,21 +1808,33 @@
         flex-wrap: wrap;
         align-items: center;
         label {
-            font-size: 20px;
-            color: #000001;
-            font-weight: 600;
-            @extend .ft-secondary;
-            display: inline-block;
+            i {
+                width: 43px;
+                height: 43px;
+                border-radius: 21px;
+                background-color: $secondary_color;
+                color: #fff;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 16px;
+                margin-right: 12px;
+            }
+            font-size: 17px;
+            color: #0a1119;
+            font-weight: 500;
+            font-family: "GTWalsheimPro";
         }
         a {
-            height: 35px;
-            width: 35px;
+            height: 43px;
+            width: 43px;
             display: inline-flex;
-            border-radius: 5px;
-            color: #454545;
+            border-radius: 21px;
+            color: #121c27;
+            border: 1px solid rgba(#121c27, 0.149);
             justify-content: center;
             align-items: center;
-            font-size: 17px;
+            font-size: 15px;
             position: relative;
             z-index: 1;
             &:before,
@@ -1664,14 +1850,10 @@
                 @include transition(all 300ms linear 0ms);
             }
             &:before {
-                border: 1px solid #454545;
                 background-color: #fff;
             }
             &:after {
-                @include background-horizontal(
-                    $gradient_color_from,
-                    $gradient_color_to
-                );
+                background-color: $primary_color;
                 opacity: 0;
             }
             i {
@@ -1689,7 +1871,6 @@
         }
     }
     .woocommerce-sg-product-price {
-        margin-bottom: 23px;
         p {
             margin-bottom: 0;
         }
@@ -1697,10 +1878,11 @@
     section.related {
         padding-top: 66px;
         h2 {
-            font-size: 42px;
+            font-size: 45px;
             text-transform: capitalize;
             margin-bottom: 0;
             position: relative;
+            text-align: center;
             @media #{$max-md} {
                 font-size: 36px;
             }
@@ -1866,9 +2048,11 @@
             &:not(.variations_form),
             &:not(.grouped_form) {
                 display: flex;
-                margin: 0 0 32px;
+                margin: 0 0 30px;
+                padding-bottom: 30px;
                 align-items: center;
                 flex-wrap: wrap;
+                border-bottom: 1px solid rgba(#121c27, 0.149);
                 select {
                     margin: 0;
                 }
@@ -2087,28 +2271,54 @@
                     }
                 }
             }
+            .woocommerce-sg-product-wishlist {
+                display: inline-flex;
+                transform: translateY(5px);
+                .woocommerce-wishlist {
+                    button {
+                        background: none;
+                        padding: 0;
+                        line-height: 1;
+                        height: auto;
+                        .woosw-btn-icon {
+                            color: #121c27;
+                        }
+                        .woosw-btn-text {
+                            color: #6d6d6d;
+                            font-size: 15px;
+                            font-family: "GTWalsheimPro";
+                        }
+                    }
+                }
+            }
+            .woocommerce-sg-product-rating {
+                display: inline-flex;
+            }
             .woocommerce-product-rating {
-                margin-bottom: 18px;
-                display: flex;
+                margin-bottom: 0px;
+                display: inline-flex;
                 align-items: center;
+                padding-right: 20px;
+                margin-right: 20px;
+                padding-bottom: 2px;
+                padding-top: 3px;
+                border-right: 1px solid #d3d5d6;
                 .star-rating {
                     margin: 0;
-                    width: 117px;
-                    height: 22px;
-                    letter-spacing: 5px;
-                    font-size: 18px;
                 }
                 .woocommerce-review-link {
                     margin-left: 8px;
-                    font-size: 18px;
-                    font-weight: 500;
-                    color: #454545;
+                    font-size: 0px;
+                    color: #646464;
                 }
             }
             .entry-title {
-                font-size: 42px;
+                font-size: 35px;
+                line-height: 37px;
+                color: #111111;
+                font-weight: 500;
                 margin-top: 6px;
-                margin-bottom: 12px;
+                margin-bottom: 10px;
                 @media #{$max-lg} {
                     font-size: 30px;
                     margin-top: -12px;
@@ -2119,37 +2329,75 @@
                 }
             }
             .price {
-                font-size: 28px;
-                line-height: 1;
-                font-weight: 600;
-                @extend .ft-secondary;
+                font-size: 23px;
+                font-family: "GTWalsheimPro";
+                font-weight: 500;
                 ins {
-                    margin-right: 22px;
-                    color: inherit;
+                    color: #111111;
                     text-decoration: none;
+                    font-weight: 500;
                 }
                 del {
-                    color: #8f8f8f;
-                    .amount {
-                        color: #8f8f8f;
+                    color: #848b94;
+                    font-weight: 500;
+                    position: relative;
+                    margin-right: 20px;
+                    padding-right: 20px;
+                    &:before {
+                        content: "/";
+                        font-size: 23px;
+                        font-family: "GTWalsheimPro";
+                        color: #111111;
+                        line-height: 1;
+                        font-weight: 500;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: -10px;
                     }
-                }
-                .amount {
-                    @extend .text-gradient;
+                    .amount {
+                        color: #848b94;
+                    }
                 }
             }
             .woocommerce-sg-product-excerpt {
-                margin-bottom: 34px;
+                margin: 30px 0;
+                border-bottom: 1px solid rgba(#121c27, 0.149);
+                padding-bottom: 30px;
                 @media #{$max-sm} {
                     font-size: 16px;
                 }
             }
+            .quantity-label {
+                font-size: 20px;
+                color: #111111;
+                font-family: "GTWalsheimPro";
+                font-weight: 500;
+                display: flex;
+                width: 100%;
+                margin-bottom: 20px;
+            }
             .single_add_to_cart_button {
                 display: inline-flex;
                 justify-content: center;
+                align-items: center;
+                border-radius: 8px;
+                background-color: $primary_color;
+                background-image: none;
+                height: 56px;
+                text-transform: capitalize;
+                font-family: "GTWalsheimPro";
+                font-size: 15px;
+                font-weight: 500;
+                padding: 0 42px;
+                @include transition(all 0.3s linear 0s);
                 float: none;
+                &:hover {
+                    background-color: $secondary_color;
+                }
                 i {
                     font-size: 16px;
+                    margin-left: 15px;
                 }
                 &.loading {
                     padding-right: 42px;
@@ -2160,6 +2408,14 @@
                 }
                 &.added:after {
                     display: none;
+                }
+            }
+            .woocommerce-sg-product-meta {
+                .label-info-product {
+                    font-size: 20px;
+                    font-family: "GTWalsheimPro";
+                    font-weight: 500;
+                    color: #111111;
                 }
             }
         }
@@ -2176,7 +2432,7 @@
                 }
                 &:before {
                     border-color: #e3e3e3;
-                    bottom: 50%;
+                    bottom: 0;
                     margin-top: 1px;
                     @media #{$max-sm} {
                         display: none !important;
@@ -2201,56 +2457,30 @@
                         display: none !important;
                     }
                     a {
-                        padding: 0 30px;
-                        font-size: 24px;
-                        line-height: 54px;
-                        color: #555555;
+                        font-size: 20px;
+                        line-height: 30px;
+                        color: #0a1119;
                         font-weight: 500;
+                        font-family: "GTWalsheimPro";
                         position: relative;
-                        z-index: 99;
-                        @extend .ft-heading;
-                        text-transform: capitalize;
-                        position: relative;
-                        border-radius: 54px;
-                        z-index: 1;
-                        @media #{$max-sm} {
-                            display: block;
-                            text-align: center;
-                            font-size: 20px;
-                            line-height: 50px;
-                        }
-                        &:before,
-                        &:after {
-                            content: "";
-                            z-index: -1;
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            width: 100%;
-                            height: 100%;
-                            @include transition(all 300ms linear 0ms);
-                            border-radius: inherit;
-                        }
                         &:before {
-                            background-color: #fff;
-                            border: 1px solid #e3e3e3;
-                        }
-                        &:after {
-                            @include background-horizontal(
-                                $gradient_color_from,
-                                $gradient_color_to
-                            );
-                            opacity: 0;
+                            content: "";
+                            position: absolute;
+                            width: 0;
+                            height: 2px;
+                            background-color: $primary_color;
+                            bottom: 0;
+                            left: auto;
+                            right: 0;
+                            @include transition(all 0.3s linear 0s);
                         }
                     }
                     &.active > a,
                     a:hover {
-                        color: #fff;
                         &:before {
-                            opacity: 0;
-                        }
-                        &:after {
-                            opacity: 1;
+                            width: 100%;
+                            left: 0;
+                            right: auto;
                         }
                     }
                 }
@@ -2337,26 +2567,16 @@
                     margin: 0 -15px;
                     display: flex;
                     flex-wrap: wrap;
-                    #comments {
-                        width: 64%;
+                    flex-direction: column;
+                    gap: 30px;
+                    #comments,
+                    #review_form_wrapper {
+                        width: 100%;
                         padding: 0 15px;
-                        @media #{$max-md} {
-                            width: 55%;
-                        }
-                        @media #{$max-sm} {
-                            width: 100%;
-                        }
                     }
                     #review_form_wrapper {
-                        width: 36%;
+                        width: 100%;
                         padding: 0 15px;
-                        @media #{$max-md} {
-                            width: 45%;
-                        }
-                        @media #{$max-sm} {
-                            width: 100%;
-                            margin-top: 40px;
-                        }
                     }
                 }
                 .woocommerce-Reviews-title {
@@ -2367,9 +2587,9 @@
                 .comment-reply-title {
                     display: block;
                     font-size: 26px;
-                    color: #000000;
-                    font-weight: 700;
-                    @extend .ft-secondary;
+                    color: #111;
+                    font-weight: 500;
+                    font-family: "GTWalsheimPro";
                     line-height: 1.2;
                     margin-bottom: 12px;
                 }
@@ -2377,19 +2597,18 @@
                     display: none;
                 }
                 #review_form {
-                    padding: 32px 30px;
-                    background-color: transparent;
-                    border: 1px solid rgba(58, 58, 58, 0.15);
-                    border-radius: 10px;
                     input,
                     textarea {
-                        border-color: transparent;
+                        border: 1px solid rgba(#121c27, 0.149);
+                        border-radius: 8px;
                         &:focus {
                             border-color: $primary_color;
                         }
                     }
                     .comment-notes {
                         font-size: 16px;
+                        color: #666666;
+                        font-weight: 400;
                     }
                     .comment-form {
                         > p {
@@ -2421,7 +2640,17 @@
                         .form-submit .submit {
                             font-size: 16px;
                             line-height: 54px;
+                            background-color: $primary_color;
+                            background-image: none;
+                            border-radius: 8px;
                             padding: 0 32px;
+                            font-weight: 500;
+                            font-family: "GTWalsheimPro";
+                            text-transform: capitalize;
+                            @include transition(all 0.3s linear 0s);
+                            &:hover {
+                                background-color: $secondary_color;
+                            }
                         }
                     }
                     #respond {
@@ -2463,9 +2692,6 @@
                         li.review {
                             position: relative;
                             margin-bottom: 15px;
-                            padding: 20px 30px 38px 20px;
-                            background-color: #f5f6f6;
-                            border-radius: 10px;
                             .star-rating {
                                 font-size: 16px;
                                 margin-right: -10px;
@@ -2503,8 +2729,11 @@
                             }
                             .comment-text {
                                 border: none;
-                                padding: 0 0 0 102px;
-                                margin: 0;
+                                margin: 0 0 0 102px;
+                                padding: 20px;
+                                background-color: transparent;
+                                border: 1px solid rgba(#121c27, 0.149);
+                                border-radius: 8px;
                                 @media #{$max-sm} {
                                     .star-rating {
                                         float: none;
@@ -2525,20 +2754,23 @@
                                 }
                                 .woocommerce-review__published-date {
                                     display: block;
-                                    font-size: 15px;
+                                    font-size: 13px;
+                                    font-family: "GTWalsheimPro";
                                     color: $primary_color;
                                     font-weight: 500;
                                     line-height: 22px;
+                                    text-transform: uppercase;
                                 }
                                 .woocommerce-review__author {
-                                    color: #000;
-                                    @extend .ft-heading;
                                     display: block;
                                     line-height: 1;
                                     margin-top: 8px;
                                     margin-bottom: 6px;
-                                    font-size: 18px;
-                                    text-transform: uppercase;
+                                    font-size: 24px;
+                                    text-transform: capitalize;
+                                    color: #111;
+                                    font-weight: 500;
+                                    font-family: "GTWalsheimPro";
                                 }
                                 .woocommerce-review__dash {
                                     display: none;
@@ -2557,19 +2789,22 @@
             float: none;
         }
         .product_meta {
-            color: 646464;
-            margin-bottom: 25px;
-            font-weight: 500;
-            font-size: 16px;
+            color: #4b535d;
+            font-weight: 400;
+            font-size: 15px;
+            font-family: "Public Sans";
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(#121c27, 0.149);
+            margin-bottom: 30px;
             > span {
                 display: block;
                 margin-top: 12px;
-                text-transform: uppercase;
                 span,
                 a {
-                    color: #0a1320;
-                    font-size: 18px;
+                    color: #4b535d;
+                    font-size: 15px;
                     text-transform: capitalize;
+                    font-family: "Public Sans";
                 }
                 a:hover {
                     color: $primary_color;
@@ -2711,14 +2946,15 @@ body.woocommerce-cart {
         .shop_table {
             border: none;
             thead th {
-                font-size: 15px;
-                font-weight: 700;
-                color: #333;
+                font-size: 18px;
+                font-weight: 500;
+                color: #111;
+                font-family: "GTWalsheimPro" !important;
                 padding: 10px;
                 border-top: none;
                 border-left: none;
                 border-right: none;
-                border-bottom: 3px solid $primary_color;
+                border-bottom: 2px solid $primary_color;
             }
             tbody td {
                 text-align: left;
@@ -3111,9 +3347,10 @@ body.woocommerce-cart {
             }
         }
         #order_review {
-            background-color: rgba(#000, 0.037);
+            border: 1px solid rgba(#121c27, 0.149);
+            background-color: transparent;
             padding: 34px 40px 40px 40px;
-            border-radius: 10px;
+            border-radius: 8px;
             @media #{$max-lg} {
                 padding-left: 20px;
                 padding-right: 20px;
@@ -3833,6 +4070,18 @@ body #yith-quick-view-modal {
 
 /* Product Wishlist Popup */
 .woosw-popup {
+    .woosw-popup-content {
+        border-radius: 8px !important;
+    }
+    .woosw-popup-content-top {
+        background-color: $primary_color !important;
+        border-radius: 8px 8px 0 0 !important;
+        font-family: "GTWalsheimPro" !important;
+        font-weight: 500 !important;
+        .woosw-popup-close {
+            color: #fff !important;
+        }
+    }
     .woosw-item--time {
         display: none;
     }
@@ -3842,14 +4091,79 @@ body #yith-quick-view-modal {
             padding: 0 22px;
         }
     }
+    .woosw-item--name {
+        a {
+            font-weight: 500 !important;
+            font-family: "GTWalsheimPro" !important;
+            color: #111 !important;
+        }
+    }
+    .woosw-item--price {
+        ins {
+            color: #111 !important;
+        }
+    }
+    .add_to_cart_inline {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        a {
+            background-color: $primary_color !important;
+            font-family: "GTWalsheimPro" !important;
+            font-weight: 500 !important;
+            text-transform: capitalize !important;
+            background-image: none !important;
+            @include transition(all 0.3s linear 0s);
+            i {
+                display: none !important;
+            }
+            &:hover {
+                background-color: $secondary_color !important;
+            }
+            &.added {
+                height: 40px;
+                line-height: 40px;
+                width: 40px;
+                @include border-radius(40px);
+                padding: 0;
+                .pxl-btn-text {
+                    display: none;
+                }
+                &:after {
+                    margin-left: 0;
+                }
+            }
+            &.loading {
+                height: 40px;
+                line-height: 40px;
+                width: 40px;
+                @include border-radius(40px);
+                padding: 0;
+                .pxl-btn-text {
+                    font-size: 0;
+                }
+                &:after {
+                    top: 0;
+                    right: 30%;
+                }
+            }
+        }
+    }
     .woosw-popup-content-bot {
         a {
-            color: #000;
+            color: #111;
             text-transform: capitalize;
+            font-family: "GTWalsheimPro" !important;
+            font-weight: 500 !important;
             &:hover {
                 color: $primary_color;
                 border-color: $primary_color;
             }
+        }
+        .woosw-notice {
+            font-size: 14px;
+            font-weight: 400;
+            font-family: "GTWalsheimPro" !important;
         }
     }
 }

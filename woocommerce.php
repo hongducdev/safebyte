@@ -4,7 +4,7 @@ get_header();
 if(is_singular('product')){
     $safebyte_sidebar = safebyte()->get_sidebar_args(['type' => 'product', 'content_col'=> '12']);
 }else{
-    $safebyte_sidebar = safebyte()->get_sidebar_args(['type' => 'shop', 'content_col'=> '9']);
+    $safebyte_sidebar = safebyte()->get_sidebar_args(['type' => 'shop', 'content_col'=> '8']);
 } ?>
 <div class="container">
     <div class="row <?php echo esc_attr($safebyte_sidebar['wrap_class']) ?>">

@@ -106,8 +106,47 @@
         $('#customer_login #reg_password').attr("placeholder", "Password");
         $('.lost_reset_password #user_login').attr("placeholder", "Username or email");
 
-    });
+        /* Change View Mode */
+        let buttonGridMode = $('.view-mode-btn.grid-mode');
+        let buttonListMode = $('.view-mode-btn.list-mode');
 
+        let gridModeClass = buttonGridMode.attr('data-view');
+        let listModeClass = buttonListMode.attr('data-view');
+
+        let layoutProducts = $(".woocommerce.woocommerce-shop ul.products").first();
+
+        if(layoutProducts) {
+            layoutProducts.removeClass("grid list columns-1 columns-2 columns-3 columns-4 columns-5");
+            layoutProducts.addClass(gridModeClass)
+        }
+
+        buttonGridMode.on('click', function () {
+            buttonGridMode.addClass('active').removeClass('active');
+            buttonListMode.removeClass('active');
+            layoutProducts.removeClass("grid list columns-1 columns-2 columns-3 columns-4 columns-5");
+            layoutProducts.addClass(gridModeClass)
+        });
+
+        buttonListMode.on('click', function () {
+            buttonListMode.addClass('active').removeClass('active');
+            buttonGridMode.removeClass('active');
+            layoutProducts.removeClass("grid list columns-1 columns-2 columns-3 columns-4 columns-5");
+            layoutProducts.addClass(listModeClass)
+        });
+
+        let savedLayout = sessionStorage.getItem('layoutClass');
+        if (savedLayout) {
+            layoutProducts.removeClass("grid list columns-1 columns-2 columns-3 columns-4 columns-5");
+            layoutProducts.addClass(savedLayout);
+            buttonGridMode.removeClass('active');
+            buttonListMode.removeClass('active');
+            if (savedLayout === gridModeClass) {
+                buttonGridMode.addClass('active');
+            } else if (savedLayout === listModeClass) {
+                buttonListMode.addClass('active');
+            }
+        }
+    });
 })(jQuery);
 
 

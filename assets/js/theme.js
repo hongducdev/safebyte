@@ -29,7 +29,6 @@
         safebyte_panel_anchor_toggle();
         safebyte_post_grid();
         safebyte_header_left_scroll();
-        safebyte_change_view_mode();
 
         document.querySelectorAll(".pxl-sphere").forEach((sphere) => {
             new PXLSphere(sphere);
@@ -1173,14 +1172,6 @@
             });
         };
         $(".wpcf7-file[type=file]").pxl_custom_type_file();
-    }
-
-    // Change View Mode
-    function safebyte_change_view_mode() {
-        $(".view-mode-btn").on("click", function () {
-            var viewMode = $(this).data("view");
-            console.log(viewMode);
-        });
     }
 
     // Zoom Point

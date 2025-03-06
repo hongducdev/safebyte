@@ -247,17 +247,23 @@ if (!class_exists('Safebyte_Main')) {
 
             $sidebars = ['content_class' => 'col-lg-9', 'sidebar_class' => 'col-lg-3', 'wrap_class' => 'pxl-content-wrap'];
 
-            $sidebar_reg = is_singular( 'post' ) ? 'blog' : $args['type'];
-            $sidebar_reg = is_singular( 'product' ) ? 'shop' : $sidebar_reg;
-
-            if ($sidebar_reg === 'shop') {
+            $sidebar_reg = is_singular('post') ? 'blog' : $args['type'];
+            if (is_singular('product')) {
+                $sidebar_reg = 'single_product';
+                $args['content_col'] = '9';
+            } else if (is_singular('product') || is_shop()) {
+                $sidebar_reg = 'shop';
                 $args['content_col'] = '8';
             }
 
             $sidebar_active = is_active_sidebar('sidebar-'.$sidebar_reg);
   
-            $default_pos = $args['type'] == 'page' ? '0' : 'right';  
-            $sidebar_pos = $this->get_opt($args['type'] . '_sidebar_pos', $default_pos);
+            $default_pos = $args['type'] == 'page' ? '0' : 'right';
+            if (is_singular('product')) {
+                $sidebar_pos = $this->get_opt('single_product_sidebar_pos', $default_pos);
+            } else {
+                $sidebar_pos = $this->get_opt($args['type'] . '_sidebar_pos', $default_pos);
+            }
 
             if(isset($_GET['sidebar-blog'])) {
                 $sidebar_pos = $_GET['sidebar-blog'];
