@@ -1,6 +1,6 @@
 <?php
 //Register Counter Widget
- pxl_add_custom_widget(
+pxl_add_custom_widget(
     array(
         'name' => 'pxl_counter',
         'title' => esc_html__('Case Counter', 'safebyte'),
@@ -33,6 +33,10 @@
                                 '2' => [
                                     'label' => esc_html__('Layout 2', 'safebyte' ),
                                     'image' => get_template_directory_uri() . '/elements/assets/img/pxl_counter/layout2.jpg'
+                                ],
+                                '3' => [
+                                    'label' => esc_html__('Layout 3', 'safebyte' ),
+                                    'image' => get_template_directory_uri() . '/elements/assets/img/pxl_counter/layout3.jpg'
                                 ],
                             ],
                         ),
@@ -139,6 +143,7 @@
                             ],
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-counter' => 'text-align: {{VALUE}};',
+                                '{{WRAPPER}}.pxl-counter .pxl-counter__number' => 'justify-content: {{VALUE}};',
                             ],
                         ),
                     ),

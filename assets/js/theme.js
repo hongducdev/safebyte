@@ -29,10 +29,6 @@
         safebyte_panel_anchor_toggle();
         safebyte_post_grid();
         safebyte_header_left_scroll();
-
-        document.querySelectorAll(".pxl-sphere").forEach((sphere) => {
-            new PXLSphere(sphere);
-        });
     });
 
     $(window).on("scroll", function () {
@@ -1257,7 +1253,6 @@
         });
     }
 
-    // Sphere Animation
     class PXLSphere {
         constructor(element) {
             this.element = element;

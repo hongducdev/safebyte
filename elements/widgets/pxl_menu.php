@@ -158,6 +158,17 @@ pxl_add_custom_widget(
                             ],
                         ),
                         array(
+                            'name' => 'color_divider',
+                            'label' => esc_html__('Divider Color', 'safebyte' ),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-nav-menu .pxl-menu-primary > li a:before' => 'background-color: {{VALUE}};',
+                            ],
+                            'condition' => [
+                                'hover_active_style' => ['fr-spacer-divider','fr-horizontal-divider'],
+                            ],
+                        ),
+                        array(
                             'name' => 'arrow_color',
                             'label' => esc_html__('Arrow Color', 'safebyte' ),
                             'type' => \Elementor\Controls_Manager::COLOR,

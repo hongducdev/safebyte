@@ -490,6 +490,14 @@ function safebyte_get_list_layout_options($post_type_name){
             ],
         ];
         break;
+        case 'industries':
+        $option_layouts = [
+            'industries-1' => [
+                'label' => esc_html__( 'Layout 1','safebyte' ),
+                'image' => get_template_directory_uri(). '/elements/assets/img/pxl_post_list/industries-layout1.jpg'
+            ],
+        ];
+        break;
     }
     return $option_layouts;
 }

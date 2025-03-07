@@ -25,6 +25,16 @@ pxl_add_custom_widget(
                     'tab' => \Elementor\Controls_Manager::TAB_STYLE,
                     'controls' => array(
                         array(
+                            'name' => 'style_type',
+                            'label' => esc_html__('Style Type','safebyte'),
+                            'type' => \Elementor\Controls_Manager::SELECT,
+                            'default' => 'style-1',
+                            'options' => [
+                                'style-1' => esc_html__('Style 1','safebyte'),
+                                'style-2' => esc_html__('Style 2','safebyte'),
+                            ],
+                        ),
+                        array(
                             'name' => 'status_color',
                             'label' => esc_html__('Status Color', 'safebyte'),
                             'type' => \Elementor\Controls_Manager::COLOR,

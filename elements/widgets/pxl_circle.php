@@ -94,7 +94,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'default' => '#ffffff',
                             'selectors' => [
-                                '{{WRAPPER}} .circle-border' => 'border-color: {{VALUE}};',
+                                '{{WRAPPER}} .circle-border' => 'border-color: {{VALUE}} !important;',
                             ],
                         ),
                     ),

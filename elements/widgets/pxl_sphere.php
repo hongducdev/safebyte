@@ -5,6 +5,9 @@ pxl_add_custom_widget(
         'title' => esc_html__('Case Sphere', 'safebyte'),
         'icon' => 'eicon-circle-o',
         'categories' => array('pxltheme-core'),
+        'scripts' => array(
+            'safebyte-sphere'
+        ),
         'params' => array(
             'sections' => array(
                 array(
@@ -50,7 +53,7 @@ pxl_add_custom_widget(
                             'name' => 'sphere_color',
                             'label' => esc_html__('Sphere Color', 'safebyte'),
                             'type' => \Elementor\Controls_Manager::COLOR,
-                            'default' => '#ff0000',
+                            'default' => '#ffffff',
                         ),
                         array(
                             'name' => 'rotation_type',

@@ -9,6 +9,9 @@ $rotation_speed = isset($settings['rotation_speed']['size']) ? $settings['rotati
 $custom_x_speed = isset($settings['custom_x_speed']['size']) ? $settings['custom_x_speed']['size'] : 0.003;
 $custom_y_speed = isset($settings['custom_y_speed']['size']) ? $settings['custom_y_speed']['size'] : 0.005;
 $tilt_angle = isset($settings['tilt_angle']['size']) ? $settings['tilt_angle']['size'] : -30;
+
+// Generate a unique ID for the canvas
+$canvas_id = 'sphereCanvas_' . uniqid();
 ?>
 
 <div class="pxl-sphere" 
@@ -20,7 +23,7 @@ $tilt_angle = isset($settings['tilt_angle']['size']) ? $settings['tilt_angle']['
     data-xspeed="<?php echo esc_attr($custom_x_speed); ?>"
     data-yspeed="<?php echo esc_attr($custom_y_speed); ?>"
     data-tilt="<?php echo esc_attr($tilt_angle); ?>">
-    <canvas id="sphereCanvas"></canvas>
+    <canvas id="<?php echo esc_attr($canvas_id); ?>"></canvas>
 </div>
 
 <style>
@@ -31,9 +34,13 @@ $tilt_angle = isset($settings['tilt_angle']['size']) ? $settings['tilt_angle']['
     justify-content: center;
     align-items: center;
     background: transparent;
+    position: relative; /* Add position relative */
 }
 
-#sphereCanvas {
+.pxl-sphere canvas {
     display: block;
+    position: absolute; /* Ensure canvas is positioned correctly */
+    top: 0;
+    left: 0;
 }
 </style>

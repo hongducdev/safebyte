@@ -216,6 +216,7 @@ pxl_add_custom_widget(
                             'options' => [
                                 'none' => esc_html__( 'None', 'safebyte' ),
                                 'ring' => esc_html__( 'Ring', 'safebyte' ),
+                                'animated' => esc_html__( 'Animated','safebyte'),
                             ],
                             'default' => 'none',
                         ),

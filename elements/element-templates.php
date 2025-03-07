@@ -702,7 +702,6 @@ function safebyte_get_post_list($posts = [], $settings = [])
         case 'post-1':
             safebyte_get_post_list_layout1($posts, $settings);
             break;
-
         default:
             return false;
             break;

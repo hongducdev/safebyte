@@ -53,6 +53,7 @@
 		"currency-circle-dollar",
 		"database",
 		"lock-simple-open",
-		"mountains"
+		"mountains",
+		"email"
 	]
 }

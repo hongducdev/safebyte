@@ -37,7 +37,7 @@
     font-weight: normal;
 }
 
-.flaticon-maps-and-flags:before {
+flaticon-maps-and-flags:before {
     content: "\f101";
 }
 .flaticon-chat:before {
@@ -198,4 +198,7 @@
 }
 .flaticon-mountains:before {
     content: "\f136";
+}
+.flaticon-email:before {
+    content: "\f137";
 }

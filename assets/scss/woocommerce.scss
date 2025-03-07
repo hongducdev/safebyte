@@ -1824,6 +1824,11 @@
             color: #0a1119;
             font-weight: 500;
             font-family: "GTWalsheimPro";
+            @media #{$max-xsx} {
+                i {
+                    display: none;
+                }
+            }
         }
         a {
             height: 43px;
@@ -1908,6 +1913,80 @@
         .entry-summary {
             width: 100% !important;
             margin-bottom: 57px;
+        }
+        .woocommerce-gallery {
+            .flex-viewport {
+                margin-left: 189px;
+                .woocommerce-product-gallery__image {
+                    max-height: 547px;
+                    height: 100%;
+                    img {
+                        width: 100%;
+                        max-height: 547px;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                    }
+                }
+            }
+            .flex-control-nav {
+                &.flex-control-thumbs {
+                    display: flex;
+                    flex-direction: column;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 189px;
+                    li {
+                        width: 100%;
+                        margin-top: 20px;
+                        &:first-child {
+                            margin-top: 0;
+                        }
+                        img {
+                            width: 169px;
+                            height: 169px;
+                            object-fit: cover;
+                            object-position: center;
+                            border-radius: 8px;
+                        }
+                    }
+                }
+            }
+            .flex-direction-nav {
+                display: none;
+            }
+
+            @media #{$max-md2} {
+                .flex-viewport {
+                    margin-left: 0;
+                }
+                .flex-control-nav {
+                    &.flex-control-thumbs {
+                        width: 100%;
+                        position: static;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        li {
+                            max-width: calc(100% / 3);
+                            width: 100%;
+                            flex-grow: 1;
+                            aspect-ratio: 1/1;
+                            &:first-child {
+                                margin-top: 20px;
+                            }
+                            &:nth-child(3n) {
+                                padding-right: 0;
+                            }
+                            img {
+                                width: auto;
+                                height: 100%;
+                                aspect-ratio: 1/1;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
     #pxl-content-area div.product,
@@ -2449,8 +2528,7 @@
                     position: relative;
                     z-index: 99;
                     @media #{$max-sm} {
-                        margin: 10px 0 0;
-                        width: 100%;
+                        margin: 10px 15px 0 0;
                     }
                     &:before,
                     &:after {
@@ -2717,8 +2795,7 @@
                                 @include border-radius(78px);
                                 border: none;
                                 @media #{$max-xs} {
-                                    width: 60px;
-                                    border: none;
+                                    margin: 20px;
                                 }
                             }
                             .description {
@@ -2740,7 +2817,8 @@
                                     }
                                 }
                                 @media #{$max-xs} {
-                                    padding-left: 80px;
+                                    margin-left: 0;
+                                    padding-top: 120px;
                                 }
                             }
                             .meta {
