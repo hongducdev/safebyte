@@ -29,6 +29,14 @@ pxl_add_custom_widget(
                                     'label' => esc_html__('Layout 2', 'safebyte' ),
                                     'image' => get_template_directory_uri() . '/elements/assets/img/pxl_accordion/layout2.jpg'
                                 ],
+                                '3' => [
+                                    'label' => esc_html__('Layout 3', 'safebyte' ),
+                                    'image' => get_template_directory_uri() . '/elements/assets/img/pxl_accordion/layout3.jpg'
+                                ],
+                                '4' => [
+                                    'label' => esc_html__('Layout 4','safebyte' ),
+                                    'image' => get_template_directory_uri(). '/elements/assets/img/pxl_accordion/layout4.jpg'
+                                ],
                             ],
                         ),
                     ),

@@ -41,6 +41,10 @@ pxl_add_custom_widget(
                                     'label' => esc_html__('Layout 4', 'safebyte'),
                                     'image' => get_template_directory_uri() . '/elements/assets/img/pxl_text_carousel/layout4.jpg'
                                 ],
+                                '5' => [
+                                    'label' => esc_html__('Layout 5', 'safebyte'),
+                                    'image' => get_template_directory_uri() . '/elements/assets/img/pxl_text_carousel/layout5.jpg'
+                                ],
                             ],
                         ),
                     ),
@@ -72,6 +76,11 @@ pxl_add_custom_widget(
                                     'label' => esc_html__('Description', 'safebyte'),
                                     'type' => \Elementor\Controls_Manager::TEXTAREA,
                                     'show_label' => false,
+                                ),
+                                array(
+                                    'name' => 'icon',
+                                    'label' => esc_html__('Icon', 'safebyte'),
+                                    'type' => \Elementor\Controls_Manager::ICONS,
                                 ),
                             ),
                             'title_field' => '{{{ title }}}',

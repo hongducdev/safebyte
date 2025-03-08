@@ -31,7 +31,6 @@ pxl_add_custom_widget(
                         safebyte_get_post_grid_layout($pt_supports)
                     ),
                 ),
-                 
                 array(
                     'name' => 'tab_source',
                     'label' => esc_html__('Source', 'safebyte' ),

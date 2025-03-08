@@ -300,7 +300,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Color', 'safebyte' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-counter .pxl-counter--number' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-counter .pxl-counter--number' => 'color: {{VALUE}} !important;',
                             ],
                         ),
                         array(

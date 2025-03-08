@@ -6,6 +6,7 @@ pxl_add_custom_widget(
         'icon' => 'eicon-circle-o',
         'categories' => array('pxltheme-core'),
         'scripts' => array(
+            'sphere',
             'safebyte-sphere'
         ),
         'params' => array(
