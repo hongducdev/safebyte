@@ -1,5 +1,7 @@
 <?php
+extract($settings);
 $html_id = pxl_get_element_id($settings);
+$tax = ['portfolio-category'];
 $select_post_by = $widget->get_setting('select_post_by', '');
 $source = $post_ids = [];
 if ($select_post_by === 'post_selected') {
@@ -17,6 +19,7 @@ extract(pxl_get_posts_of_grid('portfolio', [
     'order' => $order,
     'limit' => $limit,
     'post_ids' => $post_ids,
+    'tax' => $tax,
 ]));
 
 $pxl_animate = $widget->get_setting('pxl_animate', '');
@@ -55,6 +58,8 @@ $show_category = $widget->get_setting('show_category');
 $show_button = $widget->get_setting('show_button');
 $show_excerpt = $widget->get_setting('show_excerpt');
 $num_words = $widget->get_setting('num_words', 10);
+$show_filter = $widget->get_setting('show_filter');
+$ft_default_title = $widget->get_setting('ft_default_title');
 
 $opts = [
     'slide_direction'               => 'horizontal',
@@ -88,13 +93,57 @@ $widget->add_render_attribute('carousel', [
 
 <?php if (is_array($posts)): ?>
     <div class="pxl-swiper-slider pxl-portfolio-carousel pxl-portfolio-carousel1 pxl-portfolio-style-1" <?php if ($drap !== false): ?>data-cursor-drap="<?php echo esc_html__('DRAG', 'safebyte'); ?>" <?php endif; ?>>
+
+        <div class="pxl-inner-top">
+            <div class="container">
+                <?php if ($show_filter == 'true') { ?>
+                    <div class="swiper-filter">
+                        <div class="pxl-grid-filter normal style-2">
+                            <div class="pxl--filter-inner">
+                                <?php if (!empty($ft_default_title)): ?>
+                                    <span class="filter-item active" data-filter-target="all">
+                                        <span class="cat-name"><?php echo esc_html($ft_default_title); ?></span>
+                                        <span class="cat-count">
+                                            <?php echo esc_html(count($posts)); ?>
+                                        </span>
+                                    </span>
+                                <?php endif; ?>
+                                <?php foreach ($categories as $category):
+                                    $category_arr = explode('|', $category);
+                                    $term = get_term_by('slug', $category_arr[0], $category_arr[1]);
+                                    $count = 0;
+                                    foreach ($posts as $post):
+                                        if (has_term($term->slug, $term->taxonomy, $post->ID)) {
+                                            $count++;
+                                        }
+                                    endforeach;
+                                ?>
+                                    <span class="filter-item" data-filter-target="<?php echo esc_attr($term->slug); ?>">
+                                        <span class="cat-name"><?php echo esc_html($term->name); ?></span>
+                                        <span class="cat-count">
+                                            <?php echo esc_html($count); ?>
+                                        </span>
+                                    </span>
+                                <?php endforeach; ?>
+                            </div>
+                        </div>
+                    </div>
+                <?php  } ?>
+            </div>
+        </div>
+
         <div class="pxl-carousel-inner">
             <div <?php pxl_print_html($widget->get_render_attribute_string('carousel')); ?>>
                 <div class="pxl-swiper-wrapper">
                     <?php
-                    $image_size = !empty($img_size) ? $img_size : '410x520';
-                    foreach ($posts as $post): ?>
-                        <div class="pxl-swiper-slide">
+                    $image_size = !empty($img_size) ? $img_size : '420x520';
+                    foreach ($posts as $post): 
+                        $filter_class = '';
+                        if ($select_post_by === 'term_selected') {
+                            $filter_class = pxl_get_term_of_post_to_class($post->ID, array_unique($tax));
+                        }
+                    ?>
+                        <div class="pxl-swiper-slide wow fadeInRight" data-filter="<?php echo esc_attr($filter_class); ?>">
                             <div class="pxl-post--inner <?php echo esc_attr($pxl_animate); ?>">
                                 <?php if (has_post_thumbnail($post->ID) && wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), false)):
                                     $img_id = get_post_thumbnail_id($post->ID);

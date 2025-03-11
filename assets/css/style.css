@@ -1245,6 +1245,79 @@ TESTIMONIALS GRID
 .pxl-grid-filter.style-1 .pxl--filter-inner {
   justify-content: center;
 }
+.pxl-grid-filter.style-2 {
+  justify-content: start;
+  display: flex;
+  flex-wrap: wrap;
+}
+.pxl-grid-filter.style-2 .pxl--filter-inner {
+  column-gap: 85px;
+}
+.pxl-grid-filter.style-2 .filter-label {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 700;
+  margin: 10px 17px 10px 17px;
+}
+.pxl-grid-filter.style-2 .filter-item {
+  padding-bottom: 7px;
+  padding-top: 15px;
+  z-index: 2;
+  justify-content: center;
+  position: relative;
+  font-family: "GTWalsheimPro";
+  font-size: 17px;
+  font-weight: 500;
+  -webkit-transition: all 300ms linear 0ms;
+  -khtml-transition: all 300ms linear 0ms;
+  -moz-transition: all 300ms linear 0ms;
+  -ms-transition: all 300ms linear 0ms;
+  -o-transition: all 300ms linear 0ms;
+  transition: all 300ms linear 0ms;
+}
+.pxl-grid-filter.style-2 .filter-item.active, .pxl-grid-filter.style-2 .filter-item:hover {
+  color: #fff;
+}
+.pxl-grid-filter.style-2 .filter-item.active .cat-name:before, .pxl-grid-filter.style-2 .filter-item:hover .cat-name:before {
+  width: 100%;
+}
+.pxl-grid-filter.style-2 .filter-item .filter-item--count {
+  font-size: 15px;
+  position: absolute;
+  top: 10px;
+  right: -13px;
+}
+.pxl-grid-filter.style-2 .cat-name {
+  position: relative;
+  color: #fff;
+}
+.pxl-grid-filter.style-2 .cat-name:before {
+  content: "";
+  width: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: -8px;
+  background-color: #fff;
+  height: 1px;
+  -webkit-transition: all 300ms linear 0ms;
+  -khtml-transition: all 300ms linear 0ms;
+  -moz-transition: all 300ms linear 0ms;
+  -ms-transition: all 300ms linear 0ms;
+  -o-transition: all 300ms linear 0ms;
+  transition: all 300ms linear 0ms;
+  position: absolute;
+}
+.pxl-grid-filter.style-2 .cat-count {
+  font-size: 14px;
+  position: absolute;
+  top: 10px;
+  right: -8px;
+  color: #fff;
+}
+.pxl-grid-filter.style-2 .pxl--filter-inner {
+  justify-content: center;
+}
 .pxl-carousel-inner {
   overflow: hidden;
 }
@@ -7046,6 +7119,195 @@ body.error404 #pxl-main {
   bottom: 0;
   left: 0;
 }
+.pxl-post-carousel1 .pxl-item--inner {
+  -webkit-border-radius: 8px;
+  -khtml-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  border: 1px solid #dcdcdc;
+}
+.pxl-post-carousel1 .pxl-item--inner:hover .pxl-post--divider:before {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+.pxl-post-carousel1 .pxl-item--inner:hover .pxl-post--divider .pxl-post--button a span:after {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+.pxl-post-carousel1 .pxl-item--inner:hover .pxl-post--divider .pxl-post--button a i {
+  -webkit-transform: translateX(5px);
+  -khtml-transform: translateX(5px);
+  -moz-transform: translateX(5px);
+  -ms-transform: translateX(5px);
+  -o-transform: translateX(5px);
+  transform: translateX(5px);
+}
+.pxl-post-carousel1 .pxl-post--featured {
+  position: relative;
+  -webkit-border-radius: 8px 8px 0 0;
+  -khtml-border-radius: 8px 8px 0 0;
+  -moz-border-radius: 8px 8px 0 0;
+  -ms-border-radius: 8px 8px 0 0;
+  -o-border-radius: 8px 8px 0 0;
+  border-radius: 8px 8px 0 0;
+}
+.pxl-post-carousel1 .pxl-item--date {
+  top: 12px;
+  left: 10px;
+}
+.pxl-post-carousel1 .pxl-post--meta {
+  background-color: var(--primary-color);
+  -webkit-border-radius: 8px;
+  -khtml-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  padding: 15px 35px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: #fff;
+}
+.pxl-post-carousel1 .pxl-post--meta div {
+  color: inherit;
+  font-size: 15px;
+  text-transform: capitalize;
+}
+.pxl-post-carousel1 .pxl-post--meta div a {
+  color: inherit;
+}
+.pxl-post-carousel1 .pxl-post--body {
+  padding: 25px 35px 35px 35px;
+}
+.pxl-post-carousel1 .pxl-post--title {
+  font-size: 20px;
+  line-height: 30px;
+  color: #111;
+  -webkit-transition: all 0.3s linear 0s;
+  -khtml-transition: all 0.3s linear 0s;
+  -moz-transition: all 0.3s linear 0s;
+  -ms-transition: all 0.3s linear 0s;
+  -o-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
+  margin-bottom: 25px;
+}
+.pxl-post-carousel1 .pxl-post--title:hover {
+  color: var(--primary-color);
+}
+.pxl-post-carousel1 .pxl-post--divider {
+  height: 1px;
+  width: 100%;
+  background-color: rgba(18, 28, 39, 0.129);
+  position: relative;
+}
+.pxl-post-carousel1 .pxl-post--divider:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 86px;
+  height: 1px;
+  background-color: var(--primary-color);
+  -webkit-transition: all 0.3s linear 0s;
+  -khtml-transition: all 0.3s linear 0s;
+  -moz-transition: all 0.3s linear 0s;
+  -ms-transition: all 0.3s linear 0s;
+  -o-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
+}
+.pxl-post-carousel1 .pxl-post--content {
+  margin: 25px 0;
+}
+.pxl-post-carousel1 .pxl-post--button a {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 18px;
+  -webkit-transition: all 0.3s linear 0s;
+  -khtml-transition: all 0.3s linear 0s;
+  -moz-transition: all 0.3s linear 0s;
+  -ms-transition: all 0.3s linear 0s;
+  -o-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
+}
+.pxl-post-carousel1 .pxl-post--button a span {
+  color: #111;
+  font-size: 16px;
+  position: relative;
+}
+.pxl-post-carousel1 .pxl-post--button a span:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: auto;
+  width: 0;
+  height: 1px;
+  background-color: #111;
+  -webkit-transition: all 0.3s linear 0s;
+  -khtml-transition: all 0.3s linear 0s;
+  -moz-transition: all 0.3s linear 0s;
+  -ms-transition: all 0.3s linear 0s;
+  -o-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
+}
+.pxl-post-carousel1 .pxl-post--button a i {
+  color: var(--primary-color);
+  font-size: 20px;
+  -webkit-transform: translateX(0);
+  -khtml-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: all 0.3s linear 0s;
+  -khtml-transition: all 0.3s linear 0s;
+  -moz-transition: all 0.3s linear 0s;
+  -ms-transition: all 0.3s linear 0s;
+  -o-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
+}
+.pxl-post-carousel1 .pxl-post--button a:hover span:after {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+.pxl-post-carousel1 .pxl-post--button a:hover i {
+  -webkit-transform: translateX(5px);
+  -khtml-transform: translateX(5px);
+  -moz-transform: translateX(5px);
+  -ms-transform: translateX(5px);
+  -o-transform: translateX(5px);
+  transform: translateX(5px);
+}
+.pxl-post-carousel1 .pxl-swiper-arrow-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -khtml-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: calc(117%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 3;
+}
+.pxl-post-carousel1 .pxl-swiper-arrow-wrap .pxl-swiper-arrow-prev i {
+  transform: rotate(180deg);
+}
 @media screen and (min-width: 1201px) {
   .pxl-sidebar-sticky {
     position: -webkit-sticky;
@@ -12610,6 +12872,9 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
   z-index: 10;
   background-color: transparent !important;
   color: #111 !important;
+}
+.cf7-home-2 .wpcf7-form-control {
+  height: 50px;
 }
 .pxl-navigation-carousel.style-1 .pxl-navigation-arrow {
   width: 65px;
@@ -20316,6 +20581,19 @@ body #yith-quick-view-modal #yith-quick-view-content .entry-summary .quantity .q
 }
 .pxl-project-info2 .pxl--item:last-child {
   padding-right: 0;
+}
+.pxl-portfolio-carousel1 .pxl-inner-top {
+  margin-bottom: 68px;
+}
+.pxl-portfolio-carousel1 .pxl-swiper-container {
+  padding: 0 15px;
+}
+.pxl-portfolio-carousel1 .pxl-carousel-inner {
+  background-color: #edf0f6;
+}
+.pxl-portfolio-carousel1 .pxl-swiper-slide {
+  padding: 15px;
+  border-right: 1px solid #dcdcdc;
 }
 .title-hover-line {
   --title-line-color: #666771;

@@ -52,6 +52,7 @@ $show_date = $widget->get_setting('show_date');
 $show_button = $widget->get_setting('show_button');
 $button_text = $widget->get_setting('button_text');
 $show_excerpt = $widget->get_setting('show_excerpt');
+$show_category = $widget->get_setting('show_category');
 $num_words = $widget->get_setting('num_words');
 
 $opts = [
@@ -85,7 +86,7 @@ $widget->add_render_attribute( 'carousel', [
 ]); ?>
 
 <?php if (is_array($posts)): ?>
-    <div class="pxl-swiper-slider pxl-post-carousel pxl-post-carousel1 pxl-blog-style1" <?php if($settings['drap'] !== false) : ?>data-cursor-drap="<?php echo esc_html__('DRAG', 'safebyte'); ?>"<?php endif; ?>>
+    <div class="pxl-swiper-slider pxl-post-carousel pxl-post-carousel1" <?php if($settings['drap'] !== false) : ?>data-cursor-drap="<?php echo esc_html__('DRAG', 'safebyte'); ?>"<?php endif; ?>>
         <div class="pxl-carousel-inner">
             <div <?php pxl_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
                 <div class="pxl-swiper-wrapper">
@@ -111,47 +112,57 @@ $widget->add_render_attribute( 'carousel', [
                                         <?php if(!empty($post_video_link)) : ?>
                                             <a href="<?php echo esc_url($post_video_link); ?>" class="post-button-video pxl-action-popup"><i class="caseicon-play1"></i></a>
                                         <?php endif; ?>
+                                        <?php if($show_date == 'true'): ?>
+                                            <div class="pxl-item--date">
+                                                <span class="pxl-item--date-day"><?php echo get_the_date('d', $post->ID); ?></span>
+                                                <span class="pxl-item--date-month"><?php echo get_the_date('M', $post->ID); ?></span>
+                                            </div>
+                                        <?php endif; ?>
+                                        <div class="pxl-post--meta">
+                                            <?php if($show_author == 'true'): ?>
+                                                <div class="pxl-post--author">
+                                                    <?php echo esc_html__('by', 'safebyte'); ?>&nbsp;
+                                                    <a href="<?php echo esc_url(get_author_posts_url($post->post_author, $author->user_nicename)); ?>"><?php echo esc_attr($author->user_nicename); ?></a>
+                                                </div>
+                                            <?php endif; ?>
+                                            <?php if($show_category == 'true'): ?>
+                                                <div class="pxl-post--category">
+                                                    <?php the_terms( $post->ID, 'category', '', ', ' ); ?>
+                                                </div>
+                                            <?php endif; ?>
+                                            <?php if($show_comment) : ?>
+                                                <div class="pxl-item--comment">
+                                                    <a href="<?php echo esc_url(get_permalink( $post->ID )); ?>#comments">
+                                                        <?php echo comments_number(esc_html__('0 Comment', 'safebyte'),esc_html__('1 Comment', 'safebyte'),esc_html__('% Comments', 'safebyte')); ?>
+                                                    </a>
+                                                </div>
+                                            <?php endif; ?>
+                                        </div>
                                     </div>
                                 <?php endif; ?>
-                                <h3 class="pxl-post--title"><a href="<?php echo esc_url(get_permalink( $post->ID )); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a></h3>
-                                <div class="pxl-post--meta">
-                                    <?php if($show_author == 'true'): ?>
-                                        <div class="pxl-post--author pxl-mr-10">
-                                            <i class="flaticon-user text-gradient pxl-mr-7"></i>
-                                            <?php echo esc_html__('by', 'safebyte'); ?>&nbsp;<?php echo esc_attr($current_user->user_login); ?>
+                                <div class="pxl-post--body">
+                                    <h3 class="pxl-post--title"><a href="<?php echo esc_url(get_permalink( $post->ID )); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a></h3>
+                                    <div class="pxl-post--divider"></div>
+                                    <?php if($show_excerpt == 'true'): ?>
+                                        <div class="pxl-post--content">
+                                            <?php echo wp_trim_words( $post->post_excerpt, $num_words, $more = null ); ?>
                                         </div>
                                     <?php endif; ?>
-                                    <?php if($show_comment) : ?>
-                                        <div class="pxl-item--comment pxl-mr-10">
-                                            <i class="flaticon-chat text-gradient pxl-mr-7"></i>
-                                            <a href="<?php echo esc_url(get_permalink( $post->ID )); ?>#comments">
-                                                <?php echo comments_number(esc_html__('No Comments', 'safebyte'),esc_html__('1 Comment', 'safebyte'),esc_html__('% Comments', 'safebyte')); ?>
+                                    <?php if($show_button == 'true') : ?>
+                                        <div class="pxl-post--button">
+                                            <a href="<?php echo esc_url(get_permalink( $post->ID )); ?>">
+                                                <span>
+                                                    <?php if(!empty($button_text)) {
+                                                        echo esc_attr($button_text);
+                                                    } else {
+                                                        echo esc_html__('Read More', 'safebyte');
+                                                    } ?>
+                                                </span>
+                                                <i class="flaticon flaticon-right-arrow"></i>
                                             </a>
                                         </div>
                                     <?php endif; ?>
-                                    <?php if($show_date == 'true'): ?>
-                                        <div class="pxl-post--date pxl-mr-10">
-                                            <i class="flaticon-calendar text-gradient pxl-mr-7"></i>
-                                            <?php echo get_the_date('d M', $post->ID); ?>/<?php echo get_the_date('y', $post->ID); ?>        
-                                        </div>
-                                    <?php endif; ?>
                                 </div>
-                                <?php if($show_excerpt == 'true'): ?>
-                                    <div class="pxl-post--content">
-                                        <?php echo wp_trim_words( $post->post_excerpt, $num_words, $more = null ); ?>
-                                    </div>
-                                <?php endif; ?>
-                                <?php if($show_button == 'true') : ?>
-                                    <div class="pxl-post--button">
-                                        <a class="btn" href="<?php echo esc_url(get_permalink( $post->ID )); ?>">
-                                            <?php if(!empty($button_text)) {
-                                                echo esc_attr($button_text);
-                                            } else {
-                                                echo esc_html__('Read More', 'safebyte');
-                                            } ?>
-                                        </a>
-                                    </div>
-                                <?php endif; ?>
                             </div>
                         </div>
                     <?php endforeach; ?>
@@ -166,8 +177,8 @@ $widget->add_render_attribute( 'carousel', [
 
             <?php if($arrows !== false): ?>
                 <div class="pxl-swiper-arrow-wrap style-1">
-                    <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"><i class="caseicon-angle-arrow-left rtl-icon"></i></div>
-                    <div class="pxl-swiper-arrow pxl-swiper-arrow-next"><i class="caseicon-angle-arrow-right rtl-icon"></i></div>
+                    <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"><i class="flaticon flaticon-next rtl-icon"></i></div>
+                    <div class="pxl-swiper-arrow pxl-swiper-arrow-next"><i class="flaticon flaticon-next rtl-icon"></i></div>
                 </div>
             <?php endif; ?>
 

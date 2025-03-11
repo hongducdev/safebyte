@@ -1,9 +1,9 @@
 <?php
-$pt_supports = ['post','service','portfolio'];
+$pt_supports = ['post', 'service', 'portfolio'];
 pxl_add_custom_widget(
     array(
         'name' => 'pxl_post_carousel',
-        'title' => esc_html__('Case Post Carousel', 'safebyte' ),
+        'title' => esc_html__('Case Post Carousel', 'safebyte'),
         'icon' => 'eicon-posts-carousel',
         'categories' => array('pxltheme-core'),
         'scripts' => array(
@@ -14,69 +14,69 @@ pxl_add_custom_widget(
             'sections' => array(
                 array(
                     'name'     => 'layout_section',
-                    'label'    => esc_html__( 'Layout', 'safebyte' ),
+                    'label'    => esc_html__('Layout', 'safebyte'),
                     'tab'      => 'layout',
                     'controls' => array_merge(
                         array(
                             array(
                                 'name'     => 'post_type',
-                                'label'    => esc_html__( 'Select Post Type', 'safebyte' ),
+                                'label'    => esc_html__('Select Post Type', 'safebyte'),
                                 'type'     => 'select',
                                 'multiple' => true,
                                 'options'  => safebyte_get_post_type_options($pt_supports),
                                 'default'  => 'post'
-                            ) 
+                            )
                         ),
                         safebyte_get_post_carousel_layout($pt_supports)
                     ),
                 ),
                 array(
                     'name' => 'section_source',
-                    'label' => esc_html__('Source', 'safebyte' ),
+                    'label' => esc_html__('Source', 'safebyte'),
                     'tab' => \Elementor\Controls_Manager::TAB_SETTINGS,
                     'controls' => array_merge(
                         array(
                             array(
                                 'name'     => 'select_post_by',
-                                'label'    => esc_html__( 'Select posts by', 'safebyte' ),
+                                'label'    => esc_html__('Select posts by', 'safebyte'),
                                 'type'     => 'select',
                                 'multiple' => true,
                                 'options'  => [
-                                    'term_selected' => esc_html__( 'Terms selected', 'safebyte' ),
-                                    'post_selected' => esc_html__( 'Posts selected ', 'safebyte' ),
+                                    'term_selected' => esc_html__('Terms selected', 'safebyte'),
+                                    'post_selected' => esc_html__('Posts selected ', 'safebyte'),
                                 ],
                                 'default'  => 'term_selected'
-                            ) 
+                            )
                         ),
                         safebyte_get_grid_term_by_post_type($pt_supports, ['custom_condition' => ['select_post_by' => 'term_selected']]),
                         safebyte_get_grid_ids_by_post_type($pt_supports, ['custom_condition' => ['select_post_by' => 'post_selected']]),
                         array(
                             array(
                                 'name' => 'orderby',
-                                'label' => esc_html__('Order By', 'safebyte' ),
+                                'label' => esc_html__('Order By', 'safebyte'),
                                 'type' => \Elementor\Controls_Manager::SELECT,
                                 'default' => 'date',
                                 'options' => [
-                                    'date' => esc_html__('Date', 'safebyte' ),
-                                    'ID' => esc_html__('ID', 'safebyte' ),
-                                    'author' => esc_html__('Author', 'safebyte' ),
-                                    'title' => esc_html__('Title', 'safebyte' ),
-                                    'rand' => esc_html__('Random', 'safebyte' ),
+                                    'date' => esc_html__('Date', 'safebyte'),
+                                    'ID' => esc_html__('ID', 'safebyte'),
+                                    'author' => esc_html__('Author', 'safebyte'),
+                                    'title' => esc_html__('Title', 'safebyte'),
+                                    'rand' => esc_html__('Random', 'safebyte'),
                                 ],
                             ),
                             array(
                                 'name' => 'order',
-                                'label' => esc_html__('Sort Order', 'safebyte' ),
+                                'label' => esc_html__('Sort Order', 'safebyte'),
                                 'type' => \Elementor\Controls_Manager::SELECT,
                                 'default' => 'desc',
                                 'options' => [
-                                    'desc' => esc_html__('Descending', 'safebyte' ),
-                                    'asc' => esc_html__('Ascending', 'safebyte' ),
+                                    'desc' => esc_html__('Descending', 'safebyte'),
+                                    'asc' => esc_html__('Ascending', 'safebyte'),
                                 ],
                             ),
                             array(
                                 'name' => 'limit',
-                                'label' => esc_html__('Total items', 'safebyte' ),
+                                'label' => esc_html__('Total items', 'safebyte'),
                                 'type' => \Elementor\Controls_Manager::NUMBER,
                                 'default' => '6',
                             ),
@@ -90,14 +90,51 @@ pxl_add_custom_widget(
                     'controls' => array(
                         array(
                             'name' => 'pxl_animate',
-                            'label' => esc_html__('Safebyte Animate', 'safebyte' ),
+                            'label' => esc_html__('Safebyte Animate', 'safebyte'),
                             'type' => \Elementor\Controls_Manager::SELECT,
                             'options' => safebyte_widget_animate(),
                             'default' => '',
                         ),
                         array(
+                            'name' => 'filter',
+                            'label' => esc_html__('Filter on Masonry', 'invadex'),
+                            'type' => \Elementor\Controls_Manager::SELECT,
+                            'default' => 'false',
+                            'options' => [
+                                'true' => esc_html__('Enable', 'invadex'),
+                                'false' => esc_html__('Disable', 'invadex'),
+                            ],
+                            'condition' => [
+                                'select_post_by' => 'term_selected',
+                            ],
+                        ),
+                        array(
+                            'name'    => 'filter_type',
+                            'label'   => esc_html__('Filter Type', 'invadex'),
+                            'type'    => \Elementor\Controls_Manager::SELECT,
+                            'default' => 'normal',
+                            'options' => [
+                                'normal'  => esc_html__('Normal', 'invadex'),
+                                'ajax' => esc_html__('Ajax', 'invadex'),
+                            ],
+                            'condition' => [
+                                'select_post_by' => 'term_selected',
+                                'filter' => 'true',
+                            ],
+                        ),
+                        array(
+                            'name' => 'filter_default_title',
+                            'label' => esc_html__('Filter Default Title', 'invadex'),
+                            'type' => \Elementor\Controls_Manager::TEXT,
+                            'default' => esc_html__('All', 'invadex'),
+                            'condition' => [
+                                'filter' => 'true',
+                                'select_post_by' => 'term_selected',
+                            ],
+                        ),
+                        array(
                             'name' => 'col_xs',
-                            'label' => esc_html__('Columns XS Devices', 'safebyte' ),
+                            'label' => esc_html__('Columns XS Devices', 'safebyte'),
                             'type' => \Elementor\Controls_Manager::SELECT,
                             'default' => '1',
                             'options' => [
@@ -110,7 +147,7 @@ pxl_add_custom_widget(
                         ),
                         array(
                             'name' => 'col_sm',
-                            'label' => esc_html__('Columns SM Devices', 'safebyte' ),
+                            'label' => esc_html__('Columns SM Devices', 'safebyte'),
                             'type' => \Elementor\Controls_Manager::SELECT,
                             'default' => '2',
                             'options' => [
@@ -123,7 +160,7 @@ pxl_add_custom_widget(
                         ),
                         array(
                             'name' => 'col_md',
-                            'label' => esc_html__('Columns MD Devices', 'safebyte' ),
+                            'label' => esc_html__('Columns MD Devices', 'safebyte'),
                             'type' => \Elementor\Controls_Manager::SELECT,
                             'default' => '2',
                             'options' => [
@@ -138,7 +175,7 @@ pxl_add_custom_widget(
 
                         array(
                             'name' => 'col_md_custom',
-                            'label' => esc_html__('Columns MD Custom', 'safebyte' ),
+                            'label' => esc_html__('Columns MD Custom', 'safebyte'),
                             'type' => \Elementor\Controls_Manager::TEXT,
                             'label_block' => true,
                             'description' => 'Enter number.',
@@ -150,7 +187,7 @@ pxl_add_custom_widget(
 
                         array(
                             'name' => 'col_lg',
-                            'label' => esc_html__('Columns LG Devices', 'safebyte' ),
+                            'label' => esc_html__('Columns LG Devices', 'safebyte'),
                             'type' => \Elementor\Controls_Manager::SELECT,
                             'default' => '3',
                             'options' => [
@@ -165,7 +202,7 @@ pxl_add_custom_widget(
 
                         array(
                             'name' => 'col_lg_custom',
-                            'label' => esc_html__('Columns LG Custom', 'safebyte' ),
+                            'label' => esc_html__('Columns LG Custom', 'safebyte'),
                             'type' => \Elementor\Controls_Manager::TEXT,
                             'label_block' => true,
                             'description' => 'Enter number.',
@@ -176,7 +213,7 @@ pxl_add_custom_widget(
 
                         array(
                             'name' => 'col_xl',
-                            'label' => esc_html__('Columns XL Devices', 'safebyte' ),
+                            'label' => esc_html__('Columns XL Devices', 'safebyte'),
                             'type' => \Elementor\Controls_Manager::SELECT,
                             'default' => '3',
                             'options' => [
@@ -192,7 +229,7 @@ pxl_add_custom_widget(
 
                         array(
                             'name' => 'col_xl_custom',
-                            'label' => esc_html__('Columns XL Custom', 'safebyte' ),
+                            'label' => esc_html__('Columns XL Custom', 'safebyte'),
                             'type' => \Elementor\Controls_Manager::TEXT,
                             'label_block' => true,
                             'description' => 'Enter number.',
@@ -203,7 +240,7 @@ pxl_add_custom_widget(
 
                         array(
                             'name' => 'col_xxl',
-                            'label' => esc_html__('Columns XXL Devices', 'safebyte' ),
+                            'label' => esc_html__('Columns XXL Devices', 'safebyte'),
                             'type' => \Elementor\Controls_Manager::SELECT,
                             'default' => '3',
                             'options' => [
@@ -219,7 +256,7 @@ pxl_add_custom_widget(
 
                         array(
                             'name' => 'col_xxl_custom',
-                            'label' => esc_html__('Columns XXL Custom', 'safebyte' ),
+                            'label' => esc_html__('Columns XXL Custom', 'safebyte'),
                             'type' => \Elementor\Controls_Manager::TEXT,
                             'label_block' => true,
                             'description' => 'Enter number.',
@@ -230,7 +267,7 @@ pxl_add_custom_widget(
 
                         array(
                             'name' => 'slides_to_scroll',
-                            'label' => esc_html__('Slides to scroll', 'safebyte' ),
+                            'label' => esc_html__('Slides to scroll', 'safebyte'),
                             'type' => \Elementor\Controls_Manager::SELECT,
                             'default' => '1',
                             'options' => [
@@ -256,7 +293,7 @@ pxl_add_custom_widget(
                         ),
                         array(
                             'name' => 'pagination_type',
-                            'label' => esc_html__('Pagination Type', 'safebyte' ),
+                            'label' => esc_html__('Pagination Type', 'safebyte'),
                             'type' => \Elementor\Controls_Manager::SELECT,
                             'default' => 'bullets',
                             'options' => [
@@ -308,16 +345,68 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::SWITCHER,
                             'default' => false,
                         ),
+                        array(
+                            'name'    => 'show_filter',
+                            'label'   => esc_html__('Term Filter', 'invadex'),
+                            'type'    => \Elementor\Controls_Manager::SWITCHER,
+                            'default' => 'false',
+                            'conditions' => [
+                                'relation' => 'or',
+                                'terms' => [
+                                    [
+                                        'terms' => [
+                                            ['name' => 'post_type', 'operator' => '==', 'value' => 'portfolio'],
+                                            ['name' => 'layout_portfolio', 'operator' => 'in', 'value' => ['portfolio-1']],
+                                        ]
+                                    ]
+                                ],
+                            ]
+                        ),
+                        array(
+                            'name'      => 'ft_default_title',
+                            'label'     => esc_html__('Filter Default Title', 'invadex'),
+                            'type'      => \Elementor\Controls_Manager::TEXT,
+                            'default'   => esc_html__('All', 'invadex'),
+                            'condition' => [
+                                'show_filter' => 'true',
+                            ],
+                        ),
+                        array(
+                            'name' => 'align_ft',
+                            'label' => esc_html__('Alignment Filter', 'invadex'),
+                            'type' => \Elementor\Controls_Manager::CHOOSE,
+                            'control_type' => 'responsive',
+                            'options' => [
+                                'left' => [
+                                    'title' => esc_html__('Left', 'invadex'),
+                                    'icon' => 'eicon-text-align-left',
+                                ],
+                                'center' => [
+                                    'title' => esc_html__('Center', 'invadex'),
+                                    'icon' => 'eicon-text-align-center',
+                                ],
+                                'right' => [
+                                    'title' => esc_html__('Right', 'invadex'),
+                                    'icon' => 'eicon-text-align-right',
+                                ],
+                            ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-grid-filter' => 'text-align: {{VALUE}} !important;',
+                            ],
+                            'condition' => [
+                                'show_filter' => 'true',
+                            ],
+                        ),
                     ),
                 ),
                 array(
                     'name' => 'section_display',
-                    'label' => esc_html__('Display', 'safebyte' ),
+                    'label' => esc_html__('Display', 'safebyte'),
                     'tab' => \Elementor\Controls_Manager::TAB_SETTINGS,
                     'controls' => array(
                         array(
                             'name' => 'img_size',
-                            'label' => esc_html__('Image Size', 'safebyte' ),
+                            'label' => esc_html__('Image Size', 'safebyte'),
                             'type' => \Elementor\Controls_Manager::TEXT,
                             'description' => 'Enter image size (Example: "thumbnail", "medium", "large", "full" or other sizes defined by theme). Alternatively enter size in pixels (Default: 370x300 (Width x Height)).',
                             'conditions' => [
@@ -340,7 +429,7 @@ pxl_add_custom_widget(
                         ),
                         array(
                             'name' => 'show_date',
-                            'label' => esc_html__('Show Date', 'safebyte' ),
+                            'label' => esc_html__('Show Date', 'safebyte'),
                             'type' => \Elementor\Controls_Manager::SWITCHER,
                             'default' => 'true',
                             'conditions' => [
@@ -349,7 +438,7 @@ pxl_add_custom_widget(
                                     [
                                         'terms' => [
                                             ['name' => 'post_type', 'operator' => '==', 'value' => 'post'],
-                                            ['name' => 'layout_post', 'operator' => 'in', 'value' => ['post-1','post-2','post-3']]
+                                            ['name' => 'layout_post', 'operator' => 'in', 'value' => ['post-1', 'post-2', 'post-3']]
                                         ]
                                     ]
                                 ],
@@ -357,7 +446,7 @@ pxl_add_custom_widget(
                         ),
                         array(
                             'name' => 'show_category',
-                            'label' => esc_html__('Show Category', 'safebyte' ),
+                            'label' => esc_html__('Show Category', 'safebyte'),
                             'type' => \Elementor\Controls_Manager::SWITCHER,
                             'default' => 'true',
                             'conditions' => [
@@ -366,7 +455,7 @@ pxl_add_custom_widget(
                                     [
                                         'terms' => [
                                             ['name' => 'post_type', 'operator' => '==', 'value' => 'post'],
-                                            ['name' => 'layout_post', 'operator' => 'in', 'value' => ['post-2','post-3']]
+                                            ['name' => 'layout_post', 'operator' => 'in', 'value' => ['post-1', 'post-2', 'post-3']]
                                         ]
                                     ],
                                     [
@@ -380,7 +469,7 @@ pxl_add_custom_widget(
                         ),
                         array(
                             'name' => 'show_author',
-                            'label' => esc_html__('Show Author', 'safebyte' ),
+                            'label' => esc_html__('Show Author', 'safebyte'),
                             'type' => \Elementor\Controls_Manager::SWITCHER,
                             'default' => 'true',
                             'conditions' => [
@@ -389,7 +478,7 @@ pxl_add_custom_widget(
                                     [
                                         'terms' => [
                                             ['name' => 'post_type', 'operator' => '==', 'value' => 'post'],
-                                            ['name' => 'layout_post', 'operator' => 'in', 'value' => ['post-1','post-2']]
+                                            ['name' => 'layout_post', 'operator' => 'in', 'value' => ['post-1', 'post-2']]
                                         ]
                                     ]
                                 ],
@@ -397,7 +486,7 @@ pxl_add_custom_widget(
                         ),
                         array(
                             'name' => 'show_comment',
-                            'label' => esc_html__('Show Comment', 'safebyte' ),
+                            'label' => esc_html__('Show Comment', 'safebyte'),
                             'type' => \Elementor\Controls_Manager::SWITCHER,
                             'default' => 'true',
                             'conditions' => [
@@ -414,7 +503,7 @@ pxl_add_custom_widget(
                         ),
                         array(
                             'name' => 'show_excerpt',
-                            'label' => esc_html__('Show Excerpt', 'safebyte' ),
+                            'label' => esc_html__('Show Excerpt', 'safebyte'),
                             'type' => \Elementor\Controls_Manager::SWITCHER,
                             'default' => 'true',
                             'conditions' => [
@@ -443,7 +532,7 @@ pxl_add_custom_widget(
                         ),
                         array(
                             'name' => 'num_words',
-                            'label' => esc_html__('Number of Words', 'safebyte' ),
+                            'label' => esc_html__('Number of Words', 'safebyte'),
                             'type' => \Elementor\Controls_Manager::NUMBER,
                             'default' => 25,
                             'separator' => 'after',
@@ -474,7 +563,7 @@ pxl_add_custom_widget(
                         ),
                         array(
                             'name' => 'show_button',
-                            'label' => esc_html__('Show Button Readmore', 'safebyte' ),
+                            'label' => esc_html__('Show Button Readmore', 'safebyte'),
                             'type' => \Elementor\Controls_Manager::SWITCHER,
                             'default' => 'true',
                             'conditions' => [
@@ -483,7 +572,7 @@ pxl_add_custom_widget(
                                     [
                                         'terms' => [
                                             ['name' => 'post_type', 'operator' => '==', 'value' => 'post'],
-                                            ['name' => 'layout_post', 'operator' => 'in', 'value' => ['post-1','post-3']]
+                                            ['name' => 'layout_post', 'operator' => 'in', 'value' => ['post-1', 'post-3']]
                                         ]
                                     ],
                                     [
@@ -503,7 +592,7 @@ pxl_add_custom_widget(
                         ),
                         array(
                             'name' => 'button_text',
-                            'label' => esc_html__('Button Text', 'safebyte' ),
+                            'label' => esc_html__('Button Text', 'safebyte'),
                             'type' => \Elementor\Controls_Manager::TEXT,
                             'conditions' => [
                                 'relation' => 'or',
@@ -511,7 +600,7 @@ pxl_add_custom_widget(
                                     [
                                         'terms' => [
                                             ['name' => 'post_type', 'operator' => '==', 'value' => 'post'],
-                                            ['name' => 'layout_post', 'operator' => 'in', 'value' => ['post-1','post-3']],
+                                            ['name' => 'layout_post', 'operator' => 'in', 'value' => ['post-1', 'post-3']],
                                             ['name' => 'show_button', 'operator' => '==', 'value' => 'true']
                                         ]
                                     ],
@@ -539,7 +628,7 @@ pxl_add_custom_widget(
                     'controls' => array(
                         array(
                             'name' => 'title_color',
-                            'label' => esc_html__('Color', 'safebyte' ),
+                            'label' => esc_html__('Color', 'safebyte'),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-swiper-slider .pxl-post--title' => 'color: {{VALUE}};',
@@ -547,7 +636,7 @@ pxl_add_custom_widget(
                         ),
                         array(
                             'name' => 'title_color_hover',
-                            'label' => esc_html__('Color Hover', 'safebyte' ),
+                            'label' => esc_html__('Color Hover', 'safebyte'),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-swiper-slider .pxl-post--inner:hover .pxl-post--title' => 'color: {{VALUE}};',
@@ -555,7 +644,7 @@ pxl_add_custom_widget(
                         ),
                         array(
                             'name' => 'title_typography',
-                            'label' => esc_html__('Typography', 'safebyte' ),
+                            'label' => esc_html__('Typography', 'safebyte'),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
                             'selector' => '{{WRAPPER}} .pxl-swiper-slider .pxl-post--title',

@@ -978,3 +978,154 @@ body.error404 {
         }
     }
 }
+
+// Post Carousel
+.pxl-post-carousel1 {
+    .pxl-item--inner {
+        @include border-radius(8px);
+        border: 1px solid #dcdcdc;
+        &:hover {
+            .pxl-post--divider {
+                &:before {
+                    width: 100%;
+                    left: 0;
+                    right: auto;
+                }
+                .pxl-post--button {
+                    a {
+                        span {
+                            &:after {
+                                width: 100%;
+                                left: 0;
+                                right: auto;
+                            }
+                        }
+                        i {
+                            @include transform(translateX(5px));
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .pxl-post--featured {
+        position: relative;
+        @include border-radius(8px 8px 0 0);
+    }
+    .pxl-item--date {
+        top: 12px;
+        left: 10px;
+    }
+    .pxl-post--meta {
+        background-color: $primary_color;
+        @include border-radius(8px);
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+        padding: 15px 35px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        color: #fff;
+        div {
+            color: inherit;
+            font-size: 15px;
+            text-transform: capitalize;
+            a {
+                color: inherit;
+            }
+        }
+    }
+    .pxl-post--body {
+        padding: 25px 35px 35px 35px;
+    }
+    .pxl-post--title {
+        font-size: 20px;
+        line-height: 30px;
+        color: #111111;
+        @include transition(all 0.3s linear 0s);
+        margin-bottom: 25px;
+        &:hover {
+            color: $primary_color;
+        }
+    }
+    .pxl-post--divider {
+        height: 1px;
+        width: 100%;
+        background-color: rgba(#121c27, 0.129);
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 86px;
+            height: 1px;
+            background-color: $primary_color;
+            @include transition(all 0.3s linear 0s);
+        }
+    }
+    .pxl-post--content {
+        margin: 25px 0;
+    }
+    .pxl-post--button {
+        a {
+            display: inline-flex;
+            align-items: center;
+            column-gap: 18px;
+            @include transition(all 0.3s linear 0s);
+            span {
+                color: #111;
+                font-size: 16px;
+                position: relative;
+                &:after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    left: auto;
+                    width: 0;
+                    height: 1px;
+                    background-color: #111;
+                    @include transition(all 0.3s linear 0s);
+                }
+            }
+            i {
+                color: $primary_color;
+                font-size: 20px;
+                @include transform(translateX(0));
+                @include transition(all 0.3s linear 0s);
+            }
+            &:hover {
+                span {
+                    &:after {
+                        width: 100%;
+                        left: 0;
+                        right: auto;
+                    }
+                }
+                i {
+                    @include transform(translateX(5px));
+                }
+            }
+        }
+    }
+    .pxl-swiper-arrow-wrap {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include transform(translate(-50%, -50%));
+        width: calc(117%);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 3;
+        .pxl-swiper-arrow-prev {
+            i {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}

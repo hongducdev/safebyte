@@ -462,5 +462,21 @@ Portfolio Style
     }
 }
 
+.pxl-portfolio-carousel1 {
+    .pxl-inner-top {
+        margin-bottom: 68px;
+    }
+    .pxl-swiper-container {
+        padding: 0 15px;
+    }
+    .pxl-carousel-inner {
+        background-color: #edf0f6;
+    }
+    .pxl-swiper-slide {
+        padding: 15px;
+        border-right: 1px solid #dcdcdc;
+    }
+}
+
 body.rtl {
 }

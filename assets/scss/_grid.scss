@@ -183,4 +183,70 @@ Grid Reset
             justify-content: center;
         }
     }
+    &.style-2 {
+        .pxl--filter-inner {
+            column-gap: 85px;
+        }
+        justify-content: start;
+        display: flex;
+        flex-wrap: wrap;
+        .filter-label {
+            font-size: 16px;
+            color: #fff;
+            font-weight: 700;
+            margin: 10px 17px 10px 17px;
+        }
+        .filter-item {
+            padding-bottom: 7px;
+            padding-top: 15px;
+            z-index: 2;
+            justify-content: center;
+            position: relative;
+            font-family: "GTWalsheimPro";
+            font-size: 17px;
+            font-weight: 500;
+            @include transition(all 300ms linear 0ms);
+            &.active,
+            &:hover {
+                color: #fff;
+                .cat-name {
+                    &:before {
+                        width: 100%;
+                    }
+                }
+            }
+            .filter-item--count {
+                font-size: 15px;
+                position: absolute;
+                top: 10px;
+                right: -13px;
+            }
+        }
+        .cat-name {
+            position: relative;
+            color: #fff;
+            &:before {
+                content: "";
+                width: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                bottom: -8px;
+                background-color: #fff;
+                height: 1px;
+                @include transition(all 300ms linear 0ms);
+                position: absolute;
+            }
+        }
+        .cat-count {
+            font-size: 14px;
+            position: absolute;
+            top: 10px;
+            right: -8px;
+            color: #fff;
+        }
+        .pxl--filter-inner {
+            justify-content: center;
+        }
+    }
 }
