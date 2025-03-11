@@ -199,6 +199,20 @@ BLOG GRID
     }
 }
 
+.col-1-about-home-2 {
+    position: relative;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 1px;
+        height: 119px;
+        background-color: #cdcdcd;
+        transform: translateY(-50%);
+    }
+}
+
 // Slider Revolution
 .revslider-initialised {
     .rv-description {
@@ -3629,8 +3643,48 @@ BLOG GRID
 }
 
 .cf7-home-2 {
-    .wpcf7-form-control {
+    .col-xl-6 {
+        &:nth-child(1) {
+            padding-right: 7.5px;
+        }
+        &:nth-child(2) {
+            padding-left: 7.5px;
+        }
+    }
+    input.wpcf7-form-control,
+    select.wpcf7-form-control {
         height: 50px;
+        padding: 6px 17px;
+        &::placeholder {
+            color: #666;
+        }
+        &:focus {
+            &::placeholder {
+                color: #111;
+            }
+        }
+        &.wpcf7-not-valid {
+            border-color: #ff0000;
+        }
+    }
+    .wpcf7-not-valid-tip,
+    .wpcf7-response-output {
+        display: none;
+    }
+    .pxl-select,
+    .pxl-select-higthlight {
+        height: 50px;
+    }
+    p {
+        margin-bottom: 15px;
+    }
+    button {
+        width: 100%;
+        border-radius: 8px !important;
+        opacity: 1 !important;
+        &:hover {
+            background-color: $primary_color !important;
+        }
     }
 }
 

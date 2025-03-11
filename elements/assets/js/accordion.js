@@ -5,7 +5,7 @@
             .find(".pxl-accordion .pxl-accordion--title")
             .on("click", function (e) {
                 e.preventDefault();
-                if ($(this).hasClass("active")) {
+                if ($(this).parent().hasClass("active")) {
                     return;
                 }
 

@@ -24,9 +24,12 @@ if (!class_exists('Safebyte_Page')) {
                             <?php break;
                         default: ?>
                             <div class="pxl-loader-spinner">
-                                <div class="pxl-loader-bounce1"></div>
-                                <div class="pxl-loader-bounce2"></div>
-                                <div class="pxl-loader-bounce3"></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
                             </div>
                             <?php break;
                     } ?>
