@@ -45,6 +45,10 @@ pxl_add_custom_widget(
                                     'label' => esc_html__('Layout 5', 'safebyte'),
                                     'image' => get_template_directory_uri() . '/elements/assets/img/pxl_text_carousel/layout5.jpg'
                                 ],
+                                '6' => [
+                                    'label' => esc_html__('Layout 6', 'safebyte'),
+                                    'image' => get_template_directory_uri() . '/elements/assets/img/pxl_text_carousel/layout6.jpg'
+                                ],
                             ],
                         ),
                     ),

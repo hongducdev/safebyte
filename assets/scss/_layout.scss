@@ -1626,7 +1626,7 @@ body:not(.elementor-editor-active) .pxl-section-parallax-overflow {
                 height: 100%;
                 position: absolute;
                 width: 100%;
-                border: 2px solid #111;
+                border: 2px solid $primary-color;
                 &:nth-of-type(1) {
                     transform: translateZ(-22px) rotateY(180deg);
                 }
