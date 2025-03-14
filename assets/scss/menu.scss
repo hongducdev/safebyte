@@ -182,17 +182,18 @@
                 .pxl-menu-item-text {
                     @include transition(all 200ms linear 0ms);
                     position: relative;
+                    color: #0a1119;
+                    font-family: "GTWalsheimPro";
                     &:before {
                         content: "";
                         width: 0;
                         left: 0;
-                        height: 1px;
+                        height: 2px;
                         position: absolute;
                         top: 50%;
                         -webkit-transition: width 0.25s;
                         transition: width 0.25s;
-                        background-color: #fff;
-                        margin-top: 9px;
+                        background-color: $primary_color;
                     }
                 }
                 > a.pxl-onepage-active,
@@ -202,9 +203,9 @@
                 &.current_page_ancestor > a,
                 &.current-menu-ancestor > a {
                     .pxl-menu-item-text {
-                        margin-left: 10px;
+                        padding-left: 30px;
                         &:before {
-                            width: 100%;
+                            width: 25px;
                         }
                     }
                 }

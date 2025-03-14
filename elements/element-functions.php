@@ -489,13 +489,9 @@ function safebyte_get_list_layout_options($post_type_name){
                 'label' => esc_html__( 'Layout 1', 'safebyte' ),
                 'image' => get_template_directory_uri() . '/elements/assets/img/pxl_post_list/post-layout1.jpg'
             ],
-        ];
-        break;
-        case 'industries':
-        $option_layouts = [
-            'industries-1' => [
-                'label' => esc_html__( 'Layout 1','safebyte' ),
-                'image' => get_template_directory_uri(). '/elements/assets/img/pxl_post_list/industries-layout1.jpg'
+            'post-2' => [
+                'label' => esc_html__( 'Layout 2', 'safebyte' ),
+                'image' => get_template_directory_uri() . '/elements/assets/img/pxl_post_list/post-layout2.jpg'
             ],
         ];
         break;

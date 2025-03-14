@@ -37,7 +37,7 @@
     font-weight: normal;
 }
 
-flaticon-maps-and-flags:before {
+.flaticon-maps-and-flags:before {
     content: "\f101";
 }
 .flaticon-chat:before {
@@ -201,4 +201,7 @@ flaticon-maps-and-flags:before {
 }
 .flaticon-email:before {
     content: "\f137";
+}
+.flaticon-right-arrow-long:before {
+    content: "\f138";
 }

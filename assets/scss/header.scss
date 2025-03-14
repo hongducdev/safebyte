@@ -144,11 +144,12 @@
             vertical-align: middle;
             margin: 0 14px;
             > a {
-                line-height: 83px;
+                line-height: 55px;
                 font-size: 16px;
-                font-weight: 700;
+                font-weight: 500;
                 display: inline-block;
-                color: #0a0f0e;
+                color: #0a1119;
+                font-family: "GTWalsheimPro";
             }
         }
         .sub-menu,
@@ -156,7 +157,7 @@
             position: absolute;
             top: 100%;
             left: 0;
-            background-color: #3d3d3d;
+            background-color: #fff;
             margin-top: 30px;
             margin-bottom: 0;
             min-width: 235px;
@@ -182,7 +183,6 @@
                 &.current-menu-item > a,
                 &.current_page_ancestor > a,
                 &.current-menu-ancestor > a {
-                    color: #fff;
                 }
                 &:last-child > a {
                     border-bottom: none;
@@ -717,7 +717,7 @@
 .pxl-anchor-button {
     cursor: pointer;
     &.style-2 {
-        --x: 55px;
+        --x: 50px;
         height: var(--x);
         width: var(--x);
         @include border-radius(var(--x));

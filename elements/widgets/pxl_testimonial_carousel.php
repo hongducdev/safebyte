@@ -230,6 +230,16 @@ pxl_add_custom_widget(
                     'tab' => \Elementor\Controls_Manager::TAB_SETTINGS,
                     'controls' => array(
                         array(
+                            'name' => 'style_layout',
+                            'label' => esc_html__('Style','safebyte'),
+                            'type' => \Elementor\Controls_Manager::SELECT,
+                            'default' => 'style-1',
+                            'options' => [
+                                'style-1' => 'Style 1',
+                                'style-2' => 'Style 2',
+                            ],
+                        ),
+                        array(
                             'name' => 'col_xs',
                             'label' => esc_html__('Columns XS Devices', 'safebyte' ),
                             'type' => \Elementor\Controls_Manager::SELECT,

@@ -213,6 +213,33 @@ BLOG GRID
     }
 }
 
+.pxl-icon-spinner {
+    svg {
+        width: 45px;
+        height: 45px;
+        path {
+            fill: #0e4eeb;
+        }
+    }
+}
+
+.pxl-section-pattern-caro {
+    position: relative;
+    overflow: hidden;
+    &:before {
+        position: absolute;
+        content: "";
+        width: 150%;
+        height: 150%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: linear-gradient(#dee5f1 2px, transparent 2px),
+            linear-gradient(to right, #dee5f1 2px, transparent 2px);
+        background-size: 78px 78px;
+    }
+}
+
 // Slider Revolution
 .revslider-initialised {
     .rv-description {
@@ -2491,6 +2518,108 @@ BLOG GRID
     }
 }
 
+.pxl-tabs3 {
+    .pxl-tabs--inner {
+        display: flex;
+    }
+    .pxl-item--title-box {
+        height: 43px;
+        font-size: 14px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #fff;
+        font-family: "GTWalsheimPro";
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $primary_color;
+        padding: 0 30px;
+        @include border-radius(8px);
+        margin-bottom: 42px;
+    }
+    .pxl-tabs--title {
+        padding: 98px 0 75px 100px;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+    .pxl-tabs--content {
+        width: 50%;
+        background-color: $secondary_color;
+        padding: 90px 52px 52px 78px;
+    }
+    .pxl-tab--title {
+        font-size: 26px;
+        display: inline-flex;
+        align-items: center;
+        gap: 15px;
+        color: #cfcccc;
+        font-weight: 500;
+        font-family: "GTWalsheimPro";
+        margin-bottom: 20px;
+        i {
+            color: $primary_color;
+            font-size: 20px;
+            font-weight: 500;
+            opacity: 0;
+            transform: translateX(-10px);
+            @include transition(all 300ms linear 0ms);
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &:hover,
+        &.active {
+            color: #111111;
+            i {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    }
+    .pxl-content--title {
+        font-size: 30px;
+        color: #fff;
+        margin-bottom: 25px;
+    }
+    .pxl-content--text {
+        color: #c4c4c4;
+    }
+    .pxl-content--btn {
+        gap: 14px;
+        padding: 0 35px;
+        i {
+            @include transition(all 300ms linear 0ms);
+        }
+        &:hover {
+            background-color: $primary_color;
+            color: #fff;
+            i {
+                color: #fff;
+                animation: toRightFromLeft 0.3s forwards;
+            }
+        }
+    }
+    .pxl-icon--service {
+        width: 102px;
+        height: 102px;
+        border-radius: 10px;
+        background-color: #ffffff;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 45px;
+        color: $primary_color;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        i {
+            transform: rotateY(0);
+            @include transition(all 300ms linear 0ms);
+        }
+    }
+}
+
 // Banner Box
 .pxl-banner1 {
     margin-bottom: 62px;
@@ -2948,6 +3077,41 @@ BLOG GRID
         line-height: 28px;
         color: #ffffff;
         font-family: "GTWalsheimPro";
+    }
+}
+
+.pxl-counter4 {
+    width: 316px;
+    height: 316px;
+    @include border-radius(316px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #10399d;
+    text-align: center;
+    .pxl-counter--number {
+        font-size: 70px;
+        line-height: 1;
+        color: #fff;
+        font-weight: 400;
+        font-family: "Public Sans";
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        margin-bottom: 25px;
+    }
+    .pxl-counter--suffix {
+        font-size: 40px;
+    }
+    .pxl-counter--title {
+        font-size: 16px;
+        letter-spacing: 3px;
+        line-height: 25px;
+        text-transform: uppercase;
+        color: #ffffff;
+        font-family: "GTWalsheimPro";
+        text-align: center;
     }
 }
 

@@ -12,21 +12,37 @@ pxl_add_custom_widget(
         'params' => array(
             'sections' => array(
                 array(
+                    'name' => 'tab_layout',
+                    'label' => esc_html__( 'Layout', 'safebyte' ),
+                    'tab' => \Elementor\Controls_Manager::TAB_LAYOUT,
+                    'controls' => array(
+                        array(
+                            'name' => 'layout',
+                            'label' => esc_html__('Templates', 'safebyte' ),
+                            'type' => 'layoutcontrol',
+                            'default' => '1',
+                            'options' => [
+                                '1' => [
+                                    'label' => esc_html__('Layout 1', 'safebyte' ),
+                                    'image' => get_template_directory_uri() . '/elements/assets/img/pxl_tabs/layout3.jpg'
+                                ],
+                                '2' => [
+                                    'label' => esc_html__('Layout 2', 'safebyte' ),
+                                    'image' => get_template_directory_uri() . '/elements/assets/img/pxl_tabs/layout3.jpg'
+                                ],
+                                '3' => [
+                                    'label' => esc_html__('Layout 3', 'safebyte' ),
+                                    'image' => get_template_directory_uri() . '/elements/assets/img/pxl_tabs/layout3.jpg'
+                                ],
+                            ],
+                        ),
+                    )
+                ),
+                array(
                     'name' => 'tab_content',
                     'label' => esc_html__( 'Tabs', 'safebyte' ),
                     'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
                     'controls' => array(
-                        array(
-                            'name' => 'layout',
-                            'label' => esc_html__('Layout', 'safebyte' ),
-                            'type' => \Elementor\Controls_Manager::SELECT,
-                            'options' => [
-                                '1' => 'Layout 1',
-                                '2' => 'Layout 2',
-                            ],
-                            'default' => '1',
-                            'description' => 'Limit 2 items in layout 2.'
-                        ),
                         array(
                             'name' => 'tab_active',
                             'label' => esc_html__( 'Active Tab', 'safebyte' ),
@@ -35,6 +51,26 @@ pxl_add_custom_widget(
                             'separator' => 'after',
                             'condition' => [
                                 'layout' => ['1'],
+                            ],
+                        ),
+                        array(
+                            'name' => 'limit',
+                            'label' => esc_html__( 'Limit', 'safebyte' ),
+                            'type' => \Elementor\Controls_Manager::NUMBER,
+                            'default' => 6,
+                            'separator' => 'after',
+                            'condition' => [
+                                'layout' => ['3'],
+                            ],
+                        ),
+                        array(
+                            'name' => 'title_box',
+                            'label' => esc_html__( 'Title Box', 'safebyte' ),
+                            'type' => \Elementor\Controls_Manager::TEXT,
+                            'label_block' => true,
+                            'default' => 'explore it solution services',
+                            'condition' => [
+                                'layout' => ['3'],
                             ],
                         ),
                         array(
@@ -88,6 +124,9 @@ pxl_add_custom_widget(
                                 ),
                             ),
                             'title_field' => '{{{ title }}}',
+                            'condition' => [
+                                'layout' => ['1', '2'],
+                            ],
                         ),
                         array(
                             'name' => 'max_width',

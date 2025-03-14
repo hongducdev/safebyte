@@ -61,6 +61,7 @@
                 spaceBetween: 0,
                 observer: true,
                 observeParents: true,
+                slidesPerColumnFill: settings["slide_percolumn_fill"],
                 navigation: {
                     nextEl: $this.find(".pxl-swiper-arrow-next")[0],
                     prevEl: $this.find(".pxl-swiper-arrow-prev")[0],

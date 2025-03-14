@@ -38,6 +38,10 @@ pxl_add_custom_widget(
                                     'label' => esc_html__('Layout 3', 'safebyte' ),
                                     'image' => get_template_directory_uri() . '/elements/assets/img/pxl_counter/layout3.jpg'
                                 ],
+                                '4' => [
+                                    'label' => esc_html__('Layout 4', 'safebyte' ),
+                                    'image' => get_template_directory_uri() . '/elements/assets/img/pxl_counter/layout4.jpg'
+                                ],
                             ],
                         ),
                     ),
@@ -144,6 +148,14 @@ pxl_add_custom_widget(
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-counter' => 'text-align: {{VALUE}};',
                                 '{{WRAPPER}}.pxl-counter .pxl-counter__number' => 'justify-content: {{VALUE}};',
+                            ],
+                        ),
+                        array(
+                            'name' => 'background_overlay',
+                            'label' => esc_html__('Background Overlay', 'safebyte' ),
+                            'type' => \Elementor\Controls_Manager::MEDIA,
+                            'condition' => [
+                                'layout' => '4',
                             ],
                         ),
                     ),

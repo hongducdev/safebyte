@@ -1,5 +1,5 @@
 (function ($) {
-    "use strict";
+    ("use strict");
 
     var pxl_scroll_top;
     var pxl_window_height;
@@ -29,6 +29,7 @@
         safebyte_panel_anchor_toggle();
         safebyte_post_grid();
         safebyte_header_left_scroll();
+        safebyte_heading_scroll();
     });
 
     $(window).on("scroll", function () {
@@ -64,6 +65,7 @@
         safebyte_backtotop_progess_bar();
         safebyte_type_file_upload();
         safebyte_zoom_point();
+        safebyte_icon_spinner();
 
         // Custom Dots Slider Revolution
         setTimeout(function () {
@@ -1253,166 +1255,58 @@
         });
     }
 
-    class PXLSphere {
-        constructor(element) {
-            this.element = element;
-            this.canvas = element.querySelector("canvas");
-            this.ctx = this.canvas.getContext("2d");
+    function safebyte_icon_spinner() {
+        let lastScrollTop = 0;
+        const svgSpinner = document.querySelector(".pxl-icon-spinner svg");
 
-            // Get data attributes
-            this.size = parseInt(element.dataset.size) || 400;
-            this.radius = parseInt(element.dataset.radius) || this.size * 0.3;
-            this.sphereColor = element.dataset.color || "#fff";
-            this.rotationType = element.dataset.rotation || "y_axis";
-            this.rotationSpeed = parseFloat(element.dataset.speed) || 0.005;
-            this.customXSpeed = parseFloat(element.dataset.xspeed) || 0.003;
-            this.customYSpeed = parseFloat(element.dataset.yspeed) || 0.005;
-            this.tiltAngle =
-                ((parseFloat(element.dataset.tilt) || -30) * Math.PI) / 180;
+        gsap.to(svgSpinner, {
+            scrollTrigger: {
+                trigger: "body",
+                start: "top top",
+                end: "bottom bottom",
+                scrub: 1,
+                onUpdate: (self) => {
+                    let st =
+                        window.pageYOffset ||
+                        document.documentElement.scrollTop;
+                    let direction = st > lastScrollTop ? 1 : -1;
+                    lastScrollTop = st <= 0 ? 0 : st;
 
-            // Setup canvas
-            this.canvas.width = this.size;
-            this.canvas.height = this.size;
+                    gsap.to(svgSpinner, {
+                        rotation: `+=${direction * 15}`,
+                        duration: 0.1,
+                        ease: "none",
+                    });
+                },
+            },
+        });
+    }
 
-            // Initialize angles
-            this.angleX = this.tiltAngle;
-            this.angleY = 0;
+    function safebyte_heading_scroll() {
+        const headingScroll = document.querySelector(
+            ".pxl-heading-scroll-gsap"
+        );
+        if (!headingScroll) return;
 
-            this.init();
-        }
+        gsap.registerPlugin(SplitText, ScrollTrigger);
 
-        init() {
-            this.points = [];
-            for (
-                let lat = -Math.PI / 2;
-                lat <= Math.PI / 2;
-                lat += Math.PI / 10
-            ) {
-                for (let lon = 0; lon < 2 * Math.PI; lon += Math.PI / 10) {
-                    let x = Math.cos(lat) * Math.cos(lon);
-                    let y = Math.sin(lat);
-                    let z = Math.cos(lat) * Math.sin(lon);
-                    this.points.push({ x, y, z });
-                }
-            }
-            this.animate();
-        }
+        // split text
+        const textSplit = new SplitText(headingScroll, {
+            type: "words, chars",
+        });
 
-        rotate(point, angleX, angleY) {
-            let cosX = Math.cos(angleX),
-                sinX = Math.sin(angleX);
-            let cosY = Math.cos(angleY),
-                sinY = Math.sin(angleY);
-
-            let y = point.y * cosX - point.z * sinX;
-            let z = point.y * sinX + point.z * cosX;
-            let x = point.x * cosY - z * sinY;
-            z = point.x * sinY + z * cosY;
-            return { x, y, z };
-        }
-
-        drawSphere() {
-            this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-            this.ctx.strokeStyle = this.sphereColor;
-            this.ctx.lineWidth = 1;
-            const cx = this.canvas.width / 2;
-            const cy = this.canvas.height / 2;
-
-            // Draw latitude lines
-            for (
-                let lat = -Math.PI / 2;
-                lat <= Math.PI / 2;
-                lat += Math.PI / 10
-            ) {
-                let circlePoints = [];
-                for (let lon = 0; lon < 2 * Math.PI; lon += Math.PI / 20) {
-                    let x = Math.cos(lat) * Math.cos(lon);
-                    let y = Math.sin(lat);
-                    let z = Math.cos(lat) * Math.sin(lon);
-                    let rotatedPoint = this.rotate(
-                        { x, y, z },
-                        this.angleX,
-                        this.angleY
-                    );
-                    circlePoints.push(rotatedPoint);
-                }
-                this.ctx.beginPath();
-                circlePoints.forEach((p, i) => {
-                    if (i === 0) {
-                        this.ctx.moveTo(
-                            cx + p.x * this.radius,
-                            cy + p.y * this.radius
-                        );
-                    } else {
-                        this.ctx.lineTo(
-                            cx + p.x * this.radius,
-                            cy + p.y * this.radius
-                        );
-                    }
-                });
-                this.ctx.closePath();
-                this.ctx.stroke();
-            }
-
-            // Draw longitude lines
-            for (let lon = 0; lon < 2 * Math.PI; lon += Math.PI / 10) {
-                let circlePoints = [];
-                for (
-                    let lat = -Math.PI / 2;
-                    lat <= Math.PI / 2;
-                    lat += Math.PI / 20
-                ) {
-                    let x = Math.cos(lat) * Math.cos(lon);
-                    let y = Math.sin(lat);
-                    let z = Math.cos(lat) * Math.sin(lon);
-                    let rotatedPoint = this.rotate(
-                        { x, y, z },
-                        this.angleX,
-                        this.angleY
-                    );
-                    circlePoints.push(rotatedPoint);
-                }
-                this.ctx.beginPath();
-                circlePoints.forEach((p, i) => {
-                    if (i === 0) {
-                        this.ctx.moveTo(
-                            cx + p.x * this.radius,
-                            cy + p.y * this.radius
-                        );
-                    } else {
-                        this.ctx.lineTo(
-                            cx + p.x * this.radius,
-                            cy + p.y * this.radius
-                        );
-                    }
-                });
-                this.ctx.stroke();
-            }
-        }
-
-        updateRotation() {
-            switch (this.rotationType) {
-                case "y_axis":
-                    this.angleY += this.rotationSpeed;
-                    break;
-                case "x_axis":
-                    this.angleX += this.rotationSpeed;
-                    break;
-                case "both_axis":
-                    this.angleX += this.rotationSpeed;
-                    this.angleY += this.rotationSpeed;
-                    break;
-                case "custom":
-                    this.angleX += this.customXSpeed;
-                    this.angleY += this.customYSpeed;
-                    break;
-            }
-        }
-
-        animate() {
-            this.updateRotation();
-            this.drawSphere();
-            requestAnimationFrame(() => this.animate());
-        }
+        gsap.to(textSplit.chars, {
+            color: "#111111",
+            opacity: 1,
+            duration: 0.25,
+            stagger: 0.05,
+            ease: "power2.inOut",
+            scrollTrigger: {
+                trigger: headingScroll,
+                start: "top 80%",
+                end: "bottom 20%",
+                scrub: true,
+            },
+        });
     }
 })(jQuery);

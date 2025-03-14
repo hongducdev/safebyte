@@ -128,6 +128,29 @@ pxl_add_custom_widget(
                                 ]
                             ),
                             array(
+                                'name'     => 'view_all_button',
+                                'label'    => esc_html__('View All Button','safebyte' ),
+                                'type'     => \Elementor\Controls_Manager::SWITCHER,
+                                'default'  => 'true',
+                                'condition' => ['post_type' => 'post','layout_post' => 'post-2' ],
+                            ),
+                            array(
+                                'name'      => 'view_all_text',
+                                'label'     => esc_html__( 'View All text','safebyte' ),
+                                'type'      => \Elementor\Controls_Manager::TEXT,
+                                'condition' => [
+                                    'view_all_button' => 'true'
+                                ]
+                            ),
+                            array(
+                                'name'      => 'view_all_link',
+                                'label'     => esc_html__( 'View All Link','safebyte' ),
+                                'type'      => \Elementor\Controls_Manager::URL,
+                                'condition' => [
+                                    'view_all_button' => 'true'
+                                ]
+                            ),
+                            array(
                                 'name'         => 'pagination_alignment',
                                 'label'        => esc_html__( 'Pagination Alignment', 'safebyte' ),
                                 'type'         => 'choose',
@@ -203,6 +226,7 @@ pxl_add_custom_widget(
                             'label'     => esc_html__('Show Comment', 'safebyte' ),
                             'type'      => \Elementor\Controls_Manager::SWITCHER,
                             'default'   => 'true',
+                            'condition' => ['post_type' => 'post','layout_post' => 'post-1' ],
                         ),
                         array(
                             'name'      => 'post_excerpt',
@@ -237,9 +261,9 @@ pxl_add_custom_widget(
                             'label'     => esc_html__('Show Social Share', 'safebyte' ),
                             'type'      => \Elementor\Controls_Manager::SWITCHER,
                             'default'   => 'true',
+                            'condition' => ['post_type' => 'post','layout_post' => 'post-1' ],
                         ),
                     ),
-                    'condition' => ['post_type' => 'post','layout_post' => 'post-1' ],
                 ),
             ),
         ),

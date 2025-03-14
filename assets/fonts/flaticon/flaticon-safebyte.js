@@ -1,6 +1,6 @@
 {
     "icons": [
-	    "maps-and-flags",
+		"maps-and-flags",
 		"chat",
 		"align-bottom",
 		"bookmarks",
@@ -54,6 +54,7 @@
 		"database",
 		"lock-simple-open",
 		"mountains",
-		"email"
+		"email",
+		"right-arrow-long"
 	]
 }

@@ -184,7 +184,6 @@ pxl_add_custom_widget(
                             ],
                         ),
 
-
                         array(
                             'name' => 'col_lg',
                             'label' => esc_html__('Columns LG Devices', 'safebyte'),
@@ -512,7 +511,7 @@ pxl_add_custom_widget(
                                     [
                                         'terms' => [
                                             ['name' => 'post_type', 'operator' => '==', 'value' => 'post'],
-                                            ['name' => 'layout_post', 'operator' => 'in', 'value' => ['post-1']]
+                                            ['name' => 'layout_post', 'operator' => 'in', 'value' => ['post-1', 'post-2']]
                                         ]
                                     ],
                                     [
@@ -542,7 +541,7 @@ pxl_add_custom_widget(
                                     [
                                         'terms' => [
                                             ['name' => 'post_type', 'operator' => '==', 'value' => 'post'],
-                                            ['name' => 'layout_post', 'operator' => 'in', 'value' => ['post-1']],
+                                            ['name' => 'layout_post', 'operator' => 'in', 'value' => ['post-1', 'post-2']],
                                             ['name' => 'show_excerpt', 'operator' => '==', 'value' => 'true'],
                                         ],
                                     ],
@@ -572,7 +571,7 @@ pxl_add_custom_widget(
                                     [
                                         'terms' => [
                                             ['name' => 'post_type', 'operator' => '==', 'value' => 'post'],
-                                            ['name' => 'layout_post', 'operator' => 'in', 'value' => ['post-1', 'post-3']]
+                                            ['name' => 'layout_post', 'operator' => 'in', 'value' => ['post-1', 'post-2']]
                                         ]
                                     ],
                                     [
@@ -600,7 +599,7 @@ pxl_add_custom_widget(
                                     [
                                         'terms' => [
                                             ['name' => 'post_type', 'operator' => '==', 'value' => 'post'],
-                                            ['name' => 'layout_post', 'operator' => 'in', 'value' => ['post-1', 'post-3']],
+                                            ['name' => 'layout_post', 'operator' => 'in', 'value' => ['post-1', 'post-2']],
                                             ['name' => 'show_button', 'operator' => '==', 'value' => 'true']
                                         ]
                                     ],

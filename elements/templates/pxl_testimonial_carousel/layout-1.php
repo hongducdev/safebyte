@@ -37,7 +37,8 @@ $opts = [
     'pause_on_interaction'          => true,
     'delay'                         => (int)$autoplay_speed,
     'loop'                          => (bool)$infinite,
-    'speed'                         => (int)$speed
+    'speed'                         => (int)$speed,
+    
 ];
 $widget->add_render_attribute( 'carousel', [
     'class'         => 'pxl-swiper-container',
@@ -45,9 +46,8 @@ $widget->add_render_attribute( 'carousel', [
     'data-settings' => wp_json_encode($opts)
 ]);
 if(isset($settings['testimonial']) && !empty($settings['testimonial']) && count($settings['testimonial'])): ?>
-    <div class="pxl-swiper-slider pxl-testimonial-carousel pxl-testimonial-carousel1" <?php if($drap !== false) : ?>data-cursor-drap="<?php echo esc_html__('DRAG', 'safebyte'); ?>"<?php endif; ?>>
+    <div class="pxl-swiper-slider pxl-testimonial-carousel pxl-testimonial-carousel1 <?php echo esc_html__($settings['style_layout']); ?> " <?php if($drap !== false) : ?>data-cursor-drap="<?php echo esc_html__('DRAG', 'safebyte'); ?>"<?php endif; ?>>
         <div class="pxl-carousel-inner">
-
             <div <?php pxl_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
                 <div class="pxl-swiper-wrapper">
                     <?php foreach ($settings['testimonial'] as $key => $value):
@@ -60,7 +60,16 @@ if(isset($settings['testimonial']) && !empty($settings['testimonial']) && count(
                         ?>
                         <div class="pxl-swiper-slide">
                             <div class="pxl-item--inner <?php echo esc_attr($settings['pxl_animate']); ?>" data-wow-delay="<?php echo esc_attr($settings['pxl_animate_delay']); ?>ms">
+                                <?php if($settings['style_layout'] == 'style-2') :?>
+                                    <div class="pxl-item--qoute">
+                                        “
+                                    </div>
+                                <?php endif;?>
                                 <div class="pxl-item--desc el-empty"><?php echo pxl_print_html($desc); ?></div>
+                                <?php if($settings['style_layout'] == 'style-2') :?>
+                                    <div class="pxl-item--divider">
+                                    </div>
+                                <?php endif;?>
                                 <div class="pxl-item--holder pxl-item--flexnw">
                                     <?php if(!empty($image['id'])) { 
                                         $img = pxl_get_image_by_size( array(
@@ -90,7 +99,6 @@ if(isset($settings['testimonial']) && !empty($settings['testimonial']) && count(
                     <?php endforeach; ?>
                 </div>
             </div>
-
         </div>
         
         <?php if($pagination !== false): ?>
@@ -99,8 +107,8 @@ if(isset($settings['testimonial']) && !empty($settings['testimonial']) && count(
 
         <?php if($arrows !== false): ?>
             <div class="pxl-swiper-arrow-wrap style-1">
-                <div class="pxl-swiper-arrow pxl-swiper-arrow-prev pxl-cursor--cta"><i class="flaticon-left-chevron rtl-icon"></i></div>
-                <div class="pxl-swiper-arrow pxl-swiper-arrow-next pxl-cursor--cta"><i class="flaticon-right-chevron rtl-icon"></i></div>
+                <div class="pxl-swiper-arrow pxl-swiper-arrow-prev pxl-cursor--cta"><i class="flaticon-next rtl-icon"></i></div>
+                <div class="pxl-swiper-arrow pxl-swiper-arrow-next pxl-cursor--cta"><i class="flaticon-next rtl-icon"></i></div>
             </div>
         <?php endif; ?>
         
