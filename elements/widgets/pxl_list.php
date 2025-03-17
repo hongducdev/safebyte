@@ -97,6 +97,16 @@ pxl_add_custom_widget(
                         ]),
                         array(
                             array(
+                                'name' => 'style_type',
+                                'label' => esc_html__('Style', 'safebyte'),
+                                'type' => \Elementor\Controls_Manager::SELECT,
+                                'options' => [
+                                    'style-1' => 'Style 1',
+                                    'style-2' => 'Style 2',
+                                ],
+                                'default' => 'style-1',
+                            ),
+                            array(
                                 'name' => 'list_direction',
                                 'label' => esc_html__('List Direction', 'safebyte'),
                                 'type' => \Elementor\Controls_Manager::SELECT,
@@ -106,6 +116,9 @@ pxl_add_custom_widget(
                                     'column' => 'Column',
                                 ],
                                 'default' => 'column',
+                                'condition' => [
+                                    'style_type' => 'style-1'
+                                ]
                             ),
                             array(
                                 'name' => 'list_gap_column',

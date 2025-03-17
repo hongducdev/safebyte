@@ -185,7 +185,7 @@ pxl_add_custom_widget(
                             ],
                             'default' => 'style-1',
                             'condition' => [
-                                'layout' => '1',
+                                'layout' => ['1', '3'],
                             ],
                         ),
                     ),
@@ -300,6 +300,47 @@ pxl_add_custom_widget(
                                 '{{WRAPPER}} .pxl-counter .pxl-counter--icon' => 'background-color: {{VALUE}};',
                             ],
                         ),
+                        array(
+                            'name' => 'icon_width',
+                            'label' => esc_html__('Width', 'safebyte' ),
+                            'type' => \Elementor\Controls_Manager::SLIDER,
+                            'control_type' => 'responsive',
+                            'size_units' => [ 'px' ],
+                            'range' => [
+                                'px' => [
+                                    'min' => 0,
+                                    'max' => 300,
+                                ],
+                            ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-counter .pxl-counter--icon' => 'width: {{SIZE}}{{UNIT}};',
+                            ],
+                        ),
+                        array(
+                            'name' => 'icon_height',
+                            'label' => esc_html__('Height', 'safebyte' ),
+                            'type' => \Elementor\Controls_Manager::SLIDER,
+                            'control_type' => 'responsive',
+                            'size_units' => [ 'px' ],
+                            'range' => [
+                                'px' => [
+                                    'min' => 0,
+                                    'max' => 300,
+                                ],
+                            ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-counter .pxl-counter--icon' => 'height: {{SIZE}}{{UNIT}};',
+                            ],
+                        ),
+                        array(
+                            'name' => 'icon_border_radius',
+                            'label' => esc_html__('Border Radius', 'safebyte' ),
+                            'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                            'size_units' => [ 'px', '%', 'em' ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-counter .pxl-counter--icon' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                            ],
+                        ),
                     ),
                 ),
                 array(
@@ -320,11 +361,19 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Prefix Suffix Color', 'safebyte' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-counter .pxl-counter--number span:not(.pxl-counter--value)' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-counter .pxl-counter--prefix,{{WRAPPER}} .pxl-counter .pxl-counter--suffix' => 'color: {{VALUE}};',
                             ],
                         ),
                         array(
+                            'name' => 'prefix_suffix_typography',
+                            'label' => esc_html__('Prefix Suffix Typography', 'safebyte' ),
+                            'type' => \Elementor\Group_Control_Typography::get_type(),
+                            'control_type' => 'group',
+                            'selector' => '{{WRAPPER}} .pxl-counter .pxl-counter--suffix,{{WRAPPER}} .pxl-counter .pxl-counter--prefix',
+                        ),
+                        array(
                             'name' => 'number_typography',
+                            'label' => esc_html__('Number Typography', 'safebyte' ),
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
                             'selector' => '{{WRAPPER}} .pxl-counter .pxl-counter--number',
