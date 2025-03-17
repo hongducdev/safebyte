@@ -2546,7 +2546,12 @@ BLOG GRID
     .pxl-tabs--content {
         width: 50%;
         background-color: $secondary_color;
+        position: relative;
+        overflow: hidden;
+    }
+    .pxl-tab--content {
         padding: 90px 52px 52px 78px;
+        z-index: 5;
     }
     .pxl-tab--title {
         font-size: 26px;
@@ -2600,6 +2605,54 @@ BLOG GRID
             }
         }
     }
+    .pxl-content--feature {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        li {
+            padding-left: 21px;
+            position: relative;
+            cursor: pointer;
+            &:after {
+                content: "";
+                position: absolute;
+                width: 4px;
+                height: 4px;
+                border-radius: 4px;
+                background-color: #fff;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            span {
+                font-size: 16px;
+                color: #fff;
+                position: relative;
+                display: inline-block;
+                &:after {
+                    position: absolute;
+                    content: "";
+                    bottom: 0;
+                    left: auto;
+                    right: 0;
+                    background-color: #fff;
+                    width: 0;
+                    height: 1px;
+                    @include transition(all 300ms linear 0ms);
+                }
+            }
+            &:hover {
+                span {
+                    &:after {
+                        width: 100%;
+                        left: 0;
+                        right: auto;
+                    }
+                }
+            }
+        }
+    }
     .pxl-icon--service {
         width: 102px;
         height: 102px;
@@ -2611,12 +2664,24 @@ BLOG GRID
         font-size: 45px;
         color: $primary_color;
         position: absolute;
-        bottom: 0;
-        right: 0;
+        z-index: 5;
+        bottom: 52px;
+        right: 52px;
         i {
             transform: rotateY(0);
             @include transition(all 300ms linear 0ms);
         }
+    }
+    .pxl-tabs--content-blurry-light {
+        position: absolute;
+        bottom: -150px;
+        right: -150px;
+        width: 400px;
+        height: 400px;
+        background-color: rgba(#fff, 0.5);
+        border-radius: 50%;
+        filter: blur(70px);
+        mix-blend-mode: lighten;
     }
 }
 

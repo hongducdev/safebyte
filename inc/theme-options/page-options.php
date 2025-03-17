@@ -338,6 +338,12 @@ function safebyte_page_options_register( $metabox ) {
 					            'validate' => 'html_custom',
 					            'default' => '',
 					        ),
+							array(
+								'id' => 'service_feature',
+								'type' => 'multi_text',
+								'title' => esc_html__('Feature', 'safebyte'),
+								'validate' => 'html',
+							),
 					        array(
 					            'id'       => 'service_icon_type',
 					            'type'     => 'button_set',
