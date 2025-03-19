@@ -158,7 +158,7 @@ $widget->add_render_attribute( 'carousel', [
                                                         echo esc_html__('Read More', 'safebyte');
                                                     } ?>
                                                 </span>
-                                                <i class="flaticon flaticon-right-arrow"></i>
+                                                <i class="flaticon flaticon-right-arrow-long"></i>
                                             </a>
                                         </div>
                                     <?php endif; ?>

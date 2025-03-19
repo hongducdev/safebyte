@@ -15216,7 +15216,6 @@ body.rtl .pxl-button-video1 .slider-video-icon i {
   position: relative;
 }
 .pxl-image-scroll .pxl-scroll-image .pxl-item-image {
-  padding-left: 18px;
   width: 0;
   height: var(--y);
   position: absolute;
@@ -15233,7 +15232,7 @@ body.rtl .pxl-button-video1 .slider-video-icon i {
   transition: all 0.75s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .pxl-image-scroll .pxl-scroll-image .pxl-item-image.active {
-  width: 100%;
+  width: calc(var(--x) - var(--z));
   right: auto;
   left: var(--z);
 }

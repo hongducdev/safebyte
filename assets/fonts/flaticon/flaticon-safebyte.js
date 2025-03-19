@@ -55,6 +55,7 @@
 		"lock-simple-open",
 		"mountains",
 		"email",
-		"right-arrow-long"
+		"right-arrow-long",
+		"alarm"
 	]
 }

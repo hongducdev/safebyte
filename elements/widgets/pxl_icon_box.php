@@ -236,6 +236,22 @@ pxl_add_custom_widget(
                             'control_type' => 'group',
                             'selector' => '{{WRAPPER}} .pxl-icon-box .pxl-item--description',
                         ),
+                        array(
+                            'name' => 'desc_max_width',
+                            'label' => esc_html__('Max Width', 'safebyte' ),
+                            'type' => \Elementor\Controls_Manager::SLIDER,
+                            'control_type' => 'responsive',
+                            'size_units' => [ 'px' ],
+                            'range' => [
+                                'px' => [
+                                    'min' => 0,
+                                    'max' => 3000,
+                                ],
+                            ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-icon-box .pxl-item--description' => 'max-width: {{SIZE}}{{UNIT}} !important;',
+                            ],
+                        )
                     ),
                 ),
                 array(
@@ -262,7 +278,47 @@ pxl_add_custom_widget(
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-icon-box .pxl-item--icon' => 'background-color: {{VALUE}};',
                             ],
-                            
+                        ),
+                        array(
+                            'name' => 'icon_bg_width',
+                            'label' => esc_html__('Background Width', 'safebyte' ),
+                            'type' => \Elementor\Controls_Manager::SLIDER,
+                            'control_type' => 'responsive',
+                            'size_units' => [ 'px' ],
+                            'range' => [
+                                'px' => [
+                                    'min' => 0,
+                                    'max' => 300,
+                                ],
+                            ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-icon-box .pxl-item--icon' => 'width: {{SIZE}}{{UNIT}} !important;',
+                            ],
+                        ),
+                        array(
+                            'name' => 'icon_bg_height',
+                            'label' => esc_html__('Background Height', 'safebyte' ),
+                            'type' => \Elementor\Controls_Manager::SLIDER,
+                            'control_type' => 'responsive',
+                            'size_units' => [ 'px' ],
+                            'range' => [
+                                'px' => [
+                                    'min' => 0,
+                                    'max' => 300,
+                                ],
+                            ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-icon-box .pxl-item--icon' => 'height: {{SIZE}}{{UNIT}} !important;',
+                            ],
+                        ),
+                        array(
+                            'name' => 'icon_border_radius',
+                            'label' => esc_html__('Border Radius', 'safebyte' ),
+                            'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                            'size_units' => [ 'px', '%', 'em' ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-icon-box .pxl-item--icon' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                            ],
                         ),
                         array(
                             'name' => 'icon_font_size',
