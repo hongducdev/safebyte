@@ -5731,3 +5731,146 @@ body.rtl {
         }
     }
 }
+
+// Case Image Scroll
+.pxl-image-scroll {
+    display: flex;
+    .pxl-scroll-image {
+        --x: 330px;
+        --y: 572px;
+        --z: 18px;
+        width: var(--x);
+        height: var(--y);
+        position: relative;
+        .pxl-item-image {
+            padding-left: 18px;
+            width: 0;
+            height: var(--y);
+            position: absolute;
+            inset: 0 0 0 var(--z);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            @include border-radius(8px);
+            transition: all 0.75s cubic-bezier(0.645, 0.045, 0.355, 1);
+            &.active {
+                width: 100%;
+                right: auto;
+                left: var(--z);
+            }
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: var(--z);
+            left: 0;
+            width: calc(var(--x) - var(--z));
+            height: var(--y);
+            @include border-radius(8px);
+            background-color: $primary_color;
+        }
+    }
+    .pxl-scroll-title {
+        flex: 1;
+        margin-left: 45px;
+        padding-top: 45px;
+        border-left: 1px solid #d8d9da;
+        position: relative;
+        .pxl-item-title {
+            font-size: 17px;
+            color: #999999;
+            font-family: "GTWalsheimPro";
+            padding-left: 40px;
+            margin-bottom: 30px;
+            position: relative;
+            cursor: pointer;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: -5.5px;
+                width: 9px;
+                height: 9px;
+                @include border-radius(9px);
+                background-color: $primary_color;
+                transform: translateY(-50%);
+                opacity: 0;
+                @include transition(all 0.3s linear 0s);
+            }
+            &.active {
+                color: #0a1119;
+                &:before {
+                    opacity: 1;
+                }
+            }
+        }
+        .btn-view-all {
+            position: absolute;
+            left: 40px;
+            bottom: 50px;
+            color: #fff;
+            background-color: $primary_color;
+            @include transition(all 0.3s linear 0s);
+            &:hover {
+                background-color: $secondary_color;
+            }
+        }
+    }
+    .pxl-scroll-content {
+        width: 520px;
+        height: auto;
+        border: 1px solid #cdcdcd;
+        @include border-radius(8px);
+        padding: 90px 50px 90px 50px;
+        position: relative;
+        .pxl-item-content {
+            opacity: 0;
+            position: absolute;
+            inset: 90px 50px 90px 50px;
+            transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+            visibility: hidden;
+            @include transition(all 0.3s linear 0s);
+            &.active {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        .pxl-item-title-seco {
+            font-size: 30px;
+            line-height: 45px;
+            color: #0a1119;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #cdcdcd;
+            margin-bottom: 30px;
+        }
+        .pxl-item-list {
+            margin-top: 35px;
+            ul {
+                list-style: none;
+                color: #121315;
+                font-family: "GTWalsheimPro";
+                font-size: 17px;
+                margin-bottom: 0;
+                li {
+                    padding-left: 24px;
+                    position: relative;
+                    &:before {
+                        content: "\F11E";
+                        font-family: "Caseicon";
+                        position: absolute;
+                        font-size: 14px;
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        @include transition(all 0.3s linear 0s);
+                    }
+                    margin-bottom: 18px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

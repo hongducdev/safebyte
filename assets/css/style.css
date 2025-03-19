@@ -15204,6 +15204,187 @@ body.rtl .pxl-button-video1 .slider-video-icon i {
 .pxl-industries-list .pxl-industries-view-all:hover {
   background-color: var(--secondary-color);
 }
+.pxl-image-scroll {
+  display: flex;
+}
+.pxl-image-scroll .pxl-scroll-image {
+  --x: 330px;
+  --y: 572px;
+  --z: 18px;
+  width: var(--x);
+  height: var(--y);
+  position: relative;
+}
+.pxl-image-scroll .pxl-scroll-image .pxl-item-image {
+  padding-left: 18px;
+  width: 0;
+  height: var(--y);
+  position: absolute;
+  inset: 0 0 0 var(--z);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-border-radius: 8px;
+  -khtml-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  transition: all 0.75s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.pxl-image-scroll .pxl-scroll-image .pxl-item-image.active {
+  width: 100%;
+  right: auto;
+  left: var(--z);
+}
+.pxl-image-scroll .pxl-scroll-image:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: var(--z);
+  left: 0;
+  width: calc(var(--x) - var(--z));
+  height: var(--y);
+  -webkit-border-radius: 8px;
+  -khtml-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  background-color: var(--primary-color);
+}
+.pxl-image-scroll .pxl-scroll-title {
+  flex: 1;
+  margin-left: 45px;
+  padding-top: 45px;
+  border-left: 1px solid #d8d9da;
+  position: relative;
+}
+.pxl-image-scroll .pxl-scroll-title .pxl-item-title {
+  font-size: 17px;
+  color: #999;
+  font-family: "GTWalsheimPro";
+  padding-left: 40px;
+  margin-bottom: 30px;
+  position: relative;
+  cursor: pointer;
+}
+.pxl-image-scroll .pxl-scroll-title .pxl-item-title:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -5.5px;
+  width: 9px;
+  height: 9px;
+  -webkit-border-radius: 9px;
+  -khtml-border-radius: 9px;
+  -moz-border-radius: 9px;
+  -ms-border-radius: 9px;
+  -o-border-radius: 9px;
+  border-radius: 9px;
+  background-color: var(--primary-color);
+  transform: translateY(-50%);
+  opacity: 0;
+  -webkit-transition: all 0.3s linear 0s;
+  -khtml-transition: all 0.3s linear 0s;
+  -moz-transition: all 0.3s linear 0s;
+  -ms-transition: all 0.3s linear 0s;
+  -o-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
+}
+.pxl-image-scroll .pxl-scroll-title .pxl-item-title.active {
+  color: #0a1119;
+}
+.pxl-image-scroll .pxl-scroll-title .pxl-item-title.active:before {
+  opacity: 1;
+}
+.pxl-image-scroll .pxl-scroll-title .btn-view-all {
+  position: absolute;
+  left: 40px;
+  bottom: 50px;
+  color: #fff;
+  background-color: var(--primary-color);
+  -webkit-transition: all 0.3s linear 0s;
+  -khtml-transition: all 0.3s linear 0s;
+  -moz-transition: all 0.3s linear 0s;
+  -ms-transition: all 0.3s linear 0s;
+  -o-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
+}
+.pxl-image-scroll .pxl-scroll-title .btn-view-all:hover {
+  background-color: var(--secondary-color);
+}
+.pxl-image-scroll .pxl-scroll-content {
+  width: 520px;
+  height: auto;
+  border: 1px solid #cdcdcd;
+  -webkit-border-radius: 8px;
+  -khtml-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  padding: 90px 50px 90px 50px;
+  position: relative;
+}
+.pxl-image-scroll .pxl-scroll-content .pxl-item-content {
+  opacity: 0;
+  position: absolute;
+  inset: 90px 50px 90px 50px;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  visibility: hidden;
+  -webkit-transition: all 0.3s linear 0s;
+  -khtml-transition: all 0.3s linear 0s;
+  -moz-transition: all 0.3s linear 0s;
+  -ms-transition: all 0.3s linear 0s;
+  -o-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
+}
+.pxl-image-scroll .pxl-scroll-content .pxl-item-content.active {
+  opacity: 1;
+  visibility: visible;
+}
+.pxl-image-scroll .pxl-scroll-content .pxl-item-title-seco {
+  font-size: 30px;
+  line-height: 45px;
+  color: #0a1119;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #cdcdcd;
+  margin-bottom: 30px;
+}
+.pxl-image-scroll .pxl-scroll-content .pxl-item-list {
+  margin-top: 35px;
+}
+.pxl-image-scroll .pxl-scroll-content .pxl-item-list ul {
+  list-style: none;
+  color: #121315;
+  font-family: "GTWalsheimPro";
+  font-size: 17px;
+  margin-bottom: 0;
+}
+.pxl-image-scroll .pxl-scroll-content .pxl-item-list ul li {
+  padding-left: 24px;
+  position: relative;
+  margin-bottom: 18px;
+}
+.pxl-image-scroll .pxl-scroll-content .pxl-item-list ul li:before {
+  content: "\F11E";
+  font-family: "Caseicon";
+  position: absolute;
+  font-size: 14px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transition: all 0.3s linear 0s;
+  -khtml-transition: all 0.3s linear 0s;
+  -moz-transition: all 0.3s linear 0s;
+  -ms-transition: all 0.3s linear 0s;
+  -o-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
+}
+.pxl-image-scroll .pxl-scroll-content .pxl-item-list ul li:last-child {
+  margin-bottom: 0;
+}
 .blockUI {
   position: absolute;
   top: 0;
