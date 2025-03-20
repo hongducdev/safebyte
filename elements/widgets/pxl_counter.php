@@ -188,6 +188,28 @@ pxl_add_custom_widget(
                                 'layout' => ['1', '3'],
                             ],
                         ),
+                        array(
+                            'name' => 'gap',
+                            'label' => esc_html__('Gap', 'safebyte' ),
+                            'type' => \Elementor\Controls_Manager::SLIDER,
+                            'size_units' => ['px'],
+                            'range' => [
+                                'px' => [
+                                    'min' => 0,
+                                    'max' => 100,
+                                ],
+                            ],
+                            'default' => [
+                                'unit' => 'px',
+                                'size' => 15,
+                            ],
+                            'condition' => [
+                                'layout' => ['1', '2', '3'],
+                            ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-counter .pxl-counter--holder' => 'gap: {{SIZE}}{{UNIT}};',
+                            ],
+                        )
                     ),
                 ),
                 array(

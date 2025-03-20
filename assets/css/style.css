@@ -10180,7 +10180,7 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
   margin: 35px 0;
 }
 .pxl-accordion3 .pxl-accordion--inner {
-  padding: 30px 0;
+  padding: 24px 0;
   max-width: 628px;
   display: flex;
   flex-direction: column;
@@ -10230,7 +10230,7 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   border-radius: 10px;
-  padding: 5px 30px 5px 24px;
+  padding: 9px 30px 5px 24px;
   position: relative;
   -webkit-transition: all 0.3s linear 0s;
   -khtml-transition: all 0.3s linear 0s;
@@ -10243,7 +10243,7 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
   justify-content: space-between;
 }
 .pxl-accordion3 .pxl-accordion--title .pxl-title--number {
-  margin-right: 16px;
+  margin-right: 9px;
 }
 .pxl-accordion3 .pxl-accordion--title .pxl-icon--action {
   opacity: 1;
@@ -10293,7 +10293,7 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
   transform: scale(0);
 }
 .pxl-accordion3 .pxl-accordion--content {
-  padding: 28px 85px 48px 138px;
+  padding: 19px 85px 44px 138px;
 }
 .pxl-accordion4 {
   display: flex;
@@ -12342,18 +12342,21 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
     justify-content: center;
   }
 }
+.pxl-counter1 .pxl-counter--number {
+  font-family: "Public Sans";
+  margin-bottom: 14px;
+}
 .pxl-counter1 .pxl-counter--value {
   color: inherit;
   font-weight: 400;
-  font-family: "Public Sans";
+  font-family: inherit;
   line-height: 1;
-  margin-bottom: 14px;
 }
 .pxl-counter1 .pxl-counter--suffix {
   font-size: 20px;
   color: inherit;
   font-weight: 400;
-  font-family: "Public Sans";
+  font-family: inherit;
 }
 .pxl-counter1 .pxl-counter--title {
   font-size: 16px;
@@ -13980,7 +13983,7 @@ body.single .pxl-breadcrumb li:not(:first-child):not(:last-child) {
 }
 .pxl-list1 .list-circle label {
   display: block;
-  padding-left: 24px;
+  padding-left: 18px;
   position: relative;
   margin-bottom: 25px;
 }
@@ -15110,7 +15113,7 @@ body.rtl .pxl-button-video1 .slider-video-icon i {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 18px;
 }
 .pxl-industries-list .pxl-industries-item {
   height: 65px;
@@ -25744,7 +25747,7 @@ body.rtl .widget_search .search-submit {
   width: 6px;
   height: 6px;
   border-radius: 3px;
-  background-color: #164ac8;
+  background-color: var(--primary-color);
   right: -3px;
   top: 20%;
   z-index: 2;
@@ -25765,17 +25768,17 @@ body.rtl .widget_search .search-submit {
   color: #fff;
   font-size: 36px;
   background-color: var(--primary-color);
-  margin-bottom: 20px;
+  margin-bottom: 28px;
 }
 .pxl-text-carousel5 .pxl-item--title {
   font-size: 23px;
   line-height: 40px;
   color: #111;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 .pxl-text-carousel5 .pxl-wrap-arrow {
   position: absolute;
-  width: calc(100% + 83px + 83px);
+  width: calc(100% + 80px + 80px);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

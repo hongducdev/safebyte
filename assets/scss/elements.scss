@@ -1016,7 +1016,7 @@ BLOG GRID
     }
 
     .pxl-accordion--inner {
-        padding: 30px 0;
+        padding: 24px 0;
         max-width: 628px;
         display: flex;
         flex-direction: column;
@@ -1050,14 +1050,14 @@ BLOG GRID
         font-weight: 500;
         background-color: #fff;
         @include border-radius(10px);
-        padding: 5px 30px 5px 24px;
+        padding: 9px 30px 5px 24px;
         position: relative;
         @include transition(all 0.3s linear 0s);
         display: flex;
         align-items: center;
         justify-content: space-between;
         .pxl-title--number {
-            margin-right: 16px;
+            margin-right: 9px;
         }
         .pxl-icon--action {
             opacity: 1;
@@ -1090,7 +1090,7 @@ BLOG GRID
     }
 
     .pxl-accordion--content {
-        padding: 28px 85px 48px 138px;
+        padding: 19px 85px 44px 138px;
     }
 }
 
@@ -3034,18 +3034,21 @@ BLOG GRID
             justify-content: center;
         }
     }
+    .pxl-counter--number {
+        font-family: "Public Sans";
+        margin-bottom: 14px;
+    }
     .pxl-counter--value {
         color: inherit;
         font-weight: 400;
-        font-family: "Public Sans";
+        font-family: inherit;
         line-height: 1;
-        margin-bottom: 14px;
     }
     .pxl-counter--suffix {
         font-size: 20px;
         color: inherit;
         font-weight: 400;
-        font-family: "Public Sans";
+        font-family: inherit;
     }
     .pxl-counter--title {
         font-size: 16px;
@@ -4541,7 +4544,7 @@ body.single .pxl-breadcrumb {
     .list-circle {
         label {
             display: block;
-            padding-left: 24px;
+            padding-left: 18px;
             position: relative;
             margin-bottom: 25px;
             &:before {
@@ -5660,7 +5663,7 @@ body.rtl {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 18px;
     .pxl-industries-item {
         height: 65px;
         border-radius: 32px;

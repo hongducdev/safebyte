@@ -62,7 +62,6 @@
                 'color-from' => safebyte()->get_opt('gradient_color2', ['from' => '#8c92f6'])['from'],
                 'color-to' => safebyte()->get_opt('gradient_color2', ['to' => '#f9d78f'])['to'],
             ],
-               
         ];
         return $configs[$value];
     }
@@ -97,7 +96,5 @@ if(!function_exists('safebyte_inline_styles')) {
         echo '}';
 
         return ob_get_clean();
-         
     }
 }
- 
