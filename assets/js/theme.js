@@ -1290,7 +1290,6 @@
 
         gsap.registerPlugin(SplitText, ScrollTrigger);
 
-        // split text
         const textSplit = new SplitText(headingScroll, {
             type: "words, chars",
         });
