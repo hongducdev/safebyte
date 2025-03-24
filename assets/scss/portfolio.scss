@@ -76,6 +76,12 @@ Portfolio Style
                 height: calc(100% - 30px);
                 padding: 25px 15px 15px 15px;
             }
+            @media screen and (max-width: 1440px) and (min-width: 1281px) {
+                inset: 15px;
+                padding: 25px 15px 15px 15px;
+                width: calc(100% - 30px);
+                height: calc(100% - 30px);
+            }
         }
 
         .pxl-post--category {
@@ -123,6 +129,14 @@ Portfolio Style
             font-family: "Public Sans";
             @media #{$max-sm} {
                 font-size: 14px;
+            }
+
+            @media #{$max-xxl} {
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
         }
 
@@ -465,6 +479,9 @@ Portfolio Style
 .pxl-portfolio-carousel1 {
     .pxl-inner-top {
         margin-bottom: 68px;
+        @media #{$max-md2} {
+            margin-bottom: 18px;
+        }
     }
     .pxl-swiper-container {
         padding: 0 15px;

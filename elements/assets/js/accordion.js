@@ -27,9 +27,15 @@
         // Custom for accordion 3
         var pxl_accordion_3 = $scope.find(".pxl-accordion3");
         var pxl_accordion_3_height = pxl_accordion_3.height();
-        pxl_accordion_3
-            .find(".pxl-accordion--steps")
-            .css("height", pxl_accordion_3_height);
+        if (window.matchMedia("(max-width: 767px)").matches) {
+            pxl_accordion_3
+                .find(".pxl-accordion--steps")
+                .css("height", "auto");
+        } else {
+            pxl_accordion_3
+                .find(".pxl-accordion--steps")
+                .css("height", pxl_accordion_3_height);
+        }
     };
     $(window).on("elementor/frontend/init", function () {
         elementorFrontend.hooks.addAction(

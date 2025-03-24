@@ -1012,7 +1012,12 @@ body.error404 {
     }
     .pxl-post--featured {
         position: relative;
+        height: 346px;
         @include border-radius(8px 8px 0 0);
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
     }
     .pxl-item--date {
         top: 12px;
@@ -1128,6 +1133,16 @@ body.error404 {
             i {
                 transform: rotate(180deg);
             }
+        }
+        @media #{$max-xl} {
+            position: static;
+            width: 100%;
+            justify-content: center;
+            margin-top: 50px;
+            top: 0;
+            left: 0;
+            @include transform(translate(0, 0));
+            column-gap: 30px;
         }
     }
 }

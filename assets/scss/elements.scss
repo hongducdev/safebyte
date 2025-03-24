@@ -926,6 +926,9 @@ BLOG GRID
             height: 100%;
             clip-path: polygon(40% 0, 100% 0, 100% 100%, 0% 100%);
         }
+        @media #{$max-xsx} {
+            padding: 16px 15px 15px;
+        }
     }
     .pxl-icon--action {
         i {
@@ -939,7 +942,7 @@ BLOG GRID
         background-color: #edf0f6;
         @include border-radius(0 0 8px 8px);
         @media #{$max-xsx} {
-            padding: 30px 20px;
+            padding: 20px 15px;
         }
     }
     .pxl-accordion--content-item {
@@ -969,6 +972,9 @@ BLOG GRID
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    @media #{$max-sm} {
+        flex-direction: column;
+    }
 
     .pxl-accordion--steps {
         position: sticky;
@@ -1021,6 +1027,9 @@ BLOG GRID
         display: flex;
         flex-direction: column;
         gap: 12px;
+        @media #{$max-sm} {
+            max-width: 100%;
+        }
     }
 
     .pxl--item {
@@ -1039,6 +1048,18 @@ BLOG GRID
                     opacity: 0;
                     @include transform(scale(0));
                 }
+                @media #{$max-xsx} {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding-top: 30px;
+                    padding-left: 15px;
+                }
+                @media #{$max-xsx} {
+                    .pxl-title--icon {
+                        position: static;
+                        margin-bottom: 20px;
+                    }
+                }
             }
         }
     }
@@ -1056,6 +1077,9 @@ BLOG GRID
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @media #{$max-xsx} {
+            padding: 9px 15px 5px 12px;
+        }
         .pxl-title--number {
             margin-right: 9px;
         }
@@ -1068,6 +1092,10 @@ BLOG GRID
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+        @media #{$max-xsx} {
+            font-size: 18px;
+            line-height: 40px;
         }
     }
 
@@ -1091,6 +1119,12 @@ BLOG GRID
 
     .pxl-accordion--content {
         padding: 19px 85px 44px 138px;
+        @media #{$max-xs} {
+            padding: 19px 45px 44px 138px;
+        }
+        @media #{$max-xsx} {
+            padding: 0 15px 44px 15px;
+        }
     }
 }
 
@@ -1101,6 +1135,21 @@ BLOG GRID
     .pxl--item {
         @include border-radius(8px);
         border: 1px solid #dcdcdc;
+        .pxl-icon--plus {
+            &:after {
+                opacity: 1;
+                @include transform(scale(1));
+                @include transition(all 0.3s linear 0s);
+            }
+        }
+        &.active {
+            .pxl-icon--plus {
+                &::after {
+                    opacity: 0;
+                    @include transform(scale(0));
+                }
+            }
+        }
     }
     .pxl-accordion--title {
         font-size: 18px;
@@ -1109,7 +1158,7 @@ BLOG GRID
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 20px 30px;
+        padding: 17px 30px;
     }
     .pxl-icon--action {
         display: flex;
@@ -1118,7 +1167,7 @@ BLOG GRID
     }
     .pxl-accordion--content {
         border-top: 1px solid #dcdcdc;
-        padding: 25px 0 40px 0;
+        padding: 19px 0 38px 0;
         margin: 0 30px;
     }
 }
@@ -3819,7 +3868,23 @@ BLOG GRID
 }
 
 .cf7-services {
+    p {
+        margin-bottom: 14px !important;
+    }
+    .wpcf7-form-control-wrap {
+        margin-bottom: 0;
+    }
+    .wpcf7-form-control {
+        height: 50px;
+    }
+    .pxl-select-higthlight {
+        height: 50px !important;
+    }
+    textarea {
+        height: 157px !important;
+    }
     .cf7-services-footer {
+        margin-top: 16px;
         .cf7-services-footer-col-1 {
             display: flex;
             align-items: center;
@@ -5707,6 +5772,9 @@ body.rtl {
         line-height: 26px;
         color: #0a1119;
         font-family: "GTWalsheimPro";
+        @media #{$max-sm} {
+            font-size: 13px;
+        }
     }
     .pxl-industries-view-all {
         width: 64px;

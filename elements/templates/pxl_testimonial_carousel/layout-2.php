@@ -69,7 +69,7 @@ if(isset($settings['testimonial']) && !empty($settings['testimonial']) && count(
                                             'class' => 'no-lazyload',
                                         ));
                                         $thumbnail = $img['thumbnail'];?>
-                                        <div class="pxl-item--avatar pxl-mr-18">
+                                        <div class="pxl-item--avatar pxl-mr-24">
                                             <?php echo wp_kses_post($thumbnail); ?>
                                         </div>
                                     <?php } ?>

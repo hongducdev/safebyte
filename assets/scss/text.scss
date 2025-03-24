@@ -354,6 +354,9 @@
         text-align: center;
         padding: 0 45px;
         position: relative;
+        @media #{$max-xsx} {
+            padding: 0;
+        }
     }
     .pxl-item--icon {
         width: 86px;
@@ -393,6 +396,16 @@
                     transform: rotate(180deg);
                 }
             }
+        }
+        @media #{$max-xl} {
+            width: 100%;
+            position: static;
+            margin-top: 30px;
+            top: 0;
+            left: 0;
+            transform: none;
+            justify-content: center;
+            column-gap: 30px;
         }
     }
 }

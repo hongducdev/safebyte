@@ -127,7 +127,12 @@ $widget->add_render_attribute( 'carousel', [
                                             <?php endif; ?>
                                             <?php if($show_category == 'true'): ?>
                                                 <div class="pxl-post--category">
-                                                    <?php the_terms( $post->ID, 'category', '', ', ' ); ?>
+                                                    <?php 
+                                                    $categories = get_the_terms($post->ID, 'category');
+                                                    if (!empty($categories)) {
+                                                        echo $categories[0]->name;
+                                                    }
+                                                    ?>
                                                 </div>
                                             <?php endif; ?>
                                             <?php if($show_comment) : ?>
