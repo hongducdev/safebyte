@@ -7402,7 +7402,7 @@ body.error404 #pxl-main {
 }
 .pxl-post-carousel2 .post-readmore a i {
   color: var(--primary-color);
-  font-size: 24px;
+  font-size: 20px;
   -webkit-transform: translateX(0);
   -khtml-transform: translateX(0);
   -moz-transform: translateX(0);
@@ -7467,6 +7467,151 @@ body.error404 #pxl-main {
   transition: all 0.3s linear 0s;
 }
 .pxl-post-carousel2 .pxl-post--footer .view-all-btn:hover {
+  background-color: var(--secondary-color);
+}
+.pxl-blog-grid-layout1 .pxl-inner-content {
+  padding: 40px 0;
+}
+.pxl-blog-grid-layout1 .pxl-inner-content:first-child, .pxl-blog-grid-layout1 .pxl-inner-content + .list-item {
+  border-top: 1px solid #dadee2;
+}
+.pxl-blog-grid-layout1 .pxl-inner-content:last-child {
+  border-bottom: 1px solid #dadee2;
+}
+.pxl-blog-grid-layout1 .pxl-inner-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.pxl-blog-grid-layout1 .pxl-item-col-1 {
+  max-width: 320px;
+}
+.pxl-blog-grid-layout1 .pxl-item--title {
+  font-size: 23px;
+  line-height: 33px;
+  margin-bottom: 15px;
+}
+.pxl-blog-grid-layout1 .pxl-item-date {
+  font-size: 15px;
+  color: #111;
+  font-family: "GTWalsheimPro";
+}
+.pxl-blog-grid-layout1 .pxl-item-meta {
+  font-size: 15px;
+  color: var(--primary-color);
+}
+.pxl-blog-grid-layout1 .pxl-item-category a {
+  position: relative;
+}
+.pxl-blog-grid-layout1 .pxl-item-category a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--primary-color);
+  -webkit-transition: all 0.3s linear 0s;
+  -khtml-transition: all 0.3s linear 0s;
+  -moz-transition: all 0.3s linear 0s;
+  -ms-transition: all 0.3s linear 0s;
+  -o-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
+  width: 0;
+}
+.pxl-blog-grid-layout1 .pxl-item-category a:hover:after {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+.pxl-blog-grid-layout1 .pxl-item-excerpt {
+  max-width: 400px;
+}
+.pxl-blog-grid-layout1 .post-readmore {
+  margin-top: 20px;
+}
+.pxl-blog-grid-layout1 .post-readmore a {
+  padding: 0;
+  margin: 0;
+  -webkit-border-radius: 0;
+  -khtml-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  font-size: 17px;
+  color: #111;
+  display: inline-flex;
+  align-items: center;
+  font-family: "GTWalsheimPro";
+  gap: 15px;
+}
+.pxl-blog-grid-layout1 .post-readmore a i {
+  color: var(--primary-color);
+  font-size: 20px;
+  -webkit-transform: translateX(0);
+  -khtml-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: all 0.3s linear 0s;
+  -khtml-transition: all 0.3s linear 0s;
+  -moz-transition: all 0.3s linear 0s;
+  -ms-transition: all 0.3s linear 0s;
+  -o-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
+}
+.pxl-blog-grid-layout1 .post-readmore a:hover i {
+  -webkit-transform: translateX(10px);
+  -khtml-transform: translateX(10px);
+  -moz-transform: translateX(10px);
+  -ms-transform: translateX(10px);
+  -o-transform: translateX(10px);
+  transform: translateX(10px);
+}
+.pxl-blog-grid-layout1 .pxl-item-col-3 {
+  display: flex;
+  justify-content: flex-end;
+}
+.pxl-blog-grid-layout1 .pxl-item-col-3 .item--featured {
+  -webkit-border-radius: 8px;
+  -khtml-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+}
+.pxl-blog-grid-layout1 .pxl-item-col-3 img {
+  -webkit-border-radius: 8px;
+  -khtml-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+}
+.pxl-blog-grid-layout1 .pxl-post--footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.pxl-blog-grid-layout1 .pxl-post--footer .pxl-swiper-pagination-bullets {
+  margin: 0;
+  margin-left: 7px;
+}
+.pxl-blog-grid-layout1 .pxl-post--footer .view-all-btn {
+  margin-left: auto;
+  justify-content: end;
+  color: #fff;
+  background-color: var(--primary-color);
+  -webkit-transition: all 0.3s linear 0s;
+  -khtml-transition: all 0.3s linear 0s;
+  -moz-transition: all 0.3s linear 0s;
+  -ms-transition: all 0.3s linear 0s;
+  -o-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
+}
+.pxl-blog-grid-layout1 .pxl-post--footer .view-all-btn:hover {
   background-color: var(--secondary-color);
 }
 @media screen and (min-width: 1201px) {
@@ -12615,7 +12760,7 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
   text-align: center;
 }
 .pxl-pricing1 {
-  padding: 45px 13px 30px 13px;
+  padding: 41px 13px 50px 13px;
   border-radius: 8px;
   background-color: #fff;
   border: 1px solid #cdcdcd;
@@ -12637,8 +12782,8 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
   text-transform: uppercase;
   color: #111;
   font-family: "GTWalsheimPro";
-  padding-bottom: 20px;
-  margin-bottom: 35px;
+  padding-bottom: 15px;
+  margin-bottom: 32px;
   border-bottom: 1px solid #cdcdcd;
   margin-left: 23px;
   margin-right: 23px;
@@ -12647,7 +12792,7 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
   margin-left: 23px;
   margin-right: 23px;
 }
@@ -12677,7 +12822,7 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
   color: #666;
   font-weight: 400;
   font-family: "Public Sans";
-  margin-bottom: 34px;
+  margin-bottom: 32px;
   margin-left: 23px;
   margin-right: 23px;
 }
@@ -12740,13 +12885,13 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
 }
 .pxl-pricing1 ul.pxl-pricing--feature {
   list-style: none;
-  margin: 36px 23px;
+  margin: 33px 27px;
 }
 .pxl-pricing1 ul.pxl-pricing--feature li {
   font-size: 15px;
   font-family: "GTWalsheimPro";
   color: #848b94;
-  margin-bottom: 20px;
+  margin-bottom: 11px;
 }
 .pxl-pricing1 ul.pxl-pricing--feature li:last-child {
   margin-bottom: 0;
@@ -12759,10 +12904,12 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
   font-size: 12px;
 }
 .pxl-pricing1 .pxl-pricing--button {
-  margin-left: 23px;
+  margin-left: 26px;
   margin-right: 23px;
+  padding-top: 3px;
 }
 .pxl-pricing1 .pxl-pricing--button .btn {
+  padding: 0 30px;
   background-color: var(--primary-color);
   color: #fff;
   -webkit-transition: 0.3s all linear 0s;
@@ -13409,6 +13556,9 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
 .cf7-home-2 .col-xl-6:nth-child(2) {
   padding-left: 7.5px;
 }
+.cf7-home-2 .wpcf7-form-control-wrap {
+  margin-bottom: 12px;
+}
 .cf7-home-2 input.wpcf7-form-control, .cf7-home-2 select.wpcf7-form-control {
   height: 50px;
   padding: 6px 17px;
@@ -13429,9 +13579,13 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
   height: 50px;
 }
 .cf7-home-2 p {
-  margin-bottom: 15px;
+  margin-bottom: 0;
+}
+.cf7-home-2 textarea {
+  height: 158px;
 }
 .cf7-home-2 button {
+  margin-top: 12px;
   width: 100%;
   border-radius: 8px !important;
   opacity: 1 !important;
@@ -14050,6 +14204,9 @@ body.single .pxl-breadcrumb li:not(:first-child):not(:last-child) {
   align-items: center;
   flex-wrap: wrap;
   gap: 34px;
+}
+.pxl-list1.pxl-list-row .pxl--item {
+  margin-right: 0;
 }
 .pxl-list1.pxl-list-row .pxl--item + .pxl--item {
   margin-top: 0;
@@ -20501,7 +20658,7 @@ body #yith-quick-view-modal #yith-quick-view-content .entry-summary .quantity .q
   -o-border-radius: 8px;
   border-radius: 8px;
   border: 1px solid #cdcdcd;
-  padding: 50px 38px 45px 38px;
+  padding: 48px 36px 38px 35px;
   -webkit-transition: all 0.3s linear 0ms;
   -khtml-transition: all 0.3s linear 0ms;
   -moz-transition: all 0.3s linear 0ms;
@@ -20524,9 +20681,10 @@ body #yith-quick-view-modal #yith-quick-view-content .entry-summary .quantity .q
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 48px;
+  margin-bottom: 40px;
 }
 .pxl-service-carousel1 .pxl-post--header .pxl-post--icon {
+  margin-left: 2px;
   width: 87px;
   height: 87px;
   border-radius: 8px;
@@ -20557,8 +20715,7 @@ body #yith-quick-view-modal #yith-quick-view-content .entry-summary .quantity .q
   line-height: 1.6;
   color: #111;
   font-weight: 500;
-  font-family: "GTWalsheimPro";
-  margin-bottom: 25px;
+  margin-bottom: 17px;
   -webkit-transition: all 0.3s linear 0ms;
   -khtml-transition: all 0.3s linear 0ms;
   -moz-transition: all 0.3s linear 0ms;
@@ -20574,13 +20731,12 @@ body #yith-quick-view-modal #yith-quick-view-content .entry-summary .quantity .q
   line-height: 1.667;
   color: #666;
   font-weight: 400;
-  font-family: "Public Sans";
 }
 .pxl-service-carousel1 .pxl-item--divider {
   background-color: #d3d5d6;
   width: 100%;
   height: 1px;
-  margin: 30px 0;
+  margin: 27px 0;
 }
 .pxl-service-carousel1 .pxl-post--readmore a {
   display: flex;
@@ -20593,7 +20749,7 @@ body #yith-quick-view-modal #yith-quick-view-content .entry-summary .quantity .q
 }
 .pxl-service-carousel1 .pxl-post--readmore a i {
   color: var(--primary-color);
-  font-size: 22px;
+  font-size: 20px;
   transform: translateX(0);
   -webkit-transition: all 0.3s linear 0ms;
   -khtml-transition: all 0.3s linear 0ms;
@@ -20606,12 +20762,12 @@ body #yith-quick-view-modal #yith-quick-view-content .entry-summary .quantity .q
   transform: translateX(5px);
 }
 .pxl-service-carousel1 .pxl-swiper-arrow-wrap {
-  max-width: 1290px;
+  max-width: 1305px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: end;
-  margin-bottom: 110px;
+  margin-bottom: 78px;
 }
 .pxl-service-carousel1 .pxl-swiper-arrow-wrap .pxl-swiper-arrow-prev i {
   transform: rotateY(180deg);
@@ -23225,6 +23381,13 @@ button:not(.btn):hover, .button:not(.btn):hover, input[type="submit"]:not(.btn):
 .pxl-testimonial-carousel1.style-2 {
   --x: 61px;
 }
+.pxl-testimonial-carousel1.style-2 .pxl-item--desc {
+  font-size: 20px;
+  margin-bottom: 32px;
+}
+.pxl-testimonial-carousel1.style-2 .pxl-item--header {
+  margin-bottom: 3px;
+}
 .pxl-testimonial-carousel1.style-2 .pxl-swiper-arrow-wrap {
   margin-top: calc(-1 * var(--x));
   justify-content: end;
@@ -25830,7 +25993,7 @@ body.rtl .widget_search .search-submit {
 .pxl-text-carousel4 .pxl-item--header {
   width: 100%;
   position: relative;
-  margin-bottom: 32px;
+  margin-bottom: 29px;
 }
 .pxl-text-carousel4 .pxl-item--header:before {
   content: "\F110";
@@ -25843,7 +26006,7 @@ body.rtl .widget_search .search-submit {
   color: #fff;
 }
 .pxl-text-carousel4 .pxl-item--step {
-  height: 33px;
+  height: 30px;
   display: inline-flex;
   align-items: center;
   justify-content: center;

@@ -56,8 +56,7 @@ $num_words = $widget->get_setting('num_words');
 
 $opts = [
     'slide_direction'               => 'horizontal',
-    'slide_percolumn'               => 1,
-    'slide_percolumnfill'           => 1,
+    'slide_percolumn'               => 3,
     'slide_mode'                    => 'slide',
     'slides_to_show'                => $col_xl,
     'slides_to_show_xxl'            => $col_xxl,  
@@ -66,7 +65,6 @@ $opts = [
     'slides_to_show_sm'             => (int)$col_sm, 
     'slides_to_show_xs'             => (int)$col_xs,
     'slides_to_scroll'              => (int)$slides_to_scroll,
-    'slide_percolumn'               => 3,
     'slides_gutter'                 => 30,
     'arrow'                         => (bool)$arrows,
     'pagination'                    => (bool)$pagination,
@@ -77,8 +75,9 @@ $opts = [
     'delay'                         => (int)$autoplay_speed,
     'loop'                          => (bool)$infinite,
     'speed'                         => (int)$speed,
-    'slide_percolumn_fill'          => "column"
 ];
+
+var_dump($opts);
 
 $widget->add_render_attribute('carousel', [
     'class'         => 'pxl-swiper-container',
@@ -131,8 +130,14 @@ $widget->add_render_attribute('carousel', [
                                     <?php if ($show_button == 'true'): ?>
                                         <div class="post-readmore ">
                                             <a href="<?php echo esc_url(get_permalink($post->ID)); ?>">
-                                                <span class="pxl-button-text"><?php echo safebyte_html($button_text); ?></span>
-                                                <i class="flaticon flaticon-right-arrow"></i>
+                                                <span class="pxl-button-text">
+                                                    <?php if(!empty($button_text)) {
+                                                        echo esc_attr($button_text);
+                                                    } else {
+                                                        echo esc_html__('Continue Reading', 'safebyte');
+                                                    } ?>
+                                                </span>
+                                                <i class="flaticon flaticon-right-arrow-long"></i>
                                             </a>
                                         </div>
                                     <?php endif; ?>

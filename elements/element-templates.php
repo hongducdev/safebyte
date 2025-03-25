@@ -45,7 +45,7 @@ function safebyte_get_post_grid_layout1($posts = [], $settings = [])
 {
     extract($settings);
 
-    $images_size = !empty($img_size) ? $img_size : '600x438';
+    $images_size = !empty($img_size) ? $img_size : '375x168';
 
     if (is_array($posts)):
         foreach ($posts as $key => $post):
@@ -78,64 +78,66 @@ function safebyte_get_post_grid_layout1($posts = [], $settings = [])
                 $filter_class = pxl_get_term_of_post_to_class($post->ID, array_unique($tax));
             else
                 $filter_class = '';
-            $current_user = wp_get_current_user();
-            $post_video_link = get_post_meta($post->ID, 'post_video_link', true); ?>
+            ?>
             <div class="<?php echo esc_attr($item_class . ' ' . $filter_class); ?>">
-                <div class="pxl-post--inner <?php echo esc_attr($pxl_animate); ?>" data-wow-duration="1.2s">
-                    <?php if (has_post_thumbnail($post->ID) && wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), false)):
-                        $img_id = get_post_thumbnail_id($post->ID);
-                        $img          = pxl_get_image_by_size(array(
-                            'attach_id'  => $img_id,
-                            'thumb_size' => $images_size
-                        ));
-                        $thumbnail    = $img['thumbnail'];
-                    ?>
-                        <div class="pxl-post--featured hover-imge-effect2">
-                            <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo wp_kses_post($thumbnail); ?></a>
-                            <?php if (!empty($post_video_link)) : ?>
-                                <a href="<?php echo esc_url($post_video_link); ?>" class="post-button-video pxl-action-popup"><i class="caseicon-play1"></i></a>
+                <div class="pxl-inner-content <?php echo esc_attr($pxl_animate); ?>" data-wow-duration="1.2s">
+                    <div class="pxl-item-col-1">
+                        <h3 class="pxl-item--title"><a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a></h3>
+                        <span class="pxl-item-date"><?php echo get_the_date('d M Y', $post->ID); ?></span>
+                        <div class="pxl-item-meta">
+                            <?php if ($show_author == 'true') : ?>
+                                <span class="pxl-item-author">
+                                    <?php echo esc_html__('By', 'safebyte'); ?>&nbsp;<?php the_author_posts_link(); ?>
+                                </span>
+                            <?php endif; ?>
+                            <span>/</span>
+                            <?php if ($show_category == 'true') : ?>
+                                <span class="pxl-item-category">
+                                    <?php the_terms($post->ID, 'category', '', ', ', ''); ?>
+                                </span>
                             <?php endif; ?>
                         </div>
-                    <?php endif; ?>
-                    <h3 class="pxl-post--title"><a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a></h3>
-                    <div class="pxl-post--meta">
-                        <?php if ($show_author == 'true'): ?>
-                            <div class="pxl-post--author pxl-mr-10">
-                                <i class="flaticon-user text-gradient pxl-mr-7"></i>
-                                <?php echo esc_html__('by', 'safebyte'); ?>&nbsp;<?php echo esc_attr($current_user->user_login); ?>
-                            </div>
-                        <?php endif; ?>
-                        <?php if ($show_comment) : ?>
-                            <div class="pxl-item--comment pxl-mr-10">
-                                <i class="flaticon-chat text-gradient pxl-mr-7"></i>
-                                <a href="<?php echo esc_url(get_permalink($post->ID)); ?>#comments">
-                                    <?php echo comments_number(esc_html__('No Comments', 'safebyte'), esc_html__('1 Comment', 'safebyte'), esc_html__('% Comments', 'safebyte')); ?>
+                    </div>
+                    <div class="pxl-item-col-2">
+                        <div class="pxl-item-excerpt">
+                            <?php if (!empty($post->post_excerpt)) {
+                                echo wp_trim_words($post->post_excerpt, $num_words, null);
+                            } else {
+                                $content = strip_shortcodes($post->post_content);
+                                $content = apply_filters('the_content', $content);
+                                $content = str_replace(']]>', ']]&gt;', $content);
+                                echo wp_trim_words($content, $num_words, null);
+                            }
+                            ?>
+                        </div>
+                        <?php if ($show_button == 'true'): ?>
+                            <div class="post-readmore ">
+                                <a href="<?php echo esc_url(get_permalink($post->ID)); ?>">
+                                    <span class="pxl-button-text">
+                                        <?php if(!empty($button_text)) {
+                                            echo esc_attr($button_text);
+                                        } else {
+                                            echo esc_html__('Continue Reading', 'safebyte');
+                                        } ?>
+                                    </span>
+                                    <i class="flaticon flaticon-right-arrow-long"></i>
                                 </a>
                             </div>
                         <?php endif; ?>
-                        <?php if ($show_date == 'true'): ?>
-                            <div class="pxl-post--date pxl-mr-10">
-                                <i class="flaticon-calendar text-gradient pxl-mr-7"></i>
-                                <?php echo get_the_date('d M', $post->ID); ?>/<?php echo get_the_date('y', $post->ID); ?>
+                    </div>
+                    <div class="pxl-item-col-3">
+                        <?php if (has_post_thumbnail($post->ID) && wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), false)):
+                            $img_id = get_post_thumbnail_id($post->ID);
+                            $img          = pxl_get_image_by_size(array(
+                                'attach_id'  => $img_id,
+                                'thumb_size' => $images_size
+                            ));
+                            $thumbnail    = $img['thumbnail']; ?>
+                            <div class="item--featured hover-imge-effect2">
+                                <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo wp_kses_post($thumbnail); ?></a>
                             </div>
                         <?php endif; ?>
                     </div>
-                    <?php if ($show_excerpt == 'true'): ?>
-                        <div class="pxl-post--content">
-                            <?php echo wp_trim_words($post->post_excerpt, $num_words, $more = null); ?>
-                        </div>
-                    <?php endif; ?>
-                    <?php if ($show_button == 'true') : ?>
-                        <div class="pxl-post--button">
-                            <a class="btn" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
-                                <?php if (!empty($button_text)) {
-                                    echo esc_attr($button_text);
-                                } else {
-                                    echo esc_html__('Read More', 'safebyte');
-                                } ?>
-                            </a>
-                        </div>
-                    <?php endif; ?>
                 </div>
             </div>
             <?php

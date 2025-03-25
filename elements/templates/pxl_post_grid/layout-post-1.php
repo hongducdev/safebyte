@@ -40,7 +40,7 @@ $layout = $widget->get_setting('layout_'.$post_type, 'post-1');
 
 $show_date = $widget->get_setting('show_date');
 $show_author = $widget->get_setting('show_author');
-$show_comment = $widget->get_setting('show_comment');
+$show_category = $widget->get_setting('show_category');
 $show_button = $widget->get_setting('show_button');
 $button_text = $widget->get_setting('button_text');
 $show_excerpt = $widget->get_setting('show_excerpt');
@@ -73,7 +73,7 @@ $load_more = array(
     'col_xs'          => $col_xs,
     'pagination_type' => $pagination_type,
     'show_date'       => $show_date,
-    'show_comment'    => $show_comment,
+    'show_category'   => $show_category,
     'show_author'     => $show_author,
     'show_button'     => $show_button,
     'button_text'     => $button_text,
@@ -86,7 +86,7 @@ $load_more = array(
 
 $wrap_attrs = [
     'id'               => $html_id,
-    'class'            => trim('pxl-grid pxl-blog-grid pxl-blog-grid-layout1 pxl-blog-style1'),
+    'class'            => trim('pxl-grid pxl-blog-grid pxl-blog-grid-layout1'),
     'data-start-page'  => $paged,
     'data-max-pages'   => $max,
     'data-total'       => $total,
@@ -122,9 +122,8 @@ if( count($posts) <= 0){
     <?php endif; ?>
 
     <div class="<?php echo esc_attr($grid_class); ?>" data-gutter="15">
-        <?php safebyte_get_post_grid($posts, $load_more); ?>
         <div class="grid-sizer <?php echo esc_attr($grid_sizer); ?>"></div>
-        
+        <?php safebyte_get_post_grid($posts, $load_more); ?>
     </div>
     <?php if ($pagination_type == 'pagination') { ?>
         <div class="pxl-grid-pagination">

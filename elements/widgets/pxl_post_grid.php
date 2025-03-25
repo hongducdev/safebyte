@@ -367,7 +367,7 @@ pxl_add_custom_widget(
                                     [
                                         'terms' => [
                                             ['name' => 'post_type', 'operator' => '==', 'value' => 'post'],
-                                            ['name' => 'layout_post', 'operator' => 'in', 'value' => ['post-n']]
+                                            ['name' => 'layout_post', 'operator' => 'in', 'value' => ['post-1']]
                                         ]
                                     ],
                                     [
@@ -376,23 +376,6 @@ pxl_add_custom_widget(
                                             ['name' => 'layout_portfolio', 'operator' => 'in', 'value' => ['portfolio-1','portfolio-2', 'portfolio-3']]
                                         ]
                                     ]
-                                ],
-                            ]
-                        ),
-                        array(
-                            'name' => 'show_comment',
-                            'label' => esc_html__('Show Comment', 'safebyte' ),
-                            'type' => \Elementor\Controls_Manager::SWITCHER,
-                            'default' => 'true',
-                            'conditions' => [
-                                'relation' => 'or',
-                                'terms' => [
-                                    [
-                                        'terms' => [
-                                            ['name' => 'post_type', 'operator' => '==', 'value' => 'post'],
-                                            ['name' => 'layout_post', 'operator' => 'in', 'value' => ['post-1']]
-                                        ]
-                                    ],
                                 ],
                             ]
                         ),

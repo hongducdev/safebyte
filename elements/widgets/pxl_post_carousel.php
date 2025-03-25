@@ -9,6 +9,7 @@ pxl_add_custom_widget(
         'scripts' => array(
             'swiper',
             'pxl-swiper',
+            'carousel',
         ),
         'params' => array(
             'sections' => array(

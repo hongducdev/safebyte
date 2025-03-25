@@ -3256,7 +3256,7 @@ BLOG GRID
 
 // Case Pricing
 .pxl-pricing1 {
-    padding: 45px 13px 30px 13px;
+    padding: 41px 13px 50px 13px;
     border-radius: 8px;
     background-color: #fff;
     border: 1px solid #cdcdcd;
@@ -3281,8 +3281,8 @@ BLOG GRID
         text-transform: uppercase;
         color: #111111;
         font-family: "GTWalsheimPro";
-        padding-bottom: 20px;
-        margin-bottom: 35px;
+        padding-bottom: 15px;
+        margin-bottom: 32px;
         border-bottom: 1px solid #cdcdcd;
         margin-left: 23px;
         margin-right: 23px;
@@ -3291,7 +3291,7 @@ BLOG GRID
         display: flex;
         align-items: center;
         gap: 16px;
-        margin-bottom: 18px;
+        margin-bottom: 16px;
         margin-left: 23px;
         margin-right: 23px;
         .pxl-pricing--price {
@@ -3321,7 +3321,7 @@ BLOG GRID
         color: #666666;
         font-weight: 400;
         font-family: "Public Sans";
-        margin-bottom: 34px;
+        margin-bottom: 32px;
         margin-left: 23px;
         margin-right: 23px;
     }
@@ -3359,12 +3359,12 @@ BLOG GRID
     }
     ul.pxl-pricing--feature {
         list-style: none;
-        margin: 36px 23px;
+        margin: 33px 27px;
         li {
             font-size: 15px;
             font-family: "GTWalsheimPro";
             color: #848b94;
-            margin-bottom: 20px;
+            margin-bottom: 11px;
             &:last-child {
                 margin-bottom: 0;
             }
@@ -3378,9 +3378,11 @@ BLOG GRID
         }
     }
     .pxl-pricing--button {
-        margin-left: 23px;
+        margin-left: 26px;
         margin-right: 23px;
+        padding-top: 3px;
         .btn {
+            padding: 0 30px;
             background-color: $primary_color;
             color: #fff;
             @include transition(0.3s all linear 0s);
@@ -3970,6 +3972,9 @@ BLOG GRID
             padding-left: 7.5px;
         }
     }
+    .wpcf7-form-control-wrap {
+        margin-bottom: 12px;
+    }
     input.wpcf7-form-control,
     select.wpcf7-form-control {
         height: 50px;
@@ -3995,9 +4000,13 @@ BLOG GRID
         height: 50px;
     }
     p {
-        margin-bottom: 15px;
+        margin-bottom: 0;
+    }
+    textarea {
+        height: 158px;
     }
     button {
+        margin-top: 12px;
         width: 100%;
         border-radius: 8px !important;
         opacity: 1 !important;
@@ -4575,6 +4584,7 @@ body.single .pxl-breadcrumb {
         flex-wrap: wrap;
         gap: 34px;
         .pxl--item {
+            margin-right: 0;
             + .pxl--item {
                 margin-top: 0;
             }

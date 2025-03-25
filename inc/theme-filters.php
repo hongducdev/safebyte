@@ -456,7 +456,7 @@ function safebyte_tax_options_register( $metabox ) {
 /* Switch Swiper Version  */
 add_filter( 'pxl-swiper-version-active', 'safebyte_set_swiper_version_active' );
 function safebyte_set_swiper_version_active($version){
-  $version = '8.4.5'; //5.3.6, 8.4.5, 10.1.0
+  $version = '10.1.0'; //5.3.6, 8.4.5, 10.1.0
   return $version;
 }
 

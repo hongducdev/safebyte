@@ -152,7 +152,7 @@ pxl_add_custom_widget(
                                     ],
                                 ],
                                 'selectors' => [
-                                    '{{WRAPPER}} .pxl-list .pxl--item' => 'margin-right: {{SIZE}}{{UNIT}};',
+                                    '{{WRAPPER}} .pxl-list.pxl-list-row' => 'gap: {{SIZE}}{{UNIT}} !important;',
                                 ],
                                 'condition' => [
                                     'list_direction' => 'row',

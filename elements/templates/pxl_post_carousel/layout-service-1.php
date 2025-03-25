@@ -146,7 +146,7 @@ $widget->add_render_attribute( 'carousel', [
                                         <div class="pxl-post--readmore">
                                             <a href="<?php if(!empty($service_external_link)) { echo esc_url($service_external_link); } else { echo esc_url(get_permalink( $post->ID )); } ?>">
                                                 <?php echo esc_html__(!empty($button_text) ? $button_text : 'Read More', 'safebyte'); ?>
-                                                <i class="flaticon-right-arrow rtl-reverse"></i>
+                                                <i class="flaticon-right-arrow-long rtl-reverse"></i>
                                             </a>
                                         </div>
                                     <?php endif; ?>

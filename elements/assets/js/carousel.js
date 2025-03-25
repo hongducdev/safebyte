@@ -50,6 +50,8 @@
             var numberOfSlides = $this.find(".pxl-swiper-slide").length;
             var settings = $this.find(".pxl-swiper-container").data().settings;
 
+            console.log(settings);
+
             var carousel_settings = {
                 direction: settings["slide_direction"],
                 effect: settings["slide_mode"],
@@ -61,7 +63,6 @@
                 spaceBetween: 0,
                 observer: true,
                 observeParents: true,
-                slidesPerColumnFill: settings["slide_percolumn_fill"],
                 navigation: {
                     nextEl: $this.find(".pxl-swiper-arrow-next")[0],
                     prevEl: $this.find(".pxl-swiper-arrow-prev")[0],

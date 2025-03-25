@@ -113,6 +113,13 @@ TESTIMONIALS GRID
 // Testimonial Carousel
 .pxl-testimonial-carousel1 {
     &.style-2 {
+        .pxl-item--desc {
+            font-size: 20px;
+            margin-bottom: 32px;
+        }
+        .pxl-item--header {
+            margin-bottom: 3px;
+        }
         --x: 61px;
         .pxl-swiper-arrow-wrap{
             margin-top: calc(-1 * var(--x));

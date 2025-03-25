@@ -1197,7 +1197,123 @@ body.error404 {
             gap: 15px;
             i {
                 color: $primary_color;
-                font-size: 24px;
+                font-size: 20px;
+                @include transform(translateX(0));
+                @include transition(all 0.3s linear 0s);
+            }
+            &:hover {
+                i {
+                    @include transform(translateX(10px));
+                }
+            }
+        }
+    }
+    .pxl-item-col-3 {
+        display: flex;
+        justify-content: flex-end;
+        .item--featured {
+            @include border-radius(8px);
+        }
+        img {
+            @include border-radius(8px);
+        }
+    }
+    .pxl-post--footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 50px;
+        .pxl-swiper-pagination-bullets {
+            margin: 0;
+            margin-left: 7px;
+        }
+        .view-all-btn {
+            margin-left: auto;
+            justify-content: end;
+            color: #fff;
+            background-color: $primary_color;
+            @include transition(all 0.3s linear 0s);
+            &:hover {
+                background-color: $secondary_color;
+            }
+        }
+    }
+}
+
+// Post Grid
+.pxl-blog-grid-layout1 {
+    .pxl-inner-content {
+        padding: 40px 0;
+        &:first-child,
+        + .list-item {
+            border-top: 1px solid #dadee2;
+        }
+        &:last-child {
+            border-bottom: 1px solid #dadee2;
+        }
+    }
+    .pxl-inner-content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .pxl-item-col-1 {
+        max-width: 320px;
+    }
+    .pxl-item--title {
+        font-size: 23px;
+        line-height: 33px;
+        margin-bottom: 15px;
+    }
+    .pxl-item-date {
+        font-size: 15px;
+        color: #111;
+        font-family: "GTWalsheimPro";
+    }
+    .pxl-item-meta {
+        font-size: 15px;
+        color: $primary_color;
+    }
+    .pxl-item-category {
+        a {
+            position: relative;
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 1px;
+                background-color: $primary_color;
+                @include transition(all 0.3s linear 0s);
+                width: 0;
+            }
+            &:hover {
+                &:after {
+                    width: 100%;
+                    left: 0;
+                    right: auto;
+                }
+            }
+        }
+    }
+    .pxl-item-excerpt {
+        max-width: 400px;
+    }
+    .post-readmore {
+        margin-top: 20px;
+        a {
+            padding: 0;
+            margin: 0;
+            @include border-radius(0);
+            font-size: 17px;
+            color: #111;
+            display: inline-flex;
+            align-items: center;
+            font-family: "GTWalsheimPro";
+            gap: 15px;
+            i {
+                color: $primary_color;
+                font-size: 20px;
                 @include transform(translateX(0));
                 @include transition(all 0.3s linear 0s);
             }
