@@ -24,18 +24,6 @@
             setActiveItem(index);
         });
 
-        $(window).on("scroll", function () {
-            var scrollTop = $(window).scrollTop();
-            var windowHeight = $(window).height();
-
-            $images.each(function (index) {
-                var imageOffset = $(this).offset().top;
-                if (scrollTop + windowHeight * 0.6 > imageOffset) {
-                    setActiveItem(index);
-                }
-            });
-        });
-
         var currentIndex = 0;
         var autoScroll = setInterval(function () {
             currentIndex++;
@@ -44,21 +32,6 @@
             }
             setActiveItem(currentIndex);
         }, 3000);
-
-        $imageScroll.hover(
-            function () {
-                clearInterval(autoScroll);
-            },
-            function () {
-                autoScroll = setInterval(function () {
-                    currentIndex++;
-                    if (currentIndex >= $titles.length) {
-                        currentIndex = 0;
-                    }
-                    setActiveItem(currentIndex);
-                }, 3000);
-            }
-        );
 
         setActiveItem(0);
     };

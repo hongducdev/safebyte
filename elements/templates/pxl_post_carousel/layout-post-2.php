@@ -77,8 +77,6 @@ $opts = [
     'speed'                         => (int)$speed,
 ];
 
-var_dump($opts);
-
 $widget->add_render_attribute('carousel', [
     'class'         => 'pxl-swiper-container',
     'dir'           => is_rtl() ? 'rtl' : 'ltr',

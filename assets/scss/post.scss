@@ -1179,6 +1179,27 @@ body.error404 {
         font-size: 15px;
         color: $primary_color;
     }
+    .pxl-item-category {
+        a {
+            position: relative;
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 1px;
+                background-color: $primary_color;
+                @include transition(all 0.3s linear 0s);
+                width: 0;
+            }
+            &:hover {
+                &:after {
+                    width: 100%;
+                }
+            }
+        }
+    }
 
     .pxl-item-excerpt {
         max-width: 400px;
@@ -1235,6 +1256,40 @@ body.error404 {
             @include transition(all 0.3s linear 0s);
             &:hover {
                 background-color: $secondary_color;
+            }
+        }
+    }
+
+    @media #{$max-md2} {
+        .pxl-item--inner {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .pxl-item-col-3 {
+            order: 1;
+            width: 100%;
+            .item--featured {
+                width: 100%;
+                a {
+                    width: 100%;
+                }
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        .pxl-item-col-1 {
+            order: 2;
+            width: 100%;
+            max-width: 100%;
+        }
+        .pxl-item-col-2 {
+            order: 3;
+            width: 100%;
+            max-width: 100%;
+            .pxl-item-excerpt {
+                max-width: 100%;
             }
         }
     }

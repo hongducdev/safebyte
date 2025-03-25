@@ -140,6 +140,12 @@ TESTIMONIALS GRID
                 }
             }
         }
+        @media #{$max-xs} {
+            .pxl-swiper-arrow-wrap {
+                margin-top: 20px;
+                justify-content: center;
+            }
+        }
         .pxl-item--rating {
             i {
                 color: #fff;
@@ -173,6 +179,13 @@ TESTIMONIALS GRID
         font-family: "GTWalsheimPro";
         margin-bottom: 40px;
     }
+    @media #{$max-xs} {
+        .pxl-item--holder {
+            flex-direction: column;
+            gap: 15px;
+            text-align: center;
+        }
+    }
     .pxl-item--avatar {
         width: 61px;
         height: 61px;
@@ -183,12 +196,19 @@ TESTIMONIALS GRID
             object-fit: cover;
             @include border-radius(61px);
         }
+        @media #{$max-xs} {
+            margin-right: 0;
+        }
     }
     .pxl-item--header {
         display: flex;
         align-items: center;
         gap: 30px;
         margin-bottom: 10px;
+        @media #{$max-xs} {
+            gap: 10px;
+            flex-direction: column-reverse;
+        }
     }
     .pxl-item--title {
         font-size: 17px;
