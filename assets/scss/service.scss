@@ -6,6 +6,27 @@ Service Style
 --------------------------------------------------------------*/
 .pxl-service-carousel1 {
     --x: 30px;
+    &.style-2 {
+        .pxl-swiper-container {
+            padding: 0 15px;
+        }
+        .pxl-swiper-slide {
+            padding: 0;
+            + .pxl-swiper-slide {
+                .pxl-post--inner {
+                    border-left: 0;
+                }
+            }
+        }
+        .pxl-post--inner {
+            @include border-radius(0);
+            &:hover {
+                transform: none;
+                filter: none;
+                border-color: #cdcdcd;
+            }
+        }
+    }
     .pxl-swiper-container {
         padding-top: var(--x);
         padding-bottom: var(--x);
@@ -210,7 +231,7 @@ Service Style
         }
     }
     &__icon {
-        width:  var(--x);
+        width: var(--x);
         height: var(--x);
         border-radius: 8px;
         background-color: $primary_color;

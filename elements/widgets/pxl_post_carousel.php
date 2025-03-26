@@ -627,6 +627,16 @@ pxl_add_custom_widget(
                     'tab' => \Elementor\Controls_Manager::TAB_STYLE,
                     'controls' => array(
                         array(
+                            'name' => 'style_layout',
+                            'label' => esc_html__('Style', 'safebyte'),
+                            'type' => \Elementor\Controls_Manager::SELECT,
+                            'options' => [
+                                'style-1' => 'Style 1',
+                                'style-2' => 'Style 2',
+                            ],
+                            'default' => 'style-1',
+                        ),
+                        array(
                             'name' => 'title_color',
                             'label' => esc_html__('Color', 'safebyte'),
                             'type' => \Elementor\Controls_Manager::COLOR,

@@ -9530,6 +9530,12 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
   background-image: linear-gradient(#dee5f1 2px, transparent 2px), linear-gradient(to right, #dee5f1 2px, transparent 2px);
   background-size: 78px 78px;
 }
+.pxl-section-pattern-caro.section-1-home-4:before {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.06) 2px, transparent 2px), linear-gradient(to right, rgba(255, 255, 255, 0.06) 2px, transparent 2px);
+}
+.bg-parallax-home-4 .pxl-section-bg-parallax {
+  background-position: center center;
+}
 @media screen and (max-width: 777px) {
   .revslider-initialised .rv-description {
     font-size: 17px !important;
@@ -15733,6 +15739,40 @@ body.rtl .pxl-button-video1 .slider-video-icon i {
 .pxl-image-scroll .pxl-scroll-content .pxl-item-list ul li:last-child {
   margin-bottom: 0;
 }
+.pxl-client {
+  display: inline-flex;
+  align-items: center;
+  gap: 22px;
+}
+.pxl-client .pxl-client--images {
+  display: flex;
+  align-items: center;
+}
+.pxl-client .pxl-client--image {
+  width: 49px;
+  height: 49px;
+  -webkit-border-radius: 49px;
+  -khtml-border-radius: 49px;
+  -moz-border-radius: 49px;
+  -ms-border-radius: 49px;
+  -o-border-radius: 49px;
+  border-radius: 49px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.pxl-client .pxl-client--image + .pxl-client--image {
+  margin-left: -16px;
+}
+.pxl-client .pxl-client--content {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 17px;
+  font-family: "GTWalsheimPro";
+  color: #fff;
+  font-weight: 500;
+}
 .blockUI {
   position: absolute;
   top: 0;
@@ -20715,6 +20755,28 @@ body #yith-quick-view-modal #yith-quick-view-content .entry-summary .quantity .q
 .pxl-service-carousel1 {
   --x: 30px;
 }
+.pxl-service-carousel1.style-2 .pxl-swiper-container {
+  padding: 0 15px;
+}
+.pxl-service-carousel1.style-2 .pxl-swiper-slide {
+  padding: 0;
+}
+.pxl-service-carousel1.style-2 .pxl-swiper-slide + .pxl-swiper-slide .pxl-post--inner {
+  border-left: 0;
+}
+.pxl-service-carousel1.style-2 .pxl-post--inner {
+  -webkit-border-radius: 0;
+  -khtml-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+.pxl-service-carousel1.style-2 .pxl-post--inner:hover {
+  transform: none;
+  filter: none;
+  border-color: #cdcdcd;
+}
 .pxl-service-carousel1 .pxl-swiper-container {
   padding-top: var(--x);
   padding-bottom: var(--x);
@@ -22071,49 +22133,44 @@ body #yith-quick-view-modal #yith-quick-view-content .entry-summary .quantity .q
 .pxl-nav-menu.fr-horizontal-divider .pxl-menu-primary > li > a.pxl-onepage-active:before, .pxl-nav-menu.fr-horizontal-divider .pxl-menu-primary > li:hover > a:before, .pxl-nav-menu.fr-horizontal-divider .pxl-menu-primary > li.current_page_item > a:before, .pxl-nav-menu.fr-horizontal-divider .pxl-menu-primary > li.current-menu-item > a:before, .pxl-nav-menu.fr-horizontal-divider .pxl-menu-primary > li.current_page_ancestor > a:before, .pxl-nav-menu.fr-horizontal-divider .pxl-menu-primary > li.current-menu-ancestor > a:before {
   width: 100%;
 }
-.pxl-nav-menu.fr-icon-spacer {
+.pxl-nav-menu.fr-box-rounded {
   /* Sub Menu */
 }
-.pxl-nav-menu.fr-icon-spacer .menu-icon-spacer {
-  display: none;
-}
-.pxl-nav-menu.fr-icon-spacer .pxl-menu-primary > li {
-  margin: 0;
-}
-.pxl-nav-menu.fr-icon-spacer .pxl-menu-primary > li > a .pxl-menu-item-text {
-  display: inline-flex;
-  align-items: center;
-}
-.pxl-nav-menu.fr-icon-spacer .pxl-menu-primary > li > a .menu-icon-spacer {
-  display: inline-flex;
-  width: 9px;
-  height: 8px;
+.pxl-nav-menu.fr-box-rounded .pxl-menu-primary > li {
+  margin: 0 5px;
   position: relative;
-  color: var(--gradient-color-to);
-  margin: 0 24px;
 }
-@media screen and (max-width: 1400px) {
-  .pxl-nav-menu.fr-icon-spacer .pxl-menu-primary > li > a .menu-icon-spacer {
-    margin: 0 20px;
-  }
+.pxl-nav-menu.fr-box-rounded .pxl-menu-primary > li > a {
+  line-height: 36px;
+  padding: 0 25px;
+  border-radius: 18px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  z-index: 1;
 }
-.pxl-nav-menu.fr-icon-spacer .pxl-menu-primary > li > a .menu-icon-spacer i {
+.pxl-nav-menu.fr-box-rounded .pxl-menu-primary > li > a:before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
-  line-height: 1;
-  font-size: 8px;
-  font-weight: 400;
+  width: 100%;
+  height: 100%;
+  background-color: var(--secondary-color);
+  border-radius: 18px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: -1;
 }
-.pxl-nav-menu.fr-icon-spacer .pxl-menu-primary > li > a .menu-icon-spacer i:nth-child(1) {
-  margin-top: 1px;
+.pxl-nav-menu.fr-box-rounded .pxl-menu-primary > li > a.pxl-onepage-active, .pxl-nav-menu.fr-box-rounded .pxl-menu-primary > li:hover > a, .pxl-nav-menu.fr-box-rounded .pxl-menu-primary > li.current_page_item > a, .pxl-nav-menu.fr-box-rounded .pxl-menu-primary > li.current-menu-item > a, .pxl-nav-menu.fr-box-rounded .pxl-menu-primary > li.current_page_ancestor > a, .pxl-nav-menu.fr-box-rounded .pxl-menu-primary > li.current-menu-ancestor > a {
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(var, 0, 0, 0);
 }
-.pxl-nav-menu.fr-icon-spacer .pxl-menu-primary > li > a .menu-icon-spacer i:nth-child(2) {
-  transform: scaleY(-1);
-  margin-top: -1px;
+.pxl-nav-menu.fr-box-rounded .pxl-menu-primary > li > a.pxl-onepage-active:before, .pxl-nav-menu.fr-box-rounded .pxl-menu-primary > li:hover > a:before, .pxl-nav-menu.fr-box-rounded .pxl-menu-primary > li.current_page_item > a:before, .pxl-nav-menu.fr-box-rounded .pxl-menu-primary > li.current-menu-item > a:before, .pxl-nav-menu.fr-box-rounded .pxl-menu-primary > li.current_page_ancestor > a:before, .pxl-nav-menu.fr-box-rounded .pxl-menu-primary > li.current-menu-ancestor > a:before {
+  transform: translateX(0);
 }
-.pxl-nav-menu.fr-icon-spacer .pxl-menu-primary > li:last-child > a .menu-icon-spacer {
-  display: none;
+.pxl-nav-menu.fr-box-rounded .pxl-menu-primary > li:hover > a {
+  transform: translateY(-2px);
 }
 .pxl-nav-menu .sub-menu li.menu-item-has-children > a:after {
   content: "\f14d";

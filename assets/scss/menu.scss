@@ -89,10 +89,10 @@
         .pxl-menu-primary > li {
             margin: 0 32px 0 0;
             > a {
-				line-height: 116px;
+                line-height: 116px;
                 font-size: 17px;
                 color: #111111;
-				font-weight: 400;
+                font-weight: 400;
                 font-family: "GTWalsheimPro";
                 &:before {
                     content: "";
@@ -120,46 +120,49 @@
         }
     }
 
-    &.fr-icon-spacer {
-        .menu-icon-spacer {
-            display: none;
-        }
+    &.fr-box-rounded {
         .pxl-menu-primary > li {
-            margin: 0;
+            margin: 0 5px;
+            position: relative;
             > a {
-                .pxl-menu-item-text {
-                    display: inline-flex;
-                    align-items: center;
-                }
-                .menu-icon-spacer {
-                    display: inline-flex;
-                    width: 9px;
-                    height: 8px;
-                    position: relative;
-                    color: $gradient_color_to;
-                    margin: 0 24px;
-                    @media #{$max-xl} {
-                        margin: 0 20px;
-                    }
-                    i {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        line-height: 1;
-                        font-size: 8px;
-                        font-weight: 400;
-                        &:nth-child(1) {
-                            margin-top: 1px;
-                        }
-                        &:nth-child(2) {
-                            transform: scaleY(-1);
-                            margin-top: -1px;
-                        }
-                    }
+                line-height: 36px;
+                padding: 0 25px;
+                border-radius: 18px;
+                position: relative;
+                overflow: hidden;
+                transition: all 0.3s ease;
+                z-index: 1;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: $secondary_color;
+                    border-radius: 18px;
+                    transform: translateX(-100%);
+                    transition: transform 0.3s ease;
+                    z-index: -1;
                 }
             }
-            &:last-child > a .menu-icon-spacer {
-                display: none;
+            > a.pxl-onepage-active,
+            &:hover > a,
+            &.current_page_item > a,
+            &.current-menu-item > a,
+            &.current_page_ancestor > a,
+            &.current-menu-ancestor > a {
+                color: #fff;
+                box-shadow: 0 4px 15px rgba($secondary_color, 0.3);
+
+                &:before {
+                    transform: translateX(0);
+                }
+            }
+
+            &:hover > a {
+                transform: translateY(-2px);
             }
         }
     }

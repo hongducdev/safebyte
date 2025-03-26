@@ -41,5 +41,6 @@
         elementorFrontend.hooks.addAction( 'frontend/element_ready/pxl_counter.default', pxl_widget_counter_handler );
         elementorFrontend.hooks.addAction( 'frontend/element_ready/pxl_client_box.default', pxl_widget_counter_handler );
         elementorFrontend.hooks.addAction( 'frontend/element_ready/pxl_banner_box.default', pxl_widget_counter_handler );
+        elementorFrontend.hooks.addAction( 'frontend/element_ready/pxl_client.default', pxl_widget_counter_handler );
     } );
 } )( jQuery );

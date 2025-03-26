@@ -126,7 +126,7 @@ pxl_add_custom_widget(
                                 'fr-style-ha' => 'Hover Arrow',
                                 'fr-spacer-divider' => 'Vertical Divider',
                                 'fr-horizontal-divider' => 'Horizontal Divider',
-                                'fr-icon-spacer' => 'Icon Spacer',
+                                'fr-box-rounded' => 'Box Rounded',
                             ],
                             'default' => 'fr-style-default',
                             'condition' => [

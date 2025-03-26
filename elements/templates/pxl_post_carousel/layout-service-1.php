@@ -53,6 +53,7 @@ $show_button = $widget->get_setting('show_button');
 $button_text = $widget->get_setting('button_text');
 $show_excerpt = $widget->get_setting('show_excerpt');
 $num_words = $widget->get_setting('num_words', 25);
+$style_layout = $widget->get_setting('style_layout', 'style-1');
 
 $opts = [
     'slide_direction'               => 'horizontal',
@@ -85,7 +86,7 @@ $widget->add_render_attribute( 'carousel', [
 ]); ?>
 
 <?php if (is_array($posts)): ?>
-    <div class="pxl-swiper-slider pxl-service-carousel pxl-service-carousel1 pxl-service-style1" <?php if($drap !== false): ?>data-cursor-drap="<?php echo esc_html__('DRAG', 'safebyte'); ?>"<?php endif; ?>>
+    <div class="pxl-swiper-slider pxl-service-carousel pxl-service-carousel1 <?php echo esc_attr($style_layout); ?>" <?php if($drap !== false): ?>data-cursor-drap="<?php echo esc_html__('DRAG', 'safebyte'); ?>"<?php endif; ?>>
         <div class="pxl-carousel-inner">
 
             <?php if($arrows !== false): ?>
@@ -106,7 +107,6 @@ $widget->add_render_attribute( 'carousel', [
                         $index = array_search($post, $posts) + 1;
                         ?>
                         <div class="pxl-swiper-slide">
-
                             <div class="pxl-post--inner <?php echo esc_attr($pxl_animate); ?>">
                                 <div class="pxl-post--header">
                                     <div class="pxl-post--icon">

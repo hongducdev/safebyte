@@ -9,10 +9,6 @@ if($settings['hover_active_style'] == 'fr-style-ha') {
     $icon_style = '<i class="flaticon-up-right-arrow"></i>';
 }
 
-if($settings['hover_active_style'] == 'fr-icon-spacer') {
-    $icon_style = '<span class="menu-icon-spacer"><i class="flaticon-icon-menu"></i><i class="flaticon-icon-menu"></i></span>';
-}
-
 $arrow_parent_icon = 'pxl-arrow-'.$settings['show_arrow_parent'];
 
 if(!empty($settings['menu'])) { ?>

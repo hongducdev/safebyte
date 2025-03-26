@@ -147,7 +147,6 @@ pxl_add_custom_widget(
                             ],
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-counter' => 'text-align: {{VALUE}};',
-                                '{{WRAPPER}}.pxl-counter .pxl-counter__number' => 'justify-content: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -451,6 +450,29 @@ pxl_add_custom_widget(
                             'default' => 'shape-show',
                             'condition' => [
                                 'style' => 'style-1',
+                            ],
+                        ),
+                        array(
+                            'name' => 'align_number',
+                            'label' => esc_html__( 'Alignment', 'safebyte' ),
+                            'type' => \Elementor\Controls_Manager::CHOOSE,
+                            'control_type' => 'responsive',
+                            'options' => [
+                                'start' => [
+                                    'title' => esc_html__( 'Start', 'safebyte' ),
+                                    'icon' => 'eicon-text-align-left',
+                                ],
+                                'center' => [
+                                    'title' => esc_html__( 'Center', 'safebyte' ),
+                                    'icon' => 'eicon-text-align-center',
+                                ],
+                                'end' => [
+                                    'title' => esc_html__( 'End', 'safebyte' ),
+                                    'icon' => 'eicon-text-align-right',
+                                ],
+                            ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-counter .pxl-counter--number' => 'justify-content: {{VALUE}};',
                             ],
                         ),
                     ),

@@ -241,6 +241,18 @@ BLOG GRID
             linear-gradient(to right, #dee5f1 2px, transparent 2px);
         background-size: 78px 78px;
     }
+    &.section-1-home-4 {
+        &:before {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.06) 2px, transparent 2px),
+                linear-gradient(to right, rgba(255, 255, 255, 0.06) 2px, transparent 2px);
+        }
+    }
+}
+
+.bg-parallax-home-4 {
+    .pxl-section-bg-parallax {
+        background-position: center center;
+    }
 }
 
 // Slider Revolution
@@ -5961,5 +5973,36 @@ body.rtl {
                 }
             }
         }
+    }
+}
+
+// Case Counter
+.pxl-client {
+    display: inline-flex;
+    align-items: center;
+    gap: 22px;
+    .pxl-client--images {
+        display: flex;
+        align-items: center;
+    }
+    .pxl-client--image {
+        width: 49px;
+        height: 49px;
+        @include border-radius(49px);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        + .pxl-client--image {
+            margin-left: -16px;
+        }
+    }
+    .pxl-client--content {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 17px;
+        font-family: "GTWalsheimPro";
+        color: #fff;
+        font-weight: 500;
     }
 }
