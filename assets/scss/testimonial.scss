@@ -112,6 +112,69 @@ TESTIMONIALS GRID
 
 // Testimonial Carousel
 .pxl-testimonial-carousel1 {
+    &.style-3 {
+        position: relative;
+        &:after {
+            content: "\201D";
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: #111111;
+            font-family: "GTWalsheimPro", sans-serif;
+            font-size: 120px;
+            line-height: 1;
+            z-index: 5;
+        }
+        .pxl-item--desc,
+        .pxl-item--title,
+        .pxl-item--position,
+        .pxl-item--rating i {
+            color: #111111;
+        }
+        .pxl-item--desc {
+            padding-bottom: 35px;
+            padding-right: 70px;
+            margin-bottom: 40px;
+            position: relative;
+            &:before {
+                content: "";
+                position: absolute;
+                width: 420px;
+                height: 1px;
+                background-color: #d3d5d6;
+                bottom: 0;
+                left: 0;
+            }
+        }
+        --x: 61px;
+        .pxl-swiper-arrow-wrap {
+            margin-top: calc(-1 * var(--x));
+            justify-content: end;
+        }
+        .pxl-swiper-arrow {
+            width: var(--x);
+            height: var(--x);
+            @include border-radius(var(--x));
+            background-color: transparent;
+            border: 1px solid #cdcdcd;
+            color: #111111;
+            z-index: 5;
+            &:hover {
+                background-color: rgba($color: #fff, $alpha: 0.5);
+            }
+            &.pxl-swiper-arrow-prev {
+                i {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        @media #{$max-xs} {
+            .pxl-swiper-arrow-wrap {
+                margin-top: 20px;
+                justify-content: center;
+            }
+        }
+    }
     &.style-2 {
         .pxl-item--desc {
             font-size: 20px;
@@ -121,7 +184,7 @@ TESTIMONIALS GRID
             margin-bottom: 3px;
         }
         --x: 61px;
-        .pxl-swiper-arrow-wrap{
+        .pxl-swiper-arrow-wrap {
             margin-top: calc(-1 * var(--x));
             justify-content: end;
         }

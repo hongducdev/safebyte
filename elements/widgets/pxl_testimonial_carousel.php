@@ -223,7 +223,6 @@ pxl_add_custom_widget(
                         ),
                     ),
                 ),
-
                 array(
                     'name' => 'section_settings_carousel',
                     'label' => esc_html__('Settings', 'safebyte'),
@@ -237,6 +236,7 @@ pxl_add_custom_widget(
                             'options' => [
                                 'style-1' => 'Style 1',
                                 'style-2' => 'Style 2',
+                                'style-3' => 'Style 3',
                             ],
                         ),
                         array(

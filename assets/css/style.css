@@ -9490,6 +9490,15 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
 .counter-about-home-1 .pxl-counter--number {
   justify-content: center;
 }
+.counter-section-home-4 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.counter-section-home-4 svg {
+  width: 48px;
+  height: 48px;
+}
 .col-1-about-home-2 {
   position: relative;
 }
@@ -23504,6 +23513,69 @@ button:not(.btn):hover, .button:not(.btn):hover, input[type="submit"]:not(.btn):
   color: #666;
   font-size: 15px;
   font-family: "Public Sans";
+}
+.pxl-testimonial-carousel1.style-3 {
+  position: relative;
+  --x: 61px;
+}
+.pxl-testimonial-carousel1.style-3:after {
+  content: "\201D";
+  position: absolute;
+  top: -40px;
+  right: 0;
+  color: #111;
+  font-family: "GTWalsheimPro", sans-serif;
+  font-size: 120px;
+  line-height: 1;
+  z-index: 5;
+}
+.pxl-testimonial-carousel1.style-3 .pxl-item--desc, .pxl-testimonial-carousel1.style-3 .pxl-item--title, .pxl-testimonial-carousel1.style-3 .pxl-item--position, .pxl-testimonial-carousel1.style-3 .pxl-item--rating i {
+  color: #111;
+}
+.pxl-testimonial-carousel1.style-3 .pxl-item--desc {
+  padding-bottom: 35px;
+  padding-right: 70px;
+  margin-bottom: 40px;
+  position: relative;
+}
+.pxl-testimonial-carousel1.style-3 .pxl-item--desc:before {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 1px;
+  background-color: #d3d5d6;
+  bottom: 0;
+  left: 0;
+}
+.pxl-testimonial-carousel1.style-3 .pxl-swiper-arrow-wrap {
+  margin-top: calc(-1 * var(--x));
+  justify-content: end;
+}
+.pxl-testimonial-carousel1.style-3 .pxl-swiper-arrow {
+  width: var(--x);
+  height: var(--x);
+  -webkit-border-radius: var(--x);
+  -khtml-border-radius: var(--x);
+  -moz-border-radius: var(--x);
+  -ms-border-radius: var(--x);
+  -o-border-radius: var(--x);
+  border-radius: var(--x);
+  background-color: transparent;
+  border: 1px solid #cdcdcd;
+  color: #111;
+  z-index: 5;
+}
+.pxl-testimonial-carousel1.style-3 .pxl-swiper-arrow:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.pxl-testimonial-carousel1.style-3 .pxl-swiper-arrow.pxl-swiper-arrow-prev i {
+  transform: rotate(180deg);
+}
+@media screen and (max-width: 575px) {
+  .pxl-testimonial-carousel1.style-3 .pxl-swiper-arrow-wrap {
+    margin-top: 20px;
+    justify-content: center;
+  }
 }
 .pxl-testimonial-carousel1.style-2 {
   --x: 61px;
