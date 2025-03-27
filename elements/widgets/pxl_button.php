@@ -22,13 +22,7 @@ pxl_add_custom_widget(
                             'options' => [
                                 'btn-default' => esc_html__('Default', 'safebyte' ),
                                 'btn-text-underline' => esc_html__('Text Underline', 'safebyte' ),
-                                'btn-gradient-rotate' => esc_html__('Gradient Rotate', 'safebyte' ),
-                                'btn-gradient-horizontal' => esc_html__('Gradient Horizontal 1', 'safebyte' ),
-                                'btn-gradient-horizontal2' => esc_html__('Gradient Horizontal 2', 'safebyte' ),
-                                'btn-icon-box' => esc_html__('Icon Box 1', 'safebyte' ),
-                                'btn-icon-box2' => esc_html__('Icon Box 2', 'safebyte' ),
-                                'btn-icon-box3' => esc_html__('Icon Box 3', 'safebyte' ),
-                                'btn-icon-box4' => esc_html__('Icon Box 4', 'safebyte' ),
+                                'btn-cycle' => esc_html__('Cycle', 'safebyte' ),
                             ],
                         ),
                         array(

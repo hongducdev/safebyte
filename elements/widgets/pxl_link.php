@@ -94,7 +94,7 @@ pxl_add_custom_widget(
                             'default' => 'style-default',
                         ),
                         array(
-                          'name' => 'align',
+                            'name' => 'align',
                             'label' => esc_html__( 'Alignment', 'safebyte' ),
                             'type' => \Elementor\Controls_Manager::CHOOSE,
                             'control_type' => 'responsive',
@@ -142,6 +142,17 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-link a span:before, {{WRAPPER}} .pxl-link a span:after' => 'background-color: {{VALUE}};',
+                            ],
+                            'condition' => [
+                                'style' => ['style-hover-divider','style-hover-divider2'],
+                            ],
+                        ),
+                        array(
+                            'name' => 'color_divider_vertical',
+                            'label' => esc_html__('Color Divider Vertical', 'safebyte' ),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-link .pxl-item--link::after' => 'background-color: {{VALUE}};',
                             ],
                             'condition' => [
                                 'style' => ['style-hover-divider','style-hover-divider2'],

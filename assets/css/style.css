@@ -13678,6 +13678,41 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
 .cf7-home-2 button:hover {
   background-color: var(--primary-color) !important;
 }
+.cf7-home-4 p, .cf7-home-4 .wpcf7-form-control-wrap {
+  margin-bottom: 0;
+}
+.cf7-home-4 [class^="col"] {
+  padding: 0;
+}
+.cf7-home-4 input, .cf7-home-4 textarea, .cf7-home-4 select, .cf7-home-4 .pxl-select-higthlight {
+  height: 50px;
+  border: none;
+  border-radius: 0;
+  padding: 6px 20px;
+  font-size: 14px;
+  color: #111;
+}
+.cf7-home-4 textarea {
+  height: 171px;
+}
+.cf7-home-4 .row {
+  margin: 0;
+  border: 1px solid #d9d9d9;
+}
+.cf7-home-4 .row [class^="col"] + [class^="col"] {
+  border-left: 1px solid #d9d9d9;
+}
+.cf7-home-4 .row + .row {
+  border-top: none;
+}
+.cf7-home-4 button {
+  width: 100%;
+  border-radius: 0 !important;
+  line-height: 60px;
+}
+.cf7-home-4 .wpcf7-not-valid-tip {
+  display: none;
+}
 .pxl-navigation-carousel.style-1 .pxl-navigation-arrow {
   width: 65px;
   height: 65px;
@@ -22603,270 +22638,37 @@ button:not(.btn):hover, .button:not(.btn):hover, input[type="submit"]:not(.btn):
   -o-transition: all 300ms linear 0ms;
   transition: all 300ms linear 0ms;
 }
-.btn.btn-icon-box {
-  background-color: var(--primary-color);
-  line-height: 50px;
-  padding: 0 35px;
-  position: relative;
-  font-size: 15px;
-  color: #fff;
-  font-weight: 500;
-  font-family: "GTWalsheimPro";
-  -webkit-border-radius: 50px;
-  -khtml-border-radius: 50px;
-  -moz-border-radius: 50px;
-  -ms-border-radius: 50px;
-  -o-border-radius: 50px;
-  border-radius: 50px;
-  -webkit-transition: all 300ms linear 0ms;
-  -khtml-transition: all 300ms linear 0ms;
-  -moz-transition: all 300ms linear 0ms;
-  -ms-transition: all 300ms linear 0ms;
-  -o-transition: all 300ms linear 0ms;
-  transition: all 300ms linear 0ms;
-  display: inline-flex;
-  align-items: center;
-  justify-content: start;
-}
-.btn.btn-icon-box:hover {
-  background-color: var(--secondary-color);
-}
-.btn.btn-icon-box .pxl--btn-icon {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  top: 50%;
-  right: 5px;
-  transform: translateY(-50%);
-  border-radius: 40px;
-  background-color: rgba(255, 255, 255, 0.149);
-  color: #fff;
-  display: inline-flex;
+.btn.btn-cycle {
+  width: 219px;
+  height: 219px;
+  border-radius: 109px;
+  border: 1px solid #d9d9d9;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
+  padding: 0;
 }
-.btn.btn-icon-box2 {
-  line-height: 53px;
-  background-image: -webkit-linear-gradient(135deg, var(--gradient-color-from), var(--gradient-color-to));
-  background-image: -moz-linear-gradient(135deg, var(--gradient-color-from), var(--gradient-color-to));
-  background-image: -ms-linear-gradient(135deg, var(--gradient-color-from), var(--gradient-color-to));
-  background-image: -o-linear-gradient(135deg, var(--gradient-color-from), var(--gradient-color-to));
-  background-image: linear-gradient(135deg, var(--gradient-color-from), var(--gradient-color-to));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='var(--gradient-color-from)', endColorStr='var(--gradient-color-to)');
-  background-color: transparent;
-  padding-left: 10px;
-  padding-right: 15px;
-}
-.btn.btn-icon-box2 .pxl--btn-icon {
-  width: 36px;
-  height: 36px;
-  background-color: #fff;
-  border-radius: 36px;
-  color: #000;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 13px;
-  font-weight: 400;
-  overflow: hidden;
-}
-.btn.btn-icon-box2 .pxl--btn-text {
-  margin: 0 17px;
-}
-.btn.btn-icon-box2:hover {
-  background-color: transparent;
-}
-.btn.btn-icon-box2:hover .pxl--btn-icon i, .btn.btn-icon-box2:hover .pxl--btn-icon svg {
-  -o-animation: toRightFromLeft 0.3s forwards;
-  -ms-animation: toRightFromLeft 0.3s forwards;
-  -webkit-animation: toRightFromLeft 0.3s forwards;
-  animation: toRightFromLeft 0.3s forwards;
-}
-.btn.btn-icon-box2.btn-version-light {
-  background: #fff;
-  color: #000;
-}
-.btn.btn-icon-box2.btn-version-light .pxl--btn-icon {
-  background-image: -webkit-linear-gradient(135deg, var(--gradient-color-from), var(--gradient-color-to));
-  background-image: -moz-linear-gradient(135deg, var(--gradient-color-from), var(--gradient-color-to));
-  background-image: -ms-linear-gradient(135deg, var(--gradient-color-from), var(--gradient-color-to));
-  background-image: -o-linear-gradient(135deg, var(--gradient-color-from), var(--gradient-color-to));
-  background-image: linear-gradient(135deg, var(--gradient-color-from), var(--gradient-color-to));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='var(--gradient-color-from)', endColorStr='var(--gradient-color-to)');
-}
-.btn.btn-icon-box2.btn-version-light:hover, .btn.btn-icon-box2.btn-version-light:focus {
-  background: #fff;
-}
-.btn.btn-icon-box3 {
-  background-color: var(--gradient-color-from);
-  background-image: -webkit-gradient(linear, right top, left top, from(var(--gradient-color-from)), to(var(--gradient-color-to)));
-  background-image: -webkit-linear-gradient(to right, var(--gradient-color-from), var(--gradient-color-to));
-  background-image: -moz-linear-gradient(to right, var(--gradient-color-from), var(--gradient-color-to));
-  background-image: -ms-linear-gradient(to right, var(--gradient-color-from), var(--gradient-color-to));
-  background-image: -o-linear-gradient(to right, var(--gradient-color-from), var(--gradient-color-to));
-  background-image: linear-gradient(to right, var(--gradient-color-from), var(--gradient-color-to));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='var(--gradient-color-from)', endColorStr='var(--gradient-color-to)', gradientType='1');
-  line-height: 94px;
-  padding: 0 22px 0 0;
-  border-radius: 0 94px 94px 0;
-}
-.btn.btn-icon-box3 .pxl--btn-icon {
-  margin: 0 !important;
-  width: 94px;
-  height: 100%;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  z-index: 1;
-  font-size: 28px;
-  background-image: -webkit-linear-gradient(45deg, var(--gradient-color-from2), var(--gradient-color-to2));
-  background-image: -moz-linear-gradient(45deg, var(--gradient-color-from2), var(--gradient-color-to2));
-  background-image: -ms-linear-gradient(45deg, var(--gradient-color-from2), var(--gradient-color-to2));
-  background-image: -o-linear-gradient(45deg, var(--gradient-color-from2), var(--gradient-color-to2));
-  background-image: linear-gradient(45deg, var(--gradient-color-from2), var(--gradient-color-to2));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='var(--gradient-color-from2)', endColorStr='var(--gradient-color-to2)');
-}
-.btn.btn-icon-box3 .pxl-divider-circle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: -1;
-  transform: translate(-50%, -50%);
-  height: 52px;
-  width: 52px;
-  border-radius: 52px;
-  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.3);
-}
-.btn.btn-icon-box3 .pxl-divider-circle svg {
-  height: 52px;
-  width: 52px;
-  fill: transparent;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: scaleX(-1);
-}
-.btn.btn-icon-box3 .pxl-divider-circle svg path {
-  fill: none;
-  stroke: #fff;
-  stroke-width: 2;
-  box-sizing: border-box;
-  -webkit-transition: all 200ms linear;
-  transition: all 200ms linear;
-  stroke-dashoffset: 152px;
-  stroke-dasharray: 307.919px, 307.919px;
-}
-.btn.btn-icon-box3 .pxl--btn-text {
-  margin: 0 30px;
-}
-.btn.btn-icon-box3:hover {
-  background-color: var(--gradient-color-from);
-  background-image: -webkit-gradient(linear, right top, left top, from(var(--gradient-color-from)), to(var(--gradient-color-to)));
-  background-image: -webkit-linear-gradient(to right, var(--gradient-color-from), var(--gradient-color-to));
-  background-image: -moz-linear-gradient(to right, var(--gradient-color-from), var(--gradient-color-to));
-  background-image: -ms-linear-gradient(to right, var(--gradient-color-from), var(--gradient-color-to));
-  background-image: -o-linear-gradient(to right, var(--gradient-color-from), var(--gradient-color-to));
-  background-image: linear-gradient(to right, var(--gradient-color-from), var(--gradient-color-to));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='var(--gradient-color-from)', endColorStr='var(--gradient-color-to)', gradientType='1');
-}
-.btn.btn-icon-box3:hover .pxl-divider-circle svg path {
-  stroke-dashoffset: 0px;
-}
-.btn.btn-icon-box4 {
-  line-height: 50px;
-  color: #dbd8d8;
-  background: #220210;
-  padding-left: 8px;
-  padding-right: 15px;
-  font-size: 18px;
-}
-.btn.btn-icon-box4 .pxl--btn-icon {
-  width: 36px;
-  height: 36px;
-  background-image: -webkit-linear-gradient(45deg, var(--gradient-first-color), var(--gradient-color-to) 45%, var(--gradient-color-from) 100%);
-  background-image: -moz-linear-gradient(45deg, var(--gradient-first-color), var(--gradient-color-to) 45%, var(--gradient-color-from) 100%);
-  background-image: -ms-linear-gradient(45deg, var(--gradient-first-color), var(--gradient-color-to) 45%, var(--gradient-color-from) 100%);
-  background-image: -o-linear-gradient(45deg, var(--gradient-first-color), var(--gradient-color-to) 45%, var(--gradient-color-from) 100%);
-  background-image: linear-gradient(45deg, var(--gradient-first-color), var(--gradient-color-to) 45%, var(--gradient-color-from) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='', endColorStr='');
-  border-radius: 36px;
-  color: #fff;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 13px;
-  font-weight: 400;
-  overflow: hidden;
-}
-.btn.btn-icon-box4 .pxl--btn-text {
-  margin: 0 17px;
-}
-.btn.btn-icon-box4:hover {
-  background: #220210;
-}
-.btn.btn-icon-box4:hover .pxl--btn-icon i, .btn.btn-icon-box4:hover .pxl--btn-icon svg {
-  -o-animation: toRightFromLeft 0.3s forwards;
-  -ms-animation: toRightFromLeft 0.3s forwards;
-  -webkit-animation: toRightFromLeft 0.3s forwards;
-  animation: toRightFromLeft 0.3s forwards;
-}
-.btn.btn-icon-box4.btn-version-light {
-  background: #fff;
-  color: #000;
-}
-.btn.btn-icon-box4.btn-version-light .pxl--btn-icon {
-  background-image: -webkit-linear-gradient(135deg, var(--gradient-color-from), var(--gradient-color-to));
-  background-image: -moz-linear-gradient(135deg, var(--gradient-color-from), var(--gradient-color-to));
-  background-image: -ms-linear-gradient(135deg, var(--gradient-color-from), var(--gradient-color-to));
-  background-image: -o-linear-gradient(135deg, var(--gradient-color-from), var(--gradient-color-to));
-  background-image: linear-gradient(135deg, var(--gradient-color-from), var(--gradient-color-to));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='var(--gradient-color-from)', endColorStr='var(--gradient-color-to)');
-}
-.btn.btn-icon-box4.btn-version-light:hover, .btn.btn-icon-box4.btn-version-light:focus {
-  background: #fff;
-}
-.btn.btn-line-gradient {
+.btn.btn-cycle:hover {
   background: transparent;
-  overflow: visible;
 }
-.btn.btn-line-gradient:before {
-  content: "";
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  border-radius: inherit;
-  background-color: #191818;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.btn.btn-line-gradient:after {
-  content: "";
-  z-index: -2;
-  width: 100%;
-  height: 100%;
-  border-radius: inherit;
-  position: absolute;
-  top: 6px;
-  left: 0;
-  background-image: -webkit-linear-gradient(to right, var(--third-color) 0%, var(--gradient-color-to) 51%, var(--third-color) 100%);
-  background-image: -moz-linear-gradient(to right, var(--third-color) 0%, var(--gradient-color-to) 51%, var(--third-color) 100%);
-  background-image: -ms-linear-gradient(to right, var(--third-color) 0%, var(--gradient-color-to) 51%, var(--third-color) 100%);
-  background-image: -o-linear-gradient(to right, var(--third-color) 0%, var(--gradient-color-to) 51%, var(--third-color) 100%);
-  background-image: linear-gradient(to right, var(--third-color) 0%, var(--gradient-color-to) 51%, var(--third-color) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='', endColorStr='');
-  -webkit-transition: all 300ms linear 0ms;
-  -khtml-transition: all 300ms linear 0ms;
-  -moz-transition: all 300ms linear 0ms;
-  -ms-transition: all 300ms linear 0ms;
-  -o-transition: all 300ms linear 0ms;
-  transition: all 300ms linear 0ms;
-  background-size: 200%, auto;
-}
-.btn.btn-line-gradient:hover:after {
-  background-position: right center;
+.btn.btn-cycle span {
+  width: 172px;
+  height: 172px;
+  border-radius: 86px;
+  background-color: var(--primary-color);
+  font-size: 16px;
+  letter-spacing: 0px;
+  line-height: 26px;
+  color: #fff;
+  font-family: "GTWalsheimPro";
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 .btn.btn-text-nina.btn-default:hover, .btn.btn-text-nina.btn-default:focus {
   background-color: var(--primary-color);

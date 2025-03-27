@@ -253,8 +253,15 @@ BLOG GRID
     }
     &.section-1-home-4 {
         &:before {
-            background-image: linear-gradient(rgba(255, 255, 255, 0.06) 2px, transparent 2px),
-                linear-gradient(to right, rgba(255, 255, 255, 0.06) 2px, transparent 2px);
+            background-image: linear-gradient(
+                    rgba(255, 255, 255, 0.06) 2px,
+                    transparent 2px
+                ),
+                linear-gradient(
+                    to right,
+                    rgba(255, 255, 255, 0.06) 2px,
+                    transparent 2px
+                );
         }
     }
 }
@@ -4044,6 +4051,50 @@ BLOG GRID
         &:hover {
             background-color: $primary_color !important;
         }
+    }
+}
+
+.cf7-home-4 {
+    p,
+    .wpcf7-form-control-wrap {
+        margin-bottom: 0;
+    }
+    [class^="col"] {
+        padding: 0;
+    }
+    input,
+    textarea,
+    select,
+    .pxl-select-higthlight {
+        height: 50px;
+        border: none;
+        border-radius: 0;
+        padding: 6px 20px;
+        font-size: 14px;
+        color: #111;
+    }
+    textarea {
+        height: 171px;
+    }
+    .row {
+        margin: 0;
+        border: 1px solid #d9d9d9;
+        [class^="col"] {
+            + [class^="col"] {
+                border-left: 1px solid #d9d9d9;
+            }
+        }
+        + .row {
+            border-top: none;
+        }
+    }
+    button {
+        width: 100%;
+        border-radius: 0 !important;
+        line-height: 60px;
+    }
+    .wpcf7-not-valid-tip {
+        display: none;
     }
 }
 
