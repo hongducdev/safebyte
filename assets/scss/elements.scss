@@ -272,6 +272,14 @@ BLOG GRID
     }
 }
 
+.lang-switch-home-5 {
+    .pxl-language-switcher1 {
+        height: 70px;
+        display: flex;
+        align-items: center;
+    }
+}
+
 // Slider Revolution
 .revslider-initialised {
     .rv-description {
@@ -2340,6 +2348,25 @@ BLOG GRID
 
 // 9. Language Switch
 .pxl-language-switcher1 {
+    &.style-2 {
+        .current--item {
+            width: 41px;
+            height: 41px;
+            border-radius: 21px;
+            border: 1px solid #d9d9d9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            label {
+                display: none;
+            }
+            img {
+                width: 27px;
+                height: 27px;
+                @include border-radius(27px);
+            }
+        }
+    }
     font-size: 17px;
     color: #111111;
     font-weight: 400;
@@ -2392,10 +2419,6 @@ BLOG GRID
         flex-wrap: nowrap;
         align-items: center;
         cursor: pointer;
-        img {
-            max-width: 28px;
-            margin-right: 15px;
-        }
         label {
             cursor: pointer;
             &:after {
@@ -6067,3 +6090,49 @@ body.rtl {
         font-weight: 500;
     }
 }
+
+// Case Text Transform
+.pxl-text-transform {
+    position: relative;
+    overflow: hidden;
+    height: 21px;
+    display: flex;
+    align-items: center;
+
+    .pxl-text-transform__inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .pxl-text-transform__item {
+        font-size: 16px;
+        line-height: 21px;
+        color: #111;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        opacity: 0;
+        transform: translateY(100%);
+        transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+
+        &:first-child {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        &.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        &.prev {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+    }
+}
+
+
+

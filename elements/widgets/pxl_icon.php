@@ -132,6 +132,7 @@ pxl_add_custom_widget(
                             'default' => '',
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-icon1 a i' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-icon1 svg path' => 'fill: {{VALUE}};',
                             ],
                         ),
                         array(
@@ -172,7 +173,7 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-icon1 a i' => 'width: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .pxl-icon1 a i, {{WRAPPER}} .pxl-icon1 svg' => 'width: {{SIZE}}{{UNIT}};',
                             ],
                             'condition' => [
                                 'style' => 'style-2',
@@ -191,7 +192,7 @@ pxl_add_custom_widget(
                                 ],
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-icon1 a i' => 'height: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .pxl-icon1 a i, {{WRAPPER}} .pxl-icon1 svg' => 'height: {{SIZE}}{{UNIT}};',
                             ],
                             'condition' => [
                                 'style' => 'style-2',

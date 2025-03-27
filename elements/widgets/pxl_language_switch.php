@@ -13,6 +13,16 @@ pxl_add_custom_widget(
                     'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
                     'controls' => array(
                         array(
+                            'name' => 'style_layout',
+                            'label' => esc_html__('Style', 'safebyte' ),
+                            'type' => \Elementor\Controls_Manager::SELECT,
+                            'options' => [
+                                'style-1' => 'Style 1',
+                                'style-2' => 'Style 2',
+                            ],
+                            'default' => 'style-1',
+                        ),
+                        array(
                             'name' => 'current',
                             'label' => esc_html__('Current Item', 'safebyte'),
                             'type' => \Elementor\Controls_Manager::TEXT,
@@ -24,6 +34,14 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Group_Control_Typography::get_type(),
                             'control_type' => 'group',
                             'selector' => '{{WRAPPER}} .pxl-language-switcher1 .current--item',
+                        ),
+                        array(
+                            'name' => 'current_flag',
+                            'label' => esc_html__( 'Current Flag', 'safebyte' ),
+                            'type' => \Elementor\Controls_Manager::MEDIA,
+                            'condition' => [
+                                'style_layout' => 'style-2',
+                            ],
                         ),
                         array(
                             'name' => 'current_item_color',
@@ -48,6 +66,12 @@ pxl_add_custom_widget(
                                     'name' => 'link',
                                     'label' => esc_html__('Link', 'safebyte'),
                                     'type' => \Elementor\Controls_Manager::URL,
+                                    'label_block' => true,
+                                ),
+                                array(
+                                    'name' => 'flag',
+                                    'label' => esc_html__('Flag', 'safebyte'),
+                                    'type' => \Elementor\Controls_Manager::MEDIA,
                                     'label_block' => true,
                                 ),
                             ),

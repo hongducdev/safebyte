@@ -9545,6 +9545,11 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
 .bg-parallax-home-4 .pxl-section-bg-parallax {
   background-position: center center;
 }
+.lang-switch-home-5 .pxl-language-switcher1 {
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
 @media screen and (max-width: 777px) {
   .revslider-initialised .rv-description {
     font-size: 17px !important;
@@ -11800,6 +11805,28 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
   position: relative;
   z-index: 99;
 }
+.pxl-language-switcher1.style-2 .current--item {
+  width: 41px;
+  height: 41px;
+  border-radius: 21px;
+  border: 1px solid #d9d9d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pxl-language-switcher1.style-2 .current--item label {
+  display: none;
+}
+.pxl-language-switcher1.style-2 .current--item img {
+  width: 27px;
+  height: 27px;
+  -webkit-border-radius: 27px;
+  -khtml-border-radius: 27px;
+  -moz-border-radius: 27px;
+  -ms-border-radius: 27px;
+  -o-border-radius: 27px;
+  border-radius: 27px;
+}
 .pxl-language-switcher1 a {
   color: inherit;
 }
@@ -11873,10 +11900,6 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
   flex-wrap: nowrap;
   align-items: center;
   cursor: pointer;
-}
-.pxl-language-switcher1 .current--item img {
-  max-width: 28px;
-  margin-right: 15px;
 }
 .pxl-language-switcher1 .current--item label {
   cursor: pointer;
@@ -15816,6 +15839,42 @@ body.rtl .pxl-button-video1 .slider-video-icon i {
   font-family: "GTWalsheimPro";
   color: #fff;
   font-weight: 500;
+}
+.pxl-text-transform {
+  position: relative;
+  overflow: hidden;
+  height: 21px;
+  display: flex;
+  align-items: center;
+}
+.pxl-text-transform .pxl-text-transform__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.pxl-text-transform .pxl-text-transform__item {
+  font-size: 16px;
+  line-height: 21px;
+  color: #111;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+.pxl-text-transform .pxl-text-transform__item:first-child {
+  opacity: 1;
+  transform: translateY(0);
+}
+.pxl-text-transform .pxl-text-transform__item.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.pxl-text-transform .pxl-text-transform__item.prev {
+  transform: translateY(-100%);
+  opacity: 0;
 }
 .blockUI {
   position: absolute;
