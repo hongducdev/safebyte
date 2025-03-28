@@ -41,6 +41,9 @@ $post_type = $widget->get_setting('post_type', 'service');
 $layout = $widget->get_setting('layout_'.$post_type, 'service-1');
 
 $show_button = $widget->get_setting('show_button');
+$show_excerpt = $widget->get_setting('show_excerpt');
+$num_words = $widget->get_setting('num_words');
+
 $img_size = $widget->get_setting('img_size');
 $grid_masonry = $widget->get_setting('grid_masonry');
 $pxl_animate = $widget->get_setting('pxl_animate');
@@ -72,6 +75,8 @@ $load_more = array(
     'grid_masonry'    => $grid_masonry,
     'pxl_animate'     => $pxl_animate,
     'html_id'         => $html_id,
+    'show_excerpt'    => $show_excerpt,
+    'num_words'       => $num_words
 );
 
 $wrap_attrs = [

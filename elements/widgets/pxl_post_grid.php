@@ -458,6 +458,12 @@ pxl_add_custom_widget(
                                             ['name' => 'layout_industries', 'operator' => 'in', 'value' => ['industries-1']]
                                         ]
                                     ],
+                                    [
+                                        'terms' => [
+                                            ['name' => 'post_type', 'operator' => '==', 'value' => 'service'],
+                                            ['name' => 'layout_service', 'operator' => 'in', 'value' => ['service-1']]
+                                        ]
+                                    ],
                                 ],
                             ]
                         ),
@@ -488,6 +494,13 @@ pxl_add_custom_widget(
                                         'terms' => [
                                             ['name' => 'post_type', 'operator' => '==', 'value' => 'industries'],
                                             ['name' => 'layout_industries', 'operator' => 'in', 'value' => ['industries-1']],
+                                            ['name' => 'show_excerpt', 'operator' => '==', 'value' => 'true']
+                                        ]
+                                    ],
+                                    [
+                                        'terms' => [
+                                            ['name' => 'post_type', 'operator' => '==', 'value' => 'service'],
+                                            ['name' => 'layout_service', 'operator' => 'in', 'value' => ['service-1']],
                                             ['name' => 'show_excerpt', 'operator' => '==', 'value' => 'true']
                                         ]
                                     ],

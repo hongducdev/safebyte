@@ -56,6 +56,7 @@
 		"mountains",
 		"email",
 		"right-arrow-long",
-		"alarm"
+		"alarm",
+		"briefcase-arrow-right"
 	]
 }

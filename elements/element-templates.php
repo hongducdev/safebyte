@@ -78,7 +78,7 @@ function safebyte_get_post_grid_layout1($posts = [], $settings = [])
                 $filter_class = pxl_get_term_of_post_to_class($post->ID, array_unique($tax));
             else
                 $filter_class = '';
-            ?>
+?>
             <div class="<?php echo esc_attr($item_class . ' ' . $filter_class); ?>">
                 <div class="pxl-inner-content <?php echo esc_attr($pxl_animate); ?>" data-wow-duration="1.2s">
                     <div class="pxl-item-col-1">
@@ -114,7 +114,7 @@ function safebyte_get_post_grid_layout1($posts = [], $settings = [])
                             <div class="post-readmore ">
                                 <a href="<?php echo esc_url(get_permalink($post->ID)); ?>">
                                     <span class="pxl-button-text">
-                                        <?php if(!empty($button_text)) {
+                                        <?php if (!empty($button_text)) {
                                             echo esc_attr($button_text);
                                         } else {
                                             echo esc_html__('Continue Reading', 'safebyte');
@@ -447,23 +447,14 @@ function safebyte_get_service_grid_layout1($posts = [], $settings = [])
             $service_external_link = get_post_meta($post->ID, 'service_external_link', true);
             $service_icon_type = get_post_meta($post->ID, 'service_icon_type', true);
             $service_icon_font = get_post_meta($post->ID, 'service_icon_font', true);
-            $service_icon_img = get_post_meta($post->ID, 'service_icon_img', true); ?>
+            $service_icon_img = get_post_meta($post->ID, 'service_icon_img', true);
+            $index = $key + 1; ?>
             <div class="<?php echo esc_attr($item_class . ' ' . $filter_class); ?>">
                 <div class="pxl-post--inner <?php echo esc_attr($pxl_animate); ?>" data-wow-duration="1.2s">
-                    <?php if (has_post_thumbnail($post->ID) && wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), false)):
-                        $img_id = get_post_thumbnail_id($post->ID);
-                        $img          = pxl_get_image_by_size(array(
-                            'attach_id'  => $img_id,
-                            'thumb_size' => $images_size
-                        ));
-                        $thumbnail    = $img['thumbnail'];
-                    ?>
-                        <div class="pxl-post--featured">
-                            <?php echo wp_kses_post($thumbnail); ?>
+                    <div class="pxl-post--header">
+                        <div class="pxl-post--icon">
                             <?php if ($service_icon_type == 'icon' && !empty($service_icon_font)) : ?>
-                                <div class="pxl-post--icon pxl-fl-middle">
-                                    <i class="<?php echo esc_attr($service_icon_font); ?>"></i>
-                                </div>
+                                <i class="<?php echo esc_attr($service_icon_font); ?>"></i>
                             <?php endif; ?>
                             <?php if ($service_icon_type == 'image' && !empty($service_icon_img)) :
                                 $icon_img = pxl_get_image_by_size(array(
@@ -472,17 +463,18 @@ function safebyte_get_service_grid_layout1($posts = [], $settings = [])
                                 ));
                                 $icon_thumbnail = $icon_img['thumbnail'];
                             ?>
-                                <div class="pxl-post--icon pxl-fl-middle">
-                                    <?php echo wp_kses_post($icon_thumbnail); ?>
-                                </div>
+                                <img src="<?php echo esc_url($icon_thumbnail); ?>" alt="<?php echo esc_attr(get_the_title($post->ID)); ?>">
                             <?php endif; ?>
-                            <a class="pxl-post--link" href="<?php if (!empty($service_external_link)) {
-                                                                echo esc_url($service_external_link);
-                                                            } else {
-                                                                echo esc_url(get_permalink($post->ID));
-                                                            } ?>"></a>
                         </div>
-                    <?php endif; ?>
+
+                        <span class="pxl-post--number">
+                            <?php if ($index < 10) : ?>
+                                0<?php echo esc_attr($index); ?>
+                            <?php else: ?>
+                                <?php echo esc_attr($index); ?>
+                                <?php endif; ?>.
+                        </span>
+                    </div>
                     <div class="pxl-post--holder">
                         <h3 class="pxl-post--title">
                             <a href="<?php if (!empty($service_external_link)) {
@@ -491,15 +483,22 @@ function safebyte_get_service_grid_layout1($posts = [], $settings = [])
                                             echo esc_url(get_permalink($post->ID));
                                         } ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a>
                         </h3>
+                        <?php if ($show_excerpt == 'true') : ?>
+                            <div class="pxl-post--excerpt">
+                                <?php echo esc_attr(wp_trim_words(get_the_excerpt($post->ID), $num_words, '...')); ?>
+                            </div>
+                        <?php endif; ?>
+                        <div class="pxl-item--divider"></div>
                         <?php if ($show_button == 'true') : ?>
                             <div class="pxl-post--readmore">
-                                <div class="pxl-post--category"><?php the_terms($post->ID, 'service-category', '', ' '); ?></div>
-                                <i class="flaticon-long-arrow-right rtl-reverse"></i>
-                                <a class="pxl-post--link" href="<?php if (!empty($service_external_link)) {
-                                                                    echo esc_url($service_external_link);
-                                                                } else {
-                                                                    echo esc_url(get_permalink($post->ID));
-                                                                } ?>"></a>
+                                <a href="<?php if (!empty($service_external_link)) {
+                                                echo esc_url($service_external_link);
+                                            } else {
+                                                echo esc_url(get_permalink($post->ID));
+                                            } ?>">
+                                    <?php echo esc_html__(!empty($button_text) ? $button_text : 'Read More', 'safebyte'); ?>
+                                    <i class="flaticon-right-arrow-long rtl-reverse"></i>
+                                </a>
                             </div>
                         <?php endif; ?>
                     </div>
@@ -766,7 +765,7 @@ function safebyte_get_post_list_layout1($posts = [], $settings = [])
                         </div>
                     </div>
                 <?php endif; ?>
-                
+
                 <div class="wrap-item-content <?php echo !empty($thumbnail) ? 'col-lg-7' : 'col'; ?>">
                     <div class="item-content">
                         <?php if ($show_author == 'true' || $show_category == 'true' || $show_comment == 'true') : ?>
@@ -795,9 +794,9 @@ function safebyte_get_post_list_layout1($posts = [], $settings = [])
                                 </div>
                             </div>
                         <?php endif; ?>
-                        
+
                         <h3 class="pxl-item--title"><a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a></h3>
-                        
+
                         <?php if ($show_excerpt == 'true') : ?>
                             <div class="item-excerpt">
                                 <?php
@@ -812,7 +811,7 @@ function safebyte_get_post_list_layout1($posts = [], $settings = [])
                                 ?>
                             </div>
                         <?php endif; ?>
-                        
+
                         <?php if ($show_readmore == 'true' || $post_share == 'true') : ?>
                             <div class="blog-post-footer">
                                 <?php if ($show_readmore == 'true') : ?>
@@ -822,7 +821,7 @@ function safebyte_get_post_list_layout1($posts = [], $settings = [])
                                         </a>
                                     </div>
                                 <?php endif; ?>
-                                
+
                                 <?php if ($settings['post_share'] == 'true') : ?>
                                     <div class="post-shares">
                                         <span class="label">
@@ -845,5 +844,5 @@ function safebyte_get_post_list_layout1($posts = [], $settings = [])
                 </div>
             </div>
         </div>
-    <?php endforeach;
+<?php endforeach;
 }

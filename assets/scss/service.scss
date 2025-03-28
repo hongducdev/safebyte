@@ -31,6 +31,35 @@ Service Style
         padding-top: var(--x);
         padding-bottom: var(--x);
     }
+    @extend .pxl-service-style1;
+    .pxl-swiper-arrow-wrap {
+        max-width: 1305px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        margin-bottom: 78px;
+        .pxl-swiper-arrow-prev {
+            i {
+                transform: rotateY(180deg);
+            }
+        }
+        @media #{$max-md2} {
+            margin-bottom: 0;
+        }
+        @media #{$max-md} {
+            position: absolute;
+            z-index: 10;
+            bottom: -80px;
+            left: 0;
+            width: 100%;
+            justify-content: center;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.pxl-service-style1 {
     .pxl-post--inner {
         background-color: #fff;
         @include border-radius(8px);
@@ -115,32 +144,6 @@ Service Style
                     transform: translateX(5px);
                 }
             }
-        }
-    }
-
-    .pxl-swiper-arrow-wrap {
-        max-width: 1305px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: end;
-        margin-bottom: 78px;
-        .pxl-swiper-arrow-prev {
-            i {
-                transform: rotateY(180deg);
-            }
-        }
-        @media #{$max-md2} {
-            margin-bottom: 0;
-        }
-        @media #{$max-md} {
-            position: absolute;
-            z-index: 10;
-            bottom: -80px;
-            left: 0;
-            width: 100%;
-            justify-content: center;
-            margin-bottom: 0;
         }
     }
 }
@@ -322,6 +325,12 @@ Service Style
 @keyframes pxl-shine {
     100% {
         left: 200%;
+    }
+}
+
+.pxl-service-grid-layout1 {
+    .pxl-post--inner {
+        margin-bottom: 30px;
     }
 }
 
