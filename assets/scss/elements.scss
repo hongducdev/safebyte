@@ -5922,7 +5922,7 @@ body.rtl {
 .pxl-image-scroll {
     display: flex;
     .pxl-scroll-image {
-        --x: 330px;
+        --x: 350px;
         --y: 572px;
         --z: 18px;
         width: var(--x);
@@ -5967,7 +5967,7 @@ body.rtl {
             color: #999999;
             font-family: "GTWalsheimPro";
             padding-left: 40px;
-            margin-bottom: 30px;
+            margin-bottom: 27px;
             position: relative;
             cursor: pointer;
             &:before {

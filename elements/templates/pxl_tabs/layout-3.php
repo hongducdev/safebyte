@@ -6,7 +6,7 @@ $services = get_posts([
     'posts_per_page' => -1,
     'post_status' => 'publish',
     'orderby' => 'date',
-    'order' => 'DESC'
+    'order' => 'ASC'
 ]);
 
 if (count($services) > 0) :
@@ -22,7 +22,7 @@ if (count($services) > 0) :
                         <?php echo esc_html__($settings['title_box']); ?>
                     </span>
                 </div>
-                <?php foreach ($services as $key => $service) : ?>
+                <?php foreach (array_slice($services, 0, $limit) as $key => $service) : ?>
                     <span class="pxl-tab--title pxl-cursor--cta <?php echo ($tab_active == $key + 1) ? 'active' : ''; ?>" data-target="#<?php echo esc_attr($html_id . '-' . $service->ID); ?>">
                         <div class="pxl-title--order">
                             <?php echo esc_html($key + 1); ?><span>/</span>
@@ -43,7 +43,7 @@ if (count($services) > 0) :
 
             <div class="pxl-tabs--content">
                 <?php if (!empty($services) && is_array($services)) : ?>
-                    <?php foreach ($services as $key => $service) : ?>
+                    <?php foreach (array_slice($services, 0, $limit) as $key => $service) : ?>
                         <div id="<?php echo esc_attr($html_id . '-' . $service->ID); ?>" class="pxl-tab--content <?php echo ($tab_active == $key + 1) ? 'active' : ''; ?>" <?php echo ($tab_active == $key + 1) ? 'style="display: block;"' : ''; ?>>
                             <h3 class="pxl-content--title">
                                 <?php echo esc_html($service->post_title); ?>

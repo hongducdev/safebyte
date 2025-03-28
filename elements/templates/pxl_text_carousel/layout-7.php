@@ -58,18 +58,20 @@ if (! empty($settings['wg_btn_link']['url'])) {
 } ?>
 
 <?php if (isset($settings['text']) && !empty($settings['text']) && count($settings['text'])): ?>
-    <div class="pxl-swiper-slider pxl-text-carousel1 pxl-text-layout1 <?php echo esc_attr($settings['style']); ?>" <?php if ($drap !== false) : ?>data-cursor-drap="<?php echo esc_attr__('DRAG', 'safebyte'); ?>" <?php endif; ?>>
+    <div class="pxl-swiper-slider pxl-text-carousel7" <?php if ($drap !== false) : ?>data-cursor-drap="<?php echo esc_attr__('DRAG', 'safebyte'); ?>" <?php endif; ?>>
         <div class="pxl-carousel-inner">
             <div <?php pxl_print_html($widget->get_render_attribute_string('carousel')); ?>>
                 <div class="pxl-swiper-wrapper">
                     <?php foreach ($settings['text'] as $key => $value):
                         $title = isset($value['title']) ? $value['title'] : '';
                         $desc = isset($value['desc']) ? $value['desc'] : '';
+                        $milestone = isset($value['milestone']) ? $value['milestone'] : '';
                     ?>
                         <div class="pxl-swiper-slide">
                             <div class="pxl-item--inner <?php echo esc_attr($settings['pxl_animate']); ?>" data-wow-delay="<?php echo esc_attr($settings['pxl_animate_delay']); ?>ms">
+                                <span class="pxl-item--number"><?php echo esc_html($milestone); ?></span>
                                 <h3 class="pxl-item--title el-empty"><?php echo pxl_print_html($title); ?></h3>
-                                <div class="pxl-item--desc el-empty"><?php echo pxl_print_html($desc); ?></div>
+                                <p class="pxl-item--desc el-empty"><?php echo pxl_print_html($desc); ?></p>
                             </div>
                         </div>
                     <?php endforeach; ?>
@@ -82,12 +84,12 @@ if (! empty($settings['wg_btn_link']['url'])) {
                     <div class="pxl-swiper-dots style-1"></div>
                 <?php endif; ?>
                 <?php if ($arrows !== false): ?>
-                    <div class="pxl-wrap-arrow pxl-flex-middle">
+                    <div class="pxl-wrap-arrow">
                         <div class="pxl-swiper-arrow pxl-swiper-arrow-prev">
-                            <i class="flaticon-right-arrow-long"></i>
+                            <i class="flaticon-next"></i>
                         </div>
                         <div class="pxl-swiper-arrow pxl-swiper-arrow-next">
-                            <i class="flaticon-right-arrow-long"></i>
+                            <i class="flaticon-next"></i>
                         </div>
                     </div>
                 <?php endif; ?>

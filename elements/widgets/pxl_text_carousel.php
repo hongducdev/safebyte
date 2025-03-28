@@ -49,6 +49,10 @@ pxl_add_custom_widget(
                                     'label' => esc_html__('Layout 6', 'safebyte'),
                                     'image' => get_template_directory_uri() . '/elements/assets/img/pxl_text_carousel/layout6.jpg'
                                 ],
+                                '7' => [
+                                    'label' => esc_html__('Layout 7', 'safebyte'),
+                                    'image' => get_template_directory_uri() . '/elements/assets/img/pxl_text_carousel/layout7.jpg'
+                                ],
                             ],
                         ),
                     ),
@@ -102,8 +106,12 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::SELECT,
                             'options' => [
                                 'style-1' => 'Style 1',
+                                'style-2' => 'Style 2',
                             ],
                             'default' => 'style-1',
+                            'condition' => [
+                                'layout' => '1'
+                            ]
                         ),
                         array(
                             'name' => 'nb_color',
