@@ -9542,6 +9542,11 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
 .pxl-section-pattern-caro.section-1-home-4:before {
   background-image: linear-gradient(rgba(255, 255, 255, 0.06) 2px, transparent 2px), linear-gradient(to right, rgba(255, 255, 255, 0.06) 2px, transparent 2px);
 }
+.pxl-section-pattern-caro.section-faq-home-5:before {
+  z-index: 2;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.06) 2px, transparent 2px), linear-gradient(to right, rgba(255, 255, 255, 0.06) 2px, transparent 2px);
+  background-size: 57px 57px;
+}
 .bg-parallax-home-4 .pxl-section-bg-parallax {
   background-position: center center;
 }
@@ -9549,6 +9554,14 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
   height: 70px;
   display: flex;
   align-items: center;
+}
+.image-testi-home-5 {
+  display: flex;
+  justify-content: end;
+}
+.image-testi-home-5 img {
+  width: 340px;
+  height: 160px;
 }
 @media screen and (max-width: 777px) {
   .revslider-initialised .rv-description {
@@ -23377,6 +23390,81 @@ button:not(.btn):hover, .button:not(.btn):hover, input[type="submit"]:not(.btn):
   color: #666;
   font-size: 15px;
   font-family: "Public Sans";
+}
+.pxl-testimonial-carousel1.style-4 {
+  --x: 61px;
+}
+.pxl-testimonial-carousel1.style-4 .pxl-item--desc, .pxl-testimonial-carousel1.style-4 .pxl-item--title, .pxl-testimonial-carousel1.style-4 .pxl-item--position, .pxl-testimonial-carousel1.style-4 .pxl-item--rating i {
+  color: #fff;
+}
+.pxl-testimonial-carousel1.style-4 .pxl-item--desc {
+  margin-bottom: 35px;
+  font-size: 18px;
+  line-height: 30px;
+  color: #fff;
+  font-family: "Public Sans";
+}
+.pxl-testimonial-carousel1.style-4 .pxl-item--divider {
+  opacity: 0.149;
+  width: 100%;
+  height: 1px;
+  background-color: #d3d5d6;
+  margin-bottom: 40px;
+}
+.pxl-testimonial-carousel1.style-4 .pxl-item--avatar {
+  width: 58px;
+  height: 58px;
+  -webkit-border-radius: 58px;
+  -khtml-border-radius: 58px;
+  -moz-border-radius: 58px;
+  -ms-border-radius: 58px;
+  -o-border-radius: 58px;
+  border-radius: 58px;
+}
+.pxl-testimonial-carousel1.style-4 .pxl-item--avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -webkit-border-radius: 58px;
+  -khtml-border-radius: 58px;
+  -moz-border-radius: 58px;
+  -ms-border-radius: 58px;
+  -o-border-radius: 58px;
+  border-radius: 58px;
+}
+.pxl-testimonial-carousel1.style-4 .pxl-item--header {
+  margin-bottom: 0;
+}
+.pxl-testimonial-carousel1.style-4 .pxl-swiper-arrow-wrap {
+  margin-top: calc(-1 * var(--x));
+  justify-content: end;
+  column-gap: 10px;
+}
+.pxl-testimonial-carousel1.style-4 .pxl-swiper-arrow {
+  width: var(--x);
+  height: var(--x);
+  -webkit-border-radius: var(--x);
+  -khtml-border-radius: var(--x);
+  -moz-border-radius: var(--x);
+  -ms-border-radius: var(--x);
+  -o-border-radius: var(--x);
+  border-radius: var(--x);
+  background-color: #fff;
+  color: #111;
+  z-index: 5;
+  margin: 0;
+}
+.pxl-testimonial-carousel1.style-4 .pxl-swiper-arrow:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.pxl-testimonial-carousel1.style-4 .pxl-swiper-arrow.pxl-swiper-arrow-prev i {
+  transform: rotate(180deg);
+}
+@media screen and (max-width: 575px) {
+  .pxl-testimonial-carousel1.style-4 .pxl-swiper-arrow-wrap {
+    margin-top: 20px;
+    justify-content: center;
+  }
 }
 .pxl-testimonial-carousel1.style-3 {
   position: relative;

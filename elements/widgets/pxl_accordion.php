@@ -164,6 +164,15 @@ pxl_add_custom_widget(
                             ],
                             'default' => 'h5',
                         ),
+                        array(
+                            'name' => 'title_padding',
+                            'label' => esc_html__('Padding', 'safebyte' ),
+                            'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                            'size_units' => ['px', 'em', 'rem'],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-accordion .pxl-accordion--title' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                            ],
+                        )
                     ),
                 ),
                 array(

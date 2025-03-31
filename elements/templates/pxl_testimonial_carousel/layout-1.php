@@ -60,13 +60,8 @@ if(isset($settings['testimonial']) && !empty($settings['testimonial']) && count(
                         ?>
                         <div class="pxl-swiper-slide">
                             <div class="pxl-item--inner <?php echo esc_attr($settings['pxl_animate']); ?>" data-wow-delay="<?php echo esc_attr($settings['pxl_animate_delay']); ?>ms">
-                                <?php if($settings['style_layout'] == 'style-2') :?>
-                                    <div class="pxl-item--qoute">
-                                        “
-                                    </div>
-                                <?php endif;?>
                                 <div class="pxl-item--desc el-empty"><?php echo pxl_print_html($desc); ?></div>
-                                <?php if($settings['style_layout'] == 'style-2') :?>
+                                <?php if($settings['style_layout'] == 'style-2' || $settings['style_layout'] == 'style-3' || $settings['style_layout'] == 'style-4') :?>
                                     <div class="pxl-item--divider">
                                     </div>
                                 <?php endif;?>

@@ -237,6 +237,10 @@ pxl_add_custom_widget(
                                 'style-1' => 'Style 1',
                                 'style-2' => 'Style 2',
                                 'style-3' => 'Style 3',
+                                'style-4' => 'Style 4',
+                            ],
+                            'condition' => [
+                                'layout' => ['1'],
                             ],
                         ),
                         array(

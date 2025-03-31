@@ -264,6 +264,21 @@ BLOG GRID
                 );
         }
     }
+    &.section-faq-home-5 {
+        &:before {
+            z-index: 2;
+            background-image: linear-gradient(
+                    rgba(255, 255, 255, 0.06) 2px,
+                    transparent 2px
+                ),
+                linear-gradient(
+                    to right,
+                    rgba(255, 255, 255, 0.06) 2px,
+                    transparent 2px
+                );
+            background-size: 57px 57px;
+        }
+    }
 }
 
 .bg-parallax-home-4 {
@@ -277,6 +292,15 @@ BLOG GRID
         height: 70px;
         display: flex;
         align-items: center;
+    }
+}
+
+.image-testi-home-5 {
+    display: flex;
+    justify-content: end;
+    img {
+        width: 340px;
+        height: 160px;
     }
 }
 
@@ -6133,6 +6157,3 @@ body.rtl {
         }
     }
 }
-
-
-
