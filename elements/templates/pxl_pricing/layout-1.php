@@ -1,4 +1,4 @@
-<div class="pxl-pricing pxl-pricing1 <?php echo ($settings['popular'] == 'yes' ? 'popular' : ''); ?>">
+<div class="pxl-pricing pxl-pricing1 <?php echo ($settings['popular'] == 'yes' ? 'popular' : ''); ?> <?php echo esc_attr($settings['pxl_animate']); ?>" data-wow-delay="<?php echo esc_attr($settings['pxl_animate_delay']); ?>ms">
     <?php if (!empty($settings['plan'])) : ?>
         <div class="pxl-pricing--top">
             <?php if ($settings['popular'] == 'yes') :?>

@@ -5,6 +5,7 @@ pxl_add_custom_widget(
         'title' => esc_html__('Case Showcase', 'safebyte'),
         'icon' => 'eicon-parallax',
         'categories' => array('pxltheme-core'),
+        'script' => ['safebyte-showcase'],
         'params' => array(
             'sections' => array(
                 array(
@@ -21,16 +22,6 @@ pxl_add_custom_widget(
                                 '2' => 'Layout 2',
                             ],
                             'default' => '1',
-                        ),
-                        array(
-                            'name' => 'style_l1',
-                            'label' => esc_html__('Style', 'safebyte' ),
-                            'type' => \Elementor\Controls_Manager::SELECT,
-                            'options' => [
-                                'style-1' => 'Style 1',
-                                'style-2' => 'Style 2',
-                            ],
-                            'default' => 'style-1',
                         ),
                         array(
                             'name' => 'image',

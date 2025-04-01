@@ -119,6 +119,7 @@ pxl_add_custom_widget(
                         ),
                     ),
                 ),
+                safebyte_widget_animation_settings(),
             ),
         ),
     ),

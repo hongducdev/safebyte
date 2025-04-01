@@ -1148,6 +1148,16 @@ body.error404 {
 }
 
 .pxl-post-carousel2 {
+    // .pxl-swiper-wrapper {
+    //     display: grid;
+    //     grid-template-columns: 1fr;
+    //     grid-template-rows: auto auto auto;
+    //     grid-auto-flow: column;
+
+    //     & > .pxl-swiper-slide {
+    //         height: fit-content;
+    //     }
+    // }
     .pxl-item--inner {
         padding: 40px 0;
         &:first-child,

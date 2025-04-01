@@ -127,6 +127,7 @@ pxl_add_custom_widget(
                                 'fr-spacer-divider' => 'Vertical Divider',
                                 'fr-horizontal-divider' => 'Horizontal Divider',
                                 'fr-box-rounded' => 'Box Rounded',
+                                'fr-horizontal-divider-underline' => 'Horizontal Divider Underline',
                             ],
                             'default' => 'fr-style-default',
                             'condition' => [

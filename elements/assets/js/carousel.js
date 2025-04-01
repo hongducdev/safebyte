@@ -50,8 +50,6 @@
             var numberOfSlides = $this.find(".pxl-swiper-slide").length;
             var settings = $this.find(".pxl-swiper-container").data().settings;
 
-            console.log(settings);
-
             var carousel_settings = {
                 direction: settings["slide_direction"],
                 effect: settings["slide_mode"],
@@ -60,6 +58,10 @@
                 slidesPerView: settings["slides_to_show"],
                 slidesPerGroup: settings["slides_to_scroll"],
                 slidesPerColumn: settings["slide_percolumn"],
+                grid: {
+                    rows: settings["slide_percolumn"],
+                    fill: "row",
+                },
                 spaceBetween: 0,
                 observer: true,
                 observeParents: true,
@@ -183,6 +185,8 @@
                     },
                 },
             };
+
+            console.log(settings);
 
             if (settings["center_slide"] || settings["center_slide"] == "true")
                 carousel_settings["centeredSlides"] = true;

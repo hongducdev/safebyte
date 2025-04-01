@@ -60,7 +60,7 @@ pxl_add_custom_widget(
                                 'selectors' => [
                                     '{{WRAPPER}} .pxl-industries-list' => 'justify-content: {{VALUE}};',
                                 ],
-                            ),
+                            )
                         )
                     ),
                 ),

@@ -30,6 +30,7 @@ if(!function_exists('safebyte_elements_scripts')){
         wp_enqueue_script('safebyte-chart', get_template_directory_uri() . '/elements/assets/js/chart.js', [ 'jquery' ], $theme->get( 'Version' ), true);
         wp_enqueue_script('safebyte-sphere', get_template_directory_uri() . '/elements/assets/js/sphere.js', [ 'jquery' ], $theme->get( 'Version' ), true);
         wp_enqueue_script('safebyte-image-scroll', get_template_directory_uri() . '/elements/assets/js/image_scroll.js', [ 'jquery' ], $theme->get( 'Version' ), true);
+        wp_enqueue_script('safebyte-showcase', get_template_directory_uri() . '/elements/assets/js/showcase.js', [ 'jquery' ], $theme->get( 'Version' ), true);
     }
 }
 

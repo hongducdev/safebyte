@@ -56,8 +56,8 @@ $num_words = $widget->get_setting('num_words');
 
 $opts = [
     'slide_direction'               => 'horizontal',
-    'slide_percolumn'               => 3,
     'slide_mode'                    => 'slide',
+    'slide_percolumn'               => 3,
     'slides_to_show'                => $col_xl,
     'slides_to_show_xxl'            => $col_xxl,  
     'slides_to_show_lg'             => $col_lg, 
