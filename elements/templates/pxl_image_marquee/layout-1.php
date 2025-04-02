@@ -46,6 +46,9 @@ if(isset($settings['marquee']) && !empty($settings['marquee']) && count($setting
                                 $thumbnail_image = $img_image['thumbnail'];?>
                                 <div class="pxl-item--image">
                                     <?php echo wp_kses_post($thumbnail_image); ?>
+                                    <?php if(!empty($value['title'])) { ?>
+                                        <div class="pxl-item--title"><?php echo esc_html($value['title']); ?></div>
+                                    <?php } ?>
                                 </div>
                             <?php } ?>
                        </div>
@@ -81,6 +84,9 @@ if(isset($settings['marquee']) && !empty($settings['marquee']) && count($setting
                             $thumbnail_image = $img_image['thumbnail'];?>
                             <div class="pxl-item--image">
                                 <a <?php echo implode( ' ', [ $link_attributes ] ); ?>><?php echo wp_kses_post($thumbnail_image); ?></a>
+                                <?php if(!empty($value['title'])) { ?>
+                                    <div class="pxl-item--title"><?php echo esc_html($value['title']); ?></div>
+                                <?php } ?>
                             </div>
                         <?php } ?>
                    </div>

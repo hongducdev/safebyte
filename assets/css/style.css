@@ -9563,6 +9563,36 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
   width: 340px;
   height: 160px;
 }
+.click-ld .elementor-widget-container {
+  position: relative;
+  -webkit-transition: all 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -khtml-transition: all 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -moz-transition: all 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -ms-transition: all 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: all 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.click-ld .elementor-widget-container:before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--primary-color);
+  border-radius: 1000px;
+  animation: pxl_pulse_border 2000ms ease-out infinite;
+  -webkit-animation: pxl_pulse_border 2000ms ease-out infinite;
+  z-index: -2;
+}
+.click-ld .elementor-widget-container:hover {
+  transform: scale(0.9);
+}
+.wallpaper-landing-page img {
+  transform: rotate(15deg);
+}
 @media screen and (max-width: 777px) {
   .revslider-initialised .rv-description {
     font-size: 17px !important;
@@ -9746,12 +9776,12 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
   bottom: 0;
   background-color: var(--primary-color);
   border-radius: 1000px;
-  -webkit-transition: all 0.45s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -khtml-transition: all 0.45s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -moz-transition: all 0.45s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -ms-transition: all 0.45s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-transition: all 0.45s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: all 0.45s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-transition: all 0.45s cubic-bezier(0.645, 0, 0.355, 1);
+  -khtml-transition: all 0.45s cubic-bezier(0.645, 0, 0.355, 1);
+  -moz-transition: all 0.45s cubic-bezier(0.645, 0, 0.355, 1);
+  -ms-transition: all 0.45s cubic-bezier(0.645, 0, 0.355, 1);
+  -o-transition: all 0.45s cubic-bezier(0.645, 0, 0.355, 1);
+  transition: all 0.45s cubic-bezier(0.645, 0, 0.355, 1);
   z-index: -1;
 }
 @media (max-width: 767px) {
@@ -13981,11 +14011,12 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
 .pxl-image-carousel1 .pxl-item--image a:before {
   content: "";
   position: absolute;
-  top: 0;
+  z-index: 0;
   left: 0;
+  top: 0;
+  display: block;
   width: 100%;
   height: 100%;
-  z-index: -1;
   background-image: -webkit-linear-gradient(135deg, var(--gradient-color-from), var(--gradient-color-to));
   background-image: -moz-linear-gradient(135deg, var(--gradient-color-from), var(--gradient-color-to));
   background-image: -ms-linear-gradient(135deg, var(--gradient-color-from), var(--gradient-color-to));
@@ -14326,7 +14357,6 @@ body.single .pxl-breadcrumb li:not(:first-child):not(:last-child) {
 .pxl-info-box1 .pxl-item--icon {
   height: 62px;
   width: 62px;
-  background-color: red;
   border-radius: 62px;
   font-size: 34px;
   display: inline-flex;
@@ -14520,7 +14550,7 @@ body.single .pxl-breadcrumb li:not(:first-child):not(:last-child) {
     padding-right: 20px;
   }
 }
-.pxl-preset-4 .pxl-service-style1 .pxl-post--icon::after, .pxl-preset-4 .pxl-service-carousel1 .pxl-post--icon::after, .pxl-preset-4 .pxl-icon-color-gradient i, .pxl-preset-4 .pxl-portfolio-style1 .pxl-post--readmore.pxl-gradient-rotate, .pxl-preset-4 .pxl-testimonial-carousel1 .pxl-item--rating .pxl-item--star, .pxl-preset-4 .pxl-tabs2 .pxl-tabs--title .pxl-title--text, .pxl-preset-4 .pxl-counter1 .pxl-counter--number::before, .pxl-preset-4 .pxl-blog-style3 .pxl-post--category a, .pxl-preset-4 .pxl-blog-style3 .pxl-item--inner::after, .pxl-preset-4 .pxl-blog-style3 .pxl-post--meta div + div::before, .pxl-preset-4 .pxl-contact-form .pxl-form--label span {
+.pxl-preset-4 .pxl-service-style1 .pxl-post--icon::after, .pxl-preset-4 .pxl-service-carousel1 .pxl-post--icon::after, .pxl-preset-4 .pxl-icon-color-gradient i, .pxl-preset-4 .pxl-portfolio-style1 .pxl-post--readmore.pxl-gradient-rotate, .pxl-preset-4 .pxl-tabs2 .pxl-tabs--title .pxl-title--text, .pxl-preset-4 .pxl-counter1 .pxl-counter--number::before, .pxl-preset-4 .pxl-blog-style3 .pxl-post--category a, .pxl-preset-4 .pxl-blog-style3 .pxl-item--inner::after, .pxl-preset-4 .pxl-blog-style3 .pxl-post--meta div + div::before, .pxl-preset-4 .pxl-contact-form .pxl-form--label span {
   background-image: -webkit-linear-gradient(45deg, var(--gradient-first-color), var(--gradient-color-to) 52%, var(--gradient-color-from) 100%);
   background-image: -moz-linear-gradient(45deg, var(--gradient-first-color), var(--gradient-color-to) 52%, var(--gradient-color-from) 100%);
   background-image: -ms-linear-gradient(45deg, var(--gradient-first-color), var(--gradient-color-to) 52%, var(--gradient-color-from) 100%);
@@ -14612,11 +14642,20 @@ body.single .pxl-breadcrumb li:not(:first-child):not(:last-child) {
   top: 0;
   bottom: 0;
   margin: auto;
-  padding: 0 8px;
+  padding: 24px;
+  border: 1px solid #cdcdcd;
 }
 .pxl-image-marquee1 .pxl-image-active .pxl-item--marquee img {
   border-radius: 4px;
   width: 100%;
+}
+.pxl-image-marquee1 .pxl-image-active .pxl-item--marquee + .pxl-item--marquee {
+  border-left: none;
+}
+.pxl-image-marquee1 .pxl-item--title {
+  margin: 24px 0;
+  font-size: 17px;
+  text-align: center;
 }
 @media screen and (min-width: 1201px) {
   .pxl-image-marquee1 .col-xl-pxl5 {
@@ -15510,19 +15549,15 @@ body.rtl .pxl-button-video1 .slider-video-icon i {
   margin-bottom: 18px;
 }
 .pxl-image-scroll .pxl-scroll-content .pxl-item-list ul li:before {
-  content: "\F11E";
-  font-family: "Caseicon";
+  content: "";
   position: absolute;
-  font-size: 14px;
+  width: 4px;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #fff;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  -webkit-transition: all 0.3s linear 0s;
-  -khtml-transition: all 0.3s linear 0s;
-  -moz-transition: all 0.3s linear 0s;
-  -ms-transition: all 0.3s linear 0s;
-  -o-transition: all 0.3s linear 0s;
-  transition: all 0.3s linear 0s;
 }
 .pxl-image-scroll .pxl-scroll-content .pxl-item-list ul li:last-child {
   margin-bottom: 0;

@@ -31,6 +31,11 @@ pxl_add_custom_widget(
                                     'type' => \Elementor\Controls_Manager::URL,
                                     'label_block' => true,
                                 ),
+                                array(
+                                    'name' => 'title',
+                                    'label' => esc_html__('Title', 'safebyte' ),
+                                    'type' => \Elementor\Controls_Manager::TEXT,
+                                )
                             ),
                         ),
                     ),
