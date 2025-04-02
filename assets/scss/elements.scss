@@ -4263,9 +4263,25 @@ BLOG GRID
     padding: 18px;
     border-radius: 8px;
     background-color: #ecf2fe;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    &.pxl-wg-coming-soon {
+        .pxl-item--overlay {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            opacity: 1;
+        }
+    }
+    &:hover {
+        .pxl-item--overlay {
+            opacity: 1;
+        }
+    }
     .pxl-item--image {
         @include border-radius(8px);
-        max-height: 450px;
+        max-height: 436px;
         position: relative;
         overflow: hidden;
         img {
@@ -4274,138 +4290,48 @@ BLOG GRID
             transition: transform 0.3s ease;
         }
     }
-}
-
-@-webkit-keyframes btn_shine {
-    100% {
-        left: 200%;
-    }
-}
-@keyframes btn_shine {
-    100% {
-        left: 200%;
-    }
-}
-
-.pxl-showcase2 {
-    background-color: #fff;
-    padding: 14px;
-    border-radius: 14px;
-    box-shadow: 0 0 45px rgba(#000, 0.15) inset;
-    @include transition(all 300ms linear 0ms);
-    .pxl-item--image img {
-        width: 100%;
-    }
-    .pxl-item--title {
-        text-align: center;
-        font-size: 20px;
-        color: #fff;
-        font-weight: 700;
-        border-radius: 50px 50px 0 0;
-        position: absolute;
-        bottom: 0px;
-        left: 0px;
-        right: 0px;
-        padding: 8px 20px;
-        @include background-horizontal(
-            $gradient_color_from,
-            $gradient_color_to
-        );
-        z-index: 100;
-    }
     .pxl-item--overlay {
+        @include border-radius(8px);
         position: absolute;
-        z-index: 88;
-        top: 0;
-        left: 0;
+        inset: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(#6800d7, 0.2);
+        z-index: 10;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
         @include transition(all 300ms linear 0ms);
         opacity: 0;
     }
-    .pxl-item--readmore {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        width: 142px;
-        height: 142px;
-        margin: auto;
-        z-index: 99;
-        a {
-            width: 142px;
-            height: 142px;
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 142px;
-            @include background-horizontal(
-                $gradient_color_from,
-                $gradient_color_to
-            );
-            position: relative;
-            font-size: 18px;
-            font-weight: 600;
-            z-index: 1;
-            text-transform: uppercase;
-            transform: scale(0.8);
-            opacity: 0;
-            color: #fff;
-        }
-    }
-    .pxl-item--inner {
-        border-radius: 14px;
-        overflow: hidden;
-        position: relative;
-    }
-    .pxl-item--label {
-        font-size: 80px;
-        @extend .text-gradient;
+    .pxl-item--meta {
         position: absolute;
         top: 50%;
-        @include transform(translate(0, -50%));
-        left: 0;
-        right: 0;
-        text-align: center;
-        z-index: 99;
-        @include background-horizontal(#f6d809, #f65a39);
-        @media #{$max-xl} {
-            font-size: 60px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        gap: 8px;
+        @include transition(all 300ms linear 0ms);
+    }
+    .pxl-item--readmore {
+        @extend .btn;
+        line-height: 50px !important;
+        @include border-radius(50px !important);
+        background-color: $primary_color !important;
+        color: #ffffff !important;
+        a {
+            color: inherit !important;
         }
-        @media #{$max-sm} {
-            font-size: 42px;
+        &:hover {
+            background-color: $secondary_color !important;
         }
     }
-    &.pxl-wg-active {
-        .pxl-item--image {
-            position: relative;
-            &:before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                border-radius: 10px;
-                background-color: rgba(#020615, 0.45);
-                z-index: 9;
-            }
-            img {
-                filter: blur(7px);
-            }
-        }
-    }
-    &:hover {
-        @include transform(translateY(-22px));
-        box-shadow: 0 0 45px rgba(#fa0057, 0.2) inset;
-        .pxl-item--readmore a {
-            transform: scale(1);
-            opacity: 1;
-        }
-        .pxl-item--overlay {
-            opacity: 1;
+    .pxl-item--link {
+        span {
+            font-family: "GTWalsheimPro", sans-serif;
+            font-size: 17px;
+            color: #111;
         }
     }
 }

@@ -22,9 +22,6 @@ pxl_add_custom_widget(
                             'name' => 'title',
                             'label' => esc_html__('Title', 'safebyte'),
                             'type' => \Elementor\Controls_Manager::TEXT,
-                            'condition' => [
-                                'layout' => '2',
-                            ],
                         ),
                         array(
                             'name' => 'title_typography',
@@ -40,19 +37,25 @@ pxl_add_custom_widget(
                             'name' => 'btn_text',
                             'label' => esc_html__('Button Text 1', 'safebyte'),
                             'type' => \Elementor\Controls_Manager::TEXT,
+                            'condition' => [
+                                'coming_soon' => 'no',
+                            ],
                         ),
                         array(
                             'name' => 'btn_link',
                             'label' => esc_html__('Button Link 1', 'safebyte'),
                             'type' => \Elementor\Controls_Manager::URL,
                             'label_block' => true,
+                            'condition' => [
+                                'coming_soon' => 'no',
+                            ],
                         ),
                         array(
                             'name' => 'btn_text2',
                             'label' => esc_html__('Button Text 2', 'safebyte'),
                             'type' => \Elementor\Controls_Manager::TEXT,
                             'condition' => [
-                                'layout' => '1',
+                                'coming_soon' => 'no',
                             ],
                         ),
                         array(
@@ -61,23 +64,8 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::URL,
                             'label_block' => true,
                             'condition' => [
-                                'layout' => '1',
+                                'coming_soon' => 'no',
                             ],
-                        ),
-                        array(
-                            'name' => 'active',
-                            'label' => esc_html__('Active', 'safebyte' ),
-                            'type' => \Elementor\Controls_Manager::SELECT,
-                            'options' => [
-                                '' => 'No',
-                                'yes' => 'Yes',
-                            ],
-                            'default' => '',
-                        ),
-                        array(
-                            'name' => 'title',
-                            'label' => esc_html__('Title', 'safebyte'),
-                            'type' => \Elementor\Controls_Manager::TEXT,
                         ),
                         array(
                             'name' => 'coming_soon',

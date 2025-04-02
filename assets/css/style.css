@@ -1740,7 +1740,7 @@ a, a:hover, a:focus, a:before, a:after {
   outline: none;
   text-decoration: none;
 }
-.ft-secondary, .pxl--post-footer label, .widget_recent_comments ul, .widget_recent_comments ol, .widget_rss .rsswidget, .widget_block .wp-block-search__label, .widget_block .wp-block-group__inner-container > h2, .widget_block .wp-block-latest-posts__list, .widget_block .wp-block-latest-comments, .pxl-wg-categories .pxl-category--inner span, .pxl-contact-info-widget .pxl-phone--number, .pxl-mailchimp-l1.style-box [type="email"], .pxl-mailchimp-l1.style-box2 [type="email"], .pxl-button-video1 .slider-video-title, .pxl-banner1 .pxl-banner-bottom .pxl-counter--bnumber, .pxl-progressbar-1 .pxl--holder, .pxl-recent-news1 .pxl-post--date, .pxl-contact-form .pxl-form--label, #pxl-cart-sidebar .pxl-widget-cart-sidebar .widget_shopping_title, #pxl-cart-sidebar .pxl-widget-cart-sidebar .widget_shopping_cart .widget_shopping_cart_footer p.total, body #yith-quick-view-modal #yith-quick-view-content .entry-summary form.cart label, .pxl-blog-style3 .pxl-post--button, .pxl-blog-style3 .pxl-post--button, .btn {
+.ft-secondary, .pxl--post-footer label, .widget_recent_comments ul, .widget_recent_comments ol, .widget_rss .rsswidget, .widget_block .wp-block-search__label, .widget_block .wp-block-group__inner-container > h2, .widget_block .wp-block-latest-posts__list, .widget_block .wp-block-latest-comments, .pxl-wg-categories .pxl-category--inner span, .pxl-contact-info-widget .pxl-phone--number, .pxl-mailchimp-l1.style-box [type="email"], .pxl-mailchimp-l1.style-box2 [type="email"], .pxl-button-video1 .slider-video-title, .pxl-banner1 .pxl-banner-bottom .pxl-counter--bnumber, .pxl-progressbar-1 .pxl--holder, .pxl-recent-news1 .pxl-post--date, .pxl-contact-form .pxl-form--label, #pxl-cart-sidebar .pxl-widget-cart-sidebar .widget_shopping_title, #pxl-cart-sidebar .pxl-widget-cart-sidebar .widget_shopping_cart .widget_shopping_cart_footer p.total, body #yith-quick-view-modal #yith-quick-view-content .entry-summary form.cart label, .pxl-blog-style3 .pxl-post--button, .pxl-blog-style3 .pxl-post--button, .btn, .pxl-showcase1 .pxl-item--readmore {
   font-family: "Fira Sans", sans-serif;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -4601,7 +4601,7 @@ body.rtl .pxl-box-hover1 .pxl-item--inner:hover:before {
   color: var(--secondary-color);
   fill: var(--secondary-color);
 }
-.text-gradient, .swiper-filter-wrap .filter-item.active span, .pxl-contact-info-widget .pxl-item--icon i, .pxl-text-editor.highlight-gradient .pxl-text--highlight, .pxl-heading .px-text-gradient span, .pxl-heading .px-sub-title-shape4 i, .pxl-heading .px-sub-title-shape5 .pxl-item--subtext, .pxl-link .pxl-type-gradient .pxl-link--icon i, .pxl-tabs2 .pxl-tabs--title .pxl-title--text, .pxl-contact-form .pxl-form--label span, .pxl-social-icons1 a i, .pxl-contact-info1 .pxl-item--icon i, .pxl-showcase2 .pxl-item--label, .pxl-btn-video.style1 i, .pxl-info-box1 .pxl-item--icon i, .single-product #pxl-content-area div.product .woocommerce-product-gallery .flex-direction-nav a:hover:before, .single-product > div.product .woocommerce-product-gallery .flex-direction-nav a:hover:before, .pxl-blog-style2 .pxl-post--meta .pxl-meta--inner, .pxl-blog-style3 .pxl-post--category a, .pxl-blog-style2 .pxl-post--meta .pxl-meta--inner, .pxl-blog-style3 .pxl-post--category a {
+.text-gradient, .swiper-filter-wrap .filter-item.active span, .pxl-contact-info-widget .pxl-item--icon i, .pxl-text-editor.highlight-gradient .pxl-text--highlight, .pxl-heading .px-text-gradient span, .pxl-heading .px-sub-title-shape4 i, .pxl-heading .px-sub-title-shape5 .pxl-item--subtext, .pxl-link .pxl-type-gradient .pxl-link--icon i, .pxl-tabs2 .pxl-tabs--title .pxl-title--text, .pxl-contact-form .pxl-form--label span, .pxl-social-icons1 a i, .pxl-contact-info1 .pxl-item--icon i, .pxl-btn-video.style1 i, .pxl-info-box1 .pxl-item--icon i, .single-product #pxl-content-area div.product .woocommerce-product-gallery .flex-direction-nav a:hover:before, .single-product > div.product .woocommerce-product-gallery .flex-direction-nav a:hover:before, .pxl-blog-style2 .pxl-post--meta .pxl-meta--inner, .pxl-blog-style3 .pxl-post--category a, .pxl-blog-style2 .pxl-post--meta .pxl-meta--inner, .pxl-blog-style3 .pxl-post--category a {
   background-color: var(--gradient-color-from);
   background-image: -webkit-gradient(linear, right top, left top, from(var(--gradient-color-from)), to(var(--gradient-color-to)));
   background-image: -webkit-linear-gradient(to right, var(--gradient-color-from), var(--gradient-color-to));
@@ -6303,17 +6303,17 @@ body.rtl .pxl-box-hover1 .pxl-item--inner:hover:before {
     max-width: 100%;
   }
 }
-.pxl-item--archive.pxl-item--standard .pxl-item--readmore .btn {
+.pxl-item--archive.pxl-item--standard .pxl-item--readmore .btn, .pxl-item--archive.pxl-item--standard .pxl-item--readmore .pxl-showcase1 .pxl-item--readmore, .pxl-showcase1 .pxl-item--archive.pxl-item--standard .pxl-item--readmore .pxl-item--readmore {
   padding-left: 26px;
   padding-right: 76px;
 }
-.pxl-item--archive.pxl-item--standard .pxl-item--readmore .btn .pxl--btn-icon {
+.pxl-item--archive.pxl-item--standard .pxl-item--readmore .btn .pxl--btn-icon, .pxl-item--archive.pxl-item--standard .pxl-item--readmore .pxl-showcase1 .pxl-item--readmore .pxl--btn-icon, .pxl-showcase1 .pxl-item--archive.pxl-item--standard .pxl-item--readmore .pxl-item--readmore .pxl--btn-icon {
   min-width: 56px;
 }
-.pxl-item--archive.pxl-item--standard:not(:hover) .pxl-item--readmore .btn {
+.pxl-item--archive.pxl-item--standard:not(:hover) .pxl-item--readmore .btn, .pxl-item--archive.pxl-item--standard:not(:hover) .pxl-item--readmore .pxl-showcase1 .pxl-item--readmore, .pxl-showcase1 .pxl-item--archive.pxl-item--standard:not(:hover) .pxl-item--readmore .pxl-item--readmore {
   background-color: #454545;
 }
-.pxl-item--archive.pxl-item--standard:not(:hover) .pxl-item--readmore .btn .pxl--btn-icon {
+.pxl-item--archive.pxl-item--standard:not(:hover) .pxl-item--readmore .btn .pxl--btn-icon, .pxl-item--archive.pxl-item--standard:not(:hover) .pxl-item--readmore .pxl-showcase1 .pxl-item--readmore .pxl--btn-icon, .pxl-showcase1 .pxl-item--archive.pxl-item--standard:not(:hover) .pxl-item--readmore .pxl-item--readmore .pxl--btn-icon {
   background-color: #000;
 }
 .post-button-video {
@@ -7045,7 +7045,7 @@ body.error404 #pxl-main {
   align-items: center;
   justify-content: space-between;
 }
-.pxl-post-list.layout-post-1 .post-readmore .btn {
+.pxl-post-list.layout-post-1 .post-readmore .btn, .pxl-post-list.layout-post-1 .post-readmore .pxl-showcase1 .pxl-item--readmore, .pxl-showcase1 .pxl-post-list.layout-post-1 .post-readmore .pxl-item--readmore {
   background-color: var(--primary-color);
   color: #fff;
   -webkit-border-radius: 8px;
@@ -7055,7 +7055,7 @@ body.error404 #pxl-main {
   -o-border-radius: 8px;
   border-radius: 8px;
 }
-.pxl-post-list.layout-post-1 .post-readmore .btn:hover {
+.pxl-post-list.layout-post-1 .post-readmore .btn:hover, .pxl-post-list.layout-post-1 .post-readmore .pxl-showcase1 .pxl-item--readmore:hover, .pxl-showcase1 .pxl-post-list.layout-post-1 .post-readmore .pxl-item--readmore:hover {
   background-color: var(--secondary-color);
 }
 .pxl-post-navigation-custom {
@@ -10395,7 +10395,7 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
   align-items: flex-start;
   border-top: none;
 }
-.pxl-accordion2 a.btn {
+.pxl-accordion2 a.btn, .pxl-accordion2 .pxl-showcase1 a.pxl-item--readmore, .pxl-showcase1 .pxl-accordion2 a.pxl-item--readmore {
   margin-top: 15px;
   color: #fff;
   background-color: var(--primary-color);
@@ -10673,7 +10673,7 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
 .pxl-text-editor .pxl-item--inner {
   display: inline-block;
 }
-.pxl-text-editor .pxl-item--inner.text-gradient, .pxl-text-editor .swiper-filter-wrap .filter-item.active span.pxl-item--inner, .swiper-filter-wrap .filter-item.active .pxl-text-editor span.pxl-item--inner, .pxl-text-editor .pxl-contact-info-widget .pxl-item--icon i.pxl-item--inner, .pxl-contact-info-widget .pxl-item--icon .pxl-text-editor i.pxl-item--inner, .pxl-text-editor .pxl-text-editor.highlight-gradient .pxl-text--highlight.pxl-item--inner, .pxl-text-editor.highlight-gradient .pxl-text-editor .pxl-text--highlight.pxl-item--inner, .pxl-text-editor .pxl-heading .px-text-gradient span.pxl-item--inner, .pxl-heading .px-text-gradient .pxl-text-editor span.pxl-item--inner, .pxl-text-editor .pxl-heading .px-sub-title-shape4 i.pxl-item--inner, .pxl-heading .px-sub-title-shape4 .pxl-text-editor i.pxl-item--inner, .pxl-text-editor .pxl-heading .px-sub-title-shape5 .pxl-item--subtext.pxl-item--inner, .pxl-heading .px-sub-title-shape5 .pxl-text-editor .pxl-item--subtext.pxl-item--inner, .pxl-text-editor .pxl-link .pxl-type-gradient .pxl-link--icon i.pxl-item--inner, .pxl-link .pxl-type-gradient .pxl-link--icon .pxl-text-editor i.pxl-item--inner, .pxl-text-editor .pxl-tabs2 .pxl-tabs--title .pxl-title--text.pxl-item--inner, .pxl-tabs2 .pxl-tabs--title .pxl-text-editor .pxl-title--text.pxl-item--inner, .pxl-text-editor .pxl-contact-form .pxl-form--label span.pxl-item--inner, .pxl-contact-form .pxl-form--label .pxl-text-editor span.pxl-item--inner, .pxl-text-editor .pxl-social-icons1 a i.pxl-item--inner, .pxl-social-icons1 a .pxl-text-editor i.pxl-item--inner, .pxl-text-editor .pxl-contact-info1 .pxl-item--icon i.pxl-item--inner, .pxl-contact-info1 .pxl-item--icon .pxl-text-editor i.pxl-item--inner, .pxl-text-editor .pxl-showcase2 .pxl-item--label.pxl-item--inner, .pxl-showcase2 .pxl-text-editor .pxl-item--label.pxl-item--inner, .pxl-text-editor .pxl-btn-video.style1 i.pxl-item--inner, .pxl-btn-video.style1 .pxl-text-editor i.pxl-item--inner, .pxl-text-editor .pxl-info-box1 .pxl-item--icon i.pxl-item--inner, .pxl-info-box1 .pxl-item--icon .pxl-text-editor i.pxl-item--inner, .pxl-text-editor .single-product #pxl-content-area div.product .woocommerce-product-gallery .flex-direction-nav a:hover:before.pxl-item--inner, .single-product #pxl-content-area div.product .woocommerce-product-gallery .flex-direction-nav .pxl-text-editor a:hover:before.pxl-item--inner, .pxl-text-editor .single-product > div.product .woocommerce-product-gallery .flex-direction-nav a:hover:before.pxl-item--inner, .single-product > div.product .woocommerce-product-gallery .flex-direction-nav .pxl-text-editor a:hover:before.pxl-item--inner, .pxl-text-editor .pxl-blog-style2 .pxl-post--meta .pxl-meta--inner.pxl-item--inner, .pxl-blog-style2 .pxl-post--meta .pxl-text-editor .pxl-meta--inner.pxl-item--inner, .pxl-text-editor .pxl-blog-style3 .pxl-post--category a.pxl-item--inner, .pxl-blog-style3 .pxl-post--category .pxl-text-editor a.pxl-item--inner, .pxl-text-editor .pxl-blog-style2 .pxl-post--meta .pxl-meta--inner.pxl-item--inner, .pxl-blog-style2 .pxl-post--meta .pxl-text-editor .pxl-meta--inner.pxl-item--inner, .pxl-text-editor .pxl-blog-style3 .pxl-post--category a.pxl-item--inner, .pxl-blog-style3 .pxl-post--category .pxl-text-editor a.pxl-item--inner {
+.pxl-text-editor .pxl-item--inner.text-gradient, .pxl-text-editor .swiper-filter-wrap .filter-item.active span.pxl-item--inner, .swiper-filter-wrap .filter-item.active .pxl-text-editor span.pxl-item--inner, .pxl-text-editor .pxl-contact-info-widget .pxl-item--icon i.pxl-item--inner, .pxl-contact-info-widget .pxl-item--icon .pxl-text-editor i.pxl-item--inner, .pxl-text-editor .pxl-text-editor.highlight-gradient .pxl-text--highlight.pxl-item--inner, .pxl-text-editor.highlight-gradient .pxl-text-editor .pxl-text--highlight.pxl-item--inner, .pxl-text-editor .pxl-heading .px-text-gradient span.pxl-item--inner, .pxl-heading .px-text-gradient .pxl-text-editor span.pxl-item--inner, .pxl-text-editor .pxl-heading .px-sub-title-shape4 i.pxl-item--inner, .pxl-heading .px-sub-title-shape4 .pxl-text-editor i.pxl-item--inner, .pxl-text-editor .pxl-heading .px-sub-title-shape5 .pxl-item--subtext.pxl-item--inner, .pxl-heading .px-sub-title-shape5 .pxl-text-editor .pxl-item--subtext.pxl-item--inner, .pxl-text-editor .pxl-link .pxl-type-gradient .pxl-link--icon i.pxl-item--inner, .pxl-link .pxl-type-gradient .pxl-link--icon .pxl-text-editor i.pxl-item--inner, .pxl-text-editor .pxl-tabs2 .pxl-tabs--title .pxl-title--text.pxl-item--inner, .pxl-tabs2 .pxl-tabs--title .pxl-text-editor .pxl-title--text.pxl-item--inner, .pxl-text-editor .pxl-contact-form .pxl-form--label span.pxl-item--inner, .pxl-contact-form .pxl-form--label .pxl-text-editor span.pxl-item--inner, .pxl-text-editor .pxl-social-icons1 a i.pxl-item--inner, .pxl-social-icons1 a .pxl-text-editor i.pxl-item--inner, .pxl-text-editor .pxl-contact-info1 .pxl-item--icon i.pxl-item--inner, .pxl-contact-info1 .pxl-item--icon .pxl-text-editor i.pxl-item--inner, .pxl-text-editor .pxl-btn-video.style1 i.pxl-item--inner, .pxl-btn-video.style1 .pxl-text-editor i.pxl-item--inner, .pxl-text-editor .pxl-info-box1 .pxl-item--icon i.pxl-item--inner, .pxl-info-box1 .pxl-item--icon .pxl-text-editor i.pxl-item--inner, .pxl-text-editor .single-product #pxl-content-area div.product .woocommerce-product-gallery .flex-direction-nav a:hover:before.pxl-item--inner, .single-product #pxl-content-area div.product .woocommerce-product-gallery .flex-direction-nav .pxl-text-editor a:hover:before.pxl-item--inner, .pxl-text-editor .single-product > div.product .woocommerce-product-gallery .flex-direction-nav a:hover:before.pxl-item--inner, .single-product > div.product .woocommerce-product-gallery .flex-direction-nav .pxl-text-editor a:hover:before.pxl-item--inner, .pxl-text-editor .pxl-blog-style2 .pxl-post--meta .pxl-meta--inner.pxl-item--inner, .pxl-blog-style2 .pxl-post--meta .pxl-text-editor .pxl-meta--inner.pxl-item--inner, .pxl-text-editor .pxl-blog-style3 .pxl-post--category a.pxl-item--inner, .pxl-blog-style3 .pxl-post--category .pxl-text-editor a.pxl-item--inner, .pxl-text-editor .pxl-blog-style2 .pxl-post--meta .pxl-meta--inner.pxl-item--inner, .pxl-blog-style2 .pxl-post--meta .pxl-text-editor .pxl-meta--inner.pxl-item--inner, .pxl-text-editor .pxl-blog-style3 .pxl-post--category a.pxl-item--inner, .pxl-blog-style3 .pxl-post--category .pxl-text-editor a.pxl-item--inner {
   background-image: -webkit-gradient(linear, left top, left bottom, from(var(--gradient-color-from)), to(var(--gradient-color-to)));
   background-image: -webkit-linear-gradient(to bottom, var(--gradient-color-from), var(--gradient-color-to));
   background-image: -moz-linear-gradient(to bottom, var(--gradient-color-from), var(--gradient-color-to));
@@ -13019,7 +13019,7 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
   margin-right: 23px;
   padding-top: 3px;
 }
-.pxl-pricing1 .pxl-pricing--button .btn {
+.pxl-pricing1 .pxl-pricing--button .btn, .pxl-pricing1 .pxl-pricing--button .pxl-showcase1 .pxl-item--readmore, .pxl-showcase1 .pxl-pricing1 .pxl-pricing--button .pxl-item--readmore {
   padding: 0 30px;
   background-color: var(--primary-color);
   color: #fff;
@@ -13030,7 +13030,7 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
   -o-transition: 0.3s all linear 0s;
   transition: 0.3s all linear 0s;
 }
-.pxl-pricing1 .pxl-pricing--button .btn:hover {
+.pxl-pricing1 .pxl-pricing--button .btn:hover, .pxl-pricing1 .pxl-pricing--button .pxl-showcase1 .pxl-item--readmore:hover, .pxl-showcase1 .pxl-pricing1 .pxl-pricing--button .pxl-item--readmore:hover {
   background-color: var(--secondary-color);
 }
 .pxl-pricing1.popular {
@@ -13082,7 +13082,7 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
 .pxl-pricing1.popular ul.pxl-pricing--feature li.active i {
   color: #fff;
 }
-.pxl-pricing1.popular .pxl-pricing--button .btn {
+.pxl-pricing1.popular .pxl-pricing--button .btn, .pxl-pricing1.popular .pxl-pricing--button .pxl-showcase1 .pxl-item--readmore, .pxl-showcase1 .pxl-pricing1.popular .pxl-pricing--button .pxl-item--readmore {
   background-color: #fff;
   color: #0a1119;
 }
@@ -13855,6 +13855,18 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
   padding: 18px;
   border-radius: 8px;
   background-color: #ecf2fe;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.pxl-showcase1.pxl-wg-coming-soon .pxl-item--overlay {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  opacity: 1;
+}
+.pxl-showcase1:hover .pxl-item--overlay {
+  opacity: 1;
 }
 .pxl-showcase1 .pxl-item--image {
   -webkit-border-radius: 8px;
@@ -13863,7 +13875,7 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
   border-radius: 8px;
-  max-height: 450px;
+  max-height: 436px;
   position: relative;
   overflow: hidden;
 }
@@ -13872,60 +13884,21 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
   height: auto;
   transition: transform 0.3s ease;
 }
-@-webkit-keyframes btn_shine {
-  100% {
-    left: 200%;
-  }
-}
-@keyframes btn_shine {
-  100% {
-    left: 200%;
-  }
-}
-.pxl-showcase2 {
-  background-color: #fff;
-  padding: 14px;
-  border-radius: 14px;
-  box-shadow: 0 0 45px rgba(0, 0, 0, 0.15) inset;
-  -webkit-transition: all 300ms linear 0ms;
-  -khtml-transition: all 300ms linear 0ms;
-  -moz-transition: all 300ms linear 0ms;
-  -ms-transition: all 300ms linear 0ms;
-  -o-transition: all 300ms linear 0ms;
-  transition: all 300ms linear 0ms;
-}
-.pxl-showcase2 .pxl-item--image img {
-  width: 100%;
-}
-.pxl-showcase2 .pxl-item--title {
-  text-align: center;
-  font-size: 20px;
-  color: #fff;
-  font-weight: 700;
-  border-radius: 50px 50px 0 0;
+.pxl-showcase1 .pxl-item--overlay {
+  -webkit-border-radius: 8px;
+  -khtml-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
   position: absolute;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  padding: 8px 20px;
-  background-color: var(--gradient-color-from);
-  background-image: -webkit-gradient(linear, right top, left top, from(var(--gradient-color-from)), to(var(--gradient-color-to)));
-  background-image: -webkit-linear-gradient(to right, var(--gradient-color-from), var(--gradient-color-to));
-  background-image: -moz-linear-gradient(to right, var(--gradient-color-from), var(--gradient-color-to));
-  background-image: -ms-linear-gradient(to right, var(--gradient-color-from), var(--gradient-color-to));
-  background-image: -o-linear-gradient(to right, var(--gradient-color-from), var(--gradient-color-to));
-  background-image: linear-gradient(to right, var(--gradient-color-from), var(--gradient-color-to));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='var(--gradient-color-from)', endColorStr='var(--gradient-color-to)', gradientType='1');
-  z-index: 100;
-}
-.pxl-showcase2 .pxl-item--overlay {
-  position: absolute;
-  z-index: 88;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(104, 0, 215, 0.2);
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   -webkit-transition: all 300ms linear 0ms;
   -khtml-transition: all 300ms linear 0ms;
   -moz-transition: all 300ms linear 0ms;
@@ -13934,111 +13907,43 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
   transition: all 300ms linear 0ms;
   opacity: 0;
 }
-.pxl-showcase2 .pxl-item--readmore {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 142px;
-  height: 142px;
-  margin: auto;
-  z-index: 99;
-}
-.pxl-showcase2 .pxl-item--readmore a {
-  width: 142px;
-  height: 142px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 142px;
-  background-color: var(--gradient-color-from);
-  background-image: -webkit-gradient(linear, right top, left top, from(var(--gradient-color-from)), to(var(--gradient-color-to)));
-  background-image: -webkit-linear-gradient(to right, var(--gradient-color-from), var(--gradient-color-to));
-  background-image: -moz-linear-gradient(to right, var(--gradient-color-from), var(--gradient-color-to));
-  background-image: -ms-linear-gradient(to right, var(--gradient-color-from), var(--gradient-color-to));
-  background-image: -o-linear-gradient(to right, var(--gradient-color-from), var(--gradient-color-to));
-  background-image: linear-gradient(to right, var(--gradient-color-from), var(--gradient-color-to));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='var(--gradient-color-from)', endColorStr='var(--gradient-color-to)', gradientType='1');
-  position: relative;
-  font-size: 18px;
-  font-weight: 600;
-  z-index: 1;
-  text-transform: uppercase;
-  transform: scale(0.8);
-  opacity: 0;
-  color: #fff;
-}
-.pxl-showcase2 .pxl-item--inner {
-  border-radius: 14px;
-  overflow: hidden;
-  position: relative;
-}
-.pxl-showcase2 .pxl-item--label {
-  font-size: 80px;
+.pxl-showcase1 .pxl-item--meta {
   position: absolute;
   top: 50%;
-  -webkit-transform: translate(0, -50%);
-  -khtml-transform: translate(0, -50%);
-  -moz-transform: translate(0, -50%);
-  -ms-transform: translate(0, -50%);
-  -o-transform: translate(0, -50%);
-  transform: translate(0, -50%);
-  left: 0;
-  right: 0;
-  text-align: center;
-  z-index: 99;
-  background-color: #f6d809;
-  background-image: -webkit-gradient(linear, right top, left top, from(#f6d809), to(#f65a39));
-  background-image: -webkit-linear-gradient(to right, #f6d809, #f65a39);
-  background-image: -moz-linear-gradient(to right, #f6d809, #f65a39);
-  background-image: -ms-linear-gradient(to right, #f6d809, #f65a39);
-  background-image: -o-linear-gradient(to right, #f6d809, #f65a39);
-  background-image: linear-gradient(to right, #f6d809, #f65a39);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#f6d809', endColorStr='#f65a39', gradientType='1');
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  gap: 8px;
+  -webkit-transition: all 300ms linear 0ms;
+  -khtml-transition: all 300ms linear 0ms;
+  -moz-transition: all 300ms linear 0ms;
+  -ms-transition: all 300ms linear 0ms;
+  -o-transition: all 300ms linear 0ms;
+  transition: all 300ms linear 0ms;
 }
-@media screen and (max-width: 1400px) {
-  .pxl-showcase2 .pxl-item--label {
-    font-size: 60px;
-  }
+.pxl-showcase1 .pxl-item--readmore {
+  line-height: 50px !important;
+  -webkit-border-radius: 50px !important;
+  -khtml-border-radius: 50px !important;
+  -moz-border-radius: 50px !important;
+  -ms-border-radius: 50px !important;
+  -o-border-radius: 50px !important;
+  border-radius: 50px !important;
+  background-color: var(--primary-color) !important;
+  color: #fff !important;
 }
-@media screen and (max-width: 767px) {
-  .pxl-showcase2 .pxl-item--label {
-    font-size: 42px;
-  }
+.pxl-showcase1 .pxl-item--readmore a {
+  color: inherit !important;
 }
-.pxl-showcase2.pxl-wg-active .pxl-item--image {
-  position: relative;
+.pxl-showcase1 .pxl-item--readmore:hover {
+  background-color: var(--secondary-color) !important;
 }
-.pxl-showcase2.pxl-wg-active .pxl-item--image:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  background-color: rgba(2, 6, 21, 0.45);
-  z-index: 9;
-}
-.pxl-showcase2.pxl-wg-active .pxl-item--image img {
-  filter: blur(7px);
-}
-.pxl-showcase2:hover {
-  -webkit-transform: translateY(-22px);
-  -khtml-transform: translateY(-22px);
-  -moz-transform: translateY(-22px);
-  -ms-transform: translateY(-22px);
-  -o-transform: translateY(-22px);
-  transform: translateY(-22px);
-  box-shadow: 0 0 45px rgba(250, 0, 87, 0.2) inset;
-}
-.pxl-showcase2:hover .pxl-item--readmore a {
-  transform: scale(1);
-  opacity: 1;
-}
-.pxl-showcase2:hover .pxl-item--overlay {
-  opacity: 1;
+.pxl-showcase1 .pxl-item--link span {
+  font-family: "GTWalsheimPro", sans-serif;
+  font-size: 17px;
+  color: #111;
 }
 .pxl-image-carousel1 .pxl-item--image {
   position: relative;
@@ -14587,7 +14492,7 @@ body.single .pxl-breadcrumb li:not(:first-child):not(:last-child) {
     margin-bottom: 20px;
   }
 }
-.pxl-contact-box1 .pxl-item--button .btn {
+.pxl-contact-box1 .pxl-item--button .btn, .pxl-contact-box1 .pxl-item--button .pxl-showcase1 .pxl-item--readmore, .pxl-showcase1 .pxl-contact-box1 .pxl-item--button .pxl-item--readmore {
   font-size: 16px;
   font-weight: 500;
   line-height: 38px;
@@ -14614,11 +14519,11 @@ body.single .pxl-breadcrumb li:not(:first-child):not(:last-child) {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='', endColorStr='');
   background-color: transparent;
 }
-.pxl-preset-4 .pxl-pricing1 .pxl-pricing--button .btn {
+.pxl-preset-4 .pxl-pricing1 .pxl-pricing--button .btn, .pxl-preset-4 .pxl-pricing1 .pxl-pricing--button .pxl-showcase1 .pxl-item--readmore, .pxl-showcase1 .pxl-preset-4 .pxl-pricing1 .pxl-pricing--button .pxl-item--readmore {
   background: none;
   color: #242425;
 }
-.pxl-preset-4 .pxl-pricing1 .pxl-pricing--button .btn:before, .pxl-preset-4 .pxl-pricing1 .pxl-pricing--button .btn:after {
+.pxl-preset-4 .pxl-pricing1 .pxl-pricing--button .btn:before, .pxl-preset-4 .pxl-pricing1 .pxl-pricing--button .pxl-showcase1 .pxl-item--readmore:before, .pxl-showcase1 .pxl-preset-4 .pxl-pricing1 .pxl-pricing--button .pxl-item--readmore:before, .pxl-preset-4 .pxl-pricing1 .pxl-pricing--button .btn:after, .pxl-preset-4 .pxl-pricing1 .pxl-pricing--button .pxl-showcase1 .pxl-item--readmore:after, .pxl-showcase1 .pxl-preset-4 .pxl-pricing1 .pxl-pricing--button .pxl-item--readmore:after {
   content: "";
   z-index: -1;
   position: absolute;
@@ -14634,10 +14539,10 @@ body.single .pxl-breadcrumb li:not(:first-child):not(:last-child) {
   -o-transition: all 300ms linear 0ms;
   transition: all 300ms linear 0ms;
 }
-.pxl-preset-4 .pxl-pricing1 .pxl-pricing--button .btn:before {
+.pxl-preset-4 .pxl-pricing1 .pxl-pricing--button .btn:before, .pxl-preset-4 .pxl-pricing1 .pxl-pricing--button .pxl-showcase1 .pxl-item--readmore:before, .pxl-showcase1 .pxl-preset-4 .pxl-pricing1 .pxl-pricing--button .pxl-item--readmore:before {
   background-color: #fff;
 }
-.pxl-preset-4 .pxl-pricing1 .pxl-pricing--button .btn:after {
+.pxl-preset-4 .pxl-pricing1 .pxl-pricing--button .btn:after, .pxl-preset-4 .pxl-pricing1 .pxl-pricing--button .pxl-showcase1 .pxl-item--readmore:after, .pxl-showcase1 .pxl-preset-4 .pxl-pricing1 .pxl-pricing--button .pxl-item--readmore:after {
   background-image: -webkit-linear-gradient(45deg, var(--gradient-first-color) 0%, var(--gradient-color-to) 24%, var(--gradient-color-from) 60%, var(--third-color) 100%);
   background-image: -moz-linear-gradient(45deg, var(--gradient-first-color) 0%, var(--gradient-color-to) 24%, var(--gradient-color-from) 60%, var(--third-color) 100%);
   background-image: -ms-linear-gradient(45deg, var(--gradient-first-color) 0%, var(--gradient-color-to) 24%, var(--gradient-color-from) 60%, var(--third-color) 100%);
@@ -14646,13 +14551,13 @@ body.single .pxl-breadcrumb li:not(:first-child):not(:last-child) {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='', endColorStr='');
   opacity: 0;
 }
-.pxl-preset-4 .pxl-pricing1 .pxl-pricing--button .btn:hover, .pxl-preset-4 .pxl-pricing1 .pxl-pricing--button .btn:focus {
+.pxl-preset-4 .pxl-pricing1 .pxl-pricing--button .btn:hover, .pxl-preset-4 .pxl-pricing1 .pxl-pricing--button .pxl-showcase1 .pxl-item--readmore:hover, .pxl-showcase1 .pxl-preset-4 .pxl-pricing1 .pxl-pricing--button .pxl-item--readmore:hover, .pxl-preset-4 .pxl-pricing1 .pxl-pricing--button .btn:focus, .pxl-preset-4 .pxl-pricing1 .pxl-pricing--button .pxl-showcase1 .pxl-item--readmore:focus, .pxl-showcase1 .pxl-preset-4 .pxl-pricing1 .pxl-pricing--button .pxl-item--readmore:focus {
   color: #fff;
 }
-.pxl-preset-4 .pxl-pricing1 .pxl-pricing--button .btn:hover:before, .pxl-preset-4 .pxl-pricing1 .pxl-pricing--button .btn:focus:before {
+.pxl-preset-4 .pxl-pricing1 .pxl-pricing--button .btn:hover:before, .pxl-preset-4 .pxl-pricing1 .pxl-pricing--button .pxl-showcase1 .pxl-item--readmore:hover:before, .pxl-showcase1 .pxl-preset-4 .pxl-pricing1 .pxl-pricing--button .pxl-item--readmore:hover:before, .pxl-preset-4 .pxl-pricing1 .pxl-pricing--button .btn:focus:before, .pxl-preset-4 .pxl-pricing1 .pxl-pricing--button .pxl-showcase1 .pxl-item--readmore:focus:before, .pxl-showcase1 .pxl-preset-4 .pxl-pricing1 .pxl-pricing--button .pxl-item--readmore:focus:before {
   opacity: 0;
 }
-.pxl-preset-4 .pxl-pricing1 .pxl-pricing--button .btn:hover:after, .pxl-preset-4 .pxl-pricing1 .pxl-pricing--button .btn:focus:after {
+.pxl-preset-4 .pxl-pricing1 .pxl-pricing--button .btn:hover:after, .pxl-preset-4 .pxl-pricing1 .pxl-pricing--button .pxl-showcase1 .pxl-item--readmore:hover:after, .pxl-showcase1 .pxl-preset-4 .pxl-pricing1 .pxl-pricing--button .pxl-item--readmore:hover:after, .pxl-preset-4 .pxl-pricing1 .pxl-pricing--button .btn:focus:after, .pxl-preset-4 .pxl-pricing1 .pxl-pricing--button .pxl-showcase1 .pxl-item--readmore:focus:after, .pxl-showcase1 .pxl-preset-4 .pxl-pricing1 .pxl-pricing--button .pxl-item--readmore:focus:after {
   opacity: 1;
 }
 .pxl-preset-4 .pxl-blog-style3 .pxl-post--button {
@@ -15937,11 +15842,11 @@ body.rtl .pxl-button-video1 .slider-video-icon i {
   font-size: 100px;
   color: rgba(0, 0, 0, 0.2);
 }
-#pxl-cart-sidebar .pxl-widget-cart-sidebar .widget_shopping_cart .widget_shopping_cart_content ul.cart_list li.empty .btn {
+#pxl-cart-sidebar .pxl-widget-cart-sidebar .widget_shopping_cart .widget_shopping_cart_content ul.cart_list li.empty .btn, #pxl-cart-sidebar .pxl-widget-cart-sidebar .widget_shopping_cart .widget_shopping_cart_content ul.cart_list li.empty .pxl-showcase1 .pxl-item--readmore, .pxl-showcase1 #pxl-cart-sidebar .pxl-widget-cart-sidebar .widget_shopping_cart .widget_shopping_cart_content ul.cart_list li.empty .pxl-item--readmore {
   line-height: 50px;
   width: 100%;
 }
-#pxl-cart-sidebar .pxl-widget-cart-sidebar .widget_shopping_cart .widget_shopping_cart_content ul.cart_list li.empty .btn:hover {
+#pxl-cart-sidebar .pxl-widget-cart-sidebar .widget_shopping_cart .widget_shopping_cart_content ul.cart_list li.empty .btn:hover, #pxl-cart-sidebar .pxl-widget-cart-sidebar .widget_shopping_cart .widget_shopping_cart_content ul.cart_list li.empty .pxl-showcase1 .pxl-item--readmore:hover, .pxl-showcase1 #pxl-cart-sidebar .pxl-widget-cart-sidebar .widget_shopping_cart .widget_shopping_cart_content ul.cart_list li.empty .pxl-item--readmore:hover {
   color: #fff;
 }
 #pxl-cart-sidebar .pxl-widget-cart-sidebar .widget_shopping_cart .widget_shopping_cart_content ul.cart_list .cart-product-image {
@@ -16032,7 +15937,7 @@ body.rtl .pxl-button-video1 .slider-video-icon i {
   display: flex;
   flex-wrap: wrap;
 }
-#pxl-cart-sidebar .pxl-widget-cart-sidebar .widget_shopping_cart .widget_shopping_cart_footer p.buttons .btn {
+#pxl-cart-sidebar .pxl-widget-cart-sidebar .widget_shopping_cart .widget_shopping_cart_footer p.buttons .btn, #pxl-cart-sidebar .pxl-widget-cart-sidebar .widget_shopping_cart .widget_shopping_cart_footer p.buttons .pxl-showcase1 .pxl-item--readmore, .pxl-showcase1 #pxl-cart-sidebar .pxl-widget-cart-sidebar .widget_shopping_cart .widget_shopping_cart_footer p.buttons .pxl-item--readmore {
   width: 100%;
   margin-right: 0;
   margin-bottom: 10px;
@@ -16043,10 +15948,10 @@ body.rtl .pxl-button-video1 .slider-video-icon i {
   -o-border-radius: 0px;
   border-radius: 0px;
 }
-#pxl-cart-sidebar .pxl-widget-cart-sidebar .widget_shopping_cart .widget_shopping_cart_footer p.buttons .btn.checkout {
+#pxl-cart-sidebar .pxl-widget-cart-sidebar .widget_shopping_cart .widget_shopping_cart_footer p.buttons .btn.checkout, #pxl-cart-sidebar .pxl-widget-cart-sidebar .widget_shopping_cart .widget_shopping_cart_footer p.buttons .pxl-showcase1 .pxl-item--readmore.checkout, .pxl-showcase1 #pxl-cart-sidebar .pxl-widget-cart-sidebar .widget_shopping_cart .widget_shopping_cart_footer p.buttons .pxl-item--readmore.checkout {
   background: var(--secondary-color);
 }
-#pxl-cart-sidebar .pxl-widget-cart-sidebar .widget_shopping_cart .widget_shopping_cart_footer p.buttons .btn.checkout:hover, #pxl-cart-sidebar .pxl-widget-cart-sidebar .widget_shopping_cart .widget_shopping_cart_footer p.buttons .btn.checkout:focus {
+#pxl-cart-sidebar .pxl-widget-cart-sidebar .widget_shopping_cart .widget_shopping_cart_footer p.buttons .btn.checkout:hover, #pxl-cart-sidebar .pxl-widget-cart-sidebar .widget_shopping_cart .widget_shopping_cart_footer p.buttons .pxl-showcase1 .pxl-item--readmore.checkout:hover, .pxl-showcase1 #pxl-cart-sidebar .pxl-widget-cart-sidebar .widget_shopping_cart .widget_shopping_cart_footer p.buttons .pxl-item--readmore.checkout:hover, #pxl-cart-sidebar .pxl-widget-cart-sidebar .widget_shopping_cart .widget_shopping_cart_footer p.buttons .btn.checkout:focus, #pxl-cart-sidebar .pxl-widget-cart-sidebar .widget_shopping_cart .widget_shopping_cart_footer p.buttons .pxl-showcase1 .pxl-item--readmore.checkout:focus, .pxl-showcase1 #pxl-cart-sidebar .pxl-widget-cart-sidebar .widget_shopping_cart .widget_shopping_cart_footer p.buttons .pxl-item--readmore.checkout:focus {
   background: var(--primary-color);
 }
 #pxl-cart-sidebar.active {
@@ -19917,7 +19822,7 @@ body #yith-quick-view-modal #yith-quick-view-content .entry-summary .quantity .q
 .hidden-title-form input + input {
   margin-top: 15px;
 }
-.hidden-title-form .btn {
+.hidden-title-form .btn, .hidden-title-form .pxl-showcase1 .pxl-item--readmore, .pxl-showcase1 .hidden-title-form .pxl-item--readmore {
   line-height: 51px !important;
 }
 .shop_table.cart.wishlist_table {
@@ -22473,7 +22378,7 @@ button:not(.btn):hover, .button:not(.btn):hover, input[type="submit"]:not(.btn):
   background-color: var(--secondary-color);
   color: #fff;
 }
-.btn {
+.btn, .pxl-showcase1 .pxl-item--readmore {
   font-size: 15px;
   font-weight: 500;
   letter-spacing: 0.6px;
@@ -22500,26 +22405,26 @@ button:not(.btn):hover, .button:not(.btn):hover, input[type="submit"]:not(.btn):
   font-family: "GTWalsheimPro";
   z-index: 1;
 }
-.btn:hover, .btn:focus {
+.btn:hover, .pxl-showcase1 .pxl-item--readmore:hover, .btn:focus, .pxl-showcase1 .pxl-item--readmore:focus {
   outline: medium none;
   text-decoration: none;
   color: #fff;
   background-color: var(--secondary-color);
 }
-.btn.btn-block {
+.btn.btn-block, .pxl-showcase1 .pxl-item--readmore.btn-block {
   width: 100%;
 }
-.btn.pxl-icon--right {
+.btn.pxl-icon--right, .pxl-showcase1 .pxl-item--readmore.pxl-icon--right {
   flex-direction: row-reverse;
 }
-.btn.pxl-icon-active i {
+.btn.pxl-icon-active i, .pxl-showcase1 .pxl-item--readmore.pxl-icon-active i {
   justify-content: center;
   align-items: center;
 }
-.btn.btn-w-full {
+.btn.btn-w-full, .pxl-showcase1 .pxl-item--readmore.btn-w-full {
   width: 100%;
 }
-.btn .pxl--btn-icon {
+.btn .pxl--btn-icon, .pxl-showcase1 .pxl-item--readmore .pxl--btn-icon {
   display: inline-flex;
   -webkit-transition: all 300ms linear 0ms;
   -khtml-transition: all 300ms linear 0ms;
@@ -22528,7 +22433,7 @@ button:not(.btn):hover, .button:not(.btn):hover, input[type="submit"]:not(.btn):
   -o-transition: all 300ms linear 0ms;
   transition: all 300ms linear 0ms;
 }
-.btn .pxl--btn-icon i, .btn .pxl--btn-icon svg {
+.btn .pxl--btn-icon i, .pxl-showcase1 .pxl-item--readmore .pxl--btn-icon i, .btn .pxl--btn-icon svg, .pxl-showcase1 .pxl-item--readmore .pxl--btn-icon svg {
   -webkit-transition: all 300ms linear 0ms;
   -khtml-transition: all 300ms linear 0ms;
   -moz-transition: all 300ms linear 0ms;
@@ -22536,7 +22441,7 @@ button:not(.btn):hover, .button:not(.btn):hover, input[type="submit"]:not(.btn):
   -o-transition: all 300ms linear 0ms;
   transition: all 300ms linear 0ms;
 }
-.btn.btn-cycle {
+.btn.btn-cycle, .pxl-showcase1 .pxl-item--readmore.btn-cycle {
   width: 219px;
   height: 219px;
   border-radius: 109px;
@@ -22546,10 +22451,10 @@ button:not(.btn):hover, .button:not(.btn):hover, input[type="submit"]:not(.btn):
   justify-content: center;
   padding: 0;
 }
-.btn.btn-cycle:hover {
+.btn.btn-cycle:hover, .pxl-showcase1 .pxl-item--readmore.btn-cycle:hover {
   background: transparent;
 }
-.btn.btn-cycle span {
+.btn.btn-cycle span, .pxl-showcase1 .pxl-item--readmore.btn-cycle span {
   width: 172px;
   height: 172px;
   border-radius: 86px;
@@ -22568,13 +22473,13 @@ button:not(.btn):hover, .button:not(.btn):hover, input[type="submit"]:not(.btn):
   overflow-wrap: break-word;
   white-space: normal;
 }
-.btn.btn-text-nina.btn-default:hover, .btn.btn-text-nina.btn-default:focus {
+.btn.btn-text-nina.btn-default:hover, .pxl-showcase1 .pxl-item--readmore.btn-text-nina.btn-default:hover, .btn.btn-text-nina.btn-default:focus, .pxl-showcase1 .pxl-item--readmore.btn-text-nina.btn-default:focus {
   background-color: var(--primary-color);
 }
-.btn.btn-text-nina .pxl--btn-text {
+.btn.btn-text-nina .pxl--btn-text, .pxl-showcase1 .pxl-item--readmore.btn-text-nina .pxl--btn-text {
   position: relative;
 }
-.btn.btn-text-nina .pxl--btn-text:before {
+.btn.btn-text-nina .pxl--btn-text:before, .pxl-showcase1 .pxl-item--readmore.btn-text-nina .pxl--btn-text:before {
   content: attr(data-text);
   position: absolute;
   top: 0;
@@ -22589,7 +22494,7 @@ button:not(.btn):hover, .button:not(.btn):hover, input[type="submit"]:not(.btn):
   transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
   white-space: nowrap;
 }
-.btn.btn-text-nina .pxl--btn-text > span {
+.btn.btn-text-nina .pxl--btn-text > span, .pxl-showcase1 .pxl-item--readmore.btn-text-nina .pxl--btn-text > span {
   white-space: nowrap;
   display: inline-block;
   padding: 0;
@@ -22603,7 +22508,7 @@ button:not(.btn):hover, .button:not(.btn):hover, input[type="submit"]:not(.btn):
   transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
   line-height: normal;
 }
-.btn.btn-text-nina:hover {
+.btn.btn-text-nina:hover, .pxl-showcase1 .pxl-item--readmore.btn-text-nina:hover {
   -webkit-transform: translateY(0px);
   -khtml-transform: translateY(0px);
   -moz-transform: translateY(0px);
@@ -22611,49 +22516,49 @@ button:not(.btn):hover, .button:not(.btn):hover, input[type="submit"]:not(.btn):
   -o-transform: translateY(0px);
   transform: translateY(0px);
 }
-.btn.btn-text-nina:hover .pxl--btn-text:before {
+.btn.btn-text-nina:hover .pxl--btn-text:before, .pxl-showcase1 .pxl-item--readmore.btn-text-nina:hover .pxl--btn-text:before {
   opacity: 0;
   -webkit-transform: translate3d(0, 100%, 0);
   transform: translate3d(0, 100%, 0);
 }
-.btn.btn-text-nina:hover .pxl--btn-text span {
+.btn.btn-text-nina:hover .pxl--btn-text span, .pxl-showcase1 .pxl-item--readmore.btn-text-nina:hover .pxl--btn-text span {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-.btn.btn-text-nina:not(:hover) .pxl--btn-text > span {
+.btn.btn-text-nina:not(:hover) .pxl--btn-text > span, .pxl-showcase1 .pxl-item--readmore.btn-text-nina:not(:hover) .pxl--btn-text > span {
   transition-delay: 0s !important;
 }
-.btn.btn-text-nina.btn-outline-gradient:hover .pxl--btn-text:before {
+.btn.btn-text-nina.btn-outline-gradient:hover .pxl--btn-text:before, .pxl-showcase1 .pxl-item--readmore.btn-text-nina.btn-outline-gradient:hover .pxl--btn-text:before {
   -webkit-transform: translate3d(0, 30px, 0);
   transform: translate3d(0, 30px, 0);
 }
-.btn.btn-text-nanuk .pxl--btn-text span {
+.btn.btn-text-nanuk .pxl--btn-text span, .pxl-showcase1 .pxl-item--readmore.btn-text-nanuk .pxl--btn-text span {
   display: inline-block;
 }
-.btn.btn-text-nanuk:hover, .btn.btn-text-nanuk:active, .btn.btn-text-nanuk:not([disabled]):not(.disabled).active, .btn.btn-text-nanuk:not([disabled]):not(.disabled):active {
+.btn.btn-text-nanuk:hover, .pxl-showcase1 .pxl-item--readmore.btn-text-nanuk:hover, .btn.btn-text-nanuk:active, .pxl-showcase1 .pxl-item--readmore.btn-text-nanuk:active, .btn.btn-text-nanuk:not([disabled]):not(.disabled).active, .pxl-showcase1 .pxl-item--readmore.btn-text-nanuk:not([disabled]):not(.disabled).active, .btn.btn-text-nanuk:not([disabled]):not(.disabled):active, .pxl-showcase1 .pxl-item--readmore.btn-text-nanuk:not([disabled]):not(.disabled):active {
   background-color: var(--primary-color);
 }
-.btn.btn-text-nanuk:hover .pxl--btn-text span:nth-child(2n + 1), .btn.btn-text-nanuk:hover .pxl--btn-text span:nth-child(2n) {
+.btn.btn-text-nanuk:hover .pxl--btn-text span:nth-child(2n + 1), .pxl-showcase1 .pxl-item--readmore.btn-text-nanuk:hover .pxl--btn-text span:nth-child(2n + 1), .btn.btn-text-nanuk:hover .pxl--btn-text span:nth-child(2n), .pxl-showcase1 .pxl-item--readmore.btn-text-nanuk:hover .pxl--btn-text span:nth-child(2n) {
   -webkit-animation-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
   transition-animation-function: cubic-bezier(0.75, 0, 0.125, 1);
 }
-.btn.btn-text-nanuk:hover .pxl--btn-text span:nth-child(2n + 1) {
+.btn.btn-text-nanuk:hover .pxl--btn-text span:nth-child(2n + 1), .pxl-showcase1 .pxl-item--readmore.btn-text-nanuk:hover .pxl--btn-text span:nth-child(2n + 1) {
   -webkit-animation: pxl_nanuk_1 0.5s forwards;
   animation: pxl_nanuk_1 0.5s forwards;
 }
-.btn.btn-text-nanuk:hover .pxl--btn-text span:nth-child(2n) {
+.btn.btn-text-nanuk:hover .pxl--btn-text span:nth-child(2n), .pxl-showcase1 .pxl-item--readmore.btn-text-nanuk:hover .pxl--btn-text span:nth-child(2n) {
   -webkit-animation: pxl_nanuk_2 0.5s forwards;
   animation: pxl_nanuk_2 0.5s forwards;
 }
-.btn.btn-text-parallax {
+.btn.btn-text-parallax, .pxl-showcase1 .pxl-item--readmore.btn-text-parallax {
   overflow: visible;
   /* Button Style */
 }
-.btn.btn-text-parallax.btn-default:hover, .btn.btn-text-parallax.btn-default:focus {
+.btn.btn-text-parallax.btn-default:hover, .pxl-showcase1 .pxl-item--readmore.btn-text-parallax.btn-default:hover, .btn.btn-text-parallax.btn-default:focus, .pxl-showcase1 .pxl-item--readmore.btn-text-parallax.btn-default:focus {
   background-color: var(--primary-color);
 }
-.btn.btn-text-parallax .pxl--btn-text {
+.btn.btn-text-parallax .pxl--btn-text, .pxl-showcase1 .pxl-item--readmore.btn-text-parallax .pxl--btn-text {
   -webkit-transition: all 120ms linear 0ms;
   -khtml-transition: all 120ms linear 0ms;
   -moz-transition: all 120ms linear 0ms;
@@ -22661,10 +22566,10 @@ button:not(.btn):hover, .button:not(.btn):hover, input[type="submit"]:not(.btn):
   -o-transition: all 120ms linear 0ms;
   transition: all 120ms linear 0ms;
 }
-.btn.btn-text-parallax:not(.hovered), .btn.btn-text-parallax:not(.hovered) .pxl--btn-text {
+.btn.btn-text-parallax:not(.hovered), .pxl-showcase1 .pxl-item--readmore.btn-text-parallax:not(.hovered), .btn.btn-text-parallax:not(.hovered) .pxl--btn-text, .pxl-showcase1 .pxl-item--readmore.btn-text-parallax:not(.hovered) .pxl--btn-text {
   transform: translate3d(0px, 0px, 0px) !important;
 }
-.btn.btn-text-parallax .flaticon-up-right-arrow:before {
+.btn.btn-text-parallax .flaticon-up-right-arrow:before, .pxl-showcase1 .pxl-item--readmore.btn-text-parallax .flaticon-up-right-arrow:before {
   -webkit-transition: all 300ms linear 0ms;
   -khtml-transition: all 300ms linear 0ms;
   -moz-transition: all 300ms linear 0ms;
@@ -22672,10 +22577,10 @@ button:not(.btn):hover, .button:not(.btn):hover, input[type="submit"]:not(.btn):
   -o-transition: all 300ms linear 0ms;
   transition: all 300ms linear 0ms;
 }
-.btn.btn-text-parallax:hover .flaticon-up-right-arrow:before {
+.btn.btn-text-parallax:hover .flaticon-up-right-arrow:before, .pxl-showcase1 .pxl-item--readmore.btn-text-parallax:hover .flaticon-up-right-arrow:before {
   transform: rotate(45deg);
 }
-.btn.btn-text-underline {
+.btn.btn-text-underline, .pxl-showcase1 .pxl-item--readmore.btn-text-underline {
   font-size: 17px;
   line-height: 26px;
   padding: 0;
@@ -22687,17 +22592,17 @@ button:not(.btn):hover, .button:not(.btn):hover, input[type="submit"]:not(.btn):
   -o-border-radius: 0;
   border-radius: 0;
 }
-.btn.btn-text-underline:hover .pxl--btn-text:before {
+.btn.btn-text-underline:hover .pxl--btn-text:before, .pxl-showcase1 .pxl-item--readmore.btn-text-underline:hover .pxl--btn-text:before {
   right: auto;
   left: 0;
 }
-.btn.btn-text-underline:hover .pxl--btn-icon {
+.btn.btn-text-underline:hover .pxl--btn-icon, .pxl-showcase1 .pxl-item--readmore.btn-text-underline:hover .pxl--btn-icon {
   animation: toRightFromLeft 0.3s forwards;
 }
-.btn.btn-text-underline .pxl--btn-text {
+.btn.btn-text-underline .pxl--btn-text, .pxl-showcase1 .pxl-item--readmore.btn-text-underline .pxl--btn-text {
   position: relative;
 }
-.btn.btn-text-underline .pxl--btn-text:before {
+.btn.btn-text-underline .pxl--btn-text:before, .pxl-showcase1 .pxl-item--readmore.btn-text-underline .pxl--btn-text:before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -22713,7 +22618,7 @@ button:not(.btn):hover, .button:not(.btn):hover, input[type="submit"]:not(.btn):
   -o-transition: all 300ms linear 0ms;
   transition: all 300ms linear 0ms;
 }
-.btn.btn-gradient-rotate {
+.btn.btn-gradient-rotate, .pxl-showcase1 .pxl-item--readmore.btn-gradient-rotate {
   background-image: -webkit-linear-gradient(135deg, var(--gradient-color-from), var(--gradient-color-to));
   background-image: -moz-linear-gradient(135deg, var(--gradient-color-from), var(--gradient-color-to));
   background-image: -ms-linear-gradient(135deg, var(--gradient-color-from), var(--gradient-color-to));
@@ -22722,10 +22627,10 @@ button:not(.btn):hover, .button:not(.btn):hover, input[type="submit"]:not(.btn):
   filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='var(--gradient-color-from)', endColorStr='var(--gradient-color-to)');
   background-color: transparent;
 }
-.btn.btn-gradient-rotate:hover {
+.btn.btn-gradient-rotate:hover, .pxl-showcase1 .pxl-item--readmore.btn-gradient-rotate:hover {
   background-color: transparent;
 }
-.btn.btn-gradient-horizontal {
+.btn.btn-gradient-horizontal, .pxl-showcase1 .pxl-item--readmore.btn-gradient-horizontal {
   background-color: var(--gradient-color-from);
   background-image: -webkit-gradient(linear, right top, left top, from(var(--gradient-color-from)), to(var(--gradient-color-to)));
   background-image: -webkit-linear-gradient(to right, var(--gradient-color-from), var(--gradient-color-to));
@@ -22736,10 +22641,10 @@ button:not(.btn):hover, .button:not(.btn):hover, input[type="submit"]:not(.btn):
   filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='var(--gradient-color-from)', endColorStr='var(--gradient-color-to)', gradientType='1');
   background-color: transparent;
 }
-.btn.btn-gradient-horizontal:hover {
+.btn.btn-gradient-horizontal:hover, .pxl-showcase1 .pxl-item--readmore.btn-gradient-horizontal:hover {
   background-color: transparent;
 }
-.btn.btn-gradient-horizontal2 {
+.btn.btn-gradient-horizontal2, .pxl-showcase1 .pxl-item--readmore.btn-gradient-horizontal2 {
   background-image: -webkit-linear-gradient(45deg, var(--gradient-first-color), var(--gradient-color-to) 45%, var(--gradient-color-from) 100%);
   background-image: -moz-linear-gradient(45deg, var(--gradient-first-color), var(--gradient-color-to) 45%, var(--gradient-color-from) 100%);
   background-image: -ms-linear-gradient(45deg, var(--gradient-first-color), var(--gradient-color-to) 45%, var(--gradient-color-from) 100%);
@@ -22748,10 +22653,10 @@ button:not(.btn):hover, .button:not(.btn):hover, input[type="submit"]:not(.btn):
   filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='', endColorStr='');
   background-color: transparent;
 }
-.btn.btn-gradient-horizontal2:hover {
+.btn.btn-gradient-horizontal2:hover, .pxl-showcase1 .pxl-item--readmore.btn-gradient-horizontal2:hover {
   background-color: transparent;
 }
-.pxl-contact-form1 .btn.btn-gradient-horizontal {
+.pxl-contact-form1 .btn.btn-gradient-horizontal, .pxl-contact-form1 .pxl-showcase1 .pxl-item--readmore.btn-gradient-horizontal, .pxl-showcase1 .pxl-contact-form1 .pxl-item--readmore.btn-gradient-horizontal {
   background-image: -webkit-linear-gradient(to right, var(--gradient-color-from) 0%, var(--gradient-color-to) 51%, var(--gradient-color-from) 100%);
   background-image: -moz-linear-gradient(to right, var(--gradient-color-from) 0%, var(--gradient-color-to) 51%, var(--gradient-color-from) 100%);
   background-image: -ms-linear-gradient(to right, var(--gradient-color-from) 0%, var(--gradient-color-to) 51%, var(--gradient-color-from) 100%);
@@ -22766,7 +22671,7 @@ button:not(.btn):hover, .button:not(.btn):hover, input[type="submit"]:not(.btn):
   transition: all 300ms linear 0ms;
   background-size: 200%, auto;
 }
-.pxl-contact-form1 .btn.btn-gradient-horizontal i {
+.pxl-contact-form1 .btn.btn-gradient-horizontal i, .pxl-contact-form1 .pxl-showcase1 .pxl-item--readmore.btn-gradient-horizontal i, .pxl-showcase1 .pxl-contact-form1 .pxl-item--readmore.btn-gradient-horizontal i {
   font-size: 10px;
   -webkit-transition: all 300ms linear 0ms;
   -khtml-transition: all 300ms linear 0ms;
@@ -22775,10 +22680,10 @@ button:not(.btn):hover, .button:not(.btn):hover, input[type="submit"]:not(.btn):
   -o-transition: all 300ms linear 0ms;
   transition: all 300ms linear 0ms;
 }
-.pxl-contact-form1 .btn.btn-gradient-horizontal:hover {
+.pxl-contact-form1 .btn.btn-gradient-horizontal:hover, .pxl-contact-form1 .pxl-showcase1 .pxl-item--readmore.btn-gradient-horizontal:hover, .pxl-showcase1 .pxl-contact-form1 .pxl-item--readmore.btn-gradient-horizontal:hover {
   background-position: right center;
 }
-.pxl-contact-form1 .btn.btn-gradient-horizontal:hover i.flaticon-up-right-arrow {
+.pxl-contact-form1 .btn.btn-gradient-horizontal:hover i.flaticon-up-right-arrow, .pxl-contact-form1 .pxl-showcase1 .pxl-item--readmore.btn-gradient-horizontal:hover i.flaticon-up-right-arrow, .pxl-showcase1 .pxl-contact-form1 .pxl-item--readmore.btn-gradient-horizontal:hover i.flaticon-up-right-arrow {
   transform: rotate(45deg);
 }
 @keyframes pxl_nanuk_1 {
@@ -22836,14 +22741,14 @@ button:not(.btn):hover, .button:not(.btn):hover, input[type="submit"]:not(.btn):
   }
 }
 @media screen and (min-width: 576px) {
-  .revslider-initialised .btn.btn-icon-box {
+  .revslider-initialised .btn.btn-icon-box, .revslider-initialised .pxl-showcase1 .pxl-item--readmore.btn-icon-box, .pxl-showcase1 .revslider-initialised .pxl-item--readmore.btn-icon-box {
     padding-left: 44px;
     padding-right: 90px;
     line-height: 67px;
     font-size: 18px;
     background-color: var(--gradient-color-to);
   }
-  .revslider-initialised .btn.btn-icon-box .pxl--btn-icon {
+  .revslider-initialised .btn.btn-icon-box .pxl--btn-icon, .revslider-initialised .pxl-showcase1 .pxl-item--readmore.btn-icon-box .pxl--btn-icon, .pxl-showcase1 .revslider-initialised .pxl-item--readmore.btn-icon-box .pxl--btn-icon {
     width: 65px;
     height: 67px;
     position: absolute;
@@ -22855,7 +22760,7 @@ button:not(.btn):hover, .button:not(.btn):hover, input[type="submit"]:not(.btn):
     justify-content: center;
     font-size: 13px;
   }
-  .revslider-initialised .btn.btn-icon-box:hover, .revslider-initialised .btn.btn-icon-box:focus {
+  .revslider-initialised .btn.btn-icon-box:hover, .revslider-initialised .pxl-showcase1 .pxl-item--readmore.btn-icon-box:hover, .pxl-showcase1 .revslider-initialised .pxl-item--readmore.btn-icon-box:hover, .revslider-initialised .btn.btn-icon-box:focus, .revslider-initialised .pxl-showcase1 .pxl-item--readmore.btn-icon-box:focus, .pxl-showcase1 .revslider-initialised .pxl-item--readmore.btn-icon-box:focus {
     background-color: var(--gradient-color-to);
   }
 }
