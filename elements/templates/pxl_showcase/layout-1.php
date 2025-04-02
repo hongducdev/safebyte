@@ -22,7 +22,7 @@ if ( ! empty( $settings['btn_link2']['url'] ) ) {
     }
 }
 ?>
-<div class="pxl-showcase pxl-showcase1 <?php echo esc_attr($settings['pxl_animate']); ?> <?php if($settings['active'] == 'yes' && !empty($settings['active_label']) && empty($settings['btn_text'])) { echo 'pxl-wg-active'; } ?>" data-wow-delay="<?php echo esc_attr($settings['pxl_animate_delay']); ?>ms">
+<div class="pxl-showcase pxl-showcase1 <?php echo esc_attr($settings['pxl_animate']); ?> <?php if($settings['coming_soon'] == 'yes') { echo 'pxl-wg-coming-soon'; } ?>" data-wow-delay="<?php echo esc_attr($settings['pxl_animate_delay']); ?>ms">
     <?php if(!empty($settings['image']['id'])) :
         $img = pxl_get_image_by_size( array(
             'attach_id'  => $settings['image']['id'],
@@ -49,5 +49,10 @@ if ( ! empty( $settings['btn_link2']['url'] ) ) {
     <?php if($settings['active'] == 'yes' && !empty($settings['active_label']) && empty($settings['btn_text'])) : ?>
         <div class="pxl-item--label"><?php echo esc_attr($settings['active_label']); ?></div>
     <?php endif; ?>
-    <a class="pxl-item--link" <?php pxl_print_html($widget->get_render_attribute_string( 'button' )); ?>></a>
+    <a class="pxl-item--link" <?php pxl_print_html($widget->get_render_attribute_string( 'button' )); ?>>
+        <span>
+            <?php echo esc_attr($settings['title']); ?>
+        </span>
+    </a>
+
 </div>

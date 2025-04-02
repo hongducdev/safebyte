@@ -14,16 +14,6 @@ pxl_add_custom_widget(
                     'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
                     'controls' => array(
                         array(
-                            'name' => 'layout',
-                            'label' => esc_html__('Layout', 'safebyte' ),
-                            'type' => \Elementor\Controls_Manager::SELECT,
-                            'options' => [
-                                '1' => 'Layout 1',
-                                '2' => 'Layout 2',
-                            ],
-                            'default' => '1',
-                        ),
-                        array(
                             'name' => 'image',
                             'label' => esc_html__('Image', 'safebyte' ),
                             'type' => \Elementor\Controls_Manager::MEDIA,
@@ -85,20 +75,16 @@ pxl_add_custom_widget(
                             'default' => '',
                         ),
                         array(
-                            'name' => 'active_label',
-                            'label' => esc_html__('Active Label', 'safebyte'),
+                            'name' => 'title',
+                            'label' => esc_html__('Title', 'safebyte'),
                             'type' => \Elementor\Controls_Manager::TEXT,
-                            'condition' => [
-                                'active' => 'yes',
-                            ],
                         ),
                         array(
-                            'name' => 'label_typography',
-                            'label' => esc_html__('Label Typography', 'safebyte' ),
-                            'type' => \Elementor\Group_Control_Typography::get_type(),
-                            'control_type' => 'group',
-                            'selector' => '{{WRAPPER}} .pxl-showcase .pxl-item--label',
-                        ),
+                            'name' => 'coming_soon',
+                            'label' => esc_html__('Coming Soon', 'safebyte'),
+                            'type' => \Elementor\Controls_Manager::SWITCHER,
+                            'default' => 'no',
+                        )
                     ),
                 ),
                 safebyte_widget_animation_settings(),

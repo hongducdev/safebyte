@@ -22,7 +22,7 @@
                     return;
                 }
 
-                currentScroll += (targetScroll - currentScroll) * 0.1;
+                currentScroll += (targetScroll - currentScroll) * 0.03;
                 img.css('transform', `translateY(-${currentScroll}px)`);
                 animationFrame = requestAnimationFrame(updateScroll);
             }
