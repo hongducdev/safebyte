@@ -12870,6 +12870,16 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
   font-family: "GTWalsheimPro";
   text-align: center;
 }
+.pxl-counter5 .pxl-counter--number {
+  font-size: 200px;
+  line-height: 1;
+  display: flex;
+  background: linear-gradient(to bottom, var(--primary-color) 60%, rgba(0, 0, 0, 0) 75%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
 .pxl-pricing1 {
   padding: 41px 13px 50px 13px;
   border-radius: 8px;

@@ -42,6 +42,10 @@ pxl_add_custom_widget(
                                     'label' => esc_html__('Layout 4', 'safebyte' ),
                                     'image' => get_template_directory_uri() . '/elements/assets/img/pxl_counter/layout4.jpg'
                                 ],
+                                '5' => [
+                                    'label' => esc_html__('Layout 5', 'safebyte' ),
+                                    'image' => get_template_directory_uri() . '/elements/assets/img/pxl_counter/layout5.jpg'
+                                ],
                             ],
                         ),
                     ),
