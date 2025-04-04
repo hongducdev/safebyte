@@ -377,6 +377,12 @@ BLOG GRID
     }
 }
 
+.banner-box-woo-landing {
+    @media #{$max-md2} {
+        order: -1;
+    }
+}
+
 // Slider Revolution
 .revslider-initialised {
     .rv-description {

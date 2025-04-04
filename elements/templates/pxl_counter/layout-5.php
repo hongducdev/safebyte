@@ -7,7 +7,7 @@ $widget->add_render_attribute( 'counter', [
     'data-to-value' => $settings['ending_number'],
     'data-delimiter' => $settings['thousand_separator_char'],
 ] ); ?>
-<div class="pxl-counter pxl-counter5 <?php echo esc_attr($settings['pxl_animate']); ?>" data-wow-delay="<?php echo esc_attr($settings['pxl_animate_delay']); ?>ms" style="background-image: url(<?php echo esc_url($settings['background_overlay']['url']); ?>);">
+<div class="pxl-counter pxl-counter5 <?php echo esc_attr($settings['pxl_animate']); ?>" data-wow-delay="<?php echo esc_attr($settings['pxl_animate_delay']); ?>ms">
     <div class="pxl-counter--holder">
         <div class="pxl-counter--number <?php echo esc_attr($settings['shape_number']); ?>">
             <span class="pxl-counter--prefix el-empty"><?php echo pxl_print_html($settings['prefix']); ?></span>

@@ -9639,6 +9639,11 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
 .col-feature-landing:hover .heading-feature-landing .elementor-widget-container {
   border-color: var(--secondary-color);
 }
+@media screen and (max-width: 1024px) {
+  .banner-box-woo-landing {
+    order: -1;
+  }
+}
 @media screen and (max-width: 777px) {
   .revslider-initialised .rv-description {
     font-size: 17px !important;
