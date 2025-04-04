@@ -338,6 +338,45 @@ BLOG GRID
     }
 }
 
+.col-feature-landing {
+    .icon-feature-landing {
+        .pxl-icon1 {
+            @include transition(all 0.45s cubic-bezier(0.645, 0, 0.355, 1));
+            svg {
+                transform: rotateY(0deg);
+                @include transition(all 0.45s cubic-bezier(0.645, 0, 0.355, 1));
+                path {
+                    fill: $primary_color;
+                    @include transition(all 0.45s cubic-bezier(0.645, 0, 0.355, 1));
+                }
+            }
+        }
+    }
+    .heading-feature-landing {
+        .elementor-widget-container {
+            @include transition(all 0.45s cubic-bezier(0.645, 0, 0.355, 1));
+        }
+    }
+    &:hover {
+        .icon-feature-landing {
+            .pxl-icon1 {
+                background-color: $primary_color;
+                svg {
+                    path {
+                        fill: #fff;
+                    }
+                    transform: rotateY(360deg);
+                }
+            }
+        }
+        .heading-feature-landing {
+            .elementor-widget-container {
+                border-color: $secondary_color;
+            }
+        }
+    }
+}
+
 // Slider Revolution
 .revslider-initialised {
     .rv-description {
@@ -1989,6 +2028,22 @@ BLOG GRID
         svg {
             font-size: 28px;
             color: #111;
+        }
+    }
+    &.rounded-box {
+        width: 90px;
+        height: 90px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #ecf2fe;
+        svg {
+            width: 46px;
+            height: 46px;
+            path {
+                fill: $primary_color;
+            }
         }
     }
 }

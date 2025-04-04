@@ -9593,6 +9593,52 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
 .wallpaper-landing-page img {
   transform: rotate(15deg);
 }
+.col-feature-landing .icon-feature-landing .pxl-icon1 {
+  -webkit-transition: all 0.45s cubic-bezier(0.645, 0, 0.355, 1);
+  -khtml-transition: all 0.45s cubic-bezier(0.645, 0, 0.355, 1);
+  -moz-transition: all 0.45s cubic-bezier(0.645, 0, 0.355, 1);
+  -ms-transition: all 0.45s cubic-bezier(0.645, 0, 0.355, 1);
+  -o-transition: all 0.45s cubic-bezier(0.645, 0, 0.355, 1);
+  transition: all 0.45s cubic-bezier(0.645, 0, 0.355, 1);
+}
+.col-feature-landing .icon-feature-landing .pxl-icon1 svg {
+  transform: rotateY(0deg);
+  -webkit-transition: all 0.45s cubic-bezier(0.645, 0, 0.355, 1);
+  -khtml-transition: all 0.45s cubic-bezier(0.645, 0, 0.355, 1);
+  -moz-transition: all 0.45s cubic-bezier(0.645, 0, 0.355, 1);
+  -ms-transition: all 0.45s cubic-bezier(0.645, 0, 0.355, 1);
+  -o-transition: all 0.45s cubic-bezier(0.645, 0, 0.355, 1);
+  transition: all 0.45s cubic-bezier(0.645, 0, 0.355, 1);
+}
+.col-feature-landing .icon-feature-landing .pxl-icon1 svg path {
+  fill: var(--primary-color);
+  -webkit-transition: all 0.45s cubic-bezier(0.645, 0, 0.355, 1);
+  -khtml-transition: all 0.45s cubic-bezier(0.645, 0, 0.355, 1);
+  -moz-transition: all 0.45s cubic-bezier(0.645, 0, 0.355, 1);
+  -ms-transition: all 0.45s cubic-bezier(0.645, 0, 0.355, 1);
+  -o-transition: all 0.45s cubic-bezier(0.645, 0, 0.355, 1);
+  transition: all 0.45s cubic-bezier(0.645, 0, 0.355, 1);
+}
+.col-feature-landing .heading-feature-landing .elementor-widget-container {
+  -webkit-transition: all 0.45s cubic-bezier(0.645, 0, 0.355, 1);
+  -khtml-transition: all 0.45s cubic-bezier(0.645, 0, 0.355, 1);
+  -moz-transition: all 0.45s cubic-bezier(0.645, 0, 0.355, 1);
+  -ms-transition: all 0.45s cubic-bezier(0.645, 0, 0.355, 1);
+  -o-transition: all 0.45s cubic-bezier(0.645, 0, 0.355, 1);
+  transition: all 0.45s cubic-bezier(0.645, 0, 0.355, 1);
+}
+.col-feature-landing:hover .icon-feature-landing .pxl-icon1 {
+  background-color: var(--primary-color);
+}
+.col-feature-landing:hover .icon-feature-landing .pxl-icon1 svg {
+  transform: rotateY(360deg);
+}
+.col-feature-landing:hover .icon-feature-landing .pxl-icon1 svg path {
+  fill: #fff;
+}
+.col-feature-landing:hover .heading-feature-landing .elementor-widget-container {
+  border-color: var(--secondary-color);
+}
 @media screen and (max-width: 777px) {
   .revslider-initialised .rv-description {
     font-size: 17px !important;
@@ -11449,6 +11495,22 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
 .pxl-icon1.style-3 i, .pxl-icon1.style-3 svg {
   font-size: 28px;
   color: #111;
+}
+.pxl-icon1.rounded-box {
+  width: 90px;
+  height: 90px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ecf2fe;
+}
+.pxl-icon1.rounded-box svg {
+  width: 46px;
+  height: 46px;
+}
+.pxl-icon1.rounded-box svg path {
+  fill: var(--primary-color);
 }
 @keyframes svg_animate {
   0% {
