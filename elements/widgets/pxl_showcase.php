@@ -14,6 +14,16 @@ pxl_add_custom_widget(
                     'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
                     'controls' => array(
                         array(
+                            'name' => 'style-layout',
+                            'label' => esc_html__('Style','safebyte'),
+                            'type' => \Elementor\Controls_Manager::SELECT,
+                            'options' => [
+                                'style-1' => esc_html__('Style 1','safebyte'),
+                                'style-2' => esc_html__('Style 2','safebyte'),
+                            ],
+                            'default' => 'style-1',
+                        ),
+                        array(
                             'name' => 'image',
                             'label' => esc_html__('Image', 'safebyte' ),
                             'type' => \Elementor\Controls_Manager::MEDIA,
@@ -22,6 +32,12 @@ pxl_add_custom_widget(
                             'name' => 'title',
                             'label' => esc_html__('Title', 'safebyte'),
                             'type' => \Elementor\Controls_Manager::TEXT,
+                        ),
+                        array(
+                            'name' => 'link',
+                            'label' => esc_html__('Link','safebyte'),
+                            'type' => \Elementor\Controls_Manager::URL,
+                            'label_block' => true,
                         ),
                         array(
                             'name' => 'title_typography',
@@ -39,6 +55,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::TEXT,
                             'condition' => [
                                 'coming_soon' => 'no',
+                                'style-layout' => 'style-1',
                             ],
                         ),
                         array(
@@ -48,6 +65,7 @@ pxl_add_custom_widget(
                             'label_block' => true,
                             'condition' => [
                                 'coming_soon' => 'no',
+                                'style-layout' =>'style-1',
                             ],
                         ),
                         array(
@@ -56,6 +74,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::TEXT,
                             'condition' => [
                                 'coming_soon' => 'no',
+                                'style-layout' =>'style-1'
                             ],
                         ),
                         array(
@@ -65,6 +84,7 @@ pxl_add_custom_widget(
                             'label_block' => true,
                             'condition' => [
                                 'coming_soon' => 'no',
+                                'style-layout' =>'style-1'
                             ],
                         ),
                         array(
@@ -73,6 +93,53 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::SWITCHER,
                             'default' => 'no',
                         )
+                    ),
+                ),
+                array(
+                    'name' =>'section_style', 
+                    'label' => esc_html__('Style','safebyte'),
+                    'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+                    'controls' => array(
+                        array(
+                            'name' => 'border_type',
+                            'label' => esc_html__( 'Border Type', 'safebyte' ),
+                            'type' => \Elementor\Controls_Manager::SELECT,
+                            'options' => [
+                                '' => esc_html__( 'None', 'safebyte' ),
+                                'solid' => esc_html__( 'Solid', 'safebyte' ),
+                                'double' => esc_html__( 'Double', 'safebyte' ),
+                                'dotted' => esc_html__( 'Dotted', 'safebyte' ),
+                                'dashed' => esc_html__( 'Dashed', 'safebyte' ),
+                                'groove' => esc_html__( 'Groove', 'safebyte' ),
+                            ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-showcase' => 'border-style: {{VALUE}} !important;',
+                            ],
+                        ),
+                        array(
+                            'name' => 'border_width',
+                            'label' => esc_html__( 'Border Width', 'safebyte' ),
+                            'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-showcase' => 'border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;',
+                            ],
+                            'condition' => [
+                                'border_type!' => '',
+                            ],
+                            'responsive' => true,
+                        ),
+                        array(
+                            'name' => 'border_color',
+                            'label' => esc_html__( 'Border Color', 'safebyte' ),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'default' => '',
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-showcase' => 'border-color: {{VALUE}} !important;',
+                            ],
+                            'condition' => [
+                                'border_type!' => '',
+                            ],
+                        ),
                     ),
                 ),
                 safebyte_widget_animation_settings(),

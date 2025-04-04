@@ -4311,6 +4311,23 @@ BLOG GRID
 
 // Case Showcase
 .pxl-showcase1 {
+    &.style-2 {
+        border-radius: 0;
+        border: 1px solid #cdcdcd;
+        background-color: #fff;
+        .pxl-item--image {
+            @include border-radius(0);
+            border: 1px solid #cdcdcd;
+            img {
+                @include border-radius(0);
+            }
+        }
+        &:hover {
+            .pxl-item--overlay {
+                opacity: 0;
+            }
+        }
+    }
     padding: 18px;
     border-radius: 8px;
     background-color: #ecf2fe;

@@ -13900,6 +13900,31 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
   flex-direction: column;
   gap: 20px;
 }
+.pxl-showcase1.style-2 {
+  border-radius: 0;
+  border: 1px solid #cdcdcd;
+  background-color: #fff;
+}
+.pxl-showcase1.style-2 .pxl-item--image {
+  -webkit-border-radius: 0;
+  -khtml-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  border: 1px solid #cdcdcd;
+}
+.pxl-showcase1.style-2 .pxl-item--image img {
+  -webkit-border-radius: 0;
+  -khtml-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+.pxl-showcase1.style-2:hover .pxl-item--overlay {
+  opacity: 0;
+}
 .pxl-showcase1.pxl-wg-coming-soon .pxl-item--overlay {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
