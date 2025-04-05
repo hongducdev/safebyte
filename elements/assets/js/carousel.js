@@ -47,7 +47,7 @@
     function pxl_swiper_handler($scope) {
         $scope.find(".pxl-swiper-slider").each(function (index, element) {
             var $this = $(this);
-            var numberOfSlides = $this.find(".pxl-swiper-slide").length;
+
             var settings = $this.find(".pxl-swiper-container").data().settings;
 
             var carousel_settings = {
@@ -58,10 +58,6 @@
                 slidesPerView: settings["slides_to_show"],
                 slidesPerGroup: settings["slides_to_scroll"],
                 slidesPerColumn: settings["slide_percolumn"],
-                grid: {
-                    rows: settings["slide_percolumn"],
-                    fill: "row",
-                },
                 spaceBetween: 0,
                 observer: true,
                 observeParents: true,
@@ -185,8 +181,6 @@
                     },
                 },
             };
-
-            console.log(settings);
 
             if (settings["center_slide"] || settings["center_slide"] == "true")
                 carousel_settings["centeredSlides"] = true;
@@ -312,61 +306,6 @@
                     }
                 );
             }, 300);
-
-            var allSlides = $this.find(".pxl-swiper-slide");
-
-            $scope
-                .find(".pxl--filter-inner .filter-item")
-                .on("click", function () {
-                    var target = $(this).attr("data-filter-target");
-                    var $parent = $(this).closest(".pxl-swiper-slider");
-                    $(this).siblings().removeClass("active");
-                    $(this).addClass("active");
-                    $parent.find(".pxl-swiper-slide").remove();
-                    if (target == "all") {
-                        allSlides.each(function () {
-                            $this
-                                .find(".pxl-swiper-wrapper")
-                                .append($(this)[0].outerHTML);
-                        });
-                    } else {
-                        allSlides.each(function () {
-                            if (
-                                $(this).is("[data-filter^='" + target + "']") ||
-                                $(this).is("[data-filter*='" + target + "']")
-                            ) {
-                                $this
-                                    .find(".pxl-swiper-wrapper")
-                                    .append($(this)[0].outerHTML);
-                            }
-                        });
-                    }
-                    numberOfSlides = $parent.find(".pxl-swiper-slide").length;
-                    if (carousel_settings["centeredSlides"]) {
-                        if (carousel_settings["loop"]) {
-                            carousel_settings["initialSlide"] = Math.floor(
-                                numberOfSlides / 2
-                            );
-                        } else {
-                            if (carousel_settings["slidesPerView"] > 1) {
-                                carousel_settings["initialSlide"] = Math.ceil(
-                                    (numberOfSlides -
-                                        carousel_settings["slidesPerView"]) /
-                                        2
-                                );
-                            } else {
-                                carousel_settings["initialSlide"] = Math.ceil(
-                                    numberOfSlides / 2 - 1
-                                );
-                            }
-                        }
-                    }
-                    swiper.destroy();
-                    swiper = new Swiper(
-                        $parent.find(".pxl-swiper-container")[0],
-                        carousel_settings
-                    );
-                });
         });
     }
 })(jQuery);
