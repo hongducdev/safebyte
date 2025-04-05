@@ -24,7 +24,7 @@ if (!class_exists('Safebyte_Footer')) {
             $back_top_top_style = safebyte()->get_opt('back_top_top_style', 'style-default');
             if (isset($back_totop_on) && $back_totop_on == true) : ?>
                 <a class="pxl-scroll-top <?php echo esc_attr($back_top_top_style); ?>" href="#">
-                    <i class="flaticon-arrow-up"></i>
+                    <i class="caseicon-angle-arrow-up"></i>
                     <svg class="pxl-scroll-progress-circle" width="100%" height="100%" viewBox="-1 -1 102 102">
                         <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
                     </svg>
