@@ -3429,6 +3429,12 @@ BLOG GRID
     flex-direction: column;
     background-color: #10399d;
     text-align: center;
+
+    @media #{$max-xs} {
+        width: 250px;
+        height: 250px;
+        @include border-radius(250px);
+    }
     .pxl-counter--number {
         font-size: 70px;
         line-height: 1;

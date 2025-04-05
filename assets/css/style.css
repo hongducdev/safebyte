@@ -10544,7 +10544,7 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
     justify-content: center;
     flex-direction: column;
     height: auto;
-    width: 100% 546555666444;
+    width: 100%;
     gap: 15px;
   }
   .pxl-accordion3 .pxl-accordion--steps .pxl-accordion--step-arrow {
@@ -12974,6 +12974,18 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
   flex-direction: column;
   background-color: #10399d;
   text-align: center;
+}
+@media screen and (max-width: 575px) {
+  .pxl-counter4 {
+    width: 250px;
+    height: 250px;
+    -webkit-border-radius: 250px;
+    -khtml-border-radius: 250px;
+    -moz-border-radius: 250px;
+    -ms-border-radius: 250px;
+    -o-border-radius: 250px;
+    border-radius: 250px;
+  }
 }
 .pxl-counter4 .pxl-counter--number {
   font-size: 70px;

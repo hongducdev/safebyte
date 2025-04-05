@@ -163,10 +163,10 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Divider Color', 'safebyte' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-nav-menu .pxl-menu-primary > li a:before' => 'background-color: {{VALUE}};',
+                                '{{WRAPPER}} .pxl-nav-menu .pxl-menu-primary > li > a:before' => 'background-color: {{VALUE}};',
                             ],
                             'condition' => [
-                                'hover_active_style' => ['fr-spacer-divider','fr-horizontal-divider'],
+                                'hover_active_style' => ['fr-spacer-divider','fr-horizontal-divider', 'fr-horizontal-divider-underline'],
                             ],
                         ),
                         array(
