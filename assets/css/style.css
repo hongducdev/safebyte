@@ -9650,6 +9650,11 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
     order: -1;
   }
 }
+@media screen and (max-width: 767px) {
+  .bg-section-1-home-2 .pxl-item--bg.bg-image {
+    background-position: center right;
+  }
+}
 @media screen and (max-width: 777px) {
   .revslider-initialised .rv-description {
     font-size: 17px !important;
@@ -12711,73 +12716,38 @@ body.rtl .pxl-select .pxl-select-higthlight::before {
 }
 .pxl-partner-carousel1 .pxl-item--logo a {
   display: inline-block;
-  overflow: hidden;
   position: relative;
   padding: 10px;
+  perspective: 1000px;
+  width: 100%;
+  height: 70px;
+  transform-style: preserve-3d;
 }
 .pxl-partner-carousel1 .pxl-item--logo a img {
   display: block;
   width: auto;
+  max-width: 100%;
   margin: 0 auto;
-  position: relative;
   max-height: 50px;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  backface-visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: transform 0.8s;
 }
 .pxl-partner-carousel1 .pxl-item--logo a img:nth-child(1) {
-  opacity: 1;
   filter: grayscale(100%);
-  transform-origin: center;
-  transform: scale(1) translateZ(0);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  transform: translate(-50%, -50%) rotateX(0deg);
 }
 .pxl-partner-carousel1 .pxl-item--logo a img:nth-child(2) {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  opacity: 0;
   filter: grayscale(0%);
-  transform: translate(-50%, -50%) scale(0.8) translateZ(0);
-  clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+  transform: translate(-50%, -50%) rotateX(180deg);
 }
 .pxl-partner-carousel1 .pxl-item--logo a:hover img:nth-child(1) {
-  opacity: 0;
-  transform: scale(1.2) translateZ(0);
-  filter: grayscale(100%) blur(5px);
-  clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+  transform: translate(-50%, -50%) rotateX(180deg);
 }
 .pxl-partner-carousel1 .pxl-item--logo a:hover img:nth-child(2) {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1) translateZ(0);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-}
-.pxl-partner-carousel1 .pxl-item--logo a::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  transition: all 0.5s ease;
-}
-.pxl-partner-carousel1 .pxl-item--logo a:hover::after {
-  width: 120%;
-  height: 120%;
-  opacity: 0;
-}
-@keyframes ripple {
-  .pxl-partner-carousel1 .pxl-item--logo a 0% {
-    width: 0;
-    height: 0;
-    opacity: 0.5;
-  }
-  .pxl-partner-carousel1 .pxl-item--logo a 100% {
-    width: 120%;
-    height: 120%;
-    opacity: 0;
-  }
+  transform: translate(-50%, -50%) rotateX(0deg);
 }
 .pxl-partner-carousel1 .pxl-swiper-wrapper {
   align-items: center;

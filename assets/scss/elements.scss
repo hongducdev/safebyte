@@ -385,6 +385,14 @@ BLOG GRID
     }
 }
 
+.bg-section-1-home-2 {
+    @media #{$max-sm} {
+        .pxl-item--bg.bg-image {
+            background-position: center right;
+        }
+    }
+}
+
 // Slider Revolution
 .revslider-initialised {
     .rv-description {
@@ -3168,81 +3176,43 @@ BLOG GRID
         }
         a {
             display: inline-block;
-            overflow: hidden;
             position: relative;
             padding: 10px;
+            perspective: 1000px;
+            width: 100%;
+            height: 70px;
+            transform-style: preserve-3d;
 
             img {
                 display: block;
                 width: auto;
+                max-width: 100%;
                 margin: 0 auto;
-                position: relative;
                 max-height: 50px;
-                transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+                backface-visibility: hidden;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transition: transform 0.8s;
             }
 
             img:nth-child(1) {
-                opacity: 1;
                 filter: grayscale(100%);
-                transform-origin: center;
-                transform: scale(1) translateZ(0);
-                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                transform: translate(-50%, -50%) rotateX(0deg);
             }
 
             img:nth-child(2) {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                opacity: 0;
                 filter: grayscale(0%);
-                transform: translate(-50%, -50%) scale(0.8) translateZ(0);
-                clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+                transform: translate(-50%, -50%) rotateX(180deg);
             }
-
+            
             &:hover {
                 img:nth-child(1) {
-                    opacity: 0;
-                    transform: scale(1.2) translateZ(0);
-                    filter: grayscale(100%) blur(5px);
-                    clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+                    transform: translate(-50%, -50%) rotateX(180deg);
                 }
-
+                
                 img:nth-child(2) {
-                    opacity: 1;
-                    transform: translate(-50%, -50%) scale(1) translateZ(0);
-                    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-                }
-            }
-
-            &::after {
-                content: "";
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                width: 0;
-                height: 0;
-                background: rgba(255, 255, 255, 0.2);
-                border-radius: 50%;
-                transform: translate(-50%, -50%);
-                transition: all 0.5s ease;
-            }
-
-            &:hover::after {
-                width: 120%;
-                height: 120%;
-                opacity: 0;
-            }
-
-            @keyframes ripple {
-                0% {
-                    width: 0;
-                    height: 0;
-                    opacity: 0.5;
-                }
-                100% {
-                    width: 120%;
-                    height: 120%;
-                    opacity: 0;
+                    transform: translate(-50%, -50%) rotateX(0deg);
                 }
             }
         }

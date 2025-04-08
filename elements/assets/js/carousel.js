@@ -42,6 +42,13 @@
                 pxl_swiper_handler($scope);
             }
         );
+        
+        elementorFrontend.hooks.addAction(
+            "frontend/element_ready/pxl_tab_carousel.default",
+            function ($scope) {
+                pxl_swiper_handler($scope);
+            }
+        );
     });
 
     function pxl_swiper_handler($scope) {
