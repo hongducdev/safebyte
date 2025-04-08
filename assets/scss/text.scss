@@ -318,6 +318,11 @@
             font-size: 16px;
             color: #ffffff;
         }
+        @media #{$max-xs} {
+            &:before {
+                display: none;
+            }
+        }
     }
     .pxl-item--step {
         height: 30px;
@@ -453,6 +458,13 @@
     .pxl-item--inner {
         display: flex;
         gap: 30px;
+        @media #{$max-xs} {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 20px;
+        }
         &:hover {
             .pxl-item--icon {
                 i,
@@ -491,6 +503,9 @@
     .pxl-item--desc {
         color: #cdd4ef;
         max-width: 270px;
+        @media #{$max-xs} {
+            max-width: 100%;
+        }
     }
     .pxl-swiper-bottom {
         position: absolute;

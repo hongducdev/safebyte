@@ -26116,6 +26116,11 @@ body.rtl .widget_search .search-submit {
   font-size: 16px;
   color: #fff;
 }
+@media screen and (max-width: 575px) {
+  .pxl-text-carousel4 .pxl-item--header:before {
+    display: none;
+  }
+}
 .pxl-text-carousel4 .pxl-item--step {
   height: 30px;
   display: inline-flex;
@@ -26244,6 +26249,15 @@ body.rtl .widget_search .search-submit {
   display: flex;
   gap: 30px;
 }
+@media screen and (max-width: 575px) {
+  .pxl-text-carousel6 .pxl-item--inner {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+  }
+}
 .pxl-text-carousel6 .pxl-item--inner:hover .pxl-item--icon i, .pxl-text-carousel6 .pxl-item--inner:hover .pxl-item--icon svg, .pxl-text-carousel6 .pxl-item--inner:hover .pxl-item--icon img {
   animation-name: pxl_wobble_vertical;
   animation-duration: 1s;
@@ -26280,6 +26294,11 @@ body.rtl .widget_search .search-submit {
 .pxl-text-carousel6 .pxl-item--desc {
   color: #cdd4ef;
   max-width: 270px;
+}
+@media screen and (max-width: 575px) {
+  .pxl-text-carousel6 .pxl-item--desc {
+    max-width: 100%;
+  }
 }
 .pxl-text-carousel6 .pxl-swiper-bottom {
   position: absolute;

@@ -17,6 +17,7 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Quantity', 'safebyte'),
                             'type' => \Elementor\Controls_Manager::NUMBER,
                             'default' => 4,
+                            'control_type' => 'responsive',
                         ),
                         array(
                             'name' => 'style',
