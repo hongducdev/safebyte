@@ -2799,6 +2799,9 @@ BLOG GRID
         display: flex;
         flex-direction: column;
         width: 50%;
+        @media #{$max-lg3} {
+            padding: 98px 30px 75px 0px;
+        }
     }
     .pxl-tabs--content {
         width: 50%;
@@ -2809,6 +2812,9 @@ BLOG GRID
     .pxl-tab--content {
         padding: 90px 52px 52px 78px;
         z-index: 5;
+        @media #{$max-lg3} {
+            padding: 90px 30px 52px 30px;
+        }
     }
     .pxl-tab--title {
         font-size: 26px;
@@ -2927,6 +2933,10 @@ BLOG GRID
         i {
             transform: rotateY(0);
             @include transition(all 300ms linear 0ms);
+        }
+        @media #{$max-lg3} {
+            bottom: 30px;
+            right: 30px;
         }
     }
     .pxl-tabs--content-blurry-light {
@@ -3205,12 +3215,12 @@ BLOG GRID
                 filter: grayscale(0%);
                 transform: translate(-50%, -50%) rotateX(180deg);
             }
-            
+
             &:hover {
                 img:nth-child(1) {
                     transform: translate(-50%, -50%) rotateX(180deg);
                 }
-                
+
                 img:nth-child(2) {
                     transform: translate(-50%, -50%) rotateX(0deg);
                 }
@@ -5818,6 +5828,10 @@ body.rtl {
 // Case Image Scroll
 .pxl-image-scroll {
     display: flex;
+    @media #{$max-lg} {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
     .pxl-scroll-image {
         --x: 350px;
         --y: 572px;
@@ -5825,6 +5839,9 @@ body.rtl {
         width: var(--x);
         height: var(--y);
         position: relative;
+        @media #{$max-lg} {
+            width: 50%;
+        }
         .pxl-item-image {
             width: 0;
             height: var(--y);
@@ -5839,6 +5856,9 @@ body.rtl {
                 width: calc(var(--x) - var(--z));
                 right: auto;
                 left: var(--z);
+                @media #{$max-lg} {
+                    width: 100%;
+                }
             }
         }
         &:before {
@@ -5851,6 +5871,9 @@ body.rtl {
             height: var(--y);
             @include border-radius(8px);
             background-color: $primary_color;
+            @media #{$max-lg} {
+                width: 100%;
+            }
         }
     }
     .pxl-scroll-title {
@@ -5859,6 +5882,11 @@ body.rtl {
         padding-top: 45px;
         border-left: 1px solid #d8d9da;
         position: relative;
+        @media #{$max-lg} {
+            width: 50%;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
         .pxl-item-title {
             font-size: 17px;
             color: #999999;
@@ -5886,6 +5914,9 @@ body.rtl {
                     opacity: 1;
                 }
             }
+            @media #{$max-lg} {
+                padding-left: 30px;
+            }
         }
         .btn-view-all {
             position: absolute;
@@ -5906,6 +5937,11 @@ body.rtl {
         @include border-radius(8px);
         padding: 90px 50px 90px 50px;
         position: relative;
+        @media #{$max-lg} {
+            width: 100%;
+            height: 100%;
+            min-height: 500px;
+        }
         .pxl-item-content {
             opacity: 0;
             position: absolute;

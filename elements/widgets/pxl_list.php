@@ -83,6 +83,30 @@ pxl_add_custom_widget(
                                 'icon_type' => 'image',
                             ],
                         ),
+                        array(
+                            'name' => 'align',
+                            'label' => esc_html__( 'Alignment', 'safebyte' ),
+                            'type' => \Elementor\Controls_Manager::CHOOSE,
+                            'control_type' => 'responsive',
+                            'options' => [
+                                'start' => [
+                                    'title' => esc_html__( 'Left', 'safebyte' ),
+                                    'icon' => 'eicon-text-align-left',
+                                ],
+                                'center' => [
+                                    'title' => esc_html__( 'Center', 'safebyte' ),
+                                    'icon' => 'eicon-text-align-center',
+                                ],
+                                'end' => [
+                                    'title' => esc_html__( 'Right', 'safebyte' ),
+                                    'icon' => 'eicon-text-align-right',
+                                ],
+                            ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-list' => 'justify-content: {{VALUE}};',
+                            ],
+                            'control_type' => 'responsive',
+                        ),
                     ),
                 ),
                 array(

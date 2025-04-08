@@ -1134,7 +1134,7 @@ body.error404 {
                 transform: rotate(180deg);
             }
         }
-        @media #{$max-xl} {
+        @media screen and (max-width: 1440px) {
             position: static;
             width: 100%;
             justify-content: center;

@@ -143,6 +143,12 @@ pxl_add_custom_widget(
                             ],
                         ),
                         array(
+                            'name' => 'drap',
+                            'label' => esc_html__('Show Scroll Drap', 'safebyte'),
+                            'type' => \Elementor\Controls_Manager::SWITCHER,
+                            'default' => false,
+                        ),
+                        array(
                             'name' => 'pagination',
                             'label' => esc_html__('Show Pagination', 'safebyte'),
                             'type' => \Elementor\Controls_Manager::SWITCHER,
