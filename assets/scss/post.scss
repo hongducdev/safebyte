@@ -93,6 +93,11 @@
         margin-bottom: 27px;
         border-bottom: 1px solid #d3d5d6;
         padding-bottom: 15px;
+        @media #{$max-sm} {
+            flex-direction: column;
+            gap: 15px;
+            align-items: start;
+        }
         > div {
             display: flex;
             align-items: center;
@@ -734,6 +739,12 @@ body.error404 {
     gap: 24px;
     position: relative;
 
+    @media #{$max-3xs} {
+        flex-direction: column;
+        gap: 15px;
+        align-items: start;
+    }
+
     .label {
         @include transform(translateX(220px));
         cursor: pointer;
@@ -764,6 +775,11 @@ body.error404 {
         gap: 8px;
         transform: translateX(-20px);
         transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        @media #{$max-sm} {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
 
         .pxl-icon {
             @for $i from 1 through 4 {
@@ -774,6 +790,10 @@ body.error404 {
                         box-shadow 0.3s linear 0s;
                     opacity: 0;
                     transform: translateY(10px);
+                    @media #{$max-sm} {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
                 }
             }
         }
@@ -886,6 +906,9 @@ body.error404 {
         .wrap-item-content {
             .item-content {
                 padding: 40px 34px 58px 40px;
+                @media #{$max-sm} {
+                    padding: 15px 0;
+                }
             }
         }
         .item-excerpt {
@@ -896,6 +919,11 @@ body.error404 {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            @media #{$max-sm} {
+                align-items: start;
+                flex-direction: column;
+                gap: 15px;
+            }
         }
 
         .post-readmore .btn {

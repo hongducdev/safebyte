@@ -82,6 +82,14 @@ Portfolio Style
                 width: calc(100% - 30px);
                 height: calc(100% - 30px);
             }
+            @media #{$max-sm} {
+                top: 15px;
+                left: 15px;
+                right: 15px;
+                bottom: 15px;
+                width: calc(100% - 30px);
+                height: calc(100% - 30px);
+            }
         }
 
         .pxl-post--category {
@@ -106,6 +114,7 @@ Portfolio Style
                 min-height: 30px;
                 height: auto;
                 padding: 0 20px;
+                margin-bottom: 15px;
             }
         }
 
@@ -117,7 +126,8 @@ Portfolio Style
             font-family: "GTWalsheimPro";
             margin-bottom: 25px;
             @media #{$max-sm} {
-                font-size: 20px;
+                font-size: 18px;
+                margin-bottom: 15px;
             }
         }
 
@@ -165,6 +175,9 @@ Portfolio Style
                 left: 15px;
                 right: 15px;
                 width: calc(100% - 30px);
+            }
+            @media #{$max-sm} {
+                height: 40px;
             }
 
             i {

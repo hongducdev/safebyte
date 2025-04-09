@@ -117,6 +117,12 @@ Service Style
         line-height: 1.667;
         color: #666666;
         font-weight: 400;
+        @media #{$max-md} {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
     }
     .pxl-item--divider {
         background-color: #d3d5d6;
