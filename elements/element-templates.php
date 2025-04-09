@@ -313,7 +313,7 @@ function safebyte_get_portfolio_grid_layout2($posts = [], $settings = [])
                                         } else {
                                             echo esc_html__('Read More', 'safebyte');
                                         } ?>
-                                        <i class="flaticon-right-arrow"></i>
+                                        <i class="flaticon-right-arrow-long"></i>
                                     </a>
                                 </div>
                             <?php endif; ?>

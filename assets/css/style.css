@@ -1192,6 +1192,12 @@ TESTIMONIALS GRID
 .pxl-grid-filter.style-1 .pxl--filter-inner {
   column-gap: 80px;
 }
+@media screen and (max-width: 575px) {
+  .pxl-grid-filter.style-1 {
+    justify-content: start;
+    column-gap: 30px;
+  }
+}
 .pxl-grid-filter.style-1 .filter-label {
   font-size: 16px;
   color: #969696;
@@ -21601,6 +21607,7 @@ body #yith-quick-view-modal #yith-quick-view-content .entry-summary .quantity .q
   overflow: hidden;
   position: relative;
   margin-bottom: 30px;
+  max-height: 368px;
 }
 .pxl-portfolio-grid-layout2 .pxl-post--featured .pxl-post--category {
   position: absolute;

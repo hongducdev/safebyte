@@ -81,7 +81,7 @@ $load_more = array(
 
 $wrap_attrs = [
     'id'               => $html_id,
-    'class'            => trim('pxl-grid pxl-portfolio-grid pxl-portfolio-grid-layout1 pxl-portfolio-style1'),
+    'class'            => trim('pxl-grid pxl-portfolio-grid pxl-portfolio-grid-layout1 pxl-portfolio-style-1'),
     'data-start-page'  => $paged,
     'data-max-pages'   => $max,
     'data-total'       => $total,

@@ -138,6 +138,10 @@ Grid Reset
         display: flex;
         flex-wrap: wrap;
         margin-bottom: 60px;
+        @media #{$max-xs} {
+            justify-content: start;
+  column-gap: 30px;
+        }
         .filter-label {
             font-size: 16px;
             color: #969696;
