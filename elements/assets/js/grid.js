@@ -5,88 +5,98 @@
         setTimeout(function () {
             $(".pxl-grid").each(function (index, element) {
                 var $grid_scope = $(this);
-                var $grid_masonry = $grid_scope.find(".pxl-grid-masonry");
-                var isoOptions = {
-                    itemSelector: ".pxl-grid-item",
-                    layoutMode: "masonry",
-                    fitRows: {
-                        gutter: 0,
-                    },
-                    percentPosition: true,
-                    masonry: {
-                        columnWidth: ".grid-sizer",
-                    },
-                    containerStyle: null,
-                    stagger: 30,
-                    sortBy: "name",
-                };
-                var $grid_isotope = $grid_masonry.isotope(isoOptions);
+                if ($grid_scope.hasClass("pxl-post-list")) {
+                    var isoOptions = {};
+                    var $grid_isotope = null;
+                } else {
+                    var $grid_masonry = $grid_scope.find(".pxl-grid-masonry");
+                    var isoOptions = {
+                        itemSelector: ".pxl-grid-item",
+                        layoutMode: "masonry",
+                        fitRows: {
+                            gutter: 0,
+                        },
+                        percentPosition: true,
+                        masonry: {
+                            columnWidth: ".grid-sizer",
+                        },
+                        containerStyle: null,
+                        stagger: 30,
+                        sortBy: "name",
+                    };
+                    var $grid_isotope = $grid_masonry.isotope(isoOptions);
 
-                $grid_scope.on(
-                    "click",
-                    ".pxl-grid-filter .filter-item",
-                    function (e) {
-                        var $this = $(this);
-                        var term_slug = $this.attr("data-filter");
+                    $grid_scope.on(
+                        "click",
+                        ".pxl-grid-filter .filter-item",
+                        function (e) {
+                            var $this = $(this);
+                            var term_slug = $this.attr("data-filter");
 
-                        $this
-                            .siblings(".filter-item.active")
-                            .removeClass("active");
-                        $this.addClass("active");
-                        $grid_scope
-                            .find(".pxl-post--inner")
-                            .removeClass("animated");
-
-                        if (
-                            $this.closest(".pxl-grid-filter").hasClass("ajax")
-                        ) {
-                            var loadmore = $grid_scope.data("loadmore");
-                            loadmore.term_slug = term_slug;
-                            safebyte_grid_ajax_handler(
-                                $this,
-                                $grid_scope,
-                                $grid_isotope,
-                                {
-                                    action: "safebyte_load_more_post_grid",
-                                    loadmore: loadmore,
-                                    iso_options: isoOptions,
-                                    handler_click: "filter",
-                                    scrolltop: 0,
-                                }
-                            );
-                        } else {
-                            $grid_isotope.isotope({ filter: term_slug });
+                            $this
+                                .siblings(".filter-item.active")
+                                .removeClass("active");
+                            $this.addClass("active");
+                            $grid_scope
+                                .find(".pxl-post--inner")
+                                .removeClass("animated");
 
                             if (
-                                $grid_scope
-                                    .find(".pxl-grid-filter")
-                                    .hasClass("pxl-animate")
+                                $this
+                                    .closest(".pxl-grid-filter")
+                                    .hasClass("ajax")
                             ) {
-                                var $animate_el =
-                                        $grid_scope.find(".pxl-grid-filter"),
-                                    data = $animate_el.data("settings");
+                                var loadmore = $grid_scope.data("loadmore");
+                                loadmore.term_slug = term_slug;
+                                safebyte_grid_ajax_handler(
+                                    $this,
+                                    $grid_scope,
+                                    $grid_isotope,
+                                    {
+                                        action: "safebyte_load_more_post_grid",
+                                        loadmore: loadmore,
+                                        iso_options: isoOptions,
+                                        handler_click: "filter",
+                                        scrolltop: 0,
+                                    }
+                                );
+                            } else {
+                                $grid_isotope.isotope({ filter: term_slug });
+
                                 if (
-                                    typeof data != "undefined" &&
-                                    typeof data["animation"] != "undefined"
+                                    $grid_scope
+                                        .find(".pxl-grid-filter")
+                                        .hasClass("pxl-animate")
                                 ) {
-                                    setTimeout(function () {
-                                        $animate_el
-                                            .removeClass("pxl-invisible")
-                                            .addClass(
-                                                "animated " + data["animation"]
-                                            );
-                                    }, data["animation_delay"]);
-                                } else {
-                                    setTimeout(function () {
-                                        $animate_el
-                                            .removeClass("pxl-invisible")
-                                            .addClass("animated fadeInUp");
-                                    }, 300);
+                                    var $animate_el =
+                                            $grid_scope.find(
+                                                ".pxl-grid-filter"
+                                            ),
+                                        data = $animate_el.data("settings");
+                                    if (
+                                        typeof data != "undefined" &&
+                                        typeof data["animation"] != "undefined"
+                                    ) {
+                                        setTimeout(function () {
+                                            $animate_el
+                                                .removeClass("pxl-invisible")
+                                                .addClass(
+                                                    "animated " +
+                                                        data["animation"]
+                                                );
+                                        }, data["animation_delay"]);
+                                    } else {
+                                        setTimeout(function () {
+                                            $animate_el
+                                                .removeClass("pxl-invisible")
+                                                .addClass("animated fadeInUp");
+                                        }, 300);
+                                    }
                                 }
                             }
                         }
-                    }
-                );
+                    );
+                }
 
                 $grid_scope.on(
                     "click",

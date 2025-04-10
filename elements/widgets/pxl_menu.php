@@ -178,6 +178,18 @@ pxl_add_custom_widget(
                             ],
                             'condition' => [
                                 'menu_type' => 'horizontal',
+                                'hover_active_style' => ['fr-style-default', 'fr-style-ha'],
+                            ],
+                        ),
+                        array(
+                            'name' => 'box_rounded_color_active',
+                            'label' => esc_html__('Box Rounded Color Active', 'safebyte' ),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-nav-menu .pxl-menu-primary > li:hover > a, {{WRAPPER}} .pxl-nav-menu .pxl-menu-primary > li.current-menu-parent > a:not(.is-one-page), {{WRAPPER}} .pxl-nav-menu .pxl-menu-primary > li.current_page_item > a:not(.is-one-page), {{WRAPPER}} .pxl-nav-menu .pxl-menu-primary > li > a.pxl-onepage-active' => 'background-color: {{VALUE}};',
+                            ],
+                            'condition' => [
+                                'hover_active_style' => 'fr-box-rounded',
                             ],
                         ),
                         array(

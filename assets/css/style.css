@@ -7002,6 +7002,7 @@ body.error404 #pxl-main {
 }
 .pxl-post-list.layout-post-1 .orderby.nice-select {
   height: 50px;
+  min-width: 198px;
   background-color: var(--primary-color);
   color: #fff;
   font-size: 15px;
@@ -22455,39 +22456,33 @@ body #yith-quick-view-modal #yith-quick-view-content .entry-summary .quantity .q
 }
 .pxl-nav-menu.fr-box-rounded .pxl-menu-primary > li {
   margin: 0 5px;
-  position: relative;
 }
 .pxl-nav-menu.fr-box-rounded .pxl-menu-primary > li > a {
   line-height: 36px;
+  font-size: 17px;
+  color: #111;
+  font-weight: 400;
+  font-family: "GTWalsheimPro";
   padding: 0 25px;
   border-radius: 18px;
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
   z-index: 1;
-}
-.pxl-nav-menu.fr-box-rounded .pxl-menu-primary > li > a:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--secondary-color);
-  border-radius: 18px;
-  transform: translateX(-100%);
-  transition: transform 0.3s ease;
-  z-index: -1;
+  background-color: transparent;
+  -webkit-transition: all 300ms linear 0ms;
+  -khtml-transition: all 300ms linear 0ms;
+  -moz-transition: all 300ms linear 0ms;
+  -ms-transition: all 300ms linear 0ms;
+  -o-transition: all 300ms linear 0ms;
+  transition: all 300ms linear 0ms;
 }
 .pxl-nav-menu.fr-box-rounded .pxl-menu-primary > li > a.pxl-onepage-active, .pxl-nav-menu.fr-box-rounded .pxl-menu-primary > li:hover > a, .pxl-nav-menu.fr-box-rounded .pxl-menu-primary > li.current_page_item > a, .pxl-nav-menu.fr-box-rounded .pxl-menu-primary > li.current-menu-item > a, .pxl-nav-menu.fr-box-rounded .pxl-menu-primary > li.current_page_ancestor > a, .pxl-nav-menu.fr-box-rounded .pxl-menu-primary > li.current-menu-ancestor > a {
+  background-color: var(--secondary-color);
   color: #fff;
-  box-shadow: 0 4px 15px rgba(var, 0, 0, 0);
-}
-.pxl-nav-menu.fr-box-rounded .pxl-menu-primary > li > a.pxl-onepage-active:before, .pxl-nav-menu.fr-box-rounded .pxl-menu-primary > li:hover > a:before, .pxl-nav-menu.fr-box-rounded .pxl-menu-primary > li.current_page_item > a:before, .pxl-nav-menu.fr-box-rounded .pxl-menu-primary > li.current-menu-item > a:before, .pxl-nav-menu.fr-box-rounded .pxl-menu-primary > li.current_page_ancestor > a:before, .pxl-nav-menu.fr-box-rounded .pxl-menu-primary > li.current-menu-ancestor > a:before {
-  transform: translateX(0);
 }
 .pxl-nav-menu .sub-menu li.menu-item-has-children > a:after {
-  content: "\f14d";
+  content: "\F14D";
   position: absolute;
   top: 50%;
   right: 24px;
@@ -22500,6 +22495,7 @@ body #yith-quick-view-modal #yith-quick-view-content .entry-summary .quantity .q
   font-size: 9px;
   font-family: "Caseicon";
   font-weight: 400;
+  color: #0a1119;
 }
 @media screen and (min-width: 1201px) {
   .pxl-nav-menu.sub-style-default .sub-menu > li .pxl-menu-item-text {

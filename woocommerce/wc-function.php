@@ -79,8 +79,9 @@ function display_new_badge_on_products()
 	$html = '';
 	if ((time() - (60 * 60 * 24 * $newness_days)) < $created) {
 		$html = '<span class="new">' . esc_html__('New', 'invadex') . '</span>';
+		return $html;
 	}
-	return $html;
+	return '';
 }
 
 
@@ -98,13 +99,15 @@ function safebyte_woocommerce_product() {
 			<a class="woocommerce-product-details" href="<?php the_permalink(); ?>">
 				<?php woocommerce_template_loop_product_thumbnail(); ?>
 			</a>
+			<?php if ($product->is_on_sale() || (time() - (60 * 60 * 24 * 30)) < strtotime($product->get_date_created())) : ?>
 			<div class="woocommerce-badges <?php echo esc_attr($product->is_on_sale() ? 'sale' : 'new'); ?>">
 				<?php if ($product->is_on_sale()) : ?>
 					<span><?php echo esc_html__('Sale', 'invadex'); ?></span>
 				<?php else : ?>
-					<?php pxl_print_html(display_new_badge_on_products($product->get_id())); ?>
+					<?php pxl_print_html(display_new_badge_on_products()); ?>
 				<?php endif; ?>
 			</div>
+			<?php endif; ?>
 			<div class="woocommerce-product-buttons">
 				<?php if ( ! $product->managing_stock() && ! $product->is_in_stock() ) { ?>
 				<?php } else { ?>

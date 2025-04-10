@@ -24,6 +24,22 @@ pxl_add_custom_widget(
                             'default' => 'style-1',
                         ),
                         array(
+                            'name' => 'max_height_image',
+                            'label' => esc_html__('Max Height Image', 'safebyte'),
+                            'type' => \Elementor\Controls_Manager::SLIDER,
+                            'size_units' => [ 'px' ],
+                            'range' => [
+                                'px' => [
+                                    'min' => 0,
+                                    'max' => 1000,
+                                    'step' => 1,
+                                ],
+                            ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-showcase .pxl-item--image' => 'max-height: {{SIZE}}{{UNIT}} !important;',
+                            ],
+                        ),
+                        array(
                             'name' => 'image',
                             'label' => esc_html__('Image', 'safebyte' ),
                             'type' => \Elementor\Controls_Manager::MEDIA,
@@ -38,6 +54,9 @@ pxl_add_custom_widget(
                             'label' => esc_html__('Link','safebyte'),
                             'type' => \Elementor\Controls_Manager::URL,
                             'label_block' => true,
+                            'condition' => [
+                                'style-layout' => 'style-2',
+                            ],
                         ),
                         array(
                             'name' => 'title_typography',
