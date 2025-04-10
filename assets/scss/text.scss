@@ -597,5 +597,8 @@
     }
     .pxl-item--desc {
         max-width: 280px;
+        @media #{$max-md} {
+            max-width: 100%;
+        }
     }
 }

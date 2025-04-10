@@ -112,6 +112,37 @@ input[type="submit"]:not(.btn) {
             white-space: normal;
         }
     }
+    &.btn-icon-box {
+        background-color: $primary_color;
+        color: #fff;
+        font-size: 15px;
+        padding-left: 35px;
+        padding-right: 5px;
+        line-height: 50px;
+        @include border-radius(50px);
+        justify-content: space-between;
+        .pxl--btn-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            @include border-radius(50%);
+            background-color: rgba($color: #fff, $alpha: 0.149);
+            color: #fff;
+        }
+        &:hover {
+            background-color: $secondary_color;
+            .pxl--btn-icon {
+                i {
+                    animation-name: pxl_wobble_vertical;
+                    animation-duration: 1s;
+                    animation-timing-function: ease-in-out;
+                    animation-iteration-count: 1;
+                }
+            }
+        }
+    }
     // Text Hover
     &.btn-text-nina {
         &.btn-default {

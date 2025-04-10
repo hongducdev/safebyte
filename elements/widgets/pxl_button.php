@@ -23,6 +23,7 @@ pxl_add_custom_widget(
                                 'btn-default' => esc_html__('Default', 'safebyte' ),
                                 'btn-text-underline' => esc_html__('Text Underline', 'safebyte' ),
                                 'btn-cycle' => esc_html__('Cycle', 'safebyte' ),
+                                'btn-icon-box' => esc_html__('Icon Box', 'safebyte' ),
                             ],
                         ),
                         array(

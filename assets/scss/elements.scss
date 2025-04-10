@@ -393,6 +393,13 @@ BLOG GRID
     }
 }
 
+.btn-mt-responsive {
+    @media screen and (max-width: 959px) and (min-width: 768px),
+    screen and (max-width: 479px) {
+        margin-top: 15px;
+    }
+}
+
 // Slider Revolution
 .revslider-initialised {
     .rv-description {
@@ -4651,6 +4658,10 @@ body.single .pxl-breadcrumb {
             + .pxl--item {
                 margin-top: 0;
             }
+            @media #{$max-xs} {
+                padding: 0 20px;
+                
+            }
         }
     }
     .list-circle {
@@ -6050,7 +6061,7 @@ body.rtl {
                         transform: translateY(-50%);
                     }
                     &:after {
-                        content:"\F112";
+                        content: "\F112";
                         font-family: "Caseicon";
                         font-size: 14px;
                         color: #111;
@@ -6145,5 +6156,12 @@ body.rtl {
             transform: translateY(-100%);
             opacity: 0;
         }
+    }
+}
+
+// Case Tab Carousel
+.pxl-tab-carousel {
+    .pxl-swiper-dots.pxl-swiper-pagination-bullets {
+        margin: 45px 15px 10px 15px;
     }
 }

@@ -306,7 +306,7 @@ function safebyte_page_options_register( $metabox ) {
 					'fields' => array_merge(
 				        safebyte_page_title_opts([
 							'default'         => true,
-							'default_value'   => '-1'
+							'default_value'   => 'none'
 						])
 				    )
 				],

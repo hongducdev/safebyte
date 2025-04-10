@@ -850,8 +850,9 @@ body.error404 {
             font-family: "GTWalsheimPro";
             border: none;
             position: relative;
+            @include border-radius(50px);
 
-            &::before {
+            &:after {
                 --x: 40px;
                 content: "\f150";
                 font-family: "Caseicon";
@@ -1335,22 +1336,34 @@ body.error404 {
 
 // Post Grid
 .pxl-blog-grid-layout1 {
-    .pxl-inner-content {
-        padding: 40px 0;
-        &:first-child,
-        + .list-item {
+    .pxl-grid-item {
+        .pxl-inner-content {
+            padding: 40px 0;
             border-top: 1px solid #dadee2;
         }
         &:last-child {
-            border-bottom: 1px solid #dadee2;
+            .pxl-inner-content {
+                border-bottom: 1px solid #dadee2;
+            }
         }
     }
     .pxl-inner-content {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media #{$max-md2} {
+            column-gap: 15px;
+        }
+        @media #{$max-md} {
+            flex-wrap: wrap;
+            gap: 15px;
+        }
     }
     .pxl-item-col-1 {
         max-width: 320px;
+        @media #{$max-md} {
+            max-width: 100%;
+        }
     }
     .pxl-item--title {
         font-size: 23px;
@@ -1389,8 +1402,11 @@ body.error404 {
             }
         }
     }
-    .pxl-item-excerpt {
+    .pxl-item-col-2 {
         max-width: 400px;
+        @media #{$max-md} {
+            max-width: 100%;
+        }
     }
     .post-readmore {
         margin-top: 20px;
@@ -1422,9 +1438,19 @@ body.error404 {
         justify-content: flex-end;
         .item--featured {
             @include border-radius(8px);
+            @media #{$max-md} {
+                width: 100%;
+            }
         }
         img {
             @include border-radius(8px);
+            @media #{$max-md} {
+                width: 100%;
+            }
+        }
+        @media #{$max-md} {
+            order: -1;
+            width: 100%;
         }
     }
     .pxl-post--footer {

@@ -497,6 +497,10 @@
             $(this).niceSelect();
         });
 
+        $(".pxl-post-list .nice-select").each(function () {
+            $(this).niceSelect();
+        });
+
         /* Typewriter */
         if ($(".pxl-title--typewriter").length) {
             function typewriterOut(elements, callback) {
