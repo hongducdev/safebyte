@@ -70,10 +70,10 @@ if (!class_exists('Safebyte_Page')) {
                 <div id="pxl-page-title-default" class="pxl--parallax" data-stellar-background-ratio="0.5">
                     <div class="container">
                         <div class="row">
-                            <div class="col-sm-12 col-md-6 col-lg-6">
+                            <div class="col-sm-12 col-md-12 col-lg-12">
                                 <h1 class="pxl-page-title"><?php echo safebyte_html($titles['title']) ?></h1>
                             </div>
-                            <div class="ptitle-col-right col-sm-12 col-md-6 col-lg-6">
+                            <div class="ptitle-col-left col-sm-12 col-md-12 col-lg-12">
                                 <?php if($ptitle_breadcrumb_on == '1') : ?>
                                     <?php $this->get_breadcrumb(); ?>
                                 <?php endif; ?>

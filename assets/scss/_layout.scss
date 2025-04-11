@@ -185,8 +185,10 @@ body.elementor-editor-active {
     }
 }
 #pxl-page-title-default {
-    background-color: #f5f6f6;
+    background-color: #111111;
     padding: 150px 0;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
     @media #{$max-sm} {
         padding: 90px 0;
     }
@@ -194,7 +196,11 @@ body.elementor-editor-active {
         align-items: center;
     }
     .pxl-page-title {
+        color: #fff;
         margin: 0;
+        font-size: 60px;
+        line-height: 1.167;
+        margin-bottom: 50px !important;
         @media #{$max-lg} {
             font-size: 48px;
         }
@@ -1618,10 +1624,10 @@ body:not(.elementor-editor-active) .pxl-section-parallax-overflow {
             height: 44px;
             animation: loader-spin 2s infinite ease;
             transform-style: preserve-3d;
-			position: absolute;
-			left: 50%;
-			top: 50%;
-			transform: translate(-50%, -50%);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
             > div {
                 height: 100%;
                 position: absolute;

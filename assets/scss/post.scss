@@ -9,6 +9,8 @@
     color: #0a1119;
     font-weight: 500;
     font-family: "GTWalsheimPro";
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
     margin-bottom: 20px;
     @media #{$max-sm} {
         font-size: 30px;
@@ -101,6 +103,8 @@
         > div {
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 4px;
             span.icon-post {
                 width: 30px;
                 height: 30px;

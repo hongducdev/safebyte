@@ -12,7 +12,8 @@
 }
 
 .widget .widget-title,
-.pxl-widget-title {
+.pxl-widget-title,
+.widget .wp-block-heading {
     font-size: 23px;
     color: #ffffff;
     font-weight: 500;
@@ -77,19 +78,23 @@
 .widget_nav_menu,
 .widget_pages,
 .widget_archive,
+.widget_block:not(:has(.wp-block-latest-comments)),
 .widget_meta,
 .widget_recent_entries {
-    ul {
+    ul,
+    ol {
         list-style: none;
         margin-bottom: 0;
         padding: 0;
+        --x: 35px;
+        --y: 10px;
         li {
             a {
                 font-size: 16px;
                 font-weight: 400;
                 color: #111111;
                 font-family: "GTWalsheimPro";
-                padding: 17px 35px;
+                padding: 17px var(--x);
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
@@ -115,19 +120,99 @@
             > a:hover {
                 background-color: #ecf2fe;
             }
-            .sub-menu,
-            .children {
-                margin-top: 12px;
-            }
             &:last-child {
                 a {
                     @include border-radius(0 0 8px 8px);
                 }
             }
+
+            // Optimized sub-menu styles using a loop
+            @for $i from 1 through 10 {
+                $selector: ".sub-menu";
+                @if $i > 1 {
+                    $selector: "";
+                    @for $j from 1 through $i {
+                        $selector: $selector + " .sub-menu";
+                    }
+                }
+
+                #{$selector} a {
+                    padding-left: calc(var(--x) + var(--y) * #{$i});
+                }
+            }
+        }
+
+        > li + li {
+            border-top: 1px solid #d3d5d6;
+        }
+
+        @for $i from 1 through 10 {
+            $selector: "li.page_item_has_children";
+            @for $j from 1 through $i {
+                $selector: $selector + " > .children > li";
+                @if $j < $i {
+                    $selector: $selector + ".page_item_has_children";
+                }
+            }
+
+            #{$selector} > a {
+                padding-left: calc(var(--x) + var(--y) * #{$i});
+            }
+        }
+
+        @for $i from 1 through 10 {
+            $selector: "li.pxl-cat-parents";
+            @for $j from 1 through $i {
+                $selector: $selector + " > .children > li";
+                @if $j < $i {
+                    $selector: $selector + ".pxl-cat-parents";
+                }
+            }
+
+            #{$selector} > a {
+                padding-left: calc(var(--x) + var(--y) * #{$i});
+            }
+        }
+    }
+}
+
+.widget_block:has(.wp-block-latest-comments),
+.widget_recent_comments,
+.widget.widget_rss {
+    ol,
+    ul {
+        margin-top: 0;
+        li {
+            margin-bottom: 0;
+            font-size: 16px;
+            font-weight: 400;
+            color: #111111;
+            font-family: "GTWalsheimPro";
+            padding: 17px 35px;
+            display: flex;
+            flex-wrap: wrap;
+            z-index: 1;
+            background-color: transparent;
+            @include transition(all 300ms linear 0ms);
+            @media #{$max-lg} {
+                font-style: 15px;
+                padding-left: 18px;
+                padding-right: 50px;
+            }
         }
         > li + li {
             border-top: 1px solid #d3d5d6;
         }
+    }
+}
+
+.widget.widget_text,
+.widget.widget_calendar {
+    .textwidget,
+    .calendar_wrap {
+        color: #111111;
+        font-family: "GTWalsheimPro";
+        padding: 17px 35px;
     }
 }
 
@@ -339,9 +424,9 @@
                 transition: all 300ms ease-in-out;
                 position: absolute;
             }
-			
+
             span {
-				font-family: "GTWalsheimPro";
+                font-family: "GTWalsheimPro";
                 font-weight: 500;
                 opacity: 1;
                 transform: translateY(0);
@@ -544,14 +629,12 @@
         color: #080808;
         font-weight: 700;
         @extend .ft-secondary;
+        margin-bottom: 0;
         a {
             color: inherit;
             &:hover {
                 color: $primary_color;
             }
-        }
-        li + li {
-            margin-top: 18px;
         }
     }
 }
@@ -564,14 +647,6 @@
     ol {
         margin: 0;
         list-style: none;
-    }
-    .rsswidget {
-        display: block;
-        font-size: 16px;
-        line-height: 24px;
-        color: #080808;
-        font-weight: 700;
-        @extend .ft-secondary;
     }
     .rss-date {
         font-size: 14px;
@@ -596,16 +671,6 @@
         padding: 0;
         list-style: none;
     }
-    .wp-block-search__label,
-    .wp-block-group__inner-container > h2 {
-        font-size: 22px;
-        margin-bottom: 27px;
-        position: relative;
-        color: #080808;
-        font-weight: 700;
-        @extend .ft-secondary;
-        display: block;
-    }
     .wp-block-latest-posts__list,
     .wp-block-latest-comments {
         font-size: 16px;
@@ -618,9 +683,6 @@
             &:hover {
                 color: $primary_color;
             }
-        }
-        li + li {
-            margin-top: 18px;
         }
     }
     .wp-block-latest-comments {
@@ -666,7 +728,7 @@
                 }
             }
             .wp-block-search__input {
-                border-color: #ececf0;
+                border: none;
                 color: #222222;
                 padding-left: 24px;
             }

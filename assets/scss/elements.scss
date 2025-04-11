@@ -4385,7 +4385,7 @@ ELEMENTS WIDGET
 // 26. Case Breadcrumb
 .pxl-breadcrumb {
     list-style: none;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 10px;
     margin: 0;

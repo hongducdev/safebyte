@@ -41,7 +41,7 @@ a, button{
     -o-transition: all 300ms ease-in-out;
 }
 .merlin__content--transition .pxl-link-author a {
-    color: #ef2568;
+    color: #164ac8;
     font-weight: 500;
 }
 .merlin__content--transition .pxl-link-author a:hover {
@@ -247,11 +247,11 @@ body.toplevel_page_pxlart,.pxlart_page_pxl-plugins,.pxlart_page_pxl-import-demos
     font-size:14px;
     font-weight:500;
     text-decoration:none;
-    background: -webkit-linear-gradient(to right, #ef2568 0%, #ef2568 51%, #ef2568 100%);
-    background: -moz-linear-gradient(to right, #ef2568 0%, #ef2568 51%, #ef2568 100%);
-    background: -ms-linear-gradient(to right, #ef2568 0%, #ef2568 51%, #ef2568 100%);
-    background: -o-linear-gradient(to right, #ef2568 0%, #ef2568 51%, #ef2568 100%);
-    background: linear-gradient(to right, #ef2568 0%, #ef2568 51%, #ef2568 100%);
+    background: -webkit-linear-gradient(to right, #164ac8 0%, #164ac8 51%, #164ac8 100%);
+    background: -moz-linear-gradient(to right, #164ac8 0%, #164ac8 51%, #164ac8 100%);
+    background: -ms-linear-gradient(to right, #164ac8 0%, #164ac8 51%, #164ac8 100%);
+    background: -o-linear-gradient(to right, #164ac8 0%, #164ac8 51%, #164ac8 100%);
+    background: linear-gradient(to right, #164ac8 0%, #164ac8 51%, #164ac8 100%);
     background-size: 200%, auto;
     transition-property:all .3s;
     color: #fff;
@@ -267,7 +267,7 @@ body.toplevel_page_pxlart,.pxlart_page_pxl-plugins,.pxlart_page_pxl-import-demos
     margin-top:15px
 }
 .pxl-dashboard-wrap .pxl-btn:hover{
-    background-color: #ef2568;
+    background-color: #164ac8;
     color: #fff;
     box-shadow:0 7px 18px rgba(0,0,0,.16)
 }
@@ -335,12 +335,12 @@ body.toplevel_page_pxlart,.pxlart_page_pxl-plugins,.pxlart_page_pxl-import-demos
     margin:30px 0 0;
     position:relative;
     z-index:2;
-    background-image: -webkit-gradient(linear, right top, left top, from(#ef2568), to(#00f1f4));
-    background-image: -webkit-linear-gradient(to right, #ef2568, #ef2568);
-    background-image: -moz-linear-gradient(to right, #ef2568, #ef2568);
-    background-image: -ms-linear-gradient(to right, #ef2568, #ef2568);
-    background-image: -o-linear-gradient(to right, #ef2568, #ef2568);
-    background-image: linear-gradient(to right, #ef2568, #ef2568);
+    background-image: -webkit-gradient(linear, right top, left top, from(#164ac8), to(#00f1f4));
+    background-image: -webkit-linear-gradient(to right, #164ac8, #164ac8);
+    background-image: -moz-linear-gradient(to right, #164ac8, #164ac8);
+    background-image: -ms-linear-gradient(to right, #164ac8, #164ac8);
+    background-image: -o-linear-gradient(to right, #164ac8, #164ac8);
+    background-image: linear-gradient(to right, #164ac8, #164ac8);
     box-shadow: 0 20px 50px rgba(0,0,0, 0.1);
     align-items:center;
     flex-flow:row wrap;
@@ -466,7 +466,7 @@ body.toplevel_page_pxlart,.pxlart_page_pxl-plugins,.pxlart_page_pxl-import-demos
     color: #1f1f1f;
 }
 .pxl-dsb-box-wrap .pxl-dsb-box-head .pxl-dsb-confirmation a:hover {
-    color: #ef2568;
+    color: #164ac8;
 }
 .pxl-dsb-register-box .pxl-dsb-box-foot{
     padding-top:0;
@@ -507,11 +507,11 @@ body.toplevel_page_pxlart,.pxlart_page_pxl-plugins,.pxlart_page_pxl-import-demos
 }
 .pxl-dsb-register-form input[type=submit]{
     height:58px;
-    background: -webkit-linear-gradient(to right, #ef2568 0%, #ef2568 51%, #ef2568 100%);
-    background: -moz-linear-gradient(to right, #ef2568 0%, #ef2568 51%, #ef2568 100%);
-    background: -ms-linear-gradient(to right, #ef2568 0%, #ef2568 51%, #ef2568 100%);
-    background: -o-linear-gradient(to right, #ef2568 0%, #ef2568 51%, #ef2568 100%);
-    background: linear-gradient(to right, #ef2568 0%, #ef2568 51%, #ef2568 100%);
+    background: -webkit-linear-gradient(to right, #164ac8 0%, #164ac8 51%, #164ac8 100%);
+    background: -moz-linear-gradient(to right, #164ac8 0%, #164ac8 51%, #164ac8 100%);
+    background: -ms-linear-gradient(to right, #164ac8 0%, #164ac8 51%, #164ac8 100%);
+    background: -o-linear-gradient(to right, #164ac8 0%, #164ac8 51%, #164ac8 100%);
+    background: linear-gradient(to right, #164ac8 0%, #164ac8 51%, #164ac8 100%);
     background-size: 200%, auto;
     color: #fff;
     cursor:pointer;
@@ -750,11 +750,11 @@ body.toplevel_page_pxlart,.pxlart_page_pxl-plugins,.pxlart_page_pxl-import-demos
     color: #1f1f1f
 }
 .pxl-dsb-plugin .pxl-button{
-    background: -webkit-linear-gradient(to right, #ef2568 0%, #ef2568 51%, #ef2568 100%);
-    background: -moz-linear-gradient(to right, #ef2568 0%, #ef2568 51%, #ef2568 100%);
-    background: -ms-linear-gradient(to right, #ef2568 0%, #ef2568 51%, #ef2568 100%);
-    background: -o-linear-gradient(to right, #ef2568 0%, #ef2568 51%, #ef2568 100%);
-    background: linear-gradient(to right, #ef2568 0%, #ef2568 51%, #ef2568 100%);
+    background: -webkit-linear-gradient(to right, #164ac8 0%, #164ac8 51%, #164ac8 100%);
+    background: -moz-linear-gradient(to right, #164ac8 0%, #164ac8 51%, #164ac8 100%);
+    background: -ms-linear-gradient(to right, #164ac8 0%, #164ac8 51%, #164ac8 100%);
+    background: -o-linear-gradient(to right, #164ac8 0%, #164ac8 51%, #164ac8 100%);
+    background: linear-gradient(to right, #164ac8 0%, #164ac8 51%, #164ac8 100%);
     background-size: 200%, auto;
     color: #fff;
     border: none;
@@ -789,10 +789,10 @@ body.toplevel_page_pxlart,.pxlart_page_pxl-plugins,.pxlart_page_pxl-import-demos
     background-color: #fefbde
 }
 .pxl-dsb-plugin-active h3 span{
-    color: #ef2568;
+    color: #164ac8;
 }
 .pxl-dsb-plugin-active .pxl-button{
-    background-color: #ef2568;
+    background-color: #164ac8;
     color: #fff;
 }
 .pxl-dsb-plugin-active .pxl-button:hover,
@@ -901,7 +901,7 @@ body.toplevel_page_pxlart,.pxlart_page_pxl-plugins,.pxlart_page_pxl-import-demos
     margin: -50px 0 0 -50px;
     border-radius: 50%;
     border: 3px solid transparent;
-    border-top-color: #ef2568;;
+    border-top-color: #164ac8;;
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
 }
@@ -1099,7 +1099,7 @@ body.toplevel_page_pxlart,.pxlart_page_pxl-plugins,.pxlart_page_pxl-import-demos
     position:relative;
     border-radius:2em;
     margin-right:13px;
-    background-color: #ef2568;
+    background-color: #164ac8;
     opacity:.22
     transition: all 300ms ease-in-out;
     -webkit-transition: all 300ms ease-in-out;
@@ -1176,7 +1176,7 @@ body.toplevel_page_pxlart,.pxlart_page_pxl-plugins,.pxlart_page_pxl-import-demos
     z-index:2
 }
 .pxl-import-btn:hover{
-    background-color: #ef2568;
+    background-color: #164ac8;
     color: #fff;
 }
 .pxl-import-btn:hover:before{
@@ -1333,7 +1333,7 @@ body.toplevel_page_pxlart,.pxlart_page_pxl-plugins,.pxlart_page_pxl-import-demos
     color: #d73d43
 }
 .pxl-timeline-content p.enhancement a{
-    color: #ef2568
+    color: #164ac8
 }
 .pxl-timeline-content p.update a{
     color: #ffa100
@@ -1379,7 +1379,7 @@ body.toplevel_page_pxlart,.pxlart_page_pxl-plugins,.pxlart_page_pxl-import-demos
     background-color: #d73d43
 }
 .enhancement .pxl-timeline-label{
-    background-color: #ef2568
+    background-color: #164ac8
 }
 .update .pxl-timeline-label{
     background-color: #ffa100
@@ -1595,7 +1595,7 @@ body.exiting .merlin__content--transition{
 }
 .merlin__button:hover{
     animation:none;
-    background-color: #ef2568;
+    background-color: #164ac8;
     color: #fff
 }
 .merlin__button:hover .chevron{
@@ -1615,7 +1615,7 @@ body.exiting .merlin__content--transition{
     background-color:transparent !important
 }
 .merlin__button--skip:hover{
-    color: #ef2568;
+    color: #164ac8;
 }
 .merlin__button--next{
     margin-inline-start:auto
@@ -1699,12 +1699,12 @@ body.exiting .merlin__content--transition{
     display:none
 }
 .merlin-content-steps li.active .step-num {
-    background-image: -webkit-gradient(linear, right top, left top, from(#ef2568), to(#00f1f4));
-    background-image: -webkit-linear-gradient(to right, #ef2568, #ef2568);
-    background-image: -moz-linear-gradient(to right, #ef2568, #ef2568);
-    background-image: -ms-linear-gradient(to right, #ef2568, #ef2568);
-    background-image: -o-linear-gradient(to right, #ef2568, #ef2568);
-    background-image: linear-gradient(to right, #ef2568, #ef2568);
+    background-image: -webkit-gradient(linear, right top, left top, from(#164ac8), to(#00f1f4));
+    background-image: -webkit-linear-gradient(to right, #164ac8, #164ac8);
+    background-image: -moz-linear-gradient(to right, #164ac8, #164ac8);
+    background-image: -ms-linear-gradient(to right, #164ac8, #164ac8);
+    background-image: -o-linear-gradient(to right, #164ac8, #164ac8);
+    background-image: linear-gradient(to right, #164ac8, #164ac8);
     color: #fff !important;
 }
 .merlin-content-steps .step-num{
@@ -1715,12 +1715,12 @@ body.exiting .merlin__content--transition{
     margin-bottom: 24px;
     align-items:center;
     justify-content:center;
-    background-image: -webkit-gradient(linear, right top, left top, from(#ef2568), to(#00f1f4));
-    background-image: -webkit-linear-gradient(to right, #ef2568, #ef2568);
-    background-image: -moz-linear-gradient(to right, #ef2568, #ef2568);
-    background-image: -ms-linear-gradient(to right, #ef2568, #ef2568);
-    background-image: -o-linear-gradient(to right, #ef2568, #ef2568);
-    background-image: linear-gradient(to right, #ef2568, #ef2568);
+    background-image: -webkit-gradient(linear, right top, left top, from(#164ac8), to(#00f1f4));
+    background-image: -webkit-linear-gradient(to right, #164ac8, #164ac8);
+    background-image: -moz-linear-gradient(to right, #164ac8, #164ac8);
+    background-image: -ms-linear-gradient(to right, #164ac8, #164ac8);
+    background-image: -o-linear-gradient(to right, #164ac8, #164ac8);
+    background-image: linear-gradient(to right, #164ac8, #164ac8);
     color: #fff;
     font-size: 20px;
     font-weight: 700;
@@ -1741,7 +1741,7 @@ body.exiting .merlin__content--transition{
     margin-bottom:1.2em
 }
 .merlin__drawer--install-plugins li:hover label{
-    color: #ef2568;
+    color: #164ac8;
 }
 .merlin__drawer--install-plugins label{
     display:flex;
@@ -1785,12 +1785,12 @@ body.exiting .merlin__content--transition{
     transition:opacity .3s .1s
 }
 .merlin__drawer--install-plugins li .badge {
-    background-image: -webkit-gradient(linear, right top, left top, from(#ef2568), to(#00f1f4));
-    background-image: -webkit-linear-gradient(to right, #ef2568, #ef2568);
-    background-image: -moz-linear-gradient(to right, #ef2568, #ef2568);
-    background-image: -ms-linear-gradient(to right, #ef2568, #ef2568);
-    background-image: -o-linear-gradient(to right, #ef2568, #ef2568);
-    background-image: linear-gradient(to right, #ef2568, #ef2568);
+    background-image: -webkit-gradient(linear, right top, left top, from(#164ac8), to(#00f1f4));
+    background-image: -webkit-linear-gradient(to right, #164ac8, #164ac8);
+    background-image: -moz-linear-gradient(to right, #164ac8, #164ac8);
+    background-image: -ms-linear-gradient(to right, #164ac8, #164ac8);
+    background-image: -o-linear-gradient(to right, #164ac8, #164ac8);
+    background-image: linear-gradient(to right, #164ac8, #164ac8);
     color: #fff !important;
     top: -24px;
     right: 0px;
@@ -1808,16 +1808,16 @@ body.exiting .merlin__content--transition{
     height: 0;
     border-style: solid;
     border-width: 4px;
-    border-color: #ef2568 transparent transparent #ef2568;
+    border-color: #164ac8 transparent transparent #164ac8;
 }
 .merlin__drawer--install-plugins label:hover i{
-    border-color: #ef2568;
-    background-color: #ef2568;
+    border-color: #164ac8;
+    background-color: #164ac8;
 }
 .merlin__drawer--install-plugins .checkbox:checked+label i{
     opacity:1;
-    border-color: #ef2568;
-    background-color: #ef2568;
+    border-color: #164ac8;
+    background-color: #164ac8;
 }
 .merlin__drawer--install-plugins .checkbox:checked+label i:before{
     opacity:0;
@@ -1908,12 +1908,12 @@ body.exiting .merlin__content--transition{
 .redux-container .redux-sidebar .redux-group-menu li.activeChild > a,
 .redux-container .redux-sidebar .redux-group-menu li.active > a,
 .redux-container .redux-sidebar .redux-group-menu > li > a:hover {
-    background-image: -webkit-gradient(linear, right top, left top, from(#ef2568), to(#00f1f4)) !important;
-    background-image: -webkit-linear-gradient(to right, #ef2568, #ef2568) !important;
-    background-image: -moz-linear-gradient(to right, #ef2568, #ef2568) !important;
-    background-image: -ms-linear-gradient(to right, #ef2568, #ef2568) !important;
-    background-image: -o-linear-gradient(to right, #ef2568, #ef2568) !important;
-    background-image: linear-gradient(to right, #ef2568, #ef2568) !important;
+    background-image: -webkit-gradient(linear, right top, left top, from(#164ac8), to(#00f1f4)) !important;
+    background-image: -webkit-linear-gradient(to right, #164ac8, #164ac8) !important;
+    background-image: -moz-linear-gradient(to right, #164ac8, #164ac8) !important;
+    background-image: -ms-linear-gradient(to right, #164ac8, #164ac8) !important;
+    background-image: -o-linear-gradient(to right, #164ac8, #164ac8) !important;
+    background-image: linear-gradient(to right, #164ac8, #164ac8) !important;
     background-color: transparent !important;
 }
 .redux-container .redux-sidebar .redux-group-menu li .subsection .redux-group-tab-link-li .redux-group-tab-link-a:hover {
@@ -1939,12 +1939,12 @@ body.exiting .merlin__content--transition{
 .redux-container .redux-container-switch .switch-options label.selected,
 .redux-container .redux-container-button_set .ui-buttonset label.ui-checkboxradio-checked,
 .redux-field.redux-container-switch div.selected {
-    background-image: -webkit-gradient(linear, right top, left top, from(#ef2568), to(#00f1f4)) !important;
-    background-image: -webkit-linear-gradient(to right, #ef2568, #ef2568) !important;
-    background-image: -moz-linear-gradient(to right, #ef2568, #ef2568) !important;
-    background-image: -ms-linear-gradient(to right, #ef2568, #ef2568) !important;
-    background-image: -o-linear-gradient(to right, #ef2568, #ef2568) !important;
-    background-image: linear-gradient(to right, #ef2568, #ef2568) !important;
+    background-image: -webkit-gradient(linear, right top, left top, from(#164ac8), to(#00f1f4)) !important;
+    background-image: -webkit-linear-gradient(to right, #164ac8, #164ac8) !important;
+    background-image: -moz-linear-gradient(to right, #164ac8, #164ac8) !important;
+    background-image: -ms-linear-gradient(to right, #164ac8, #164ac8) !important;
+    background-image: -o-linear-gradient(to right, #164ac8, #164ac8) !important;
+    background-image: linear-gradient(to right, #164ac8, #164ac8) !important;
     background-color: transparent !important;
     box-shadow: none !important;
     color: #fff !important;
@@ -1954,11 +1954,11 @@ body.exiting .merlin__content--transition{
 }
 
 .wp-core-ui .redux-container .button-primary {
-    background: -webkit-linear-gradient(to right, #ef2568 0%, #ef2568 51%, #ef2568 100%) !important;
-    background: -moz-linear-gradient(to right, #ef2568 0%, #ef2568 51%, #ef2568 100%) !important;
-    background: -ms-linear-gradient(to right, #ef2568 0%, #ef2568 51%, #ef2568 100%) !important;
-    background: -o-linear-gradient(to right, #ef2568 0%, #ef2568 51%, #ef2568 100%) !important;
-    background: linear-gradient(to right, #ef2568 0%, #ef2568 51%, #ef2568 100%) !important;
+    background: -webkit-linear-gradient(to right, #164ac8 0%, #164ac8 51%, #164ac8 100%) !important;
+    background: -moz-linear-gradient(to right, #164ac8 0%, #164ac8 51%, #164ac8 100%) !important;
+    background: -ms-linear-gradient(to right, #164ac8 0%, #164ac8 51%, #164ac8 100%) !important;
+    background: -o-linear-gradient(to right, #164ac8 0%, #164ac8 51%, #164ac8 100%) !important;
+    background: linear-gradient(to right, #164ac8 0%, #164ac8 51%, #164ac8 100%) !important;
     background-size: 200%, auto !important;
     border: none;
 }
@@ -1985,11 +1985,11 @@ body.exiting .merlin__content--transition{
 }
 /* Update Dashboard */
 .pxl-dashboard-wrap .btn {
-    background: -webkit-linear-gradient(to right, #ef2568 0%, #ef2568 51%, #ef2568 100%) !important;
-    background: -moz-linear-gradient(to right, #ef2568 0%, #ef2568 51%, #ef2568 100%) !important;
-    background: -ms-linear-gradient(to right, #ef2568 0%, #ef2568 51%, #ef2568 100%) !important;
-    background: -o-linear-gradient(to right, #ef2568 0%, #ef2568 51%, #ef2568 100%) !important;
-    background: linear-gradient(to right, #ef2568 0%, #ef2568 51%, #ef2568 100%) !important;
+    background: -webkit-linear-gradient(to right, #164ac8 0%, #164ac8 51%, #164ac8 100%) !important;
+    background: -moz-linear-gradient(to right, #164ac8 0%, #164ac8 51%, #164ac8 100%) !important;
+    background: -ms-linear-gradient(to right, #164ac8 0%, #164ac8 51%, #164ac8 100%) !important;
+    background: -o-linear-gradient(to right, #164ac8 0%, #164ac8 51%, #164ac8 100%) !important;
+    background: linear-gradient(to right, #164ac8 0%, #164ac8 51%, #164ac8 100%) !important;
     background-size: 200%, auto !important;
     color: #fff !important;
     border: none;
@@ -2039,8 +2039,8 @@ body.exiting .merlin__content--transition{
     transition: all 300ms linear 0s;
 }
 .pxl-install-all-plugin:hover{
-    background-color: #ef2568;
-    border-color: #ef2568;
+    background-color: #164ac8;
+    border-color: #164ac8;
     box-shadow: none;
 }
 .pxl-install-all-plugin.installing{
@@ -2161,7 +2161,7 @@ body .redux-container-slider .redux-slider-input, .redux-container-slider .redux
     border: 1px solid #eceaea;
 }
 body .redux-container-slider .noUi-base {
-    background-color: #ef2568;
+    background-color: #164ac8;
 }
 body .redux-container .redux-main .wp-picker-container input {
     border-radius: 0px;
