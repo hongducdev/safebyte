@@ -389,7 +389,8 @@
         i {
             font-size: 13px;
         }
-        &:hover {
+        &:hover,
+        &.current {
             background-color: $primary_color;
             border-color: $primary_color;
             color: #fff;

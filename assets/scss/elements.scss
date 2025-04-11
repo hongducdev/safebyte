@@ -1,41 +1,51 @@
 /*--------------------------------------------------------------
-BLOG GRID
+ELEMENTS WIDGET
 ----------------------------------------------------------------
-1. Case Logo
-2. Case Text Editor
-3. Case Image
-4. Case Heading
-5. Case Links
-6. Case Icons
-7. Case Call Phone
-8. Case MailChimp
-9. Case Language Switch
-10. Case Button Video
-11. Case Tabs
-12. Case Banner Box
-13. Case Progressbar
-14. Case Partner Carousel
-15. Case Counter
-16. Case Pricing
-17. Case Recent News
-18. Case Contact Form
-19. Case Social Icon
-20. Case Contact Info
-21. Case Showcase
-22. Case Image Carousel
-23. Case Breadcrumb
-24. Case List
-25. Case Video Player
-26. Case Info Box
-27. Case Search Form
-28. Case Contact Box
-29. Case Accordion
-30. Case Icon Box
-31. Case Post Lists
-32. Case Process
+1. Custom
+2. Slider Revolution
+3. Case Process
+4. Case Icon Box
+5. Case Accordion
+6. Case Logo
+7. Case Text Editor
+8. Case Image
+9. Case Heading
+10. Case Links
+11. Case Icons
+12. Case Call Phone
+13. Case MailChimp
+14. Case Language Switch
+14. Case Button Video
+15. Case Tabs
+16. Case Progressbar
+17. Case Partner Carousel
+18. Case Counter
+19. Case Pricing
+20. Case Recent News
+21. Case Contact Form
+22. Case Social Icon
+23. Case Close Popup
+24. Case Showcase
+25. Case Image Carousel
+26. Case Breadcrumb
+27. Case List
+28. Case Video Player
+29. Case Search Form
+30. Case Image Marquee
+31. Case Text Marquee
+32. Case Countdown
+33. Case Global
+34. Case Rain Drop
+35. Case Status
+36. Case Chart
+37. Case Industries List
+38. Case Image Scroll
+39. Case Counter
+40. Case Text Transform
+41. Case Tab Carousel
 --------------------------------------------------------------*/
 
-// Custom
+// 1. Custom
 .slash-header-home-1 {
     background-color: rgba($color: #111b27, $alpha: 0.2);
     width: 2px !important;
@@ -400,7 +410,25 @@ BLOG GRID
     }
 }
 
-// Slider Revolution
+.woo-landing-page {
+    position: relative;
+    .woo-heading-landing {
+        
+        .pxl-heading {
+            transform: rotate(270deg);
+            transform-origin: right;
+            .pxl-heading--text {
+                background-image: linear-gradient(45deg, #fff, rgba(#164ac8, 0.05), rgba(#164ac8, 0.102));
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+
+            }
+        }
+    }
+}
+
+// 2. Slider Revolution
 .revslider-initialised {
     .rv-description {
         @media screen and (max-width: 777px) {
@@ -472,7 +500,7 @@ BLOG GRID
     }
 }
 
-// Case Process
+// 3. Case Process
 .pxl-process1 {
     position: relative;
     padding-left: 150px;
@@ -611,7 +639,7 @@ BLOG GRID
     }
 }
 
-// Case Icon Box
+// 4. Case Icon Box
 .pxl-icon-box1 {
     display: flex;
     align-items: center;
@@ -1010,7 +1038,7 @@ BLOG GRID
     }
 }
 
-// Case Accordion
+// 5. Case Accordion
 .pxl-accordion1 {
     &.style-default {
         .pxl-icon--action {
@@ -1367,7 +1395,7 @@ BLOG GRID
     }
 }
 
-// 1. Case Logo
+// 6. Case Logo
 .pxl-logo {
     a {
         display: inline-block;
@@ -1379,7 +1407,7 @@ BLOG GRID
     }
 }
 
-//2. Case Text Editor
+// 7. Case Text Editor
 .pxl-text-editor {
     .pxl-item--inner {
         display: inline-block;
@@ -1407,7 +1435,7 @@ BLOG GRID
     }
 }
 
-// 3. Case Image
+// 8. Case Image
 .pxl-image-single {
     @include border-radius(inherit);
     *,
@@ -1495,7 +1523,7 @@ BLOG GRID
     overflow: hidden;
 }
 
-// 4. Case Heading
+// 9. Case Heading
 .splitting .word,
 .splitting .char {
     display: inline-block;
@@ -1738,7 +1766,7 @@ BLOG GRID
     }
 }
 
-// 5. Case Links
+// 10. Case Links
 .pxl-link {
     list-style: none;
     margin: 0;
@@ -2006,7 +2034,7 @@ BLOG GRID
     }
 }
 
-// 6. Case Icons
+// 11. Case Icons
 .pxl-icon1 {
     &.style-1 {
         display: inline-flex;
@@ -2343,7 +2371,7 @@ BLOG GRID
     }
 }
 
-// 7. Case Call Phone
+// 12. Case Call Phone
 .pxl-call-phone {
     display: inline-flex;
     flex-direction: column;
@@ -2428,7 +2456,7 @@ BLOG GRID
     }
 }
 
-// 8. Case MailChimp
+// 13. Case MailChimp
 .pxl-mailchimp-l1 {
     .mc4wp-form-fields {
         position: relative;
@@ -2517,7 +2545,7 @@ BLOG GRID
     }
 }
 
-// 9. Language Switch
+// 14. Case Language Switch
 .pxl-language-switcher1 {
     &.style-2 {
         .current--item {
@@ -2618,7 +2646,7 @@ BLOG GRID
     }
 }
 
-// 10. Button Video
+// 14. Case Button Video
 .pxl-button-video1 {
     display: inline-flex;
     align-items: center;
@@ -2665,7 +2693,7 @@ BLOG GRID
     }
 }
 
-// Case Tabs
+// 15. Case Tabs
 .pxl-tabs1 {
     .pxl-tabs--title {
         display: flex;
@@ -2984,179 +3012,7 @@ BLOG GRID
     }
 }
 
-// Banner Box
-.pxl-banner1 {
-    margin-bottom: 62px;
-    position: relative;
-    .pxl-main--image {
-        max-width: 454px;
-        margin-right: 40px;
-        @media #{$max-lg} {
-            margin-right: 30px;
-        }
-        img {
-            width: 100%;
-        }
-    }
-    .pxl-secondary--image {
-        position: absolute;
-        bottom: -9px;
-        right: 0;
-        @media #{$max-lg} {
-            max-width: 260px;
-        }
-        @media #{$max-md} {
-            max-width: 200px;
-        }
-        img {
-            border-radius: 4px;
-            box-shadow: 0 14px 29px rgba(#131313, 0.13);
-        }
-    }
-    .pxl-counter--wrap {
-        position: absolute;
-        padding: 20px 25px 26px 25px;
-        z-index: 9;
-        max-width: 175px;
-        width: 100%;
-        left: 0;
-        top: -90px;
-        overflow: hidden;
-        @media #{$max-lg} {
-            padding: 20px;
-            max-width: 155px;
-            top: -60px;
-        }
-        &:before {
-            content: "";
-            z-index: -1;
-            @include background-horizontal(
-                $gradient_color_from,
-                $gradient_color_to
-            );
-            position: absolute;
-            height: 100%;
-            top: 0;
-            left: 0;
-            right: 0;
-            clip-path: polygon(67% 0, 100% 26%, 100% 100%, 0 100%, 0 0);
-        }
-        .pxl-counter--number {
-            line-height: 1;
-            font-weight: 700;
-            color: #fff;
-            font-size: 70px;
-            margin-bottom: 2px;
-            @media #{$max-lg} {
-                font-size: 54px;
-            }
-        }
-        .pxl-counter--title {
-            font-size: 24px;
-            color: #fff;
-            font-weight: 700;
-            line-height: 1.12;
-            @media #{$max-lg} {
-                font-size: 20px;
-            }
-        }
-    }
-    .pxl-banner-top {
-        max-width: 653px;
-        position: relative;
-    }
-    .pxl-banner-bottom {
-        position: absolute;
-        z-index: 99;
-        bottom: -62px;
-        left: 50%;
-        transform: translate(-50%, 0);
-        .pxl-banner-bottom-inner {
-            padding: 14px 21px;
-            background-color: #fff;
-            border-radius: 4px;
-            box-shadow: 0 0 90px rgba(#131313, 0.13);
-        }
-        .pxl-third--image {
-            width: 95px;
-            min-width: 95px;
-            @media #{$max-lg} {
-                width: 75px;
-                min-width: 75px;
-            }
-        }
-        .pxl-counter--bnumber {
-            font-size: 45px;
-            font-weight: 700;
-            @extend .ft-secondary;
-            color: #000001;
-            line-height: 1;
-            margin-bottom: 4px;
-            @media #{$max-lg} {
-                font-size: 36px;
-            }
-        }
-        .pxl-counter--btitle {
-            font-size: 18px;
-            color: #000001;
-            @media #{$max-lg} {
-                font-size: 16px;
-                white-space: nowrap;
-            }
-        }
-        .pxl-counter--bnumber {
-            display: inline-flex;
-        }
-    }
-}
-
-.pxl-banner2 {
-    margin-top: 56px;
-    position: relative;
-    padding-left: 90px;
-    @media #{$max-lg} {
-        padding-left: 50px;
-    }
-    .pxl-main--image {
-        img {
-            width: 100%;
-            border-radius: 30px 30px 30px 190px;
-        }
-    }
-    .pxl-secondary--image {
-        position: absolute;
-        top: -40px;
-        left: 0;
-        max-width: 181px;
-        @media #{$max-lg} {
-            max-width: 161px;
-        }
-        img {
-            border-radius: 30px;
-            width: 100%;
-        }
-    }
-    .pxl-item--icon {
-        font-size: 48px;
-        color: #fff;
-        width: 77px;
-        height: 77px;
-        border-radius: 77px;
-        position: absolute;
-        top: -16px;
-        right: -43px;
-        @include background-horizontal(
-            $gradient_color_from,
-            $gradient_color_to
-        );
-        svg {
-            fill: #fff;
-            height: 48px;
-        }
-    }
-}
-
-// Case Progressbar
+// 16. Case Progressbar
 .pxl-progressbar-1 {
     .pxl--holder {
         font-size: 16px;
@@ -3205,7 +3061,7 @@ BLOG GRID
     }
 }
 
-// Case Partner Carousel
+// 17. Case Partner Carousel
 .pxl-partner-carousel1 {
     .pxl-item--logo {
         display: flex;
@@ -3264,7 +3120,7 @@ BLOG GRID
     }
 }
 
-// Case Counter
+// 18. Case Counter
 .pxl-counter1 {
     display: flex;
     align-items: center;
@@ -3489,7 +3345,7 @@ BLOG GRID
     }
 }
 
-// Case Pricing
+// 19. Case Pricing
 .pxl-pricing1 {
     padding: 41px 13px 50px 13px;
     border-radius: 8px;
@@ -3691,7 +3547,7 @@ BLOG GRID
     }
 }
 
-// Case Recent News
+// 20. Case Recent News
 .pxl-recent-news1 {
     .pxl-post--title {
         margin-top: 9px;
@@ -3835,7 +3691,7 @@ BLOG GRID
     }
 }
 
-// Case Contact Form
+// 21. Case Contact Form
 .pxl-contact-form {
     .pxl-form--label {
         display: block;
@@ -4308,31 +4164,7 @@ BLOG GRID
     }
 }
 
-// Case Navigation Carousel
-.pxl-navigation-carousel {
-    &.style-1 {
-        .pxl-navigation-arrow {
-            width: 65px;
-            height: 65px;
-            color: #cdcdcd;
-            border-radius: 65px;
-            border: 2px solid #cdcdcd;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 19px;
-            margin: 0 7px;
-            @include transition(all 300ms linear 0ms);
-            cursor: pointer;
-            &:hover {
-                color: $primary_color;
-                border-color: $primary_color;
-            }
-        }
-    }
-}
-
-// Social Icon
+// 22. Case Social Icon
 .pxl-social-icons1 {
     display: inline-flex;
     align-items: center;
@@ -4380,7 +4212,7 @@ BLOG GRID
     }
 }
 
-// Close Popup
+// 23. Case Close Popup
 .pxl-close-popup {
     background-color: transparent;
     border-width: 4px;
@@ -4391,37 +4223,7 @@ BLOG GRID
     }
 }
 
-// Contact Info
-.pxl-contact-info1 {
-    position: relative;
-    display: flex;
-    flex-wrap: nowrap;
-    .pxl-item--icon {
-        line-height: 1;
-        font-size: 28px;
-        i {
-            @extend .text-gradient;
-        }
-    }
-    .pxl-item--title {
-        font-size: 16px;
-        margin-bottom: 0;
-        text-decoration: underline;
-    }
-    .pxl-item--subtitle {
-        font-size: 16px;
-    }
-    .pxl-item--link {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 99;
-    }
-}
-
-// Case Showcase
+// 24. Case Showcase
 .pxl-showcase1 {
     &.style-2 {
         border-radius: 0;
@@ -4516,7 +4318,7 @@ BLOG GRID
     }
 }
 
-// Case Image Carousel
+// 25. Case Image Carousel
 .pxl-image-carousel1 {
     .pxl-item--image {
         position: relative;
@@ -4580,7 +4382,7 @@ BLOG GRID
     }
 }
 
-// Case Breadcrumb
+// 26. Case Breadcrumb
 .pxl-breadcrumb {
     list-style: none;
     display: flex;
@@ -4620,7 +4422,7 @@ body.single .pxl-breadcrumb {
     }
 }
 
-// Case List
+// 27. Case List
 .pxl-list1 {
     &.pxl-list-row {
         display: flex;
@@ -4755,7 +4557,7 @@ body.single .pxl-breadcrumb {
     }
 }
 
-// Case Video Player
+// 28. Case Video Player
 .pxl-btn-video {
     position: relative;
     &.style1 {
@@ -4842,81 +4644,7 @@ body.single .pxl-breadcrumb {
     }
 }
 
-// Info Box
-.pxl-info-box1 {
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    padding: 62px 30px;
-    font-weight: 500;
-    color: rgba(#fff, 0.8);
-    .pxl-item--bg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -2;
-    }
-    .pxl-phone--number {
-        margin-bottom: 16px;
-        color: #fff;
-        font-size: 36px;
-        font-weight: 700;
-        @extend .ft-theme-default;
-        @media #{$max-lg} {
-            font-size: 28px;
-        }
-    }
-    .pxl-item--icon {
-        height: 62px;
-        width: 62px;
-        border-radius: 62px;
-        font-size: 34px;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        z-index: 1;
-        margin-bottom: 23px;
-        &:before {
-            content: "";
-            background-color: #020626;
-            position: absolute;
-            top: 3px;
-            right: 3px;
-            bottom: 3px;
-            left: 3px;
-            border-radius: 100%;
-            z-index: -1;
-        }
-        @extend .bg-gradient;
-        i {
-            @extend .text-gradient;
-            &.active {
-                animation: pxl_zigzag 0.8s ease-out infinite;
-                -webkit-animation: pxl_zigzag 0.8s ease-out infinite;
-            }
-        }
-    }
-    .pxl-phone--link {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 99;
-    }
-    &:before {
-        z-index: -1;
-        @extend .pxl-spill;
-        background-color: rgba(#000000, 0.6);
-    }
-}
-
-// Search Form
+// 29. Case Search Form
 .pxl-search-form1 {
     &.style-1 {
         .pxl-searchform-wrap {
@@ -5007,62 +4735,6 @@ body.single .pxl-breadcrumb {
     }
 }
 
-// Case Contact Box
-.pxl-contact-box1 {
-    border-radius: 15px;
-    background-color: #{"rgba(var(--primary-color-rgb),0.08)"};
-    padding: 20px;
-    @media #{$max-lg} {
-        font-size: 17px;
-        padding: 15px;
-    }
-    .pxl-item--icon {
-        line-height: 1;
-        font-size: 30px;
-        color: $primary_color;
-        @media #{$max-md} {
-            margin-right: 0;
-            margin-bottom: 12px;
-        }
-    }
-    .pxl-item--title {
-        font-size: 20px;
-        font-weight: 500;
-        margin-bottom: 13px;
-    }
-    .pxl-item--holder {
-        display: flex;
-        flex-wrap: nowrap;
-        @media #{$max-md} {
-            display: block;
-        }
-    }
-    .pxl-item--button {
-        border-bottom: 1px solid #e3e3e3;
-        margin-bottom: 12px;
-        padding-bottom: 20px;
-        @media #{$max-md} {
-            margin-bottom: 20px;
-        }
-        .btn {
-            font-size: 16px;
-            font-weight: 500;
-            line-height: 38px;
-            padding: 0 26px;
-        }
-    }
-    .pxl-contact--inner {
-        border-radius: 12px;
-        padding: 25px 25px 23px 25px;
-        background-color: #fff;
-        box-shadow: 0 0 15px rgba(#000000, 0.05);
-        @media #{$max-md} {
-            padding-left: 20px;
-            padding-right: 20px;
-        }
-    }
-}
-
 .pxl-preset-4 {
     .pxl-service-style1 .pxl-post--icon::after,
     .pxl-icon-color-gradient i,
@@ -5136,7 +4808,7 @@ body.single .pxl-breadcrumb {
     }
 }
 
-// Image Marquee
+// 30. Case Image Marquee
 .pxl-image-marquee1 {
     position: relative;
     overflow: hidden;
@@ -5198,7 +4870,7 @@ body.single .pxl-breadcrumb {
     }
 }
 
-// Case Text Marquee
+// 31. Case Text Marquee
 .pxl-text-marquee1 {
     font-size: 64px;
     line-height: 1.2;
@@ -5278,7 +4950,7 @@ body.rtl {
     }
 }
 
-// Case Countdown
+// 32. Case Countdown
 .pxl-countdown {
     display: flex;
     align-items: center;
@@ -5500,7 +5172,7 @@ body.rtl {
     }
 }
 
-// Case Global
+// 33. Case Global
 .pxl-global {
     position: relative;
     width: 100%;
@@ -5641,7 +5313,7 @@ body.rtl {
     }
 }
 
-// Case Rain Drop
+// 34. Case Rain Drop
 .pxl-rain-drop {
     position: absolute;
     top: 0;
@@ -5706,7 +5378,7 @@ body.rtl {
     }
 }
 
-// Case Status
+// 35. Case Status
 .pxl-status {
     display: inline-flex;
     align-items: center;
@@ -5777,7 +5449,7 @@ body.rtl {
     }
 }
 
-// Case Chart
+// 36. Case Chart
 .pxl-chart {
     position: relative;
     height: 400px;
@@ -5789,7 +5461,7 @@ body.rtl {
     }
 }
 
-// Case Industries List
+// 37. Case Industries List
 .pxl-industries-list {
     display: flex;
     align-items: center;
@@ -5869,7 +5541,7 @@ body.rtl {
     }
 }
 
-// Case Image Scroll
+// 38. Case Image Scroll
 .pxl-image-scroll {
     display: flex;
     @media #{$max-lg} {
@@ -6080,7 +5752,7 @@ body.rtl {
     }
 }
 
-// Case Counter
+// 39. Case Counter
 .pxl-client {
     display: inline-flex;
     align-items: center;
@@ -6116,7 +5788,7 @@ body.rtl {
     }
 }
 
-// Case Text Transform
+// 40. Case Text Transform
 .pxl-text-transform {
     position: relative;
     overflow: hidden;
@@ -6159,7 +5831,7 @@ body.rtl {
     }
 }
 
-// Case Tab Carousel
+// 41. Case Tab Carousel
 .pxl-tab-carousel {
     .pxl-swiper-dots.pxl-swiper-pagination-bullets {
         margin: 45px 15px 10px 15px;
