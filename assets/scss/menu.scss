@@ -102,7 +102,7 @@
                     left: 0;
                     right: 0;
                     margin: auto;
-                    background-color: #0e4eeb;
+                    background-color: $third_color;
                     @include transition(all 300ms linear 0ms);
                     top: 0;
                 }
