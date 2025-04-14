@@ -24,8 +24,10 @@
                             array(
                                 'name' => 'link_grid_page',
                                 'label' => esc_html__('Link Gird Page', 'safebyte' ),
-                                'type' => \Elementor\Controls_Manager::TEXT,
-                                'default' => esc_html__('#', 'safebyte'),
+                                'type' => \Elementor\Controls_Manager::URL,
+                                'default' => [
+                                    'url' => '#',
+                                ],
                             ),
                         ),
                     ),

@@ -57,6 +57,11 @@ input[type="submit"]:not(.btn) {
         text-decoration: none;
         color: #fff;
         background-color: $secondary_color;
+        .pxl--btn-icon {
+            i {
+                animation: toRightFromLeft 0.3s forwards;
+            }
+        }
     }
     &.btn-block {
         width: 100%;

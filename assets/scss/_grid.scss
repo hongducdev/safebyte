@@ -88,6 +88,10 @@ Grid Reset
 }
 
 .pxl-load-more {
+    .btn {
+        background-color: $primary_color;
+        color: #fff;
+    }
     .pxl-load-icon {
         width: 20px;
         height: 20px;

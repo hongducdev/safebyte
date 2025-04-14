@@ -30,6 +30,7 @@
         safebyte_post_grid();
         safebyte_header_left_scroll();
         safebyte_heading_scroll();
+        safebyte_col_offset();
     });
 
     $(window).on("scroll", function () {
@@ -58,6 +59,7 @@
         safebyte_submenu_responsive();
         safebyte_header_mobile();
         safebyte_post_grid();
+        safebyte_col_offset();
     });
 
     $(document).ready(function () {
@@ -492,12 +494,8 @@
 
         /* Nice Select */
         $(
-            ".woocommerce-ordering .orderby, #pxl-sidebar-area select, .variations_form.cart .variations select, .pxl-open-table select, .pxl-nice-select"
+            ".woocommerce-ordering .orderby, #pxl-sidebar-area select, .variations_form.cart .variations select, .pxl-open-table select, .pxl-nice-select, .pxl-post-list .nice-select"
         ).each(function () {
-            $(this).niceSelect();
-        });
-
-        $(".pxl-post-list .nice-select").each(function () {
             $(this).niceSelect();
         });
 
@@ -1257,6 +1255,21 @@
 
             scrollZoom();
         });
+    }
+
+    // Column Absolute
+    function safebyte_col_offset() {
+        var w_pxl_row_lg = ($("#pxl-main").width() - 1650) / 2;
+        if (pxl_window_width > 1650) {
+            $(".pxl-col-offset-right .pxl-column-inner").css(
+                "padding-right",
+                w_pxl_row_lg + "px"
+            );
+            $(".pxl-col-offset-left .pxl-column-inner").css(
+                "padding-left",
+                w_pxl_row_lg + "px"
+            );
+        }
     }
 
     function safebyte_icon_spinner() {

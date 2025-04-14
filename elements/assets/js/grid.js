@@ -119,7 +119,7 @@
                                 iso_options: isoOptions,
                                 handler_click: "pagination",
                                 scrolltop: 0,
-                                wpnonce: main_data.wpnonce,
+                                wpnonce: main_params.wpnonce,
                             }
                         );
                         $("html,body").animate(
@@ -146,7 +146,7 @@
                             iso_options: isoOptions,
                             handler_click: "loadmore",
                             scrolltop: 0,
-                            wpnonce: main_data.wpnonce,
+                            wpnonce: main_params.wpnonce,
                         }
                     );
                 });
@@ -204,7 +204,7 @@
             }
 
             $.ajax({
-                url: main_data.ajax_url,
+                url: main_params.ajax_url,
                 type: "POST",
                 data: {
                     action: settings.action,

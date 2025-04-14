@@ -148,7 +148,7 @@ if( count($posts) <= 0){
     <?php if (!empty($next_link) && $pagination_type == 'loadmore') { ?>
         <div class="pxl-load-more">
             <span class="btn btn-grid-loadmore">
-                <span class="pxl-loadmore-text"><?php echo esc_html__('Load More', 'safebyte') ?></span>
+                <span class="pxl-loadmore-text"><?php echo esc_html__('Load More Projects', 'safebyte') ?></span>
                 <span class="pxl-load-icon"></span>
             </span>
         </div>

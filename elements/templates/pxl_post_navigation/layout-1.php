@@ -8,6 +8,7 @@ if($settings['type'] === 'navigation') :
     }
     $next_post = get_next_post();
     $previous_post = get_previous_post();
+
     if( !empty($next_post) || !empty($previous_post) ) { ?>
         <div class="pxl-post-navigation-custom">
             <div class="pxl--item item--prev pxl-navigation-btn--wrap pxl-navigation--prev">
@@ -27,12 +28,12 @@ if($settings['type'] === 'navigation') :
                     </a>
                 <?php } ?>
             </div>
-            <div class="pxl--item pxl--item-grid">
+            <a class="pxl--item pxl--item-grid" href="<?php echo esc_url($settings['link_grid_page']['url']); ?>">
                 <span class="bl bl1"></span>
                 <span class="bl bl2"></span>
                 <span class="bl bl3"></span>
                 <span class="bl bl4"></span>
-            </div>
+            </a>
             <?php if ( is_a( $next_post , 'WP_Post' ) && get_the_title( $next_post->ID ) != '') { ?>
                 <div class="pxl--item item--next pxl-navigation-btn--wrap pxl-navigation--next ">
                     <a class="pxl-icon-link pxl-arrow--next" href="<?php echo esc_url(get_permalink( $next_post->ID )); ?>">

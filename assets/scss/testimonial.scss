@@ -152,6 +152,7 @@ TESTIMONIALS GRID
             margin-top: calc(-1 * var(--x));
             justify-content: end;
             column-gap: 10px;
+            z-index: 10;
         }
         .pxl-swiper-arrow {
             width: var(--x);
@@ -218,6 +219,7 @@ TESTIMONIALS GRID
         .pxl-swiper-arrow-wrap {
             margin-top: calc(-1 * var(--x));
             justify-content: end;
+            z-index: 10;
         }
         .pxl-swiper-arrow {
             width: var(--x);
@@ -255,6 +257,7 @@ TESTIMONIALS GRID
         .pxl-swiper-arrow-wrap {
             margin-top: calc(-1 * var(--x));
             justify-content: end;
+            z-index: 10;
         }
         .pxl-swiper-arrow {
             width: var(--x);

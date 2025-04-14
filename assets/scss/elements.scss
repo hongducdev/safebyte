@@ -405,7 +405,7 @@ ELEMENTS WIDGET
 
 .btn-mt-responsive {
     @media screen and (max-width: 959px) and (min-width: 768px),
-    screen and (max-width: 479px) {
+        screen and (max-width: 479px) {
         margin-top: 15px;
     }
 }
@@ -413,16 +413,19 @@ ELEMENTS WIDGET
 .woo-landing-page {
     position: relative;
     .woo-heading-landing {
-        
         .pxl-heading {
             transform: rotate(270deg);
             transform-origin: right;
             .pxl-heading--text {
-                background-image: linear-gradient(45deg, #fff, rgba(#164ac8, 0.05), rgba(#164ac8, 0.102));
+                background-image: linear-gradient(
+                    45deg,
+                    #fff,
+                    rgba(#164ac8, 0.05),
+                    rgba(#164ac8, 0.102)
+                );
                 -webkit-background-clip: text;
                 background-clip: text;
                 color: transparent;
-
             }
         }
     }
@@ -2413,7 +2416,8 @@ ELEMENTS WIDGET
         color: #fff;
         @include transition(all 300ms linear 0ms);
         &:hover {
-            background-color: $secondary_color;
+            background-color: #fff;
+            color: #111;
         }
     }
 }
@@ -4462,7 +4466,6 @@ body.single .pxl-breadcrumb {
             }
             @media #{$max-xs} {
                 padding: 0 20px;
-                
             }
         }
     }
@@ -5355,7 +5358,8 @@ body.rtl {
     @for $i from 1 through 10 {
         &:nth-child(#{$i}) {
             &:before {
-                animation-duration: #{2 + ($i * 0.2)}s;
+                animation-duration: #{2 + ($i * 0.1)}s;
+                animation-delay: #{($i * 0.2) + random(10) * 0.1}s;
             }
         }
     }

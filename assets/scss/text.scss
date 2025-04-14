@@ -198,13 +198,6 @@
                     transform: rotate(180deg);
                 }
             }
-            &.swiper-button-disabled {
-                pointer-events: none;
-                i {
-                    color: #cdcdcd;
-                    opacity: 0.5;
-                }
-            }
         }
     }
 }

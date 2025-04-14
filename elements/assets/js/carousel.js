@@ -42,7 +42,7 @@
                 pxl_swiper_handler($scope);
             }
         );
-        
+
         elementorFrontend.hooks.addAction(
             "frontend/element_ready/pxl_tab_carousel.default",
             function ($scope) {
@@ -188,6 +188,8 @@
                     },
                 },
             };
+
+            console.log(carousel_settings);
 
             if (settings["center_slide"] || settings["center_slide"] == "true")
                 carousel_settings["centeredSlides"] = true;

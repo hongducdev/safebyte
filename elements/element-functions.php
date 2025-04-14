@@ -16,7 +16,7 @@ if(!function_exists('safebyte_elements_scripts')){
         wp_register_script('safebyte-particle', get_template_directory_uri() . '/elements/assets/js/particle.js', [ 'jquery' ], $theme->get( 'Version' ), true);
         wp_register_script('safebyte-parallax', get_template_directory_uri() . '/elements/assets/js/parallax.js', [ 'jquery' ], $theme->get( 'Version' ), true);
         wp_register_script('pxl-post-grid', get_template_directory_uri() . '/elements/assets/js/grid.js', [ 'isotope', 'jquery' ], $theme->get( 'Version' ), true);
-        wp_localize_script('pxl-post-grid', 'main_data', array( 'ajax_url' => admin_url( 'admin-ajax.php' ), 'wpnonce' => wp_create_nonce( '_ajax_nonce' ) ) );
+        wp_localize_script('pxl-post-grid', 'main_params', array( 'ajax_url' => admin_url( 'admin-ajax.php' ), 'wpnonce' => wp_create_nonce( '_ajax_nonce' ) ) );
         wp_register_script('pxl-swiper', get_template_directory_uri() . '/elements/assets/js/carousel.js', [ 'jquery' ], $theme->get( 'Version' ), true);
         wp_register_script('pxl-slick', get_template_directory_uri() . '/elements/assets/js/slick.js', [ 'jquery' ], $theme->get( 'Version' ), true);
         wp_register_script('safebyte-counter', get_template_directory_uri() . '/elements/assets/js/counter.js', [ 'jquery' ], $theme->get( 'Version' ), true);

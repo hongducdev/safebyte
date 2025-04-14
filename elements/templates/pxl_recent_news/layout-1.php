@@ -84,7 +84,7 @@ if (is_array($posts)): ?>
                                 } else {
                                     echo esc_html__('Read More', 'safebyte');
                                 } ?></span>
-                                <span class="pxl--btn-icon"><i class="flaticon-up-right-arrow"></i></span>
+                                <span class="pxl--btn-icon"><i class="flaticon-right-arrow-long"></i></span>
                             </a>
                         </div>
                     <?php endif; ?>

@@ -63,6 +63,10 @@
                 color: $primary_color;
                 transform: translateX(0px);
                 @include transition(all 300ms linear 0ms);
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 20px;
             }
             &:hover {
                 .pxl--btn-icon {
@@ -109,7 +113,7 @@
                 width: 30px;
                 height: 30px;
                 border-radius: 15px;
-                background-color: rgba($third_color, 0.149);
+                background-color: rgba(#0e4eeb, 0.149);
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -987,6 +991,22 @@ body.error404 {
         height: 25px;
         position: relative;
         @include transition(all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1));
+        &:hover {
+            .bl {
+                &.bl1 {
+                    transform: translate(20px, 20px);
+                }
+                &.bl2 {
+                    transform: translate(-20px, 20px);
+                }
+                &.bl3 {
+                    transform: translate(-20px, -20px);
+                }
+                &.bl4 {
+                    transform: translate(20px, -20px);
+                }
+            }
+        }
 
         .bl {
             position: absolute;
@@ -999,18 +1019,26 @@ body.error404 {
             &.bl1 {
                 top: 0;
                 left: 0;
+                transform: translate(0, 0);
+                transition-delay: 0ms;
             }
             &.bl2 {
                 top: 0;
                 right: 0;
+                transform: translate(0, 0);
+                transition-delay: 100ms;
             }
             &.bl3 {
                 bottom: 0;
                 right: 0;
+                transform: translate(0, 0);
+                transition-delay: 200ms;
             }
             &.bl4 {
                 bottom: 0;
                 left: 0;
+                transform: translate(0, 0);
+                transition-delay: 300ms;
             }
         }
     }
