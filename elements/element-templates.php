@@ -697,6 +697,12 @@ function safebyte_load_more_post_grid()
     die;
 }
 
+// End Load More Post Grid
+//--------------------------------------------------
+
+// Start Post List
+//--------------------------------------------------
+
 function safebyte_get_post_list($posts = [], $settings = [])
 {
     if (empty($posts) || !is_array($posts) || empty($settings) || !is_array($settings)) {
@@ -713,6 +719,7 @@ function safebyte_get_post_list($posts = [], $settings = [])
             break;
     }
 }
+
 function safebyte_get_post_list_layout1($posts = [], $settings = [])
 {
     extract($settings);
@@ -774,20 +781,41 @@ function safebyte_get_post_list_layout1($posts = [], $settings = [])
                                     <?php if ($show_author == 'true') : ?>
                                         <div class="pxl-item--author">
                                             <span class="icon-post pxl-mr-8"><i class="fas fa-user"></i></span>
-                                            <?php echo esc_html__('By', 'safebyte'); ?>&nbsp;<?php the_author_posts_link(); ?>
+                                            <?php echo esc_html__('By', 'safebyte'); ?>&nbsp;
+                                            <a href="<?php echo esc_url(get_author_posts_url($post->post_author)); ?>">
+                                                <?php echo esc_html(get_the_author_meta('display_name', $post->post_author)); ?>
+                                            </a>
                                         </div>
                                     <?php endif; ?>
                                     <?php if ($show_category == 'true') : ?>
                                         <div class="pxl-item--category">
                                             <span class="icon-post pxl-mr-8"><i class="fas fa-tag"></i></span>
-                                            <?php the_terms($post->ID, 'category', '', ', ', ''); ?>
+                                            <?php 
+                                            $categories = get_the_terms($post->ID, 'category');
+                                            if (!empty($categories) && !is_wp_error($categories)) {
+                                                $category_links = array();
+                                                foreach ($categories as $category) {
+                                                    $category_links[] = '<a href="' . esc_url(get_term_link($category)) . '">' . esc_html($category->name) . '</a>';
+                                                }
+                                                echo implode(', ', $category_links);
+                                            }
+                                            ?>
                                         </div>
                                     <?php endif; ?>
                                     <?php if ($show_comment == 'true') : ?>
                                         <div class="pxl-item--comment">
                                             <span class="icon-post pxl-mr-8"><i class="fas fa-comment"></i></span>
-                                            <a href="<?php the_permalink(); ?>#comments">
-                                                <?php echo comments_number(esc_html__('No Comments', 'safebyte'), esc_html__('1 Comment', 'safebyte'), esc_html__('% Comments', 'safebyte')); ?>
+                                            <a href="<?php echo esc_url(get_permalink($post->ID) . '#comments'); ?>">
+                                                <?php 
+                                                $comments_count = get_comments_number($post->ID);
+                                                if ($comments_count == 0) {
+                                                    echo esc_html__('No Comments', 'safebyte');
+                                                } elseif ($comments_count == 1) {
+                                                    echo esc_html__('1 Comment', 'safebyte');
+                                                } else {
+                                                    printf(esc_html__('%d Comments', 'safebyte'), $comments_count);
+                                                }
+                                                ?>
                                             </a>
                                         </div>
                                     <?php endif; ?>
@@ -846,3 +874,97 @@ function safebyte_get_post_list_layout1($posts = [], $settings = [])
         </div>
 <?php endforeach;
 }
+
+// End Post List
+//--------------------------------------------------
+
+add_action('wp_ajax_safebyte_load_more_post_list', 'safebyte_load_more_post_list');
+add_action('wp_ajax_nopriv_safebyte_load_more_post_list', 'safebyte_load_more_post_list');
+function safebyte_load_more_post_list()
+{
+    if (! check_ajax_referer('_ajax_nonce', 'wpnonce') || empty(sanitize_text_field(wp_unslash($_POST['wpnonce'])))) {
+        wp_send_json(
+            array(
+                'status' => false,
+                'message' => esc_attr__('Nonce error, please reload.', 'safebyte'),
+                'data' => array(),
+            )
+        );
+    }
+
+    try {
+        if (!isset($_POST['settings'])) {
+            throw new Exception(__('Something went wrong while requesting. Please try again!', 'safebyte'));
+        }
+
+        $settings = isset($_POST['settings']) ? $_POST['settings'] : null;
+
+        $source = isset($settings['source']) ? $settings['source'] : '';
+        $term_slug = isset($settings['term_slug']) ? $settings['term_slug'] : '';
+        if (!empty($term_slug) && $term_slug != '*') {
+            $term_slug = str_replace('.', '', $term_slug);
+            $source = [$term_slug . '|' . $settings['tax'][0]];
+        }
+        if (isset($_POST['handler_click']) && sanitize_text_field(wp_unslash($_POST['handler_click'])) == 'filter') {
+            set_query_var('paged', 1);
+            $settings['paged'] = 1;
+        } else {
+            set_query_var('paged', $settings['paged']);
+        }
+        extract(pxl_get_posts_of_grid(
+            $settings['post_type'],
+            [
+                'source' => $source,
+                'orderby' => isset($settings['orderby']) ? $settings['orderby'] : 'date',
+                'order' => isset($settings['order']) ? $settings['order'] : 'desc',
+                'limit' => isset($settings['limit']) ? $settings['limit'] : '6',
+                'post_ids' => isset($settings['post_ids']) ? $settings['post_ids'] : [],
+                'post_not_in' => isset($settings['post_not_in']) ? $settings['post_not_in'] : [],
+            ],
+            $settings['tax']
+        ));
+
+        ob_start();
+        safebyte_get_post_list($posts, $settings);
+        $html = ob_get_clean();
+
+        $pagin_html = '';
+        if (isset($settings['pagination_type']) && $settings['pagination_type'] == 'pagination') {
+            ob_start();
+            safebyte()->page->get_pagination($query,  true);
+            $pagin_html = ob_get_clean();
+        }
+
+        $result_count = '';
+        if (isset($settings['show_toolbar']) && $settings['show_toolbar'] == 'show') {
+            $limitpage = ($settings['limit'] >= $total) ? $total : $settings['limit'];
+            $result_count = sprintf(
+                '<span class="result-count">%1$s %2$s %3$s %4$s %5$s</span>',
+                esc_html__('Showing','safebyte'),
+                '1-'.$limitpage,
+                esc_html__('of','safebyte'),
+                $total,
+                esc_html__('results','safebyte')
+            );
+        }
+
+        wp_send_json(
+            array(
+                'status' => true,
+                'message' => esc_attr__('Load Successfully!', 'safebyte'),
+                'data' => array(
+                    'html' => $html,
+                    'pagin_html' => $pagin_html,
+                    'paged' => $settings['paged'],
+                    'posts' => $posts,
+                    'max' => $max,
+                    'result_count' => $result_count
+                ),
+            )
+        );
+    } catch (Exception $e) {
+        wp_send_json(array('status' => false, 'message' => $e->getMessage()));
+    }
+    die;
+}
+

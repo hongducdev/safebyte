@@ -189,8 +189,6 @@
                 },
             };
 
-            console.log(carousel_settings);
-
             if (settings["center_slide"] || settings["center_slide"] == "true")
                 carousel_settings["centeredSlides"] = true;
 

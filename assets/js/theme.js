@@ -68,6 +68,7 @@
         safebyte_type_file_upload();
         safebyte_zoom_point();
         safebyte_icon_spinner();
+        safebyte_col_offset();
 
         // Custom Dots Slider Revolution
         setTimeout(function () {

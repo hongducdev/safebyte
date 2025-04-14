@@ -115,7 +115,7 @@ if( count($posts) <= 0){
         <?php safebyte_get_post_list($posts, $load_more); ?>
     </div>
     <?php if ($pagination_type == 'pagination') { ?>
-        <div class="pxl-grid-pagination pagin-post">
+        <div class="pxl-list-pagination pagin-post">
             <?php safebyte()->page->get_pagination($query, true); ?>
         </div>
     <?php } ?>
@@ -123,7 +123,7 @@ if( count($posts) <= 0){
         $icon_pos = ( !empty($settings['loadmore_icon']) && !empty($settings['icon_align'])) ? $settings['icon_align'] : ''; 
         ?>
         <div class="pxl-load-more " data-loading-text="<?php echo esc_attr__('Loading', 'safebyte') ?>" data-loadmore-text="<?php echo esc_html($settings['loadmore_text']); ?>">
-            <span class="btn btn-grid-loadmore">
+            <span class="btn btn-list-loadmore">
                 <span class="btn-text"><?php echo esc_html($settings['loadmore_text']); ?></span>
             </span>
         </div>
