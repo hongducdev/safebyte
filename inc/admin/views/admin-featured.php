@@ -1,6 +1,6 @@
 <div class="pxl-iconbox">
 	<span class="pxl-icon-container">
-		<img src="<?php echo get_template_directory_uri() . '/inc/admin/assets/img/check.png' ?>" alt="<?php esc_attr_e( 'Check', 'safebyte' ); ?>">
+		<img src="<?php echo esc_url( get_template_directory_uri() . '/inc/admin/assets/img/check.png' ); ?>" alt="<?php esc_attr_e( 'Check', 'safebyte' ); ?>">
 	</span>
 	<div class="pxl-iconbox-contents">
 		<h6><?php esc_html_e( 'Enable Auto Updates', 'safebyte' ); ?></h6>
@@ -10,7 +10,7 @@
 
 <div class="pxl-iconbox">
 	<span class="pxl-icon-container">
-		<img src="<?php echo get_template_directory_uri() . '/inc/admin/assets/img/check.png' ?>" alt="<?php esc_attr_e( 'Check', 'safebyte' ); ?>">
+		<img src="<?php echo esc_url( get_template_directory_uri() . '/inc/admin/assets/img/check.png' ); ?>" alt="<?php esc_attr_e( 'Check', 'safebyte' ); ?>">
 	</span>
 	<div class="pxl-iconbox-contents">
 		<h6><?php esc_html_e( 'Exclusive and Premium Plugins', 'safebyte' ); ?></h6>
@@ -20,7 +20,7 @@
 
 <div class="pxl-iconbox">
 	<span class="pxl-icon-container">
-		<img src="<?php echo get_template_directory_uri() . '/inc/admin/assets/img/check.png' ?>" alt="<?php esc_attr_e( 'Check', 'safebyte' ); ?>">
+		<img src="<?php echo esc_url( get_template_directory_uri() . '/inc/admin/assets/img/check.png' ); ?>" alt="<?php esc_attr_e( 'Check', 'safebyte' ); ?>">
 	</span>
 	<div class="pxl-iconbox-contents">
 		<h6><?php esc_html_e( 'Premium Support', 'safebyte' ); ?></h6>
