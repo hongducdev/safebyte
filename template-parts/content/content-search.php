@@ -44,7 +44,7 @@ $post_video_link = get_post_meta(get_the_ID(), 'post_video_link', true);
         <div class="pxl-item--readmore">
             <a class="" href="<?php echo esc_url( get_permalink()); ?>">
                 <span class="pxl--btn-text"><?php echo safebyte_html($archive_readmore_text); ?></span>
-                <span class="pxl--btn-icon"><i class="flaticon-up-right-arrow"></i></span>
+                <span class="pxl--btn-icon"><i class="flaticon-right-arrow-long"></i></span>
             </a>
         </div>
     </div>
