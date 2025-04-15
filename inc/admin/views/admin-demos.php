@@ -1,8 +1,6 @@
 <main>
-
 	<div class="pxl-dashboard-wrap">
-
-		<?php include_once( get_template_directory() . '/inc/admin/views/admin-tabs.php' ); ?>
+		<?php require get_template_directory() . '/inc/admin/views/admin-tabs.php'; ?>
 		<?php 
 		$installed_plugins = get_plugins();
 		$plugins = TGM_Plugin_Activation::$instance->plugins;
@@ -50,7 +48,7 @@
 
 		<?php
 
-			include( locate_template( 'inc/admin/demo-data/demo-config.php' ) );
+			require locate_template( 'inc/admin/demo-data/demo-config.php' );
 			$i = 0;
 			wp_localize_script( 'pxlart-admin', 'pxlart_demos', $demos );
 
@@ -76,7 +74,7 @@
 								<img src="<?php echo esc_url( $demo['screenshot'] ); ?>" alt="<?php echo esc_attr( $demo['title'] ); ?>">
 								<div class="pxl-dsb-overlay"></div>
 								<div class="pxl-btn-group">
-									<a href="#" id="import-id" data-import-id="<?php echo esc_attr( $i ); ?>" data-demo-id="<?php echo esc_attr( $id ); ?>" class="pxl-btn pxl-popup-import">
+									<a href="#" id="import-id" data-import-id="<?php echo esc_attr( $i ); ?>" data-demo-id="<?php echo esc_attr( $id ); ?>" class="pxl-btn pxl-popup-import <?php echo esc_attr( $id ); ?>">
 										<span><?php esc_html_e( 'Import Demo', 'safebyte' ); ?></span>
 									</a><br/>
 									<a target="_blank" href="<?php echo esc_url( $demo['preview'] ); ?>" class="pxl-preview-btn">
@@ -94,106 +92,94 @@
 
 				</div>
 			</div>
-
-		<script type="text/template" id="tmpl-demo-import-modules">
-			<div id="pxl-progress-popup" class="pxl-imp-popup-wrap is-active">
-				<div class="pxl-imp-progress">
-					<h6><?php esc_html_e( 'Importing...', 'safebyte' ); ?></h6>
-					<div id="pxl-progress" class="importing"><?php esc_html_e( 'Working', 'safebyte' )?> <span>.</span><span>.</span><span>.</span></div>
-					<div class="pxl-progressbar">
-						<div class="pxl-progressbar-inner" style="width: 0%">
-							<span id="pxl-loader" class="pxl-progressbar-percentage"><?php esc_html_e( '0%', 'safebyte' ); ?></span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</script>
-
-		<script type="text/template" id="tmpl-demo-popup">
-			<div id="pxl-popup" class="pxl-imp-popup-wrap is-active">
-				<div class="pxl-imp-popup-inner">
-				
-					<span class="pxl-imp-popup-close"></span>
-					 
-					<div class="pxl-imp-popup-content">
-						<h4 style="text-align:center; margin-bottom: 30px;"><?php esc_html_e( 'Select all or a few', 'safebyte' ); ?></h4>
-						<div class="pxl-row">
-							<div class="pxl-col pxl-col-6">
-								<span class="pxl-imp-opt">
-									<input id="pxl-imp-media" type="checkbox" value="import_media" checked="">
-									<label for="pxl-imp-media"></label>
-									<span><?php esc_html_e( 'Media Attachments', 'safebyte' ); ?></span>
-								</span>
-							</div>
-							<div class="pxl-col pxl-col-6">
-								<span class="pxl-imp-opt">
-									<input id="pxl-imp-content" type="checkbox" value="import_content" checked="">
-									<label for="pxl-imp-content"></label>
-									<span><?php esc_html_e( 'Content', 'safebyte' ); ?></span>
-								</span>
-							</div>
-							<div class="pxl-col pxl-col-6">
-								<span class="pxl-imp-opt">
-									<input id="pxl-imp-options" type="checkbox" value="import_theme_options" checked="">
-									<label for="pxl-imp-options"></label>
-									<span><?php esc_html_e( 'Theme Options', 'safebyte' ) ?></span>
-								</span>
-							</div>
-							<div class="pxl-col pxl-col-6">
-								<span class="pxl-imp-opt">
-									<input id="pxl-imp-widgets" type="checkbox" value="import_widgets" checked="">
-									<label for="pxl-imp-widgets"></label>
-									<span><?php esc_html_e( 'Widgets', 'safebyte' ); ?></span>
-								</span>
-							</div>
-							<?php if(!empty($plugins['revslider'])): ?>
-							<div class="pxl-col pxl-col-6">
-								<span class="pxl-imp-opt">
-									<input id="pxl-imp-revslider" type="checkbox" value="import_slider" checked="">
-									<label for="pxl-imp-revslider"></label>
-									<span><?php esc_html_e( 'Revslider', 'safebyte' ); ?></span>
-								</span>
-							</div>
- 							<?php endif; ?>
-							<div class="pxl-col pxl-col-6">
-								<span class="pxl-imp-opt">
-									<input id="pxl-imp-settings" type="checkbox" value="import_settings" checked="">
-									<label for="pxl-imp-settings"></label>
-									<span><?php esc_html_e( 'Settings', 'safebyte' ) ?></span>
-								</span>
-							</div>
-						</div>
-						<div class="pxl-row" style="padding-top: 30px;">
-							<div class="pxl-col pxl-col-12">
-								<div class="pxl-imp-skip-posts">
-									<span class="pxl-imp-opt-skip-posts" style="margin-bottom: 0; padding-left: 15px;">
-										<input id="pxl-imp-skip-posts-existen" name="skip_posts_existen" type="checkbox" value="skip-posts-existen">
-										<label for="pxl-imp-skip-posts-existen">
-										<span><?php esc_html_e( 'Skip the posts exist. By default, all current content will be deleted.', 'safebyte' ); ?></span>
-										</label>
-									</span>
-								</div>
-								<div class="pxl-imp-crop">
-									<span class="pxl-imp-opt-crop" style="margin-bottom: 0; padding-left: 15px;">
-										<input id="pxl-imp-crop-img" name="crop-img" type="checkbox" value="crop_img" checked="">
-										<label for="pxl-imp-crop-img">
-											<span><?php esc_html_e( 'Crop Image after import finish?', 'safebyte' ); ?></span>
-										</label>
-									</span>
-								</div>
-								<button class="pxl-import-btn" data-id="0">
-									<span><?php esc_html_e( 'Import Demo', 'safebyte' ); ?></span>
-								</button>
-							</div>
-						</div>
-					</div>
-				  
-				</div>
-			</div>
-		
-		</script>
-			
 		</div>
+		<div class="pxl-demo-content pxl-imp-popup-wrap">
+			<div class="pxl-imp-popup-inner">
+				<span class="pxl-imp-popup-close"></span>
+				<div class="pxl-imp-popup-content">
+					<h4 style="text-align:center; margin-bottom: 30px;"><?php esc_html_e( 'Select all or a few', 'safebyte' ); ?></h4>
+					<div class="pxl-row">
+						<div class="pxl-col pxl-col-6">
+							<span class="pxl-imp-opt">
+								<input id="pxl-imp-media" type="checkbox" value="import_media" checked="">
+								<label for="pxl-imp-media"></label>
+								<span><?php esc_html_e( 'Media Attachments', 'safebyte' ); ?></span>
+							</span>
+						</div>
+						<div class="pxl-col pxl-col-6">
+							<span class="pxl-imp-opt">
+								<input id="pxl-imp-content" type="checkbox" value="import_content" checked="">
+								<label for="pxl-imp-content"></label>
+								<span><?php esc_html_e( 'Content', 'safebyte' ); ?></span>
+							</span>
+						</div>
+						<div class="pxl-col pxl-col-6">
+							<span class="pxl-imp-opt">
+								<input id="pxl-imp-options" type="checkbox" value="import_theme_options" checked="">
+								<label for="pxl-imp-options"></label>
+								<span><?php esc_html_e( 'Theme Options', 'safebyte' ) ?></span>
+							</span>
+						</div>
+						<div class="pxl-col pxl-col-6">
+							<span class="pxl-imp-opt">
+								<input id="pxl-imp-widgets" type="checkbox" value="import_widgets" checked="">
+								<label for="pxl-imp-widgets"></label>
+								<span><?php esc_html_e( 'Widgets', 'safebyte' ); ?></span>
+							</span>
+						</div>
+						<?php if(!empty($plugins['revslider'])): ?>
+						<div class="pxl-col pxl-col-6">
+							<span class="pxl-imp-opt">
+								<input id="pxl-imp-revslider" type="checkbox" value="import_slider" checked="">
+								<label for="pxl-imp-revslider"></label>
+								<span><?php esc_html_e( 'Revslider', 'safebyte' ); ?></span>
+							</span>
+						</div>
+							<?php endif; ?>
+						<div class="pxl-col pxl-col-6">
+							<span class="pxl-imp-opt">
+								<input id="pxl-imp-settings" type="checkbox" value="import_settings" checked="">
+								<label for="pxl-imp-settings"></label>
+								<span><?php esc_html_e( 'Settings', 'safebyte' ) ?></span>
+							</span>
+						</div>
+					</div>
+					<div class="pxl-row" style="padding-top: 30px;">
+						<div class="pxl-col pxl-col-12">
+							<div class="pxl-imp-skip-posts">
+								<span class="pxl-imp-opt-skip-posts" style="margin-bottom: 0; padding-left: 15px;">
+									<input id="pxl-imp-skip-posts-existen" name="skip_posts_existen" type="checkbox" value="skip-posts-existen">
+									<label for="pxl-imp-skip-posts-existen">
+									<span><?php esc_html_e( 'Skip the posts existen, ( Default clear all content ).', 'safebyte' ); ?></span>
+									</label>
+								</span>
+							</div>
+							<div class="pxl-imp-crop">
+								<span class="pxl-imp-opt-crop" style="margin-bottom: 0; padding-left: 15px;">
+									<input id="pxl-imp-crop-img" name="crop-img" type="checkbox" value="crop_img" checked="">
+									<label for="pxl-imp-crop-img"><span><?php esc_html_e( 'Crop Image after import finish?', 'safebyte' ); ?></span></label>
+								</span>
+							</div>
+							<button class="pxl-import-btn" data-id="0">
+								<span><?php esc_html_e( 'Import Demo', 'safebyte' ); ?></span>
+							</button>
+						</div>
+					</div>
+				</div>
+			  
+			</div>
+		</div>
+		<div class="pxl-progress-popup pxl-imp-popup-wrap">
+			<div class="pxl-imp-progress">
+				<h6><?php esc_html_e( 'Importing...', 'safebyte' ); ?></h6>
+				<div class="pxl-progress importing"><?php esc_html_e( 'Working', 'safebyte' )?> <span>.</span><span>.</span><span>.</span></div>
+				<div class="pxl-progressbar">
+					<div class="pxl-progressbar-inner" style="width: 0%">
+						<span class="pxl-loader pxl-progressbar-percentage"><?php esc_html_e( '0%', 'safebyte' ); ?></span>
+					</div>
+				</div>
+			</div>
+		</div>  
 		<?php endif; ?>
 	</div>
 

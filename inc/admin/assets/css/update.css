@@ -1,0 +1,171 @@
+/* Fixed Demo Step */
+.pxl-demo-error-confirm .err {
+    color: #f26522;
+}
+.upload-demo-fields {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.pxl-demo-error-confirm .btn-upload {
+    display: inline-flex;
+    height: 45px;
+    padding: 5px 25px;
+    min-width: 122px;
+    border: none;
+    border-radius: 3px;
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    background: #1f1f1f;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.pxl-demo-error-confirm .btn-upload svg {
+    width: 22px;
+    height: 22px;
+    fill: #fff;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -11px;
+    margin-left: -11px;
+    -webkit-animation: spin 1s infinite linear;
+    -khtml-animation: spin 1s infinite linear;
+    -moz-animation: spin 1s infinite linear;
+    -ms-animation: spin 1s infinite linear;
+    -o-animation: spin 1s infinite linear;
+    animation: spin 1s infinite linear;
+}
+.pxl-demo-error-confirm .btn-upload:hover {
+    background-color: #072010;
+}
+.pxl-demo-error-confirm .btn-upload.loading .btn-text {
+    opacity: 0;
+    visibility: hidden;
+}
+.pxl-demo-error-confirm .btn-upload.loading svg {
+    opacity: 1;
+    visibility: visible;
+}
+.pxl-demo-error-confirm .confirm-footer button.btn-default {
+    font-size: 0;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    padding: 0;
+    border-radius: 50%;
+    background: rgba(22, 37, 66, 0.07);
+    border: 9px solid transparent;
+    color: #162542;
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.pxl-demo-error-confirm .confirm-footer button.btn-default:before,
+.pxl-demo-error-confirm .confirm-footer button.btn-default:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    background-color: #162542;
+    transform-origin: 50% 50%;
+    opacity: 1;
+    transition: transform ease 0.25s;
+    -webkit-transition: transform ease 0.25s;
+    -khtml-transition: transform ease 0.25s;
+    -moz-transition: transform ease 0.25s;
+    -ms-transition: transform ease 0.25s;
+    -o-transition: transform ease 0.25s;
+}
+.pxl-demo-error-confirm .confirm-footer button.btn-default:before {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -khtml-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+.pxl-demo-error-confirm .confirm-footer button.btn-default:after {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -khtml-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+}
+.pxl-demo-error-confirm .confirm-footer button.btn-default:hover:before,
+.pxl-demo-error-confirm .confirm-footer button.btn-default:hover:after {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -khtml-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+}
+
+.pxl-demo-loader {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+    visibility: hidden;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 15px;
+    line-height: 1.8em;
+    color: #797979;
+}
+.pxl-demo-loader.active {
+    opacity: 1;
+    visibility: visible;
+}
+.pxl-imp-popup-wrap {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-size: 15px;
+    line-height: 1.8em;
+    color: #797979;
+    text-align: left;
+}
+.pxl-imp-popup-wrap.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+}
+
+.pxl-imp-skip-posts,
+.pxl-imp-crop {
+    text-align: left;
+}
+.pxl-imp-skip-posts input,
+.pxl-imp-crop input {
+    margin-top: 0;
+}

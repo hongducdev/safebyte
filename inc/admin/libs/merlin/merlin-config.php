@@ -17,7 +17,7 @@ if ( ! class_exists( 'Merlin' ) ) {
 /**
  * Set directory locations, text strings, and settings.
  */
-$pxl_server_info = apply_filters( 'pxl_server_info', ['docs_url' => 'https://doc.casethemes.net/', 'support_url' => 'https://casethemes.ticksy.com/'] ) ; 
+$pxl_server_info = apply_filters( 'pxl_server_info', ['docs_url' => '', 'email_support' => ''] ) ;
 $wizard = new Merlin(
 
 	$config = array(
@@ -38,6 +38,7 @@ $wizard = new Merlin(
 	$strings = array(
 		'admin-menu'               => esc_html__( 'Setup Wizard', 'safebyte' ),
 
+		/* translators: 1: Title Tag 2: Theme Name 3: Closing Title Tag */
 		'title%s%s%s%s'            => esc_html__( '%1$s%2$s Themes &lsaquo; Theme Setup: %3$s%4$s', 'safebyte' ),
 		'return-to-dashboard'      => esc_html__( 'Return to the dashboard', 'safebyte' ),
 		'ignore'                   => esc_html__( 'Disable this wizard', 'safebyte' ),
@@ -66,9 +67,9 @@ $wizard = new Merlin(
 		'license-tooltip'          => esc_html__( 'Need help?', 'safebyte' ),
 
 		/* translators: Theme Name */
-		'welcome-header%s'         => esc_html__( 'Welcome to %s', 'safebyte' ),
+		'welcome-header%s'         => esc_html__( 'Let\'s Get You Started', 'safebyte' ),
 		'welcome-header-success%s' => esc_html__( 'Hi. Welcome back', 'safebyte' ),
-		'welcome%s'                => esc_html__( 'This wizard will set up your theme, install plugins, and import content. It is optional & should take only a few minutes.', 'safebyte' ),
+		'welcome%s'                => esc_html__( 'Thanks for purchasing theme! You can now register your product to install plugins, import demos and unlock exlusive features.', 'safebyte' ),
 		'welcome-success%s'        => esc_html__( 'You may have already run this theme setup wizard. If you would like to proceed anyway, click on the "Start" button below.', 'safebyte' ),
 
 		'child-header'             => esc_html__( 'Install Child Theme', 'safebyte' ),
@@ -89,14 +90,14 @@ $wizard = new Merlin(
 		'import'                   => esc_html__( 'Choose a demo for importing to your website', 'safebyte' ),
 		'import-action-link'       => esc_html__( 'Advanced', 'safebyte' ),
 
-		'ready-header'             => esc_html__( 'All done. Have fun!', 'safebyte' ),
+		'ready-header'             => esc_html__( 'You\'re Ready!', 'safebyte' ),
 
 		/* translators: Theme Author */
 		'ready%s'                  => esc_html__( 'Your theme has been all set up. Enjoy your new theme by %s.', 'safebyte' ),
 		'ready-action-link'        => esc_html__( 'Extras', 'safebyte' ),
 		'ready-big-button'         => esc_html__( 'View your website', 'safebyte' ),
 		'ready-link-1'             => sprintf( '<a href="%1$s" target="_blank">%2$s</a>', $pxl_server_info['docs_url'], esc_html__( 'Help center', 'safebyte' ) ),
-		'ready-link-2'             => sprintf( '<a href="%1$s" target="_blank">%2$s</a>', $pxl_server_info['support_url'], esc_html__( 'Get Theme Support', 'safebyte' ) ),
+		'ready-link-2'             => sprintf( '<a href="%1$s" target="_blank">%2$s</a>', $pxl_server_info['email_support'], esc_html__( 'Get Theme Support', 'safebyte' ) ),
 		'ready-link-3'             => sprintf( '<a href="%1$s">%2$s</a>', admin_url( 'admin.php?page=pxlart-theme-options' ), esc_html__( 'Theme Options', 'safebyte' ) ),
 	)
 );

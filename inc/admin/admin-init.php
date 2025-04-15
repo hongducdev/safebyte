@@ -5,9 +5,9 @@
 
 if( !defined( 'ABSPATH' ) )
 	exit; 
-include_once get_template_directory() . '/inc/classes/class-base.php';
-include_once get_template_directory() . '/inc/admin/libs/tgmpa/class-tgm-plugin-activation.php' ; 
-include_once get_template_directory() . '/inc/admin/admin-require-plugins.php'; 
+require_once get_template_directory() . '/inc/classes/class-base.php';
+require_once get_template_directory() . '/inc/admin/libs/tgmpa/class-tgm-plugin-activation.php' ; 
+require_once get_template_directory() . '/inc/admin/admin-require-plugins.php'; 
 
 class Safebyte_Admin extends Safebyte_Base{
 
@@ -21,29 +21,34 @@ class Safebyte_Admin extends Safebyte_Base{
 
 	public function init() {
 		 
-		// Merlin
-		require_once get_template_directory() . '/inc/admin/libs/merlin/vendor/autoload.php';
 		require_once get_template_directory() . '/inc/admin/libs/merlin/class-merlin.php';
 		require_once get_template_directory() . '/inc/admin/libs/merlin/merlin-config.php';
-		require_once get_template_directory() . '/inc/admin/libs/merlin/merlin-filters.php';
 
-		include_once( get_template_directory() . '/inc/admin/updater/register-admin.php' );
-		include_once( get_template_directory() . '/inc/admin/admin-page.php' );
-		include_once( get_template_directory() . '/inc/admin/admin-dashboard.php' );
-		include_once( get_template_directory() . '/inc/admin/admin-plugins.php' ) ;
-		include_once( get_template_directory() . '/inc/admin/admin-import.php' );
+		require_once get_template_directory() . '/inc/admin/updater/register-admin.php';
+		require_once get_template_directory() . '/inc/admin/admin-page.php';
+		require_once get_template_directory() . '/inc/admin/admin-dashboard.php';
+		require_once get_template_directory() . '/inc/admin/admin-plugins.php' ;
+		require_once get_template_directory() . '/inc/admin/admin-import.php';
 		if( class_exists('Pxltheme_Core'))
-			include_once( get_template_directory() . '/inc/admin/admin-templates.php' ) ;
+			require_once get_template_directory() . '/inc/admin/admin-templates.php' ;
 	}
- 
-	public function enqueue() {
+ 	
+ 	public function enqueue() {
+		$pxl_server_info = apply_filters( 'pxl_server_info', ['api_url' => ''] ) ;
 		wp_enqueue_style( 'pxlart-dashboard', get_template_directory_uri() . '/inc/admin/assets/css/dashboard.css' );
+
+		if ( ! did_action( 'wp_enqueue_media' ) ) {
+	        wp_enqueue_media();
+	    }
 		wp_enqueue_script( 'pxlart-admin', get_template_directory_uri() . '/inc/admin/assets/js/admin.js', array( 'jquery'), false, true );
 		wp_localize_script( 'pxlart-admin', 'pxlart_admin', array(
 			'ajaxurl'        => admin_url( 'admin-ajax.php' ),
 			'wpnonce'        => wp_create_nonce( 'merlin_nonce' ),
+			'api_url' 		 => $pxl_server_info['api_url'],
+			'theme_slug'     => safebyte()->get_slug()
 		));
 	}
+
 	  
 	public function save_plugins() {
 
@@ -95,10 +100,10 @@ class Safebyte_Admin extends Safebyte_Base{
         }
 		 
 		global $submenu;
+ 
+		$submenu['pxlart'][0][0] = safebyte()->get_name().' '.esc_html__( 'Dashboard', 'safebyte' );
 
-		$submenu['pxlart'][0][0] = esc_html__( 'Dashboard', 'safebyte' );
-
-		remove_submenu_page( 'themes.php', 'tgmpa-install-plugins' );
+		//remove_submenu_page( 'themes.php', 'tgmpa-install-plugins' );
 		remove_submenu_page( 'tools.php', 'redux-about' );
 	}
 }
