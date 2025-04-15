@@ -71,11 +71,11 @@ function safebyte_register_required_plugins() {
         ),
 
         array(
-            'name'               => esc_html__('Wishlist', 'invadex'),
+            'name'               => esc_html__('Wishlist', 'safebyte'),
             'slug'               => "woo-smart-wishlist",
             'required'           => false,
             'logo'        => $images . '/woo-smart-wishlist.png',
-            'description' => esc_html__( 'WPC Smart Wishlist is a simple but powerful tool that can help your customer save products for buying later.', 'invadex' ),
+            'description' => esc_html__( 'WPC Smart Wishlist is a simple but powerful tool that can help your customer save products for buying later.', 'safebyte' ),
         ),
     );
  

@@ -13,7 +13,7 @@ if(isset($settings['tabs']) && !empty($settings['tabs']) && count($settings['tab
                            <span class="pxl-title--text">
                                 <?php echo pxl_print_html($title['title']); ?>
                             </span>
-                            <label class="pxl-empty"><?php echo esc_attr($title['label']); ?></label>
+                            <label class="pxl-empty"><?php echo esc_html($title['label']); ?></label>
                         </span>
                     <?php endforeach; ?>
                     <div class="pxl-tab--control"></div>

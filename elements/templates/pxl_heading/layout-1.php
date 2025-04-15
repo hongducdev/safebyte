@@ -33,7 +33,7 @@ $sg_portfolio_title_text = safebyte()->get_theme_opt('sg_portfolio_title_text');
 					<?php if($settings['sub_title_style'] == 'px-sub-title-shape3' || $settings['sub_title_style'] == 'px-sub-title-shape4') : ?>
 						<i class="flaticon-abstract"></i>
 					<?php endif; ?>
-					<span class="<?php if(!empty($settings['sub_title_color']) && !empty($settings['sub_title_color_gradient'])) { echo 'text-gradient'; } ?> <?php if(!empty($settings['sub_title_color_gradient2'])) { echo 'text-gradient-first'; } ?>"><?php echo esc_attr($settings['sub_title']); ?></span>
+					<span class="<?php if(!empty($settings['sub_title_color']) && !empty($settings['sub_title_color_gradient'])) { echo 'text-gradient'; } ?> <?php if(!empty($settings['sub_title_color_gradient2'])) { echo 'text-gradient-first'; } ?>"><?php echo esc_html($settings['sub_title']); ?></span>
 				</span>
 			</div>
 		<?php endif; ?>

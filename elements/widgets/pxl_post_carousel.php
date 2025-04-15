@@ -98,12 +98,12 @@ pxl_add_custom_widget(
                         ),
                         array(
                             'name' => 'filter',
-                            'label' => esc_html__('Filter on Masonry', 'invadex'),
+                            'label' => esc_html__('Filter on Masonry', 'safebyte'),
                             'type' => \Elementor\Controls_Manager::SELECT,
                             'default' => 'false',
                             'options' => [
-                                'true' => esc_html__('Enable', 'invadex'),
-                                'false' => esc_html__('Disable', 'invadex'),
+                                'true' => esc_html__('Enable', 'safebyte'),
+                                'false' => esc_html__('Disable', 'safebyte'),
                             ],
                             'condition' => [
                                 'select_post_by' => 'term_selected',
@@ -111,12 +111,12 @@ pxl_add_custom_widget(
                         ),
                         array(
                             'name'    => 'filter_type',
-                            'label'   => esc_html__('Filter Type', 'invadex'),
+                            'label'   => esc_html__('Filter Type', 'safebyte'),
                             'type'    => \Elementor\Controls_Manager::SELECT,
                             'default' => 'normal',
                             'options' => [
-                                'normal'  => esc_html__('Normal', 'invadex'),
-                                'ajax' => esc_html__('Ajax', 'invadex'),
+                                'normal'  => esc_html__('Normal', 'safebyte'),
+                                'ajax' => esc_html__('Ajax', 'safebyte'),
                             ],
                             'condition' => [
                                 'select_post_by' => 'term_selected',
@@ -125,9 +125,9 @@ pxl_add_custom_widget(
                         ),
                         array(
                             'name' => 'filter_default_title',
-                            'label' => esc_html__('Filter Default Title', 'invadex'),
+                            'label' => esc_html__('Filter Default Title', 'safebyte'),
                             'type' => \Elementor\Controls_Manager::TEXT,
-                            'default' => esc_html__('All', 'invadex'),
+                            'default' => esc_html__('All', 'safebyte'),
                             'condition' => [
                                 'filter' => 'true',
                                 'select_post_by' => 'term_selected',
@@ -347,7 +347,7 @@ pxl_add_custom_widget(
                         ),
                         array(
                             'name'    => 'show_filter',
-                            'label'   => esc_html__('Term Filter', 'invadex'),
+                            'label'   => esc_html__('Term Filter', 'safebyte'),
                             'type'    => \Elementor\Controls_Manager::SWITCHER,
                             'default' => 'false',
                             'conditions' => [
@@ -364,29 +364,29 @@ pxl_add_custom_widget(
                         ),
                         array(
                             'name'      => 'ft_default_title',
-                            'label'     => esc_html__('Filter Default Title', 'invadex'),
+                            'label'     => esc_html__('Filter Default Title', 'safebyte'),
                             'type'      => \Elementor\Controls_Manager::TEXT,
-                            'default'   => esc_html__('All', 'invadex'),
+                            'default'   => esc_html__('All', 'safebyte'),
                             'condition' => [
                                 'show_filter' => 'true',
                             ],
                         ),
                         array(
                             'name' => 'align_ft',
-                            'label' => esc_html__('Alignment Filter', 'invadex'),
+                            'label' => esc_html__('Alignment Filter', 'safebyte'),
                             'type' => \Elementor\Controls_Manager::CHOOSE,
                             'control_type' => 'responsive',
                             'options' => [
                                 'left' => [
-                                    'title' => esc_html__('Left', 'invadex'),
+                                    'title' => esc_html__('Left', 'safebyte'),
                                     'icon' => 'eicon-text-align-left',
                                 ],
                                 'center' => [
-                                    'title' => esc_html__('Center', 'invadex'),
+                                    'title' => esc_html__('Center', 'safebyte'),
                                     'icon' => 'eicon-text-align-center',
                                 ],
                                 'right' => [
-                                    'title' => esc_html__('Right', 'invadex'),
+                                    'title' => esc_html__('Right', 'safebyte'),
                                     'icon' => 'eicon-text-align-right',
                                 ],
                             ],

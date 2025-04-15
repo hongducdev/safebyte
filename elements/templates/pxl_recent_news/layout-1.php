@@ -49,7 +49,7 @@ if (is_array($posts)): ?>
                     </div>
                 <?php endif; ?>
                 <div class="pxl-post--holder">
-                    <h5 class="pxl-post--title"><a href="<?php echo esc_url(get_permalink( $post->ID )); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a></h5>
+                    <h5 class="pxl-post--title"><a href="<?php echo esc_url(get_permalink( $post->ID )); ?>"><?php echo esc_html(get_the_title($post->ID)); ?></a></h5>
                     <?php if($show_author == 'true' || $show_comment == 'true') : ?>
                         <div class="pxl-post--meta">
                             <?php if($show_author == 'true'): ?>

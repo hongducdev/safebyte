@@ -84,7 +84,7 @@ $widget->add_render_attribute('carousel', [
 ]); ?>
 
 <?php if (is_array($posts)): ?>
-    <div class="pxl-swiper-slider pxl-post-carousel pxl-post-carousel2" <?php if ($settings['drap'] !== false) : ?>data-cursor-drap="<?php echo esc_html__('DRAG', 'safebyte'); ?>" <?php endif; ?>>
+    <div class="pxl-swiper-slider pxl-post-carousel pxl-post-carousel2" <?php if ($settings['drap'] !== false) : ?>data-cursor-drap="<?php echo esc_attr__('DRAG', 'safebyte'); ?>" <?php endif; ?>>
         <div class="pxl-carousel-inner">
             <div <?php pxl_print_html($widget->get_render_attribute_string('carousel')); ?>>
                 <div class="pxl-swiper-wrapper">
@@ -97,7 +97,7 @@ $widget->add_render_attribute('carousel', [
                         <div class="pxl-swiper-slide">
                             <div class="pxl-item--inner <?php echo esc_attr($pxl_animate); ?>">
                                 <div class="pxl-item-col-1">
-                                    <h3 class="pxl-item--title"><a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a></h3>
+                                    <h3 class="pxl-item--title"><a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_html(get_the_title($post->ID)); ?></a></h3>
                                     <span class="pxl-item-date"><?php echo get_the_date('d M Y', $post->ID); ?></span>
                                     <div class="pxl-item-meta">
                                         <?php if ($show_author == 'true') : ?>

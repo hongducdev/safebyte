@@ -86,7 +86,7 @@ $widget->add_render_attribute( 'carousel', [
 ]); ?>
 
 <?php if (is_array($posts)): ?>
-    <div class="pxl-swiper-slider pxl-post-carousel pxl-post-carousel1" <?php if($settings['drap'] !== false) : ?>data-cursor-drap="<?php echo esc_html__('DRAG', 'safebyte'); ?>"<?php endif; ?>>
+    <div class="pxl-swiper-slider pxl-post-carousel pxl-post-carousel1" <?php if($settings['drap'] !== false) : ?>data-cursor-drap="<?php echo esc_attr__('DRAG', 'safebyte'); ?>"<?php endif; ?>>
         <div class="pxl-carousel-inner">
             <div <?php pxl_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
                 <div class="pxl-swiper-wrapper">
@@ -122,7 +122,7 @@ $widget->add_render_attribute( 'carousel', [
                                             <?php if($show_author == 'true'): ?>
                                                 <div class="pxl-post--author">
                                                     <?php echo esc_html__('by', 'safebyte'); ?>&nbsp;
-                                                    <a href="<?php echo esc_url(get_author_posts_url($post->post_author, $author->user_nicename)); ?>"><?php echo esc_attr($author->user_nicename); ?></a>
+                                                    <a href="<?php echo esc_url(get_author_posts_url($post->post_author, $author->user_nicename)); ?>"><?php echo esc_html($author->user_nicename); ?></a>
                                                 </div>
                                             <?php endif; ?>
                                             <?php if($show_category == 'true'): ?>
@@ -130,7 +130,7 @@ $widget->add_render_attribute( 'carousel', [
                                                     <?php 
                                                     $categories = get_the_terms($post->ID, 'category');
                                                     if (!empty($categories)) {
-                                                        echo $categories[0]->name;
+                                                        echo esc_attr($categories[0]->name);
                                                     }
                                                     ?>
                                                 </div>
@@ -146,7 +146,7 @@ $widget->add_render_attribute( 'carousel', [
                                     </div>
                                 <?php endif; ?>
                                 <div class="pxl-post--body">
-                                    <h3 class="pxl-post--title"><a href="<?php echo esc_url(get_permalink( $post->ID )); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a></h3>
+                                    <h3 class="pxl-post--title"><a href="<?php echo esc_url(get_permalink( $post->ID )); ?>"><?php echo esc_html(get_the_title($post->ID)); ?></a></h3>
                                     <div class="pxl-post--divider"></div>
                                     <?php if($show_excerpt == 'true'): ?>
                                         <div class="pxl-post--content">

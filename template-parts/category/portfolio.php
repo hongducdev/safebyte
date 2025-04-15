@@ -16,7 +16,7 @@
                 <div class="pxl-post--icon">
                     <i class="flaticon-right-up"></i>
                 </div>
-                <h5 class="pxl-post--title"><?php echo esc_attr(get_the_title($post->ID)); ?></h5>
+                <h5 class="pxl-post--title"><?php echo esc_html(get_the_title($post->ID)); ?></h5>
             </div>
         </div>
         <a class="pxl-post--link" href="<?php echo esc_url( get_permalink()); ?>" title="<?php the_title(); ?>"></a>

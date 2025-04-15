@@ -1260,8 +1260,8 @@
 
     // Column Absolute
     function safebyte_col_offset() {
-        var w_pxl_row_lg = ($("#pxl-main").width() - 1650) / 2;
-        if (pxl_window_width > 1650) {
+        var w_pxl_row_lg = ($("#pxl-main").width() - 1620) / 2;
+        if (pxl_window_width > 1620) {
             $(".pxl-col-offset-right .pxl-column-inner").css(
                 "padding-right",
                 w_pxl_row_lg + "px"

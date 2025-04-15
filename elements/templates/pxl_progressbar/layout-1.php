@@ -12,7 +12,7 @@ if(isset($settings['progressbar']) && !empty($settings['progressbar'])):
                 <div class="pxl--holder pxl-flex-grow">
                     <div class="pxl--meta pxl-flex-middle">
                         <div class="pxl--title pxl-flex-grow el-empty pxl-mr-10"><?php echo pxl_print_html($progressbar['title']); ?></div>
-                        <div class="pxl--percentage"><?php echo esc_attr($progressbar['percent']['size']); ?>%</div>
+                        <div class="pxl--percentage"><?php echo esc_html($progressbar['percent']['size']); ?>%</div>
                     </div>
                     <div class="pxl-progressbar--wrap">
                         <div class="pxl--progressbar" role="progressbar" data-valuetransitiongoal="<?php echo esc_attr($progressbar['percent']['size']); ?>"></div>

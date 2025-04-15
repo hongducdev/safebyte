@@ -78,7 +78,7 @@ function display_new_badge_on_products()
 	$created = strtotime($product->get_date_created());
 	$html = '';
 	if ((time() - (60 * 60 * 24 * $newness_days)) < $created) {
-		$html = '<span class="new">' . esc_html__('New', 'invadex') . '</span>';
+		$html = '<span class="new">' . esc_html__('New', 'safebyte') . '</span>';
 		return $html;
 	}
 	return '';
@@ -102,7 +102,7 @@ function safebyte_woocommerce_product() {
 			<?php if ($product->is_on_sale() || (time() - (60 * 60 * 24 * 30)) < strtotime($product->get_date_created())) : ?>
 			<div class="woocommerce-badges <?php echo esc_attr($product->is_on_sale() ? 'sale' : 'new'); ?>">
 				<?php if ($product->is_on_sale()) : ?>
-					<span><?php echo esc_html__('Sale', 'invadex'); ?></span>
+					<span><?php echo esc_html__('Sale', 'safebyte'); ?></span>
 				<?php else : ?>
 					<?php pxl_print_html(display_new_badge_on_products()); ?>
 				<?php endif; ?>

@@ -19,12 +19,12 @@ if ( ! empty( $settings['phone_link']['url'] ) ) {
             </a>
         <?php endif; ?>
         <div class="pxl-item--meta">
-            <div class="pxl-item--title pxl-empty"><?php echo esc_attr($settings['title']); ?></div>
-            <div class="pxl-item--number pxl-empty"><?php echo esc_attr($settings['number']); ?></div>
+            <div class="pxl-item--title pxl-empty"><?php echo esc_html($settings['title']); ?></div>
+            <div class="pxl-item--number pxl-empty"><?php echo esc_html($settings['number']); ?></div>
         </div>
         <?php if ( !empty($settings['button_text']) ) : ?>
             <a class="pxl-item--button pxl-fl-middle btn" <?php pxl_print_html($widget->get_render_attribute_string( 'button' )); ?>>
-                <?php echo esc_attr($settings['button_text']); ?>
+                <?php echo esc_html($settings['button_text']); ?>
             </a>
         <?php endif; ?>
     </div>

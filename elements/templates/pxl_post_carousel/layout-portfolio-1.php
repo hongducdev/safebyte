@@ -92,7 +92,7 @@ $widget->add_render_attribute('carousel', [
 ]); ?>
 
 <?php if (is_array($posts)): ?>
-    <div class="pxl-swiper-slider pxl-portfolio-carousel pxl-portfolio-carousel1 pxl-portfolio-style-1" <?php if ($drap !== false): ?>data-cursor-drap="<?php echo esc_html__('DRAG', 'safebyte'); ?>" <?php endif; ?>>
+    <div class="pxl-swiper-slider pxl-portfolio-carousel pxl-portfolio-carousel1 pxl-portfolio-style-1" <?php if ($drap !== false): ?>data-cursor-drap="<?php echo esc_attr__('DRAG', 'safebyte'); ?>" <?php endif; ?>>
         <div class="pxl-inner-top">
             <div class="container">
                 <?php if ($show_filter == 'true') { ?>
@@ -163,7 +163,7 @@ $widget->add_render_attribute('carousel', [
                                                         <?php the_terms($post->ID, 'portfolio-category', '', ', '); ?>
                                                     </div>
                                                 <?php endif; ?>
-                                                <h3 class="pxl-post--title"><?php echo esc_attr(get_the_title($post->ID)); ?></h3>
+                                                <h3 class="pxl-post--title"><?php echo esc_html(get_the_title($post->ID)); ?></h3>
                                             </div>
                                             <?php if ($show_excerpt == 'true' && !empty($portfolio_excerpt)) : ?>
                                                 <div class="pxl-post--content">
