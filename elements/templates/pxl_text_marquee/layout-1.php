@@ -21,7 +21,7 @@ $is_new = \Elementor\Icons_Manager::is_migration_allowed(); ?>
                             <?php endif; ?>
                         </div>
                     <?php endif; ?>
-                    <div class="pxl-item--text pxl-empty"><?php echo esc_attr($text); ?></div>
+                    <div class="pxl-item--text pxl-empty"><?php echo esc_html($text); ?></div>
                </div>
             </div>
         <?php endforeach; ?>

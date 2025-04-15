@@ -58,7 +58,7 @@ if ( ! empty( $settings['wg_btn_link']['url'] ) ) {
 } ?>
 <?php if(isset($settings['team']) && !empty($settings['team']) && count($settings['team'])): 
     $image_size = !empty($settings['img_size']) ? $settings['img_size'] : '354x354'; ?>
-    <div class="pxl-swiper-slider pxl-team pxl-team-carousel1 pxl-team-layout1" <?php if($drap !== false) : ?>data-cursor-drap="<?php echo esc_html__('DRAG', 'safebyte'); ?>"<?php endif; ?>>
+    <div class="pxl-swiper-slider pxl-team pxl-team-carousel1 pxl-team-layout1" <?php if($drap !== false) : ?>data-cursor-drap="<?php echo esc_attr__('DRAG', 'safebyte'); ?>"<?php endif; ?>>
         <div class="pxl-carousel-inner">
             <div <?php pxl_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
                 <div class="pxl-swiper-wrapper">

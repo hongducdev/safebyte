@@ -1,4 +1,4 @@
-<div class="pxl-pricing pxl-pricing1 <?php echo ($settings['popular'] == 'yes' ? 'popular' : ''); ?> <?php echo esc_attr($settings['pxl_animate']); ?>" data-wow-delay="<?php echo esc_attr($settings['pxl_animate_delay']); ?>ms">
+<div class="pxl-pricing pxl-pricing1 <?php echo esc_attr($settings['popular'] == 'yes' ? 'popular' : ''); ?> <?php echo esc_attr($settings['pxl_animate']); ?>" data-wow-delay="<?php echo esc_attr($settings['pxl_animate_delay']); ?>ms">
     <?php if (!empty($settings['plan'])) : ?>
         <div class="pxl-pricing--top">
             <?php if ($settings['popular'] == 'yes') :?>
@@ -24,7 +24,7 @@
                 foreach ($settings['feature'] as $key => $link):
                     $feature_text = $widget->parse_text_editor( $link['feature_text'] );
                     $feature_active = $widget->parse_text_editor( $link['feature_active'] );  ?>
-                    <li class="<?php echo ($feature_active == 'yes') ? 'active' : ''; ?>">
+                    <li class="<?php echo esc_attr($feature_active == 'yes' ? 'active' : ''); ?>">
                         <?php if ($feature_active == 'yes') :?>
                             <i class="fas fa-check pxl-mr-10"></i>
                         <?php elseif ($feature_active == 'no') :?>

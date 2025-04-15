@@ -19,11 +19,11 @@ if (count($services) > 0) :
             <div class="pxl-tabs--title">
                 <div>
                     <span class="pxl-item--title-box">
-                        <?php echo esc_html__($settings['title_box']); ?>
+                        <?php echo esc_html__($settings['title_box'], 'safebyte'); ?>
                     </span>
                 </div>
                 <?php foreach (array_slice($services, 0, $limit) as $key => $service) : ?>
-                    <span class="pxl-tab--title pxl-cursor--cta <?php echo ($tab_active == $key + 1) ? 'active' : ''; ?>" data-target="#<?php echo esc_attr($html_id . '-' . $service->ID); ?>">
+                    <span class="pxl-tab--title pxl-cursor--cta <?php echo esc_attr(($tab_active == $key + 1) ? 'active' : ''); ?>" data-target="#<?php echo esc_attr($html_id . '-' . $service->ID); ?>">
                         <div class="pxl-title--order">
                             <?php echo esc_html($key + 1); ?><span>/</span>
                         </div>
@@ -34,7 +34,7 @@ if (count($services) > 0) :
                         <?php
                         $service_label = get_post_meta($service->ID, 'service_label', true);
                         if (!empty($service_label)) : ?>
-                            <label class="pxl-empty"><?php echo esc_attr($service_label); ?></label>
+                            <label class="pxl-empty"><?php echo esc_html($service_label); ?></label>
                         <?php endif; ?>
                     </span>
                 <?php endforeach; ?>
@@ -44,7 +44,7 @@ if (count($services) > 0) :
             <div class="pxl-tabs--content">
                 <?php if (!empty($services) && is_array($services)) : ?>
                     <?php foreach (array_slice($services, 0, $limit) as $key => $service) : ?>
-                        <div id="<?php echo esc_attr($html_id . '-' . $service->ID); ?>" class="pxl-tab--content <?php echo ($tab_active == $key + 1) ? 'active' : ''; ?>" <?php echo ($tab_active == $key + 1) ? 'style="display: block;"' : ''; ?>>
+                        <div id="<?php echo esc_attr($html_id . '-' . $service->ID); ?>" class="pxl-tab--content <?php echo esc_attr(($tab_active == $key + 1) ? 'active' : ''); ?>" <?php echo esc_attr(($tab_active == $key + 1) ? 'style="display: block;"' : ''); ?>>
                             <h3 class="pxl-content--title">
                                 <?php echo esc_html($service->post_title); ?>
                             </h3>

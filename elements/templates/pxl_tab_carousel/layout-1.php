@@ -47,7 +47,7 @@ $tab_bd_ids = [];
 
 if (isset($settings['tabs']) && !empty($settings['tabs']) && count($settings['tabs'])) :
 ?>
-    <div class="pxl-swiper-slider pxl-tab-carousel pxl-tab-carousel1 " <?php if ($settings['drap'] !== false) : ?>data-cursor-drap="<?php echo esc_html__('DRAG', 'safebyte'); ?>" <?php endif; ?>>
+    <div class="pxl-swiper-slider pxl-tab-carousel pxl-tab-carousel1 " <?php if ($settings['drap'] !== false) : ?>data-cursor-drap="<?php echo esc_attr__('DRAG', 'safebyte'); ?>" <?php endif; ?>>
         <div class="pxl-carousel-inner">
             <div <?php pxl_print_html($widget->get_render_attribute_string('carousel')); ?>>
                 <div class="pxl-swiper-wrapper">

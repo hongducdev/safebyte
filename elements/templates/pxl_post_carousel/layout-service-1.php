@@ -86,7 +86,7 @@ $widget->add_render_attribute( 'carousel', [
 ]); ?>
 
 <?php if (is_array($posts)): ?>
-    <div class="pxl-swiper-slider pxl-service-carousel pxl-service-carousel1 <?php echo esc_attr($style_layout); ?>" <?php if($drap !== false): ?>data-cursor-drap="<?php echo esc_html__('DRAG', 'safebyte'); ?>"<?php endif; ?>>
+    <div class="pxl-swiper-slider pxl-service-carousel pxl-service-carousel1 <?php echo esc_attr($style_layout); ?>" <?php if($drap !== false): ?>data-cursor-drap="<?php echo esc_attr__('DRAG', 'safebyte'); ?>"<?php endif; ?>>
         <div class="pxl-carousel-inner">
 
             <?php if($arrows !== false): ?>

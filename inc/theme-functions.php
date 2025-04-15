@@ -462,7 +462,7 @@ if(function_exists( 'pxl_register_shortcode' )) {
         ob_start();
         if(!empty($text)) : ?>
             <button class="<?php echo esc_attr($style); ?>" type="submit">
-                <span class="pxl--btn-text"><?php echo esc_attr($text); ?></span>
+                <span class="pxl--btn-text"><?php echo esc_html($text); ?></span>
                 <span class="pxl--btn-icon"><i class="flaticon flaticon-right-arrows"></i></span>
             </button>
         <?php  endif;
@@ -634,7 +634,7 @@ if(function_exists( 'pxl_register_shortcode' )) {
                 <i class="flaticon-play-button"></i>
             </span>
             <?php if(!empty($text)) : ?>
-                <span class="slider-video-title"><?php echo esc_attr($text); ?></span>
+                <span class="slider-video-title"><?php echo esc_html($text); ?></span>
             <?php endif; ?>
         </a>
         <?php
@@ -662,7 +662,7 @@ if(function_exists( 'pxl_register_shortcode' )) {
                     <div class="pxl-category--inner">
                         <div class="pxl-category--img bg-image" <?php if(!empty($term_bg["url"])) : ?>style="background-image: url(<?php echo esc_url($term_bg["url"]); ?>);"<?php endif; ?>></div>
                         <a href="<?php echo esc_url(get_category_link($category->term_id)); ?>"></a>
-                        <span><?php echo esc_attr($category->name); ?></span>
+                        <span><?php echo esc_html($category->name); ?></span>
                     </div>
                 </div>
             <?php } ?>
@@ -686,8 +686,8 @@ if(function_exists( 'pxl_register_shortcode' )) {
         if(!empty($price) || !empty($desc)) : ?>
             <div class="pxl-slider-price1">
                 <div class="pxl-item--inner">
-                    <div class="pxl-item--price"><?php echo esc_attr($price); ?></div>
-                    <div class="pxl-item--desc"><?php echo esc_attr($desc); ?></div>
+                    <div class="pxl-item--price"><?php echo esc_html($price); ?></div>
+                    <div class="pxl-item--desc"><?php echo esc_html($desc); ?></div>
                 </div>
             </div>
         <?php  endif;
@@ -798,7 +798,7 @@ function safebyte_cookie_policy() {
             <div class="pxl-item--icon pxl-mr-8"><img src="<?php echo esc_url(get_template_directory_uri().'/assets/img/cookie.png'); ?>" alt="<?php echo esc_attr($cookie_policy_btntext); ?>" /></div>
             <div class="pxl-item--description">
                 <?php echo esc_attr($cookie_policy_description); ?>
-                <a class="pxl-item--link" href="<?php echo esc_url( $cookie_policy_link ); ?>" target="_blank"><?php echo esc_attr($cookie_policy_btntext); ?></a>
+                <a class="pxl-item--link" href="<?php echo esc_url( $cookie_policy_link ); ?>" target="_blank"><?php echo esc_html($cookie_policy_btntext); ?></a>
             </div>
             <div class="pxl-item--close pxl-close"></div>
         </div>

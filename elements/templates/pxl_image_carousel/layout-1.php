@@ -59,7 +59,7 @@ if ( ! empty( $settings['wg_btn_link']['url'] ) ) {
 $pxl_g_id = uniqid(); ?>
 <?php if(isset($settings['imgs']) && !empty($settings['imgs']) && count($settings['imgs'])): 
     $image_size = !empty($settings['img_size']) ? $settings['img_size'] : '600x447'; ?>
-    <div id="pxl-image-carousel-<?php echo esc_attr($pxl_g_id); ?>" class="pxl-swiper-slider pxl-image-carousel pxl-image-carousel1 pxl-swiper-nogap" <?php if($drap !== false) : ?>data-cursor-drap="<?php echo esc_html__('DRAG', 'safebyte'); ?>"<?php endif; ?>>
+    <div id="pxl-image-carousel-<?php echo esc_attr($pxl_g_id); ?>" class="pxl-swiper-slider pxl-image-carousel pxl-image-carousel1 pxl-swiper-nogap" <?php if($drap !== false) : ?>data-cursor-drap="<?php echo esc_attr__('DRAG', 'safebyte'); ?>"<?php endif; ?>>
         <div class="pxl-carousel-inner">
             <div <?php pxl_print_html($widget->get_render_attribute_string( 'carousel' )); ?>>
                 <div class="pxl-swiper-wrapper">
