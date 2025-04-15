@@ -17,7 +17,7 @@ if(!empty($accordion)) : ?>
             ] ); ?>
             <div class="pxl--item <?php echo esc_attr($is_active ? 'active' : ''); ?>">
                 <<?php pxl_print_html($settings['title_tag']); ?> class="pxl-accordion--title" data-target="<?php echo esc_attr('#'.$wg_id.'-'.$pxl_id); ?>">
-                    <div class="pxl-title--number pxl-empty"><?php echo esc_attr($number); ?></div>
+                    <div class="pxl-title--number pxl-empty"><?php echo esc_html($number); ?></div>
                     <?php if ( ! empty( $value['pxl_icon']['value'] ) ) : ?>
                         <span class="pxl-title--icon pxl-mr-16">
                             <?php \Elementor\Icons_Manager::render_icon( $value['pxl_icon'], [ 'aria-hidden' => 'true' ] ); ?>

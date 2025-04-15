@@ -31,7 +31,7 @@ if(isset($settings['icons']) && !empty($settings['icons']) && count($settings['i
                             <i class="<?php echo esc_attr( $value['pxl_icon'] ); ?>" aria-hidden="true"></i>
                         <?php endif; ?>
                         <?php if($settings['style'] == 'style-1'): ?>
-                            <span class="pxl-icon-label"><?php echo esc_attr($label); ?></span>
+                            <span class="pxl-icon-label"><?php echo esc_html($label); ?></span>
                         <?php endif; ?>
                     </a>
                 </div>

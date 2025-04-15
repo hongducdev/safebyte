@@ -4,19 +4,19 @@
             <?php if ($settings['popular'] == 'yes') :?>
                 <i class="fas fa-star"></i>
             <?php endif;?>
-            <span><?php echo esc_attr($settings['plan']); ?></span>
+            <span><?php echo esc_html($settings['plan']); ?></span>
         </div>
     <?php endif; ?>
     <div class="pxl-pricing--header">
         <div class="pxl-pricing--price">
-            <span class="pxl-pricing--currency"><?php echo esc_attr($settings['currency']); ?></span>
-            <span><?php echo esc_attr($settings['price']); ?></span>
+            <span class="pxl-pricing--currency"><?php echo esc_html($settings['currency']); ?></span>
+            <span><?php echo esc_html($settings['price']); ?></span>
         </div>
-        <div class="pxl-pricing--title pxl-empty"><?php echo esc_attr($settings['title']); ?></div>
+        <div class="pxl-pricing--title pxl-empty"><?php echo esc_html($settings['title']); ?></div>
     </div>
-    <div class="pxl-pricing--subtitle pxl-empty"><?php echo esc_attr($settings['sub_title']); ?></div>
+    <div class="pxl-pricing--subtitle pxl-empty"><?php echo esc_html($settings['sub_title']); ?></div>
     <?php if (!empty($settings['btn_download_text'])) :?>
-        <a class="pxl-pricing--download" href="<?php echo esc_url($settings['btn_download_link']['url']);?>"><span><?php echo esc_attr($settings['btn_download_text']);?></span><i class="far fa-arrow-to-bottom"></i></a>
+        <a class="pxl-pricing--download" href="<?php echo esc_url($settings['btn_download_link']['url']);?>"><span><?php echo esc_html($settings['btn_download_text']);?></span><i class="far fa-arrow-to-bottom"></i></a>
     <?php endif;?>
     <?php if(isset($settings['feature']) && !empty($settings['feature']) && count($settings['feature'])): ?>
         <ul class="pxl-pricing--feature">
@@ -46,7 +46,7 @@
             $widget->add_render_attribute( 'btn_link', 'rel', 'nofollow' );
         } ?>
         <div class="pxl-pricing--button">
-            <a class="btn" <?php pxl_print_html($widget->get_render_attribute_string( 'btn_link' )); ?>><span><?php echo esc_attr($settings['btn_text']); ?></span></a>
+            <a class="btn" <?php pxl_print_html($widget->get_render_attribute_string( 'btn_link' )); ?>><span><?php echo esc_html($settings['btn_text']); ?></span></a>
         </div>
     <?php } ?>
 </div>

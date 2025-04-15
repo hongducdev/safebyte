@@ -47,12 +47,12 @@ if (! empty( $settings['link']['url'] ) ) {
                 <div class="pxl-item--meta">
                     <?php if(!empty($settings['btn_text'])) : ?>
                         <div class="pxl-item--readmore">
-                            <a <?php pxl_print_html($widget->get_render_attribute_string( 'button' )); ?>><?php echo esc_attr($settings['btn_text']); ?></a>
+                            <a <?php pxl_print_html($widget->get_render_attribute_string( 'button' )); ?>><?php echo esc_html($settings['btn_text']); ?></a>
                         </div>
                     <?php endif; ?>
                     <?php if(!empty($settings['btn_text2'])) : ?>
                         <div class="pxl-item--readmore">
-                            <a <?php pxl_print_html($widget->get_render_attribute_string( 'button2' )); ?>><?php echo esc_attr($settings['btn_text2']); ?></a>
+                            <a <?php pxl_print_html($widget->get_render_attribute_string( 'button2' )); ?>><?php echo esc_html($settings['btn_text2']); ?></a>
                         </div>
                     <?php endif; ?>
                     <?php if($settings['coming_soon'] == 'true') : ?>

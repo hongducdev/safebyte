@@ -2,7 +2,7 @@
 global $wp;
 $html_id = pxl_get_element_id($settings); ?>
 <div class="pxl-link-wrap">
-    <h3 class="pxl-widget-title pxl-empty"><?php echo esc_attr($settings['wg_title']); ?></h3>
+    <h3 class="pxl-widget-title pxl-empty"><?php echo esc_html($settings['wg_title']); ?></h3>
     <?php if(isset($settings['link']) && !empty($settings['link']) && count($settings['link'])): 
         $current_url_path = home_url( add_query_arg( array(), $wp->request ) ); ?>
         <ul id="pxl-link-<?php echo esc_attr($html_id) ?>" class="pxl-link pxl-link-l1 <?php echo esc_attr($settings['style'].' '.$settings['type']); ?>">

@@ -39,7 +39,7 @@
                 <?php endif; ?>
                 <div class="pxl-item--meta">
                     <?php if(!empty($label)) : ?>
-                        <label><?php echo esc_attr($label); ?></label>
+                        <label><?php echo esc_html($label); ?></label>
                     <?php endif; ?>
                     <?php if(!empty($content)) : ?>
                         <span><?php echo pxl_print_html($content); ?></span>
@@ -50,7 +50,7 @@
     <?php endif; ?>
     <?php if($settings['btn_text']) : ?>
         <div class="pxl-item--button">
-            <a <?php pxl_print_html($widget->get_render_attribute_string( 'button' )); ?> class="button"><?php echo esc_attr($settings['btn_text']); ?></a>
+            <a <?php pxl_print_html($widget->get_render_attribute_string( 'button' )); ?> class="button"><?php echo esc_html($settings['btn_text']); ?></a>
         </div>
     <?php endif; ?>
 </div>

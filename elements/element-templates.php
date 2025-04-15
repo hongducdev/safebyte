@@ -82,7 +82,7 @@ function safebyte_get_post_grid_layout1($posts = [], $settings = [])
             <div class="<?php echo esc_attr($item_class . ' ' . $filter_class); ?>">
                 <div class="pxl-inner-content <?php echo esc_attr($pxl_animate); ?>" data-wow-duration="1.2s">
                     <div class="pxl-item-col-1">
-                        <h3 class="pxl-item--title"><a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a></h3>
+                        <h3 class="pxl-item--title"><a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_html(get_the_title($post->ID)); ?></a></h3>
                         <span class="pxl-item-date"><?php echo get_the_date('d M Y', $post->ID); ?></span>
                         <div class="pxl-item-meta">
                             <?php if ($show_author == 'true') : ?>
@@ -209,7 +209,7 @@ function safebyte_get_portfolio_grid_layout1($posts = [], $settings = [])
                                             <?php the_terms($post->ID, 'portfolio-category', '', ', '); ?>
                                         </div>
                                     <?php endif; ?>
-                                    <h5 class="pxl-post--title"><?php echo esc_attr(get_the_title($post->ID)); ?></h5>
+                                    <h5 class="pxl-post--title"><?php echo esc_html(get_the_title($post->ID)); ?></h5>
                                 </div>
                                 <?php if ($show_excerpt == 'true' && !empty($portfolio_excerpt)) : ?>
                                     <div class="pxl-post--content">
@@ -297,7 +297,7 @@ function safebyte_get_portfolio_grid_layout2($posts = [], $settings = [])
                         </div>
                         <div class="pxl-post--holder">
                             <h5 class="pxl-post--title">
-                                <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a>
+                                <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_html(get_the_title($post->ID)); ?></a>
                             </h5>
                             <div class="pxl-post-divider"></div>
                             <?php if ($show_excerpt == 'true' && !empty($portfolio_excerpt)): ?>
@@ -382,7 +382,7 @@ function safebyte_get_portfolio_grid_layout3($posts = [], $settings = [])
                                 </div>
                             <?php endif; ?>
                             <h5 class="pxl-post--title">
-                                <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a>
+                                <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_html(get_the_title($post->ID)); ?></a>
                             </h5>
                             <div class="pxl-post-divider"></div>
                             <?php if ($show_excerpt == 'true' && !empty($portfolio_excerpt)): ?>
@@ -481,7 +481,7 @@ function safebyte_get_service_grid_layout1($posts = [], $settings = [])
                                             echo esc_url($service_external_link);
                                         } else {
                                             echo esc_url(get_permalink($post->ID));
-                                        } ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a>
+                                        } ?>"><?php echo esc_html(get_the_title($post->ID)); ?></a>
                         </h3>
                         <?php if ($show_excerpt == 'true') : ?>
                             <div class="pxl-post--excerpt">
@@ -597,7 +597,7 @@ function safebyte_get_industries_grid_layout1($posts = [], $settings = [])
                                             echo esc_url($industries_external_link);
                                         } else {
                                             echo esc_url(get_permalink($post->ID));
-                                        } ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a>
+                                        } ?>"><?php echo esc_html(get_the_title($post->ID)); ?></a>
                         </h3>
 
                         <?php if ($show_excerpt == 'true'): ?>
@@ -823,7 +823,7 @@ function safebyte_get_post_list_layout1($posts = [], $settings = [])
                             </div>
                         <?php endif; ?>
 
-                        <h3 class="pxl-item--title"><a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a></h3>
+                        <h3 class="pxl-item--title"><a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_html(get_the_title($post->ID)); ?></a></h3>
 
                         <?php if ($show_excerpt == 'true') : ?>
                             <div class="item-excerpt">

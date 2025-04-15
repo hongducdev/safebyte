@@ -21,7 +21,7 @@
                 <?php endif; ?>
                 <div class="pxl-item--meta">
                     <?php if(!empty($label)) : ?>
-                        <label><?php echo esc_attr($label); ?></label>
+                        <label><?php echo esc_html($label); ?></label>
                     <?php endif; ?>
                     <?php if(!empty($content)) : ?>
                         <span><?php echo pxl_print_html($content); ?></span>

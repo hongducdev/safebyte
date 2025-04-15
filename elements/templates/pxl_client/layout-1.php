@@ -11,6 +11,6 @@
                 <span class="pxl-counter--suffix"><?php echo pxl_print_html($settings['suffix']); ?></span>
             <?php endif; ?>
         </div>
-        <div class="pxl-counter--title"><?php echo esc_attr($settings['title']); ?></div>
+        <div class="pxl-counter--title"><?php echo esc_html($settings['title']); ?></div>
     </div>
 </div>

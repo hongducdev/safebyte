@@ -134,7 +134,7 @@ $widget->add_render_attribute( 'carousel', [
                                 </div>
                                 <div class="pxl-post--holder">
                                     <h3 class="pxl-post--title">
-                                        <a href="<?php if(!empty($service_external_link)) { echo esc_url($service_external_link); } else { echo esc_url(get_permalink( $post->ID )); } ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a>
+                                        <a href="<?php if(!empty($service_external_link)) { echo esc_url($service_external_link); } else { echo esc_url(get_permalink( $post->ID )); } ?>"><?php echo esc_html(get_the_title($post->ID)); ?></a>
                                     </h3>
                                     <?php if($show_excerpt == 'true') : ?>
                                         <div class="pxl-post--excerpt">
