@@ -1767,7 +1767,7 @@ a, a:hover, a:focus, a:before, a:after {
   text-decoration: none;
 }
 .ft-secondary, .pxl--post-footer label, .widget_recent_comments ul, .widget_recent_comments ol, .widget_block .wp-block-latest-posts__list, .widget_block .wp-block-latest-comments, .pxl-wg-categories .pxl-category--inner span, .pxl-contact-info-widget .pxl-phone--number, .pxl-mailchimp-l1.style-box [type="email"], .pxl-mailchimp-l1.style-box2 [type="email"], .pxl-button-video1 .slider-video-title, .pxl-progressbar-1 .pxl--holder, .pxl-recent-news1 .pxl-post--date, .pxl-contact-form .pxl-form--label, #pxl-cart-sidebar .pxl-widget-cart-sidebar .widget_shopping_title, #pxl-cart-sidebar .pxl-widget-cart-sidebar .widget_shopping_cart .widget_shopping_cart_footer p.total, body #yith-quick-view-modal #yith-quick-view-content .entry-summary form.cart label, .pxl-blog-style3 .pxl-post--button, .pxl-blog-style3 .pxl-post--button, .btn, .pxl-showcase1 .pxl-item--readmore {
-  font-family: , sans-serif;
+  font-family: "Fira Sans", sans-serif;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: "GTWalsheimPro", sans-serif;
@@ -14682,6 +14682,39 @@ body.single .pxl-breadcrumb li:not(:first-child):not(:last-child) {
 }
 .pxl-search-form1.style-2 .pxl-searchform-wrap {
   position: relative;
+}
+.pxl-search-form1 .searchform-wrap {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #cdcdcd;
+}
+.pxl-search-form1 input {
+  border: none;
+  padding-left: 0;
+  font-size: 20px;
+  height: 65px;
+}
+.pxl-search-form1 button {
+  background-color: transparent !important;
+  -webkit-border-radius: 0 !important;
+  -khtml-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  -ms-border-radius: 0 !important;
+  -o-border-radius: 0 !important;
+  border-radius: 0 !important;
+  border: none !important;
+  color: #111 !important;
+  padding: 0;
+  margin: 0;
+  width: 65px;
+  height: 65px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.pxl-search-form1 button i {
+  font-size: 20px;
+  color: #111;
 }
 .pxl-preset-4 .pxl-service-style1 .pxl-post--icon::after, .pxl-preset-4 .pxl-service-carousel1 .pxl-post--icon::after, .pxl-preset-4 .pxl-icon-color-gradient i, .pxl-preset-4 .pxl-portfolio-style1 .pxl-post--readmore.pxl-gradient-rotate, .pxl-preset-4 .pxl-tabs2 .pxl-tabs--title .pxl-title--text, .pxl-preset-4 .pxl-counter1 .pxl-counter--number::before, .pxl-preset-4 .pxl-blog-style3 .pxl-post--category a, .pxl-preset-4 .pxl-blog-style3 .pxl-item--inner::after, .pxl-preset-4 .pxl-blog-style3 .pxl-post--meta div + div::before, .pxl-preset-4 .pxl-contact-form .pxl-form--label span {
   background-image: -webkit-linear-gradient(45deg, var(--gradient-first-color), var(--gradient-color-to) 52%, var(--gradient-color-from) 100%);
