@@ -369,7 +369,12 @@
             right: -3px;
             top: 20%;
             z-index: 2;
-            animation: pxl_rain-drop-2 2s linear infinite;
+            animation: pxl_loop-animation-2 4s ease-in-out infinite;
+        }
+        &.swiper-slide-next {
+            &:after {
+                animation: pxl_loop-animation 4s ease-in-out infinite;
+            }
         }
     }
 
@@ -433,17 +438,27 @@
     }
 }
 
-@keyframes pxl_rain-drop-2 {
+@keyframes pxl_loop-animation {
     0% {
-        top: 20%;
-        opacity: 0.8;
+        top: 90%;
     }
-    70% {
-        opacity: 1;
+    50% {
+        top: 10%;
     }
     100% {
         top: 90%;
-        opacity: 0;
+    }
+}
+
+@keyframes pxl_loop-animation-2 {
+    0% {
+        top: 10%;
+    }
+    50% {
+        top: 90%;
+    }
+    100% {
+        top: 10%;
     }
 }
 

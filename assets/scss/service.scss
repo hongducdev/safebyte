@@ -24,6 +24,9 @@ Service Style
                 transform: none;
                 filter: none;
                 border-color: #cdcdcd;
+                .pxl-post--header .pxl-post--icon {
+                    background-color: $secondary_color;
+                }
             }
         }
     }

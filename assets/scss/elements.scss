@@ -257,19 +257,36 @@ ELEMENTS WIDGET
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background-image: linear-gradient(#dee5f1 2px, transparent 2px),
-            linear-gradient(to right, #dee5f1 2px, transparent 2px);
+        background-image: linear-gradient(
+                rgba(#dee5f1, 0.149) 2px,
+                transparent 2px
+            ),
+            linear-gradient(to right, rgba(#dee5f1, 0.149) 2px, transparent 2px);
         background-size: 78px 78px;
     }
-    &.section-1-home-4 {
+    &.section-count-home-1 {
         &:before {
+            background-size: 60px 60px;
             background-image: linear-gradient(
-                    rgba(255, 255, 255, 0.06) 2px,
+                    rgba(#b1b1b0, 0.08) 2px,
                     transparent 2px
                 ),
                 linear-gradient(
                     to right,
-                    rgba(255, 255, 255, 0.06) 2px,
+                    rgba(#b1b1b0, 0.08) 2px,
+                    transparent 2px
+                );
+        }
+    }
+    &.section-1-home-4 {
+        &:before {
+            background-image: linear-gradient(
+                    rgba(#edeff5, 0.02) 2px,
+                    transparent 2px
+                ),
+                linear-gradient(
+                    to right,
+                    rgba(#edeff5, 0.02) 2px,
                     transparent 2px
                 );
         }
@@ -278,12 +295,12 @@ ELEMENTS WIDGET
         &:before {
             z-index: 2;
             background-image: linear-gradient(
-                    rgba(255, 255, 255, 0.06) 2px,
+                    rgba(#edeff5, 0.02) 2px,
                     transparent 2px
                 ),
                 linear-gradient(
                     to right,
-                    rgba(255, 255, 255, 0.06) 2px,
+                    rgba(#edeff5, 0.02) 2px,
                     transparent 2px
                 );
             background-size: 57px 57px;
@@ -5216,7 +5233,7 @@ body.rtl {
         transform: translateX(-50%);
         width: 750px;
         height: 100%;
-        background-image: url(../img/global.png);
+        background-image: url(../img/global.webp);
         background-size: cover;
         @media #{$max-xsx} {
             max-width: 400px;
@@ -5803,6 +5820,7 @@ body.rtl {
         width: 49px;
         height: 49px;
         @include border-radius(49px);
+        border: 2px solid #fff;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;

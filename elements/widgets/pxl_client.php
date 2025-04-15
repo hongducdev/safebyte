@@ -51,6 +51,68 @@ pxl_add_custom_widget(
                         ),
                     ),
                 ),
+                array(
+                    'name' => 'section_style',
+                    'label' => esc_html__('Style', 'safebyte'),
+                    'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+                    'controls' => array(
+                        array(
+                            'name' => 'border_type',
+                            'label' => esc_html__('Border Type', 'safebyte'),
+                            'type' => \Elementor\Controls_Manager::SELECT,
+                            'options' => [
+                                '' => esc_html__('None', 'safebyte'),
+                                'solid' => esc_html__('Solid', 'safebyte'),
+                                'double' => esc_html__('Double', 'safebyte'),
+                                'dotted' => esc_html__('Dotted', 'safebyte'),
+                                'dashed' => esc_html__('Dashed', 'safebyte'),
+                                'groove' => esc_html__('Groove', 'safebyte'),
+                            ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-client .pxl-client--image' => 'border-style: {{VALUE}} !important;',
+                            ],
+                        ),
+                        array(
+                            'name' => 'border_width',
+                            'label' => esc_html__('Border Width', 'safebyte'),
+                            'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-client .pxl-client--image' => 'border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;',
+                            ],
+                            'condition' => [
+                                'border_type!' => '',
+                            ],
+                            'responsive' => true,
+                        ),
+                        array(
+                            'name' => 'border_color',
+                            'label' => esc_html__('Border Color', 'safebyte'),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'default' => '',
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-client .pxl-client--image' => 'border-color: {{VALUE}} !important;',
+                            ],
+                            'condition' => [
+                                'border_type!' => '',
+                            ],
+                        ),
+                        array(
+                            'name' => 'title_typography',
+                            'label' => esc_html__('Typography', 'safebyte' ),
+                            'type' => \Elementor\Group_Control_Typography::get_type(),
+                            'control_type' => 'group',
+                            'selector' => '{{WRAPPER}} .pxl-client .pxl-client--content',
+                        ),
+                        array(
+                            'name' => 'title_color',
+                            'label' => esc_html__('Title Color', 'safebyte' ),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-client .pxl-client--content' => 'color: {{VALUE}};',
+                            ],
+                        ),
+                    ),
+                ),
                 safebyte_widget_animation_settings(),
             ),
         ),
